@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode } from "react";
+import React from "react";
 
 import { IntTemplateContext, IntTemplateData } from "../../types";
 
@@ -6,13 +6,13 @@ const templateDefaultState: IntTemplateContext = {
   hello: "bye"
 };
 
-const TemplateContext = createContext<IntTemplateData>({
+const TemplateContext = React.createContext<IntTemplateData>({
   templateState: templateDefaultState,
   setTemplateState: (): void => {}
 });
 
 interface IntTemplateContextProvider {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const TemplateContextProvider: React.FC<IntTemplateContextProvider> = ({

@@ -1,13 +1,18 @@
 import React from "react";
-import { useTemplate } from "../../../hooks";
+import { useTemplate, useTheme } from "../../../hooks";
 import * as Styled from "./mainContent.style";
+import * as themes from "../../../context/themeContext/themes";
 
 const MainContent: React.FC = () => {
   const { templateState } = useTemplate();
+  const { setThemeState } = useTheme();
 
   return (
     <Styled.MainContent>
-      <h3>Main</h3> <h4>{templateState.hello}</h4>{" "}
+      <h2>Main</h2>
+      <h3 onClick={() => setThemeState(themes.themeLight)}>Light</h3>
+      <h3 onClick={() => setThemeState(themes.themeDark)}>Dark</h3>
+      <h4>{templateState.hello}</h4>{" "}
     </Styled.MainContent>
   );
 };
