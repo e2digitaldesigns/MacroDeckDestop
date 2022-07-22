@@ -4,7 +4,7 @@ export interface IntTemplateContext {
 
 export interface IntTemplateContextState {
   templateState: IntTemplateContext;
-  setTemplateState: React.Dispatch<React.SetStateAction<any>>;
+  setTemplateState: React.Dispatch<React.SetStateAction<IntTemplateContext>>;
 }
 
 export type IntTemplateData = IntTemplateContextState;

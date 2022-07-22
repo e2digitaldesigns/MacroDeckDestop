@@ -8,7 +8,7 @@ const templateDefaultState: IntTemplateContext = {
 
 const TemplateContext = React.createContext<IntTemplateData>({
   templateState: templateDefaultState,
-  setTemplateState: (): void => {}
+  setTemplateState: (templateState): void => {}
 });
 
 interface IntTemplateContextProvider {
