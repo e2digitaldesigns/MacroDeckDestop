@@ -3,7 +3,7 @@ import { useTemplate, useTheme } from "../../../hooks";
 import * as Styled from "./mainContent.style";
 import * as themes from "../../../context/themeContext/themes";
 
-const MainContent: React.FC = () => {
+export const TemplateMainContent: React.FC = () => {
   const { templateState, setTemplateState } = useTemplate();
   const { setThemeState } = useTheme();
 
@@ -17,5 +17,3 @@ const MainContent: React.FC = () => {
     </Styled.MainContent>
   );
 };
-
-export default MainContent;

@@ -1,8 +1,6 @@
 import React from "react";
 import * as Styled from "./subHeader.style";
 
-const SubHeader: React.FC = () => {
+export const TemplateSubHeader: React.FC = () => {
   return <Styled.SubHeader></Styled.SubHeader>;
 };
-
-export default SubHeader;

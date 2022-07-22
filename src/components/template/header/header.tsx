@@ -1,8 +1,8 @@
 import React from "react";
 import * as Styled from "./header.style";
 
-const Header: React.FC = () => {
+export interface ITemplateHeader {}
+
+export const TemplateHeader: React.FC = () => {
   return <Styled.Header></Styled.Header>;
 };
-
-export default Header;

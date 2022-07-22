@@ -1,8 +1,6 @@
 import React from "react";
 import * as Styled from "./footer.style";
 
-const Footer: React.FC = () => {
+export const TemplateFooter: React.FC = () => {
   return <Styled.Footer></Styled.Footer>;
 };
-
-export default Footer;

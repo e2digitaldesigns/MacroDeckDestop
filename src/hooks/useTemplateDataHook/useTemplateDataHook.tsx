@@ -3,8 +3,9 @@ import { TemplateContext } from "../../context";
 import { IntTemplateContextState } from "./../../types";
 
 const useTemplateData = () => {
-  const templateData: IntTemplateContextState =
-    React.useContext(TemplateContext);
+  const templateData: IntTemplateContextState = React.useContext(
+    TemplateContext
+  );
   return templateData;
 };
 
