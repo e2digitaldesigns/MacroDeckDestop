@@ -7,6 +7,7 @@ import SidebarLeft from "./components/template/sideBarLeft/sideBarLeft";
 import Footer from "./components/template/footer/footer";
 import SubHeader from "./components/template/subheader/subHeader";
 import MainContent from "./components/template/mainContent/mainContent";
+import { TemplateContextProvider } from "./context";
 
 const App: React.FC<{}> = () => {
   const [theme, setTheme] = useState<DefaultTheme>(themes.themeDark);
@@ -27,11 +28,13 @@ const App: React.FC<{}> = () => {
   return (
     <ThemeProvider theme={theme}>
       <Styled.GlobalStyle />
-      <Header />
-      <SubHeader />
-      <SidebarLeft />
-      <MainContent />
-      <Footer />
+      <TemplateContextProvider>
+        <Header />
+        <SubHeader />
+        <SidebarLeft />
+        <MainContent />
+        <Footer />
+      </TemplateContextProvider>
     </ThemeProvider>
   );
 };
