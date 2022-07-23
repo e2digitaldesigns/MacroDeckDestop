@@ -1,22 +1,21 @@
 import React from "react";
 import * as Styled from "./app.style";
-
-import { TemplateContextProvider, ThemeContextProvider } from "./context";
-import { Template } from "./components/template/template";
+import { AppContext } from "./context/context";
+import { AppTemplate } from "./components/template/template";
 
 const App: React.FC<{}> = () => {
   return (
     <>
-      <ThemeContextProvider>
+      <AppContext.ThemeProvider>
         <Styled.GlobalStyle />
-        <TemplateContextProvider>
-          <Template.Header />
-          <Template.SubHeader />
-          <Template.SidebarLeft />
-          <Template.MainContent />
-          <Template.Footer />
-        </TemplateContextProvider>
-      </ThemeContextProvider>
+        <AppContext.TemplateProvider>
+          <AppTemplate.Header />
+          <AppTemplate.SubHeader />
+          <AppTemplate.SidebarLeft />
+          <AppTemplate.MainContent />
+          <AppTemplate.Footer />
+        </AppContext.TemplateProvider>
+      </AppContext.ThemeProvider>
     </>
   );
 };

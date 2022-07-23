@@ -13,7 +13,7 @@ export const TemplateMainContent: React.FC = () => {
       <h3 onClick={() => setThemeState(themes.themeLight)}>Light</h3>
       <h3 onClick={() => setThemeState(themes.themeDark)}>Dark</h3>
       <h3 onClick={() => setTemplateState({ hello: "pop" })}>Dark</h3>
-      <h4>{templateState.hello}</h4>{" "}
+      <h4>{templateState.hello}</h4> <span>"🌙" : "🌞"</span>
     </Styled.MainContent>
   );
 };

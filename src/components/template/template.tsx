@@ -5,7 +5,7 @@ import { TemplateMainContent } from "./mainContent/mainContent";
 import { TemplateSidebarLeft } from "./sideBarLeft/sideBarLeft";
 import { TemplateSubHeader } from "./subheader/subHeader";
 
-export interface ITemplateComponents {
+export interface IAppTemplateComponents {
   Footer: React.ElementType;
   Header: React.ElementType;
   MainContent: React.ElementType;
@@ -13,10 +13,10 @@ export interface ITemplateComponents {
   SubHeader: React.ElementType;
 }
 
-export const Template: React.FC & ITemplateComponents = () => <div />;
+export const AppTemplate: React.FC & IAppTemplateComponents = () => <div />;
 
-Template.Footer = TemplateFooter;
-Template.Header = TemplateHeader;
-Template.MainContent = TemplateMainContent;
-Template.SidebarLeft = TemplateSidebarLeft;
-Template.SubHeader = TemplateSubHeader;
+AppTemplate.Footer = TemplateFooter;
+AppTemplate.Header = TemplateHeader;
+AppTemplate.MainContent = TemplateMainContent;
+AppTemplate.SidebarLeft = TemplateSidebarLeft;
+AppTemplate.SubHeader = TemplateSubHeader;
