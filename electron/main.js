@@ -1,4 +1,5 @@
 const electron = require("electron");
+const listners = require("./listeners");
 
 const { app: electronApp, BrowserWindow } = electron;
 
@@ -40,4 +41,6 @@ electronApp.on("ready", () => {
     electronApp.quit();
     mainWindow = null;
   });
+
+  listners.listeners(mainWindow);
 });

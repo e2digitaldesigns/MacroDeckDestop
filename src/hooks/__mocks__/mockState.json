@@ -1,0 +1,141 @@
+{
+  "setState": "",
+  "state": {
+    "userInformation": {
+      "_id": "",
+      "name": ""
+    },
+    "templateInformation": {
+      "sideBarState": "hello hello hello"
+    },
+    "settings": {},
+    "active": {
+      "profileId": "profile-id-001",
+      "buttonPadId": "",
+      "actionId": "",
+      "pageId": ""
+    },
+    "profiles": [
+      {
+        "_id": "profile-id-001",
+        "profileName": "001 profile 6 pads",
+        "buttonPads": 6
+      },
+      {
+        "_id": "profile-id-002",
+        "profileName": "002 profile 32 pads",
+        "buttonPads": 32
+      },
+      {
+        "_id": "profile-id-003",
+        "profileName": "003 profile 0 pads",
+        "buttonPads": 0
+      }
+    ],
+    "pages": [
+      {
+        "profileId": "profile-id-001",
+        "_id": "page-id-001",
+        "order": 202106030904805
+      },
+      {
+        "profileId": "profile-id-001",
+        "_id": "page-id-002",
+        "order": 202106030904810
+      },
+      {
+        "profileId": "profile-id-001",
+        "_id": "page-id-003",
+        "order": 202106030904815
+      }
+    ],
+    "buttonPads": [
+      {
+        "profileId": "profile-id-001",
+        "pageId": "page-id-001",
+        "_id": "button-id-001",
+        "buttonPadNum": 1,
+        "text": "Button 001",
+        "textColor": "#dddddd",
+        "icon": "home",
+        "iconColor": "#333333",
+        "image": "",
+        "bgColor": "#333333"
+      },
+      {
+        "profileId": "profile-id-001",
+        "pageId": "page-id-001",
+        "_id": "button-id-002",
+        "buttonPadNum": 2,
+        "text": "Button 002",
+        "textColor": "#dddddd",
+        "icon": "home",
+        "iconColor": "#333333",
+        "image": "",
+        "bgColor": "#333333"
+      }
+    ],
+    "actions": [
+      {
+        "profileId": "profile-id-003",
+        "pageId": "UArAZooM75",
+        "buttonPadId": "button-id-001",
+        "_id": "action-001",
+        "order": 0,
+        "action": "md",
+        "subAction": "mdHome",
+        "seconds": 0,
+        "url": "",
+        "text": "",
+        "scene": "",
+        "layer": "",
+        "path": "",
+        "page": "",
+        "profile": ""
+      },
+      {
+        "profileId": "profile-id-003",
+        "pageId": "UArAZooM75",
+        "buttonPadId": "button-id-001",
+        "_id": "action-002",
+        "order": 0,
+        "action": "md",
+        "subAction": "mdHome",
+        "seconds": 0,
+        "url": "",
+        "text": "",
+        "scene": "",
+        "layer": "",
+        "path": "",
+        "page": "",
+        "profile": ""
+      }
+    ],
+    "styles": [
+      {
+        "textColor": "#eeeeee",
+        "icon": "Image",
+        "iconColor": "#ffffff",
+        "image": "",
+        "bgColor": "#333333",
+        "_id": "5a15161b-7784-459e-bc65-45c036f11219"
+      },
+      {
+        "textColor": "#eeeeee",
+        "icon": "Image",
+        "iconColor": "#ffffff",
+        "image": "",
+        "bgColor": "#555555",
+        "_id": "c52ea654-86d3-4920-9d39-e24e49bfd656"
+      },
+      {
+        "textColor": "#ffffff",
+        "icon": "Twitch",
+        "iconColor": "#ffffff",
+        "image": "",
+        "bgColor": "#9147ff",
+        "_id": "dddb0c63-48d1-4b12-8151-8103f8be081f"
+      }
+    ]
+  }
+}
