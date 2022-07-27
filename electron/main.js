@@ -1,13 +1,29 @@
 const electron = require("electron");
+const path = require("path");
+const getApplicationUrl = require("./utils/getApplicationUrl");
+const menuTemplate = require("./menu");
 const listners = require("./listeners");
+const server = require("./server/server");
+const storage = require("electron-json-storage");
 
-const { app: electronApp, BrowserWindow } = electron;
+const SETTINGS = require("./settings/system.json");
+
+console.log(11, storage.getDataPath());
+// const isDev = process?.env?.APP_DEV ? true : false;
+const isDev = true;
+console.log(13, { isDev });
+
+const { app: electronApp, BrowserWindow, ipcMain, Menu, Tray } = electron;
 
 let mainWindow;
-const width = 1600;
-const height = 1200;
+let tray = null;
+const width = SETTINGS.APPLICATION.SIZE.WIDTH;
+const height = SETTINGS.APPLICATION.SIZE.HEIGHT;
 
 electronApp.on("ready", () => {
+  tray = new Tray(__dirname + SETTINGS.LOGOS.SMALL);
+  tray.setToolTip(SETTINGS.TRAY.TOOLTIP);
+
   mainWindow = new BrowserWindow({
     width: width,
     minWidth: width,
@@ -15,27 +31,63 @@ electronApp.on("ready", () => {
     minHeight: height,
     resizable: true,
     frame: true,
-    backgroundColor: "white",
+    backgroundColor: SETTINGS.APPLICATION.COLORS.BG,
     movable: true,
     minimizable: true,
     maximizable: true,
+    // icon: __dirname + SETTINGS.LOGOS.SMALL,
     show: false,
     webPreferences: {
       contextIsolation: false,
-      devTools: true,
+      devTools: isDev,
       nodeIntegration: true,
-      preload: __dirname + "/preload.js",
+      preload: __dirname + SETTINGS.SCRIPTS.PRELOAD,
       webSecurity: false
     }
   });
 
   mainWindow.setAspectRatio(width / height);
+  // mainWindow.loadFile(`${__dirname}/build/index.html`);
 
-  mainWindow.loadURL(__dirname + "/build/index.html");
-
-  mainWindow.loadURL("http://localhost:3000");
+  if (isDev) {
+    mainWindow.loadURL(SETTINGS.LOAD_URL.LOCAL);
+  } else {
+    mainWindow.loadFile(`${__dirname}${SETTINGS.LOAD_URL.BUILD}`);
+  }
 
   mainWindow.once("ready-to-show", () => mainWindow.show());
+
+  mainWindow.on("minimize", event => {
+    event.preventDefault();
+
+    const template = [
+      {
+        label: SETTINGS.TRAY.TOOLTIP,
+        // icon: __dirname + SETTINGS.LOGOS.SMALL,
+        enabled: false
+      },
+      {
+        type: "separator"
+      },
+      {
+        label: "Show App",
+        click: () => {
+          mainWindow.show();
+        }
+      },
+      {
+        label: "Quit",
+        click: () => {
+          electronApp.quit();
+          mainWindow = null;
+        }
+      }
+    ];
+
+    const contextMenu = Menu.buildFromTemplate(template);
+    tray.setContextMenu(contextMenu);
+    mainWindow.hide();
+  });
 
   mainWindow.on("closed", () => {
     electronApp.quit();
@@ -43,4 +95,9 @@ electronApp.on("ready", () => {
   });
 
   listners.listeners(mainWindow);
+
+  const mainMenu = Menu.buildFromTemplate(menuTemplate);
+  Menu.setApplicationMenu(mainMenu);
+
+  server(mainWindow);
 });

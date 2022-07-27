@@ -1,0 +1,27 @@
+{
+  "userInformation": { "_id": "", "name": "" },
+  "templateInformation": { "sideBarState": "" },
+  "settings": {
+    "ipAddress": "",
+    "port": "",
+    "features": {
+      "obs": {
+        "status": "0",
+        "ipAddress": "",
+        "port": "",
+        "password": ""
+      }
+    }
+  },
+  "active": {
+    "profileId": "",
+    "buttonPadId": "",
+    "actionId": "",
+    "pageId": ""
+  },
+  "profiles": [],
+  "pages": [],
+  "buttonPads": [],
+  "actions": [],
+  "styles": []
+}

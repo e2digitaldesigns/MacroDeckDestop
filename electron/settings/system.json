@@ -1,0 +1,19 @@
+{
+  "APPLICATION": {
+    "NAME": "MacroDeck",
+    "SIZE": { "WIDTH": 1280, "HEIGHT": 785 },
+    "COLORS": { "BG": "#1e1e1e" }
+  },
+  "DEFAULT_PORT": "8585",
+  "LOAD_URL": {
+    "BUILD": "/build/index.html",
+    "LOCAL": "http://localhost:3000"
+  },
+  "LOGOS": {
+    "SMALL": "/images/logo-128x128.png"
+  },
+  "SCRIPTS": { "PRELOAD": "/preload.js" },
+  "TRAY": {
+    "TOOLTIP": "MacroDeck"
+  }
+}
