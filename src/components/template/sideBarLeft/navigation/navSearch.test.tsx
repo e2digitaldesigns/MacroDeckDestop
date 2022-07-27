@@ -3,13 +3,13 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import NavSearch from "./navSearch";
 
-import { AppContext } from "../../../../context/context";
+import { ApplicationContext } from "../../../../context/context";
 
 const testSetup = () => {
   return render(
-    <AppContext.ThemeProvider>
+    <ApplicationContext.ThemeProvider>
       <NavSearch />
-    </AppContext.ThemeProvider>
+    </ApplicationContext.ThemeProvider>
   );
 };
 

@@ -3,13 +3,13 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { TemplateSubHeader } from "./subHeader";
 
-import { AppContext } from "../../../context/context";
+import { ApplicationContext } from "../../../context/context";
 
 const testSetup = () => {
   return render(
-    <AppContext.ThemeProvider>
+    <ApplicationContext.ThemeProvider>
       <TemplateSubHeader />
-    </AppContext.ThemeProvider>
+    </ApplicationContext.ThemeProvider>
   );
 };
 

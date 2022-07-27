@@ -1,6 +1,6 @@
 import React from "react";
 import * as Styled from "./breadCrumb.style";
-import { CaretDownFill, ChevronRight } from "react-bootstrap-icons";
+import { CaretDownFill } from "react-bootstrap-icons";
 import BreadCrumbMenu from "./breadCrumbMenu";
 
 export interface IntBreadCrumb {

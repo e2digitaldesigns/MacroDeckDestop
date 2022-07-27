@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppData, useElectron, useTemplate, useTheme } from "../../../hooks";
+import { useElectron, useTemplate, useTheme } from "../../../hooks";
 import * as Styled from "./mainContent.style";
 import * as themes from "../../../context/themeContext/themes";
 import { IpcRendererTypes } from "../../../types";
@@ -8,9 +8,6 @@ export const TemplateMainContent: React.FC = () => {
   const { templateState, setTemplateState } = useTemplate();
   const { setThemeState } = useTheme();
   const { ipcRender } = useElectron();
-  const { appState } = useAppData();
-
-  console.log(13, { appState });
 
   const handleIpc = () => {
     ipcRender(IpcRendererTypes.Ping, { data: "data" });

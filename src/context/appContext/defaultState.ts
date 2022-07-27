@@ -1,5 +1,4 @@
-import { createContext } from "react";
-import { IntAppData, IntAppContextInterface } from "./../../types";
+import { IntAppContextInterface } from "../../types";
 
 export const appDefaultState: IntAppContextInterface = {
   iconSelector: {
@@ -19,15 +18,5 @@ export const appDefaultState: IntAppContextInterface = {
     buttonPadId: "",
     actionId: ""
   },
-  breadCrumbMenus: {
-    profileId: false,
-    pageId: false,
-    buttonPadId: false,
-    actionId: false
-  }
+  breadCrumbMenus: ""
 };
-
-export const AppContext = createContext<IntAppData>({
-  appState: appDefaultState,
-  setAppState: (): void => {}
-});

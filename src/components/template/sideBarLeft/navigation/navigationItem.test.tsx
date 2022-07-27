@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import NavigationItem from "./navigationItem";
 
-import { AppContext } from "../../../../context/context";
+import { ApplicationContext } from "../../../../context/context";
 
 const mockData = [
   { name: "Local", pads: 6 },
@@ -20,9 +20,9 @@ const mockData = [
 
 const testSetup = () => {
   return render(
-    <AppContext.ThemeProvider>
+    <ApplicationContext.ThemeProvider>
       <NavigationItem data={mockData} />
-    </AppContext.ThemeProvider>
+    </ApplicationContext.ThemeProvider>
   );
 };
 

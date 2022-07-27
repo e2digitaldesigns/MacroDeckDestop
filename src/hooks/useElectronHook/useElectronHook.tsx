@@ -10,6 +10,7 @@ type TLoadAppData = () => void;
 type SaveAppData = (data: any) => void;
 
 export interface IntElectronHook {
+  ipcRenderParser: () => any;
   ipcRender: TIPCRender;
   loadAppData: TLoadAppData;
   saveAppData: SaveAppData;
@@ -48,6 +49,7 @@ const useElectronHook = (): IntElectronHook => {
   };
 
   return {
+    ipcRenderParser,
     ipcRender,
     loadAppData,
     saveAppData

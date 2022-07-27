@@ -1,5 +1,5 @@
 import React from "react";
-import { TemplateContext, TemplateContextProvider } from "./templateContext";
+import { TemplateContextProvider } from "./templateContext";
 import { ThemeContextProvider } from "./themeContext";
 
 export interface IThemeComponents {
@@ -7,7 +7,7 @@ export interface IThemeComponents {
   ThemeProvider: React.ElementType;
 }
 
-export const AppContext: React.FC & IThemeComponents = () => <div />;
+export const ApplicationContext: React.FC & IThemeComponents = () => <div />;
 
-AppContext.TemplateProvider = TemplateContextProvider;
-AppContext.ThemeProvider = ThemeContextProvider;
+ApplicationContext.TemplateProvider = TemplateContextProvider;
+ApplicationContext.ThemeProvider = ThemeContextProvider;

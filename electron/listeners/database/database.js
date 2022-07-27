@@ -24,8 +24,11 @@ const database = () => {
               !error && theJson.hasOwnProperty("settings")
                 ? theJson
                 : STARTER_JSON;
+
             event.reply("database:return", setIpAddress(useJson));
-            if (error) throw error;
+            if (error) {
+              throw error;
+            }
           });
         } catch (err) {
           console.error(err);
@@ -33,11 +36,12 @@ const database = () => {
       },
 
       saveAppData: () => {
+        console.log("save");
         try {
-          storage.set("md", data.data, error => {
-            if (error) throw error;
-            console.log("file written successfully");
-          });
+          // storage.set("md", data.data, error => {
+          //   if (error) throw error;
+          //   console.log("file written successfully");
+          // });
         } catch (err) {
           console.error(err);
         }
