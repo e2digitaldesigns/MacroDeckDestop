@@ -2,7 +2,11 @@ import React from "react";
 import * as Styled from "./app.style";
 import { ApplicationContext } from "./context/context";
 import { AppTemplate } from "./components/template/template";
-import { AppContextProvider, GlobalContextProvider } from "./context";
+import {
+  AppContextProvider,
+  DropZoneContextProvider,
+  GlobalContextProvider
+} from "./context";
 
 const App: React.FC<{}> = () => {
   return (
@@ -12,11 +16,13 @@ const App: React.FC<{}> = () => {
         <ApplicationContext.TemplateProvider>
           <GlobalContextProvider>
             <AppContextProvider>
-              <AppTemplate.Header />
-              <AppTemplate.SubHeader />
-              <AppTemplate.SidebarLeft />
-              <AppTemplate.MainContent />
-              <AppTemplate.Footer />
+              <DropZoneContextProvider>
+                <AppTemplate.Header />
+                <AppTemplate.SubHeader />
+                <AppTemplate.SidebarLeft />
+                <AppTemplate.MainContent />
+                <AppTemplate.Footer />
+              </DropZoneContextProvider>
             </AppContextProvider>
           </GlobalContextProvider>
         </ApplicationContext.TemplateProvider>
