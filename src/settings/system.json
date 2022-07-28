@@ -1,0 +1,103 @@
+{
+  "FILE_TYPES": { "ALL": "*", "EXE": ".exe", "SOUND": ".mp3" },
+  "FONT_SIZE_MIN": 16,
+  "FONT_SIZE_MAX": 40,
+  "BUTTON_PAD_AMOUNTS": [6, 8, 12, 15, 24, 32],
+  "MAX_DELAY_SECONDS": 10.5,
+  "SAVE_ON_CHANGE_PARAMS": [
+    "profiles",
+    "pages",
+    "buttonPads",
+    "actions",
+    "settings",
+    "styles"
+  ],
+  "ACTION_TYPES": [
+    { "name": "api", "display": "API", "active": true },
+    { "name": "delay", "display": "Delay", "active": true },
+    { "name": "exe", "display": "Exe", "active": true },
+    { "name": "keyTap", "display": "KeyTap", "active": true },
+    {
+      "name": "md",
+      "display": "Macro Deck",
+      "active": true,
+      "subActions": [
+        "mdHome",
+        "mdPage",
+        "mdProfile",
+        "mdProfileSelector",
+        "mdReset",
+        "mdSettings"
+      ]
+    },
+    {
+      "name": "obs",
+      "display": "OBS",
+      "active": true,
+      "subActions": [
+        "obsLayerHide",
+        "obsLayerShow",
+        "obsLayerToggle",
+        "obsRecordStart",
+        "obsRecordStop",
+        "obsRecordToggle",
+        "obsRecordPause",
+        "obsRecordResume",
+        "obsSceneChange",
+        "obsStreamStart",
+        "obsStreamStop",
+        "obsStreamToggle"
+      ]
+    },
+    { "name": "sound", "display": "Sound", "active": true },
+    {
+      "name": "spotify",
+      "display": "Spotify",
+      "active": false,
+      "subActions": [
+        "spotifyNext",
+        "spotifyPause",
+        "spotifyPrevious",
+        "spotifyStart",
+        "spotifyStop"
+      ]
+    },
+    { "name": "twitter", "display": "Twitter", "active": false }
+  ],
+  "DEFAULT_STATE": {
+    "BUTTON_PADS": {
+      "profileId": "",
+      "pageId": "-",
+      "_id": " ",
+      "buttonPadNum": -1,
+      "text": "ButtonPad",
+      "textColor": "#eeeeee",
+      "icon": "Image",
+      "iconColor": "#ffffff",
+      "image": "",
+      "bgColor": "#333333"
+    },
+    "ACTIONS": {
+      "profileId": "",
+      "pageId": "",
+      "buttonPadId": "",
+      "_id": "",
+      "order": 0,
+      "action": "md",
+      "subAction": "mdHome",
+      "seconds": 0,
+      "url": "",
+      "text": "",
+      "scene": "",
+      "layer": "",
+      "path": "",
+      "page": "",
+      "profile": ""
+    }
+  },
+  "APPLICATION": {
+    "portNumberCharLength": 4,
+    "profileNameCharLength": 18,
+    "ButtonPadTextCharLength": 15
+  }
+}

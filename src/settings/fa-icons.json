@@ -1,0 +1,2313 @@
+[
+  {
+    "_id": "gty_b-fIc",
+    "name": "address-book",
+    "display": "Address Book",
+    "active": true
+  },
+  {
+    "_id": "CCQkOZFakl",
+    "name": "address-book-o",
+    "display": "Address Book-O",
+    "active": true
+  },
+  {
+    "_id": "f4vpAZMtSL",
+    "name": "address-card",
+    "display": "Address Card",
+    "active": true
+  },
+  {
+    "_id": "Vyp_Nli6Th",
+    "name": "address-card-o",
+    "display": "Address Card-O",
+    "active": true
+  },
+  {
+    "_id": "RD9FbMeFfW",
+    "name": "adjust",
+    "display": "Adjust",
+    "active": true
+  },
+  {
+    "_id": "bk8pOFRDwW",
+    "name": "american-sign-language-interpreting",
+    "display": "American Sign-Language-Interpreting",
+    "active": true
+  },
+  {
+    "_id": "qVqjvKC8_g",
+    "name": "anchor",
+    "display": "Anchor",
+    "active": true
+  },
+  {
+    "_id": "fb6bpDI7Je",
+    "name": "archive",
+    "display": "Archive",
+    "active": true
+  },
+  {
+    "_id": "hq_8FwEPCA",
+    "name": "area-chart",
+    "display": "Area Chart",
+    "active": true
+  },
+  {
+    "_id": "-iolf1Ryvv",
+    "name": "arrows",
+    "display": "Arrows",
+    "active": true
+  },
+  {
+    "_id": "SSlb0cGdrI",
+    "name": "arrows-h",
+    "display": "Arrows H",
+    "active": true
+  },
+  {
+    "_id": "HGonVBWp7r",
+    "name": "arrows-v",
+    "display": "Arrows V",
+    "active": true
+  },
+  {
+    "_id": "yceWFDzVqz",
+    "name": "asl-interpreting",
+    "display": "Asl Interpreting",
+    "active": true
+  },
+  {
+    "_id": "bKZxu746rm",
+    "name": "assistive-listening-systems",
+    "display": "Assistive Listening-Systems",
+    "active": true
+  },
+  {
+    "_id": "gypfQwxyQg",
+    "name": "asterisk",
+    "display": "Asterisk",
+    "active": true
+  },
+  { "_id": "XW4jQRmn9f", "name": "at", "display": "At", "active": true },
+  {
+    "_id": "-7lSc28rDUj",
+    "name": "audio-description",
+    "display": "Audio Description",
+    "active": true
+  },
+  {
+    "_id": "zzwNIX4N8zX",
+    "name": "automobile",
+    "display": "Automobile",
+    "active": true
+  },
+  {
+    "_id": "zUWcCNM9o8u",
+    "name": "balance-scale",
+    "display": "Balance Scale",
+    "active": true
+  },
+  { "_id": "iZSINcJJlX5", "name": "ban", "display": "Ban", "active": true },
+  { "_id": "Z3esdbNIsix", "name": "bank", "display": "Bank", "active": true },
+  {
+    "_id": "W4QBDJzpQD6",
+    "name": "bar-chart",
+    "display": "Bar Chart",
+    "active": true
+  },
+  {
+    "_id": "-utUSGHH_de",
+    "name": "bar-chart-o",
+    "display": "Bar Chart-O",
+    "active": true
+  },
+  {
+    "_id": "QJGYhD2fq_T",
+    "name": "barcode",
+    "display": "Barcode",
+    "active": true
+  },
+  { "_id": "x4igF8si_eE", "name": "bars", "display": "Bars", "active": true },
+  { "_id": "kQey6ZhjzNk", "name": "bath", "display": "Bath", "active": true },
+  {
+    "_id": "uy8dvFz6BiU",
+    "name": "bathtub",
+    "display": "Bathtub",
+    "active": true
+  },
+  {
+    "_id": "qNWNUvubMNR",
+    "name": "battery",
+    "display": "Battery",
+    "active": true
+  },
+  {
+    "_id": "PZW173QRvi6",
+    "name": "battery-0",
+    "display": "Battery 0",
+    "active": false
+  },
+  {
+    "_id": "_SCB12f5MSk",
+    "name": "battery-1",
+    "display": "Battery 1",
+    "active": true
+  },
+  {
+    "_id": "-jB29iX5yi_",
+    "name": "battery-2",
+    "display": "Battery 2",
+    "active": true
+  },
+  {
+    "_id": "lk0dkQ8QmxO",
+    "name": "battery-3",
+    "display": "Battery 3",
+    "active": true
+  },
+  {
+    "_id": "kAxdpTdI9mq",
+    "name": "battery-4",
+    "display": "Battery 4",
+    "active": true
+  },
+  {
+    "_id": "yR9O4FRJRlt",
+    "name": "battery-empty",
+    "display": "Battery Empty",
+    "active": true
+  },
+  {
+    "_id": "7bCnQggWohE",
+    "name": "battery-full",
+    "display": "Battery Full",
+    "active": true
+  },
+  {
+    "_id": "sxQ9tqmHKS5",
+    "name": "battery-half",
+    "display": "Battery Half",
+    "active": true
+  },
+  {
+    "_id": "XYagwHZ7fpa",
+    "name": "battery-quarter",
+    "display": "Battery Quarter",
+    "active": true
+  },
+  {
+    "_id": "2t7oHkQDxOA",
+    "name": "battery-three-quarters",
+    "display": "Battery Three-Quarters",
+    "active": true
+  },
+  { "_id": "qLynVGw47l_", "name": "bed", "display": "Bed", "active": true },
+  { "_id": "z78EOBNWg3i", "name": "beer", "display": "Beer", "active": true },
+  { "_id": "J4EKmXYqU7C", "name": "bell", "display": "Bell", "active": true },
+  {
+    "_id": "NC6LvsM2uex",
+    "name": "bell-o",
+    "display": "Bell O",
+    "active": true
+  },
+  {
+    "_id": "Jj37CSfkrnf",
+    "name": "bell-slash",
+    "display": "Bell Slash",
+    "active": true
+  },
+  {
+    "_id": "9OsiGq8gWfw",
+    "name": "bell-slash-o",
+    "display": "Bell Slash-O",
+    "active": true
+  },
+  {
+    "_id": "amW3E_qLU9t",
+    "name": "bicycle",
+    "display": "Bicycle",
+    "active": true
+  },
+  {
+    "_id": "laVP36aDIwY",
+    "name": "binoculars",
+    "display": "Binoculars",
+    "active": true
+  },
+  {
+    "_id": "qHpJ41dO_Cn",
+    "name": "birthday-cake",
+    "display": "Birthday Cake",
+    "active": true
+  },
+  { "_id": "iFrvZaq6aFA", "name": "blind", "display": "Blind", "active": true },
+  {
+    "_id": "axz90yAoMWQ",
+    "name": "bluetooth",
+    "display": "Bluetooth",
+    "active": true
+  },
+  {
+    "_id": "PzY9XOMtmKr",
+    "name": "bluetooth-b",
+    "display": "Bluetooth B",
+    "active": true
+  },
+  { "_id": "QdurMVRMXfs", "name": "bolt", "display": "Bolt", "active": true },
+  { "_id": "ZFtzU9elDjn", "name": "bomb", "display": "Bomb", "active": true },
+  { "_id": "vI2EHBTeTZd", "name": "book", "display": "Book", "active": true },
+  {
+    "_id": "Exa1weo1trr",
+    "name": "bookmark",
+    "display": "Bookmark",
+    "active": true
+  },
+  {
+    "_id": "JD89Lp1TErY",
+    "name": "bookmark-o",
+    "display": "Bookmark O",
+    "active": true
+  },
+  {
+    "_id": "jdMFOcIAISD",
+    "name": "braille",
+    "display": "Braille",
+    "active": true
+  },
+  {
+    "_id": "Ms0VvvLLJeZ",
+    "name": "briefcase",
+    "display": "Briefcase",
+    "active": true
+  },
+  { "_id": "0kHgTh0xs9T", "name": "bug", "display": "Bug", "active": true },
+  {
+    "_id": "jvCJAlQgUGR",
+    "name": "building",
+    "display": "Building",
+    "active": true
+  },
+  {
+    "_id": "htfKNHcWbkb",
+    "name": "building-o",
+    "display": "Building O",
+    "active": true
+  },
+  {
+    "_id": "FCpJ-_XQLY1",
+    "name": "bullhorn",
+    "display": "Bullhorn",
+    "active": true
+  },
+  {
+    "_id": "vAFD9VmBMUC",
+    "name": "bullseye",
+    "display": "Bullseye",
+    "active": true
+  },
+  { "_id": "A0c7MYob5p2", "name": "bus", "display": "Bus", "active": true },
+  { "_id": "YDQMsUZIXr5", "name": "cab", "display": "Cab", "active": true },
+  {
+    "_id": "ddcNX7c6S5L",
+    "name": "calculator",
+    "display": "Calculator",
+    "active": true
+  },
+  {
+    "_id": "V9ZOuh1NUKR",
+    "name": "calendar",
+    "display": "Calendar",
+    "active": true
+  },
+  {
+    "_id": "270B8HPL0VT",
+    "name": "calendar-check-o",
+    "display": "Calendar Check-O",
+    "active": true
+  },
+  {
+    "_id": "w1zCYN4TgFx",
+    "name": "calendar-minus-o",
+    "display": "Calendar Minus-O",
+    "active": true
+  },
+  {
+    "_id": "uRovkCdGXGI",
+    "name": "calendar-o",
+    "display": "Calendar O",
+    "active": true
+  },
+  {
+    "_id": "aA1GwjABFMz",
+    "name": "calendar-plus-o",
+    "display": "Calendar Plus-O",
+    "active": true
+  },
+  {
+    "_id": "yAeOgPwT33E",
+    "name": "calendar-times-o",
+    "display": "Calendar Times-O",
+    "active": true
+  },
+  {
+    "_id": "dacqedi9uOp",
+    "name": "camera",
+    "display": "Camera",
+    "active": true
+  },
+  {
+    "_id": "nI-sUsBOoHe",
+    "name": "camera-retro",
+    "display": "Camera Retro",
+    "active": true
+  },
+  { "_id": "W6BLPz3-10l", "name": "car", "display": "Car", "active": true },
+  {
+    "_id": "LMs9fY071rH",
+    "name": "caret-square-o-down",
+    "display": "Caret Square-O-Down",
+    "active": true
+  },
+  {
+    "_id": "6d2oG_Izup8",
+    "name": "caret-square-o-left",
+    "display": "Caret Square-O-Left",
+    "active": true
+  },
+  {
+    "_id": "HJnCQQsvHUL",
+    "name": "caret-square-o-right",
+    "display": "Caret Square-O-Right",
+    "active": true
+  },
+  {
+    "_id": "P-40X1mGqXP",
+    "name": "caret-square-o-up",
+    "display": "Caret Square-O-Up",
+    "active": true
+  },
+  {
+    "_id": "M6tg2rSWV1J",
+    "name": "cart-arrow-down",
+    "display": "Cart Arrow-Down",
+    "active": true
+  },
+  {
+    "_id": "iTWigPTPMci",
+    "name": "cart-plus",
+    "display": "Cart Plus",
+    "active": true
+  },
+  { "_id": "TAn-bdVINB7", "name": "cc", "display": "Cc", "active": true },
+  {
+    "_id": "gQrHEY4JnrL",
+    "name": "certificate",
+    "display": "Certificate",
+    "active": true
+  },
+  { "_id": "__oNzu1PNYH", "name": "check", "display": "Check", "active": true },
+  {
+    "_id": "GftWfdZRkQq",
+    "name": "check-circle",
+    "display": "Check Circle",
+    "active": true
+  },
+  {
+    "_id": "qKrNPP66U_p",
+    "name": "check-circle-o",
+    "display": "Check Circle-O",
+    "active": true
+  },
+  {
+    "_id": "NpLi8Rg4Oc9",
+    "name": "check-square",
+    "display": "Check Square",
+    "active": true
+  },
+  {
+    "_id": "e9DFVV_lGH3",
+    "name": "check-square-o",
+    "display": "Check Square-O",
+    "active": true
+  },
+  { "_id": "4Ckf21fxLqg", "name": "child", "display": "Child", "active": true },
+  {
+    "_id": "EdLiDVoILIr",
+    "name": "circle",
+    "display": "Circle",
+    "active": true
+  },
+  {
+    "_id": "qj-0sunnaAR",
+    "name": "circle-o",
+    "display": "Circle O",
+    "active": true
+  },
+  {
+    "_id": "CUnpLmVRWG2",
+    "name": "circle-o-notch",
+    "display": "Circle O-Notch",
+    "active": true
+  },
+  {
+    "_id": "vmkA-tnNrRn",
+    "name": "circle-thin",
+    "display": "Circle Thin",
+    "active": true
+  },
+  {
+    "_id": "A2uyYvHS24W",
+    "name": "clock-o",
+    "display": "Clock O",
+    "active": true
+  },
+  { "_id": "A008zSzSFHf", "name": "clone", "display": "Clone", "active": true },
+  { "_id": "3GffvUidcVu", "name": "close", "display": "Close", "active": true },
+  { "_id": "Clf3UaNGdRO", "name": "cloud", "display": "Cloud", "active": true },
+  {
+    "_id": "a9uXALPCYAS",
+    "name": "cloud-download",
+    "display": "Cloud Download",
+    "active": true
+  },
+  {
+    "_id": "NX3YqED76HS",
+    "name": "cloud-upload",
+    "display": "Cloud Upload",
+    "active": true
+  },
+  { "_id": "5i0LGWjl23S", "name": "code", "display": "Code", "active": true },
+  {
+    "_id": "7t6wglI6nx8",
+    "name": "code-fork",
+    "display": "Code Fork",
+    "active": true
+  },
+  {
+    "_id": "Qb-DaZf7BfK",
+    "name": "coffee",
+    "display": "Coffee",
+    "active": true
+  },
+  { "_id": "nrC9q_-3OG4", "name": "cog", "display": "Cog", "active": true },
+  { "_id": "ORb7K_mNzJd", "name": "cogs", "display": "Cogs", "active": true },
+  {
+    "_id": "o2Gd8QAh7z1",
+    "name": "comment",
+    "display": "Comment",
+    "active": true
+  },
+  {
+    "_id": "L1OGXzG41U0",
+    "name": "comment-o",
+    "display": "Comment O",
+    "active": true
+  },
+  {
+    "_id": "r-LTg-7e3ec",
+    "name": "commenting",
+    "display": "Commenting",
+    "active": true
+  },
+  {
+    "_id": "LhDKyLMDkBb",
+    "name": "commenting-o",
+    "display": "Commenting O",
+    "active": true
+  },
+  {
+    "_id": "JmoFESPzg9K",
+    "name": "comments",
+    "display": "Comments",
+    "active": true
+  },
+  {
+    "_id": "pLckp6QzMxT",
+    "name": "comments-o",
+    "display": "Comments O",
+    "active": true
+  },
+  {
+    "_id": "6rREb-zwv2h",
+    "name": "compass",
+    "display": "Compass",
+    "active": true
+  },
+  {
+    "_id": "UC7eoDHcG-f",
+    "name": "copyright",
+    "display": "Copyright",
+    "active": true
+  },
+  {
+    "_id": "E4YH2JAcPwJ",
+    "name": "creative-commons",
+    "display": "Creative Commons",
+    "active": true
+  },
+  {
+    "_id": "G6-8zJiMOTZ",
+    "name": "credit-card",
+    "display": "Credit Card",
+    "active": true
+  },
+  {
+    "_id": "KgdTJbmNvyl",
+    "name": "credit-card-alt",
+    "display": "Credit Card-Alt",
+    "active": true
+  },
+  { "_id": "hfvsTrXX_fZ", "name": "crop", "display": "Crop", "active": true },
+  {
+    "_id": "LHikcu4Ol3y",
+    "name": "crosshairs",
+    "display": "Crosshairs",
+    "active": true
+  },
+  { "_id": "cUVoqWOFrfi", "name": "cube", "display": "Cube", "active": true },
+  { "_id": "YtNqmwZg1R7", "name": "cubes", "display": "Cubes", "active": true },
+  {
+    "_id": "d4rg5P8qi5w",
+    "name": "cutlery",
+    "display": "Cutlery",
+    "active": true
+  },
+  {
+    "_id": "u4GGy-gEEGk",
+    "name": "dashboard",
+    "display": "Dashboard",
+    "active": true
+  },
+  {
+    "_id": "XexN0fkyNp7",
+    "name": "database",
+    "display": "Database",
+    "active": true
+  },
+  { "_id": "M39nDcRY5Ce", "name": "deaf", "display": "Deaf", "active": true },
+  {
+    "_id": "xJ5K2u28klm",
+    "name": "deafness",
+    "display": "Deafness",
+    "active": true
+  },
+  {
+    "_id": "svf-F5hXzb5",
+    "name": "desktop",
+    "display": "Desktop",
+    "active": true
+  },
+  {
+    "_id": "xjdz5s7AJPZ",
+    "name": "diamond",
+    "display": "Diamond",
+    "active": true
+  },
+  {
+    "_id": "PjdJiXK3Zhb",
+    "name": "dot-circle-o",
+    "display": "Dot Circle-O",
+    "active": true
+  },
+  {
+    "_id": "Cb_9_wW2O5x",
+    "name": "download",
+    "display": "Download",
+    "active": true
+  },
+  {
+    "_id": "YDH6jb_XMZo",
+    "name": "drivers-license",
+    "display": "Drivers License",
+    "active": true
+  },
+  {
+    "_id": "zD4bG9MvVKA",
+    "name": "drivers-license-o",
+    "display": "Drivers License-O",
+    "active": true
+  },
+  { "_id": "j3v1PsTN04r", "name": "edit", "display": "Edit", "active": true },
+  {
+    "_id": "PSKFB7hAYN1",
+    "name": "ellipsis-h",
+    "display": "Ellipsis H",
+    "active": true
+  },
+  {
+    "_id": "qfniGcAXZHs",
+    "name": "ellipsis-v",
+    "display": "Ellipsis V",
+    "active": true
+  },
+  {
+    "_id": "JUJIwmZ7Sgi",
+    "name": "envelope",
+    "display": "Envelope",
+    "active": true
+  },
+  {
+    "_id": "5oXFS_tazw1",
+    "name": "envelope-o",
+    "display": "Envelope O",
+    "active": true
+  },
+  {
+    "_id": "J4GabeC_-rY",
+    "name": "envelope-open",
+    "display": "Envelope Open",
+    "active": true
+  },
+  {
+    "_id": "hyjO7yOyfmY",
+    "name": "envelope-open-o",
+    "display": "Envelope Open-O",
+    "active": true
+  },
+  {
+    "_id": "-5OAhoq9pBC",
+    "name": "envelope-square",
+    "display": "Envelope Square",
+    "active": true
+  },
+  {
+    "_id": "f2lkanUId7a",
+    "name": "eraser",
+    "display": "Eraser",
+    "active": true
+  },
+  {
+    "_id": "3L4Qy_zE4rT",
+    "name": "exchange",
+    "display": "Exchange",
+    "active": true
+  },
+  {
+    "_id": "K0LwYqjjX27",
+    "name": "exclamation",
+    "display": "Exclamation",
+    "active": true
+  },
+  {
+    "_id": "kOxvUT9rtZc",
+    "name": "exclamation-circle",
+    "display": "Exclamation Circle",
+    "active": true
+  },
+  {
+    "_id": "rIVYIPwoB2m",
+    "name": "exclamation-triangle",
+    "display": "Exclamation Triangle",
+    "active": true
+  },
+  {
+    "_id": "3amX_KYdNJk",
+    "name": "external-link",
+    "display": "External Link",
+    "active": true
+  },
+  {
+    "_id": "f_8HAzzPisx",
+    "name": "external-link-square",
+    "display": "External Link-Square",
+    "active": true
+  },
+  { "_id": "IIoZ6uA0BEc", "name": "eye", "display": "Eye", "active": true },
+  {
+    "_id": "bd92-fgHU1N",
+    "name": "eye-slash",
+    "display": "Eye Slash",
+    "active": true
+  },
+  {
+    "_id": "wqh4tfM76OT",
+    "name": "eyedropper",
+    "display": "Eyedropper",
+    "active": true
+  },
+  { "_id": "Q9hf-3oaxmS", "name": "fax", "display": "Fax", "active": true },
+  { "_id": "4ifcPvi2NGf", "name": "feed", "display": "Feed", "active": true },
+  {
+    "_id": "BIKnUJmcKE8",
+    "name": "female",
+    "display": "Female",
+    "active": true
+  },
+  {
+    "_id": "z1HpBx-78RB",
+    "name": "fighter-jet",
+    "display": "Fighter Jet",
+    "active": true
+  },
+  {
+    "_id": "_EUzRgliBYr",
+    "name": "file-archive-o",
+    "display": "File Archive-O",
+    "active": true
+  },
+  {
+    "_id": "wI58yxNP_-d",
+    "name": "file-audio-o",
+    "display": "File Audio-O",
+    "active": true
+  },
+  {
+    "_id": "30CHc6_EYQH",
+    "name": "file-code-o",
+    "display": "File Code-O",
+    "active": true
+  },
+  {
+    "_id": "-q_AYdn0Roz",
+    "name": "file-excel-o",
+    "display": "File Excel-O",
+    "active": true
+  },
+  {
+    "_id": "UwVtnpSjiJ1",
+    "name": "file-image-o",
+    "display": "File Image-O",
+    "active": true
+  },
+  {
+    "_id": "t8pL9kO_gWo",
+    "name": "file-movie-o",
+    "display": "File Movie-O",
+    "active": true
+  },
+  {
+    "_id": "nvLmPFpedOp",
+    "name": "file-pdf-o",
+    "display": "File Pdf-O",
+    "active": true
+  },
+  {
+    "_id": "dwkfgfVO7kB",
+    "name": "file-photo-o",
+    "display": "File Photo-O",
+    "active": true
+  },
+  {
+    "_id": "N02ZSOjyXPd",
+    "name": "file-picture-o",
+    "display": "File Picture-O",
+    "active": true
+  },
+  {
+    "_id": "aXmLvOKyPMh",
+    "name": "file-powerpoint-o",
+    "display": "File Powerpoint-O",
+    "active": true
+  },
+  {
+    "_id": "NXjpJ_XwVdK",
+    "name": "file-sound-o",
+    "display": "File Sound-O",
+    "active": true
+  },
+  {
+    "_id": "qqDBw8TT5Ng",
+    "name": "file-video-o",
+    "display": "File Video-O",
+    "active": true
+  },
+  {
+    "_id": "FLB7Gh18-Sz",
+    "name": "file-word-o",
+    "display": "File Word-O",
+    "active": true
+  },
+  {
+    "_id": "F9otDzsfUWB",
+    "name": "file-zip-o",
+    "display": "File Zip-O",
+    "active": true
+  },
+  { "_id": "yDTbrVbRsTm", "name": "film", "display": "Film", "active": true },
+  {
+    "_id": "C4x2dw2zD6Y",
+    "name": "filter",
+    "display": "Filter",
+    "active": true
+  },
+  { "_id": "oSjWfolikkr", "name": "fire", "display": "Fire", "active": true },
+  {
+    "_id": "sPAEryWqC3o",
+    "name": "fire-extinguisher",
+    "display": "Fire Extinguisher",
+    "active": true
+  },
+  { "_id": "LbAl36u3z6S", "name": "flag", "display": "Flag", "active": true },
+  {
+    "_id": "9ueuL2VEHIh",
+    "name": "flag-checkered",
+    "display": "Flag Checkered",
+    "active": true
+  },
+  {
+    "_id": "lz4mGDVQC3N",
+    "name": "flag-o",
+    "display": "Flag O",
+    "active": true
+  },
+  { "_id": "Au2E-KO4wCD", "name": "flash", "display": "Flash", "active": true },
+  { "_id": "GNHzQUEspPe", "name": "flask", "display": "Flask", "active": true },
+  {
+    "_id": "ysnE7sfSPUv",
+    "name": "folder",
+    "display": "Folder",
+    "active": true
+  },
+  {
+    "_id": "bBseq93yzyH",
+    "name": "folder-o",
+    "display": "Folder O",
+    "active": true
+  },
+  {
+    "_id": "UeRbs7R6amx",
+    "name": "folder-open",
+    "display": "Folder Open",
+    "active": true
+  },
+  {
+    "_id": "ZeT6-B_BeB4",
+    "name": "folder-open-o",
+    "display": "Folder Open-O",
+    "active": true
+  },
+  {
+    "_id": "B2uq5LxDF4H",
+    "name": "frown-o",
+    "display": "Frown O",
+    "active": true
+  },
+  {
+    "_id": "HLtsByvpo9M",
+    "name": "futbol-o",
+    "display": "Futbol O",
+    "active": true
+  },
+  {
+    "_id": "nhCtoatFEMZ",
+    "name": "gamepad",
+    "display": "Gamepad",
+    "active": true
+  },
+  { "_id": "CiOynjhaKp5", "name": "gavel", "display": "Gavel", "active": true },
+  { "_id": "9VdUSMOaK8L", "name": "gear", "display": "Gear", "active": true },
+  { "_id": "GQ3MiIYD52m", "name": "gears", "display": "Gears", "active": true },
+  { "_id": "5QJS6_j3J9E", "name": "gift", "display": "Gift", "active": true },
+  { "_id": "IL_z5wc0mqZ", "name": "glass", "display": "Glass", "active": true },
+  { "_id": "eoUtdXfr0NH", "name": "globe", "display": "Globe", "active": true },
+  {
+    "_id": "f3n1L3U-Xt4",
+    "name": "graduation-cap",
+    "display": "Graduation Cap",
+    "active": true
+  },
+  { "_id": "YXKpwsPUPKa", "name": "group", "display": "Group", "active": true },
+  {
+    "_id": "LYEmlO9JaU_",
+    "name": "hand-grab-o",
+    "display": "Hand Grab-O",
+    "active": true
+  },
+  {
+    "_id": "bZ8tH7uyKPw",
+    "name": "hand-lizard-o",
+    "display": "Hand Lizard-O",
+    "active": true
+  },
+  {
+    "_id": "9svBcTOLeun",
+    "name": "hand-paper-o",
+    "display": "Hand Paper-O",
+    "active": true
+  },
+  {
+    "_id": "zhy8b9EKmmR",
+    "name": "hand-peace-o",
+    "display": "Hand Peace-O",
+    "active": true
+  },
+  {
+    "_id": "PNNNlmmgCV9",
+    "name": "hand-pointer-o",
+    "display": "Hand Pointer-O",
+    "active": true
+  },
+  {
+    "_id": "MzRbHCZsno1",
+    "name": "hand-rock-o",
+    "display": "Hand Rock-O",
+    "active": true
+  },
+  {
+    "_id": "l6RsjVbkQF_",
+    "name": "hand-scissors-o",
+    "display": "Hand Scissors-O",
+    "active": true
+  },
+  {
+    "_id": "7LtcygyzKXJ",
+    "name": "hand-spock-o",
+    "display": "Hand Spock-O",
+    "active": true
+  },
+  {
+    "_id": "vmSWLBYhSJo",
+    "name": "hand-stop-o",
+    "display": "Hand Stop-O",
+    "active": true
+  },
+  {
+    "_id": "o_dujyfdHsP",
+    "name": "handshake-o",
+    "display": "Handshake O",
+    "active": true
+  },
+  {
+    "_id": "gmDZsMWTQl2",
+    "name": "hard-of-hearing",
+    "display": "Hard Of-Hearing",
+    "active": true
+  },
+  {
+    "_id": "CH6DcbaAhhj",
+    "name": "hashtag",
+    "display": "Hashtag",
+    "active": true
+  },
+  { "_id": "7wCqgI7KM3C", "name": "hdd-o", "display": "Hdd O", "active": true },
+  {
+    "_id": "YgBUKijwIss",
+    "name": "headphones",
+    "display": "Headphones",
+    "active": true
+  },
+  { "_id": "fv9iOIAFlYz", "name": "heart", "display": "Heart", "active": true },
+  {
+    "_id": "PMqLOzok5Hj",
+    "name": "heart-o",
+    "display": "Heart O",
+    "active": true
+  },
+  {
+    "_id": "T5BW-gda23V",
+    "name": "heartbeat",
+    "display": "Heartbeat",
+    "active": true
+  },
+  {
+    "_id": "dcfO5mXmw6H",
+    "name": "history",
+    "display": "History",
+    "active": true
+  },
+  { "_id": "Kix-SaJSh9R", "name": "home", "display": "Home", "active": true },
+  { "_id": "kJ6K2sMVEuf", "name": "hotel", "display": "Hotel", "active": true },
+  {
+    "_id": "fBjNWSh8xam",
+    "name": "hourglass",
+    "display": "Hourglass",
+    "active": true
+  },
+  {
+    "_id": "HaUuOYE4sSV",
+    "name": "hourglass-1",
+    "display": "Hourglass 1",
+    "active": true
+  },
+  {
+    "_id": "l3QFl0I3uzX",
+    "name": "hourglass-2",
+    "display": "Hourglass 2",
+    "active": true
+  },
+  {
+    "_id": "Tp22J0rztML",
+    "name": "hourglass-3",
+    "display": "Hourglass 3",
+    "active": true
+  },
+  {
+    "_id": "KB6-xigQ8NW",
+    "name": "hourglass-end",
+    "display": "Hourglass End",
+    "active": true
+  },
+  {
+    "_id": "NMOvE4J5IkD",
+    "name": "hourglass-half",
+    "display": "Hourglass Half",
+    "active": true
+  },
+  {
+    "_id": "4ShUlaJso-L",
+    "name": "hourglass-o",
+    "display": "Hourglass O",
+    "active": true
+  },
+  {
+    "_id": "omi6GvTxGYo",
+    "name": "hourglass-start",
+    "display": "Hourglass Start",
+    "active": true
+  },
+  {
+    "_id": "YPdUf9IgH3b",
+    "name": "i-cursor",
+    "display": "I Cursor",
+    "active": true
+  },
+  {
+    "_id": "sOiO9Xar3jj",
+    "name": "id-badge",
+    "display": "Id Badge",
+    "active": true
+  },
+  {
+    "_id": "zX6N9oOXmTT",
+    "name": "id-card",
+    "display": "Id Card",
+    "active": true
+  },
+  {
+    "_id": "xWpSZskCm90",
+    "name": "id-card-o",
+    "display": "Id Card-O",
+    "active": true
+  },
+  { "_id": "2PNZRQxhM0m", "name": "image", "display": "Image", "active": true },
+  { "_id": "UaDaXUN1-uN", "name": "inbox", "display": "Inbox", "active": true },
+  {
+    "_id": "Jy1izYINi1a",
+    "name": "industry",
+    "display": "Industry",
+    "active": true
+  },
+  { "_id": "dcok4PDaC4J", "name": "info", "display": "Info", "active": true },
+  {
+    "_id": "elisioKl63U",
+    "name": "info-circle",
+    "display": "Info Circle",
+    "active": true
+  },
+  {
+    "_id": "g8-bpmHBV7j",
+    "name": "institution",
+    "display": "Institution",
+    "active": true
+  },
+  { "_id": "yF4Rwl7UuO_", "name": "key", "display": "Key", "active": true },
+  {
+    "_id": "XBnLLBTKRAw",
+    "name": "keyboard-o",
+    "display": "Keyboard O",
+    "active": true
+  },
+  {
+    "_id": "wGeueRDxck3",
+    "name": "language",
+    "display": "Language",
+    "active": true
+  },
+  {
+    "_id": "TuMnRudXVvu",
+    "name": "laptop",
+    "display": "Laptop",
+    "active": true
+  },
+  { "_id": "iitftA7U5ZV", "name": "leaf", "display": "Leaf", "active": true },
+  { "_id": "L-yk1IiDnW0", "name": "legal", "display": "Legal", "active": true },
+  {
+    "_id": "KST9Ofv0tvI",
+    "name": "lemon-o",
+    "display": "Lemon O",
+    "active": true
+  },
+  {
+    "_id": "weF8FxiG3er",
+    "name": "level-down",
+    "display": "Level Down",
+    "active": true
+  },
+  {
+    "_id": "0BrM-yLjNr9",
+    "name": "level-up",
+    "display": "Level Up",
+    "active": true
+  },
+  {
+    "_id": "9gq_GlBUY0r",
+    "name": "life-bouy",
+    "display": "Life Bouy",
+    "active": true
+  },
+  {
+    "_id": "D2SZ4-tUWmh",
+    "name": "life-buoy",
+    "display": "Life Buoy",
+    "active": true
+  },
+  {
+    "_id": "G6L5J90nBVG",
+    "name": "life-ring",
+    "display": "Life Ring",
+    "active": true
+  },
+  {
+    "_id": "NBTjQ5Sm2Bq",
+    "name": "life-saver",
+    "display": "Life Saver",
+    "active": true
+  },
+  {
+    "_id": "jNIw2vealmO",
+    "name": "lightbulb-o",
+    "display": "Lightbulb O",
+    "active": true
+  },
+  {
+    "_id": "TQuqNv1OuDP",
+    "name": "line-chart",
+    "display": "Line Chart",
+    "active": true
+  },
+  {
+    "_id": "3FTRH8usQ3T",
+    "name": "location-arrow",
+    "display": "Location Arrow",
+    "active": true
+  },
+  { "_id": "szF0oeEqdN_", "name": "lock", "display": "Lock", "active": true },
+  {
+    "_id": "GhJVrI-GWdx",
+    "name": "low-vision",
+    "display": "Low Vision",
+    "active": true
+  },
+  { "_id": "zoZWOcoFwMH", "name": "magic", "display": "Magic", "active": true },
+  {
+    "_id": "BwOIzFDjxR-",
+    "name": "magnet",
+    "display": "Magnet",
+    "active": true
+  },
+  {
+    "_id": "IXo2QwILrL0",
+    "name": "mail-forward",
+    "display": "Mail Forward",
+    "active": true
+  },
+  {
+    "_id": "isUNiMi1iE1",
+    "name": "mail-reply",
+    "display": "Mail Reply",
+    "active": true
+  },
+  {
+    "_id": "6KlIEKnQBEv",
+    "name": "mail-reply-all",
+    "display": "Mail Reply-All",
+    "active": true
+  },
+  { "_id": "evcjEKFsOYt", "name": "male", "display": "Male", "active": true },
+  { "_id": "AoAAVmbg43i", "name": "map", "display": "Map", "active": true },
+  {
+    "_id": "P1tIM2kVnkZ",
+    "name": "map-marker",
+    "display": "Map Marker",
+    "active": true
+  },
+  { "_id": "Yf_XXDikWuQ", "name": "map-o", "display": "Map O", "active": true },
+  {
+    "_id": "ddLLussdENf",
+    "name": "map-pin",
+    "display": "Map Pin",
+    "active": true
+  },
+  {
+    "_id": "mZquHum2SZ3",
+    "name": "map-signs",
+    "display": "Map Signs",
+    "active": true
+  },
+  {
+    "_id": "ab1GgctPr3x-",
+    "name": "meh-o",
+    "display": "Meh O",
+    "active": true
+  },
+  {
+    "_id": "bai6xSUV7r8N",
+    "name": "microchip",
+    "display": "Microchip",
+    "active": true
+  },
+  {
+    "_id": "HnkwjbAz0Ry0",
+    "name": "microphone",
+    "display": "Microphone",
+    "active": true
+  },
+  {
+    "_id": "SRQnP1m4j3M9",
+    "name": "microphone-slash",
+    "display": "Microphone Slash",
+    "active": true
+  },
+  {
+    "_id": "iUUP9Z2Cvx_v",
+    "name": "minus",
+    "display": "Minus",
+    "active": true
+  },
+  {
+    "_id": "M7mHf8EjNBgH",
+    "name": "minus-circle",
+    "display": "Minus Circle",
+    "active": true
+  },
+  {
+    "_id": "NH1bhPxuZPmJ",
+    "name": "minus-square",
+    "display": "Minus Square",
+    "active": true
+  },
+  {
+    "_id": "JQEbd91D8h6t",
+    "name": "minus-square-o",
+    "display": "Minus Square-O",
+    "active": true
+  },
+  {
+    "_id": "CWt8pZtGI-pL",
+    "name": "mobile",
+    "display": "Mobile",
+    "active": true
+  },
+  {
+    "_id": "FDLZA_5FRK2i",
+    "name": "mobile-phone",
+    "display": "Mobile Phone",
+    "active": true
+  },
+  {
+    "_id": "fA_DtOdDeQ4X",
+    "name": "money",
+    "display": "Money",
+    "active": true
+  },
+  {
+    "_id": "YSlgpTXqxm9_",
+    "name": "moon-o",
+    "display": "Moon O",
+    "active": true
+  },
+  {
+    "_id": "4aOSSp3XZiMm",
+    "name": "mortar-board",
+    "display": "Mortar Board",
+    "active": true
+  },
+  {
+    "_id": "nWzr2Cpn6BZs",
+    "name": "motorcycle",
+    "display": "Motorcycle",
+    "active": true
+  },
+  {
+    "_id": "_7d-NgK70Cjy",
+    "name": "mouse-pointer",
+    "display": "Mouse Pointer",
+    "active": true
+  },
+  {
+    "_id": "vfHkMByIuhrN",
+    "name": "music",
+    "display": "Music",
+    "active": true
+  },
+  {
+    "_id": "ZKTC4Uq5vKwT",
+    "name": "navicon",
+    "display": "Navicon",
+    "active": true
+  },
+  {
+    "_id": "QzxYKh8fFTAs",
+    "name": "newspaper-o",
+    "display": "Newspaper O",
+    "active": true
+  },
+  {
+    "_id": "wuIyhHa3T7M0",
+    "name": "object-group",
+    "display": "Object Group",
+    "active": true
+  },
+  {
+    "_id": "UjbHD4NwAXZN",
+    "name": "object-ungroup",
+    "display": "Object Ungroup",
+    "active": true
+  },
+  {
+    "_id": "NJvCeX0ErZhS",
+    "name": "paint-brush",
+    "display": "Paint Brush",
+    "active": true
+  },
+  {
+    "_id": "GFoME8ELup8M",
+    "name": "paper-plane",
+    "display": "Paper Plane",
+    "active": true
+  },
+  {
+    "_id": "il65aaKoLiHw",
+    "name": "paper-plane-o",
+    "display": "Paper Plane-O",
+    "active": true
+  },
+  { "_id": "TcCFsy7YOjT9", "name": "paw", "display": "Paw", "active": true },
+  {
+    "_id": "6mfnqNwGhCLF",
+    "name": "pencil",
+    "display": "Pencil",
+    "active": true
+  },
+  {
+    "_id": "iQ2w2SJLE2er",
+    "name": "pencil-square",
+    "display": "Pencil Square",
+    "active": true
+  },
+  {
+    "_id": "vXunnrGeznDv",
+    "name": "pencil-square-o",
+    "display": "Pencil Square-O",
+    "active": true
+  },
+  {
+    "_id": "K3D42fXlCTJs",
+    "name": "percent",
+    "display": "Percent",
+    "active": true
+  },
+  {
+    "_id": "-LZGD8lv5XWY",
+    "name": "phone",
+    "display": "Phone",
+    "active": true
+  },
+  {
+    "_id": "VSPcaYG6OmG3",
+    "name": "phone-square",
+    "display": "Phone Square",
+    "active": true
+  },
+  {
+    "_id": "rQHiUMcS6yCs",
+    "name": "photo",
+    "display": "Photo",
+    "active": true
+  },
+  {
+    "_id": "sX-5Rg1MfDD7",
+    "name": "picture-o",
+    "display": "Picture O",
+    "active": true
+  },
+  {
+    "_id": "Eq9IQGDzSQKO",
+    "name": "pie-chart",
+    "display": "Pie Chart",
+    "active": true
+  },
+  {
+    "_id": "MtvJyG4Vjxle",
+    "name": "plane",
+    "display": "Plane",
+    "active": true
+  },
+  { "_id": "C_lS6RAZwcuO", "name": "plug", "display": "Plug", "active": true },
+  { "_id": "KEaHjdFO9ND1", "name": "plus", "display": "Plus", "active": true },
+  {
+    "_id": "YH2PyWj7dX1d",
+    "name": "plus-circle",
+    "display": "Plus Circle",
+    "active": true
+  },
+  {
+    "_id": "ekEFfgPyW2ng",
+    "name": "plus-square",
+    "display": "Plus Square",
+    "active": true
+  },
+  {
+    "_id": "Gw1zS8j2Dm1H",
+    "name": "plus-square-o",
+    "display": "Plus Square-O",
+    "active": true
+  },
+  {
+    "_id": "TeAAGwHVZvLv",
+    "name": "podcast",
+    "display": "Podcast",
+    "active": true
+  },
+  {
+    "_id": "XzP2a97TcWQ4",
+    "name": "power-off",
+    "display": "Power Off",
+    "active": true
+  },
+  {
+    "_id": "5YXZZXELqFbe",
+    "name": "print",
+    "display": "Print",
+    "active": true
+  },
+  {
+    "_id": "n6M7nUd-5583",
+    "name": "puzzle-piece",
+    "display": "Puzzle Piece",
+    "active": true
+  },
+  {
+    "_id": "0Dbsap1EZmmA",
+    "name": "qrcode",
+    "display": "Qrcode",
+    "active": true
+  },
+  {
+    "_id": "_X0zxI1lzZST",
+    "name": "question",
+    "display": "Question",
+    "active": true
+  },
+  {
+    "_id": "OUHdYMu6Uz0N",
+    "name": "question-circle",
+    "display": "Question Circle",
+    "active": true
+  },
+  {
+    "_id": "wQVlpWwlA52T",
+    "name": "question-circle-o",
+    "display": "Question Circle-O",
+    "active": true
+  },
+  {
+    "_id": "CqyRDryEjMH4",
+    "name": "quote-left",
+    "display": "Quote Left",
+    "active": true
+  },
+  {
+    "_id": "foWaIjAYF3G4",
+    "name": "quote-right",
+    "display": "Quote Right",
+    "active": true
+  },
+  {
+    "_id": "eR9gM6LFmFZO",
+    "name": "random",
+    "display": "Random",
+    "active": true
+  },
+  {
+    "_id": "3zFFe3rUVuZY",
+    "name": "recycle",
+    "display": "Recycle",
+    "active": true
+  },
+  {
+    "_id": "3EDuMGK8juPI",
+    "name": "refresh",
+    "display": "Refresh",
+    "active": true
+  },
+  {
+    "_id": "zxYxQ8TM2dyk",
+    "name": "registered",
+    "display": "Registered",
+    "active": true
+  },
+  {
+    "_id": "_SgrnEq94BeX",
+    "name": "remove",
+    "display": "Remove",
+    "active": true
+  },
+  {
+    "_id": "pqHGgJln8bv9",
+    "name": "reorder",
+    "display": "Reorder",
+    "active": true
+  },
+  {
+    "_id": "pRQ_FEbfVzmC",
+    "name": "reply",
+    "display": "Reply",
+    "active": true
+  },
+  {
+    "_id": "vCOCEZB4MzI9",
+    "name": "reply-all",
+    "display": "Reply All",
+    "active": true
+  },
+  {
+    "_id": "RKUAwweiyujN",
+    "name": "retweet",
+    "display": "Retweet",
+    "active": true
+  },
+  { "_id": "KxPmKQdU6IdR", "name": "road", "display": "Road", "active": true },
+  {
+    "_id": "z8yREdPbvifm",
+    "name": "rocket",
+    "display": "Rocket",
+    "active": true
+  },
+  { "_id": "lPQpffkQjrTf", "name": "rss", "display": "Rss", "active": true },
+  {
+    "_id": "B1ntztflVwJT",
+    "name": "rss-square",
+    "display": "Rss Square",
+    "active": true
+  },
+  { "_id": "IknuqJvR8R_H", "name": "s15", "display": "S15", "active": true },
+  {
+    "_id": "lxIdaXHzs_uz",
+    "name": "search",
+    "display": "Search",
+    "active": true
+  },
+  {
+    "_id": "S5se7FYNg9A7",
+    "name": "search-minus",
+    "display": "Search Minus",
+    "active": true
+  },
+  {
+    "_id": "_KDE_RPZbOKH",
+    "name": "search-plus",
+    "display": "Search Plus",
+    "active": true
+  },
+  { "_id": "simdB25oTIkG", "name": "send", "display": "Send", "active": true },
+  {
+    "_id": "z92FEANREMJb",
+    "name": "send-o",
+    "display": "Send O",
+    "active": true
+  },
+  {
+    "_id": "QGM5Xe_WUf7f",
+    "name": "server",
+    "display": "Server",
+    "active": true
+  },
+  {
+    "_id": "0z7LC86lTgR4",
+    "name": "share",
+    "display": "Share",
+    "active": true
+  },
+  {
+    "_id": "u_c-O9BGU4sr",
+    "name": "share-alt",
+    "display": "Share Alt",
+    "active": true
+  },
+  {
+    "_id": "LshElAhdlDj0",
+    "name": "share-alt-square",
+    "display": "Share Alt-Square",
+    "active": true
+  },
+  {
+    "_id": "Q19FGDr2RW2z",
+    "name": "share-square",
+    "display": "Share Square",
+    "active": true
+  },
+  {
+    "_id": "1FZnCOxaiyK3",
+    "name": "share-square-o",
+    "display": "Share Square-O",
+    "active": true
+  },
+  {
+    "_id": "FQ_Ai8wxrdi2",
+    "name": "shield",
+    "display": "Shield",
+    "active": true
+  },
+  { "_id": "C63AnCdi_phT", "name": "ship", "display": "Ship", "active": true },
+  {
+    "_id": "FO6SceieoAlu",
+    "name": "shopping-bag",
+    "display": "Shopping Bag",
+    "active": true
+  },
+  {
+    "_id": "FnaRcNj79cyI",
+    "name": "shopping-basket",
+    "display": "Shopping Basket",
+    "active": true
+  },
+  {
+    "_id": "5f64iDsd6OiA",
+    "name": "shopping-cart",
+    "display": "Shopping Cart",
+    "active": true
+  },
+  {
+    "_id": "Sw4WG4Gkvin-",
+    "name": "shower",
+    "display": "Shower",
+    "active": true
+  },
+  {
+    "_id": "ZUG1PFKxOhiu",
+    "name": "sign-in",
+    "display": "Sign In",
+    "active": true
+  },
+  {
+    "_id": "hMR8Cxx6Nrf_",
+    "name": "sign-language",
+    "display": "Sign Language",
+    "active": true
+  },
+  {
+    "_id": "txHkDwJmbRJv",
+    "name": "sign-out",
+    "display": "Sign Out",
+    "active": true
+  },
+  {
+    "_id": "ZZdczifGxkJb",
+    "name": "signal",
+    "display": "Signal",
+    "active": true
+  },
+  {
+    "_id": "GbBSJXe51hOm",
+    "name": "signing",
+    "display": "Signing",
+    "active": true
+  },
+  {
+    "_id": "ZkIR4CbK3EMt",
+    "name": "sitemap",
+    "display": "Sitemap",
+    "active": true
+  },
+  {
+    "_id": "rB22ilamMhIC",
+    "name": "sliders",
+    "display": "Sliders",
+    "active": true
+  },
+  {
+    "_id": "hdyW-zikU_df",
+    "name": "smile-o",
+    "display": "Smile O",
+    "active": true
+  },
+  {
+    "_id": "0lkowL52Ebwp",
+    "name": "snowflake-o",
+    "display": "Snowflake O",
+    "active": true
+  },
+  {
+    "_id": "6aTCAuFhM5GL",
+    "name": "soccer-ball-o",
+    "display": "Soccer Ball-O",
+    "active": true
+  },
+  { "_id": "cpqOwK2rp_HJ", "name": "sort", "display": "Sort", "active": true },
+  {
+    "_id": "FGicZY6qbi2R",
+    "name": "sort-alpha-asc",
+    "display": "Sort Alpha-Asc",
+    "active": true
+  },
+  {
+    "_id": "FgINp6LY0bTT",
+    "name": "sort-alpha-desc",
+    "display": "Sort Alpha-Desc",
+    "active": true
+  },
+  {
+    "_id": "0I0m7fraa0ri",
+    "name": "sort-amount-asc",
+    "display": "Sort Amount-Asc",
+    "active": true
+  },
+  {
+    "_id": "QSMvJAoh4Pv1",
+    "name": "sort-amount-desc",
+    "display": "Sort Amount-Desc",
+    "active": true
+  },
+  {
+    "_id": "8adaqlsTUcz0",
+    "name": "sort-asc",
+    "display": "Sort Asc",
+    "active": true
+  },
+  {
+    "_id": "HNjORvhoJvTz",
+    "name": "sort-desc",
+    "display": "Sort Desc",
+    "active": true
+  },
+  {
+    "_id": "kHK7ckawnE_s",
+    "name": "sort-down",
+    "display": "Sort Down",
+    "active": true
+  },
+  {
+    "_id": "tbThnUxjtzjv",
+    "name": "sort-numeric-asc",
+    "display": "Sort Numeric-Asc",
+    "active": true
+  },
+  {
+    "_id": "0DycaRTlx3dm",
+    "name": "sort-numeric-desc",
+    "display": "Sort Numeric-Desc",
+    "active": true
+  },
+  {
+    "_id": "RhSQSuNb6pTN",
+    "name": "sort-up",
+    "display": "Sort Up",
+    "active": true
+  },
+  {
+    "_id": "q0zgrokW9uex",
+    "name": "space-shuttle",
+    "display": "Space Shuttle",
+    "active": true
+  },
+  {
+    "_id": "2w5P11hU6w8D",
+    "name": "spinner",
+    "display": "Spinner",
+    "active": true
+  },
+  {
+    "_id": "35HcHDMJd4nk",
+    "name": "spoon",
+    "display": "Spoon",
+    "active": true
+  },
+  {
+    "_id": "8b7lroxCXjxt",
+    "name": "square",
+    "display": "Square",
+    "active": true
+  },
+  {
+    "_id": "2V8wxgIzboCb",
+    "name": "square-o",
+    "display": "Square O",
+    "active": true
+  },
+  { "_id": "2KK9k3fzjDMX", "name": "star", "display": "Star", "active": true },
+  {
+    "_id": "BbG-wJo3DPse",
+    "name": "star-half",
+    "display": "Star Half",
+    "active": true
+  },
+  {
+    "_id": "2Ktalqf-2Rvr",
+    "name": "star-half-empty",
+    "display": "Star Half-Empty",
+    "active": true
+  },
+  {
+    "_id": "uDYMpP3oBcEi",
+    "name": "star-half-full",
+    "display": "Star Half-Full",
+    "active": true
+  },
+  {
+    "_id": "d0EUoJiz0Su_",
+    "name": "star-half-o",
+    "display": "Star Half-O",
+    "active": true
+  },
+  {
+    "_id": "PCj86nbQjHjk",
+    "name": "star-o",
+    "display": "Star O",
+    "active": true
+  },
+  {
+    "_id": "_V6byeS-cHki",
+    "name": "sticky-note",
+    "display": "Sticky Note",
+    "active": true
+  },
+  {
+    "_id": "tGkWBisN1FaR",
+    "name": "sticky-note-o",
+    "display": "Sticky Note-O",
+    "active": true
+  },
+  {
+    "_id": "iT6tzWP8WqdQ",
+    "name": "street-view",
+    "display": "Street View",
+    "active": true
+  },
+  {
+    "_id": "7Bm0Wt1XeopO",
+    "name": "suitcase",
+    "display": "Suitcase",
+    "active": true
+  },
+  {
+    "_id": "mzjnWm3C5QDs",
+    "name": "sun-o",
+    "display": "Sun O",
+    "active": true
+  },
+  {
+    "_id": "HSsIDSbkeybA",
+    "name": "support",
+    "display": "Support",
+    "active": true
+  },
+  {
+    "_id": "es4N_9y4cpXj",
+    "name": "tablet",
+    "display": "Tablet",
+    "active": true
+  },
+  {
+    "_id": "i1CTQosDYr9o",
+    "name": "tachometer",
+    "display": "Tachometer",
+    "active": true
+  },
+  { "_id": "Ed3hSUNLkkoa", "name": "tag", "display": "Tag", "active": true },
+  { "_id": "XKAdf-t95KzI", "name": "tags", "display": "Tags", "active": true },
+  {
+    "_id": "2AdEf8HfCKAR",
+    "name": "tasks",
+    "display": "Tasks",
+    "active": true
+  },
+  { "_id": "he-VvLKaGBAw", "name": "taxi", "display": "Taxi", "active": true },
+  {
+    "_id": "WdGadulQOj2K",
+    "name": "television",
+    "display": "Television",
+    "active": true
+  },
+  {
+    "_id": "JJyWNBw_O8Dp",
+    "name": "terminal",
+    "display": "Terminal",
+    "active": true
+  },
+  {
+    "_id": "Z5QjE_ZSAEgQ",
+    "name": "thermometer",
+    "display": "Thermometer",
+    "active": true
+  },
+  {
+    "_id": "jEWe0GlaVkPN",
+    "name": "thermometer-0",
+    "display": "Thermometer 0",
+    "active": false
+  },
+  {
+    "_id": "3LBCUHl3ddVw",
+    "name": "thermometer-1",
+    "display": "Thermometer 1",
+    "active": true
+  },
+  {
+    "_id": "pudS_86n74yN",
+    "name": "thermometer-2",
+    "display": "Thermometer 2",
+    "active": true
+  },
+  {
+    "_id": "CGYa74O_Hoz2",
+    "name": "thermometer-3",
+    "display": "Thermometer 3",
+    "active": true
+  },
+  {
+    "_id": "Pv0i68GRyQI7",
+    "name": "thermometer-4",
+    "display": "Thermometer 4",
+    "active": true
+  },
+  {
+    "_id": "iIKzDLiddZEA",
+    "name": "thermometer-empty",
+    "display": "Thermometer Empty",
+    "active": true
+  },
+  {
+    "_id": "WM5J4_LpzIc_",
+    "name": "thermometer-full",
+    "display": "Thermometer Full",
+    "active": true
+  },
+  {
+    "_id": "hYAbrE_6DCFw",
+    "name": "thermometer-half",
+    "display": "Thermometer Half",
+    "active": true
+  },
+  {
+    "_id": "QmLSpPX_Hl9o",
+    "name": "thermometer-quarter",
+    "display": "Thermometer Quarter",
+    "active": true
+  },
+  {
+    "_id": "JiGtj4cVHdGp",
+    "name": "thermometer-three-quarters",
+    "display": "Thermometer Three-Quarters",
+    "active": true
+  },
+  {
+    "_id": "gfEvGqFiWSQ0",
+    "name": "thumb-tack",
+    "display": "Thumb Tack",
+    "active": true
+  },
+  {
+    "_id": "PcX2J-mGi_69",
+    "name": "thumbs-down",
+    "display": "Thumbs Down",
+    "active": true
+  },
+  {
+    "_id": "1GCnDfEcfGHt",
+    "name": "thumbs-o-down",
+    "display": "Thumbs O-Down",
+    "active": true
+  },
+  {
+    "_id": "PNbxWm83YQZe",
+    "name": "thumbs-o-up",
+    "display": "Thumbs O-Up",
+    "active": true
+  },
+  {
+    "_id": "-LUL6r4eYgVY",
+    "name": "thumbs-up",
+    "display": "Thumbs Up",
+    "active": true
+  },
+  {
+    "_id": "g9O29hKeA8YV",
+    "name": "ticket",
+    "display": "Ticket",
+    "active": true
+  },
+  {
+    "_id": "9bSbeY-SzeZq",
+    "name": "times",
+    "display": "Times",
+    "active": true
+  },
+  {
+    "_id": "d12zoARFRkwH",
+    "name": "times-circle",
+    "display": "Times Circle",
+    "active": true
+  },
+  {
+    "_id": "HEFevo_B_crq",
+    "name": "times-circle-o",
+    "display": "Times Circle-O",
+    "active": true
+  },
+  {
+    "_id": "bJumEAw1Psb6",
+    "name": "times-rectangle",
+    "display": "Times Rectangle",
+    "active": true
+  },
+  {
+    "_id": "Nthg1vqKK5rd",
+    "name": "times-rectangle-o",
+    "display": "Times Rectangle-O",
+    "active": true
+  },
+  { "_id": "xe1hoMLqaeHV", "name": "tint", "display": "Tint", "active": true },
+  {
+    "_id": "4uqC8CAEXNxS",
+    "name": "toggle-down",
+    "display": "Toggle Down",
+    "active": true
+  },
+  {
+    "_id": "6I1MymJXSNsg",
+    "name": "toggle-left",
+    "display": "Toggle Left",
+    "active": true
+  },
+  {
+    "_id": "_VNhgML9MiQM",
+    "name": "toggle-off",
+    "display": "Toggle Off",
+    "active": true
+  },
+  {
+    "_id": "Dl6bXwAsL-a4",
+    "name": "toggle-on",
+    "display": "Toggle On",
+    "active": true
+  },
+  {
+    "_id": "MNJJxyhuBkkS",
+    "name": "toggle-right",
+    "display": "Toggle Right",
+    "active": true
+  },
+  {
+    "_id": "1kN8pyJCrZOZ",
+    "name": "toggle-up",
+    "display": "Toggle Up",
+    "active": true
+  },
+  {
+    "_id": "7KqtRYOyRGPL",
+    "name": "trademark",
+    "display": "Trademark",
+    "active": true
+  },
+  {
+    "_id": "N_rU5vk4nEpE",
+    "name": "trash",
+    "display": "Trash",
+    "active": true
+  },
+  {
+    "_id": "r1wTW-vj6UdH",
+    "name": "trash-o",
+    "display": "Trash O",
+    "active": true
+  },
+  { "_id": "reHjSojl9Qyp", "name": "tree", "display": "Tree", "active": true },
+  {
+    "_id": "CfFYyXubRutg",
+    "name": "trophy",
+    "display": "Trophy",
+    "active": true
+  },
+  {
+    "_id": "-Cpi6vqC-M78",
+    "name": "truck",
+    "display": "Truck",
+    "active": true
+  },
+  { "_id": "s9obWL2vAkGr", "name": "tty", "display": "Tty", "active": true },
+  { "_id": "5hCfWI7lpryk", "name": "tv", "display": "Tv", "active": true },
+  {
+    "_id": "dMA7gY8eNdpD",
+    "name": "umbrella",
+    "display": "Umbrella",
+    "active": true
+  },
+  {
+    "_id": "ucIFmYEqcZiy",
+    "name": "universal-access",
+    "display": "Universal Access",
+    "active": true
+  },
+  {
+    "_id": "wHvzDcpZTiYf",
+    "name": "university",
+    "display": "University",
+    "active": true
+  },
+  {
+    "_id": "LZ4_fqOFayOJ",
+    "name": "unlock",
+    "display": "Unlock",
+    "active": true
+  },
+  {
+    "_id": "qHQuskVwL0eS",
+    "name": "unlock-alt",
+    "display": "Unlock Alt",
+    "active": true
+  },
+  {
+    "_id": "66znjQ_nydaW",
+    "name": "unsorted",
+    "display": "Unsorted",
+    "active": true
+  },
+  {
+    "_id": "9JSf5NdPR-DB",
+    "name": "upload",
+    "display": "Upload",
+    "active": true
+  },
+  { "_id": "Ok9Qkkjg-Y5G", "name": "user", "display": "User", "active": true },
+  {
+    "_id": "YqLNLKf3YAXJ",
+    "name": "user-circle",
+    "display": "User Circle",
+    "active": true
+  },
+  {
+    "_id": "rWSR2mRxBuha",
+    "name": "user-circle-o",
+    "display": "User Circle-O",
+    "active": true
+  },
+  {
+    "_id": "AaVw0_jiZ1op",
+    "name": "user-o",
+    "display": "User O",
+    "active": true
+  },
+  {
+    "_id": "AE6NI2QJWqHu",
+    "name": "user-plus",
+    "display": "User Plus",
+    "active": true
+  },
+  {
+    "_id": "8d5mLVqEfF9Q",
+    "name": "user-secret",
+    "display": "User Secret",
+    "active": true
+  },
+  {
+    "_id": "STBRBRbrocGh",
+    "name": "user-times",
+    "display": "User Times",
+    "active": true
+  },
+  {
+    "_id": "HDto3uj6h2Y2",
+    "name": "users",
+    "display": "Users",
+    "active": true
+  },
+  {
+    "_id": "t3igp1J09E2x",
+    "name": "vcard",
+    "display": "Vcard",
+    "active": true
+  },
+  {
+    "_id": "2VjEFzx4YmqI",
+    "name": "vcard-o",
+    "display": "Vcard O",
+    "active": true
+  },
+  {
+    "_id": "wTZc3xviwtOb",
+    "name": "video-camera",
+    "display": "Video Camera",
+    "active": true
+  },
+  {
+    "_id": "uqKRchAd66YR",
+    "name": "volume-control-phone",
+    "display": "Volume Control-Phone",
+    "active": true
+  },
+  {
+    "_id": "hVpDeWprNllA",
+    "name": "volume-down",
+    "display": "Volume Down",
+    "active": true
+  },
+  {
+    "_id": "oP0I0AhsJKQI",
+    "name": "volume-off",
+    "display": "Volume Off",
+    "active": true
+  },
+  {
+    "_id": "VJThl_scaiWt",
+    "name": "volume-up",
+    "display": "Volume Up",
+    "active": true
+  },
+  {
+    "_id": "waEmBpQtC0EI",
+    "name": "warning",
+    "display": "Warning",
+    "active": true
+  },
+  {
+    "_id": "KIFTP4ZTUoVo",
+    "name": "wheelchair",
+    "display": "Wheelchair",
+    "active": true
+  },
+  {
+    "_id": "kaypjCTFuADr",
+    "name": "wheelchair-alt",
+    "display": "Wheelchair Alt",
+    "active": true
+  },
+  { "_id": "BO2QqxdEVJiy", "name": "wifi", "display": "Wifi", "active": true },
+  {
+    "_id": "pBoSAY-a60oM",
+    "name": "window-close",
+    "display": "Window Close",
+    "active": true
+  },
+  {
+    "_id": "Jt6gJPU8ljpl",
+    "name": "window-close-o",
+    "display": "Window Close-O",
+    "active": true
+  },
+  {
+    "_id": "ZAWQ2DR8jjBs",
+    "name": "window-maximize",
+    "display": "Window Maximize",
+    "active": true
+  },
+  {
+    "_id": "hI-sOgzNiEnv",
+    "name": "window-minimize",
+    "display": "Window Minimize",
+    "active": true
+  },
+  {
+    "_id": "mJIF_mZgzIej",
+    "name": "window-restore",
+    "display": "Window Restore",
+    "active": true
+  },
+  {
+    "_id": "QuMsX7eAk3JI",
+    "name": "wrench",
+    "display": "Wrench",
+    "active": true
+  }
+]
