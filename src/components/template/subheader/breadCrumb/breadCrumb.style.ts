@@ -19,10 +19,20 @@ export const Label = styled.div`
   font-size: 0.75rem;
 `;
 
-export const Title = styled.div`
-  font-size: 0.875rem;
+export const TitleDiv = styled.div`
   display: flex;
   padding-top: 0.125rem;
+`;
+
+interface IntTitle {
+  width: number;
+}
+
+export const Title = styled.div<IntTitle>`
+  font-size: 0.875rem;
+  width: ${props => (props.width ? props.width + "px" : "auto")};
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 
 export const CaretHolder = styled.div`

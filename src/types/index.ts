@@ -1,5 +1,6 @@
 /* istanbul ignore file */
 export * from "./appContextTypes";
+export * from "./buttonPadGridTypes";
 export * from "./dragAndDropTypes";
 export * from "./globalContextType";
 export * from "./ipcRenderTypes";

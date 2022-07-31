@@ -5,18 +5,11 @@ export const appDefaultState: IntAppContextInterface = {
     isVisible: false,
     icon: ""
   },
-  dropZones: {
-    actionList: false,
-    buttonPads: false,
-    sideBarProfiles: false,
-    sideBarStyles: false,
-    styleHeader: false
-  },
   active: {
     profileId: "",
     pageId: "",
     buttonPadId: "",
     actionId: ""
   },
-  breadCrumbMenus: ""
+  breadCrumbMenu: ""
 };

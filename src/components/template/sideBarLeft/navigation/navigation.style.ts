@@ -4,9 +4,13 @@ export const NavigationWrapper = styled.div`
   height: 300px;
 `;
 
-export const NavigationItem = styled.div`
+interface IntNavigationItem {
+  active: boolean;
+}
+
+export const NavigationItem = styled.div<IntNavigationItem>`
   height: 30px;
-  background-color: #32363f;
+  background-color: ${props => (props.active ? "#111" : "#32363f")};
   border-top: 1px solid #42464e;
 
   display: grid;

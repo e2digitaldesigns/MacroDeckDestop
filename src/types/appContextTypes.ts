@@ -5,6 +5,13 @@ export interface IntbreadCrumbMenus {
   actionId: boolean;
 }
 
+export enum BreadCrumbMenuTypes {
+  Profile = "profile",
+  Page = "page",
+  ButtonPad = "buttonPad",
+  Action = "action"
+}
+
 export interface IntAppDataIconSelector {
   icon: string;
   isVisible: boolean;
@@ -27,8 +34,7 @@ export interface IntDropZones {
 
 export interface IntAppContextInterface {
   active: IntAppDataActive;
-  breadCrumbMenus: any;
-  dropZones: IntDropZones;
+  breadCrumbMenu: BreadCrumbMenuTypes | "";
   iconSelector: IntAppDataIconSelector;
 }
 

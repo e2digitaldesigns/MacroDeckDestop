@@ -24,10 +24,11 @@ export const SearchStatsCount = styled.span`
   color: #8498d2;
 `;
 
-export const SearchShowAll = styled.a`
+export const SearchShowAll = styled.div`
   color: #8498d2;
   justify-content: right;
   text-align: right;
+  cursor: pointer;
 `;
 
 export const SearchBox = styled.input.attrs({

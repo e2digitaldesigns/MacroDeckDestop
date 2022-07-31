@@ -1,0 +1,19 @@
+{
+  "iconSelector": {
+    "isVisible": false,
+    "icon": ""
+  },
+  "active": {
+    "profileId": "",
+    "pageId": "",
+    "buttonPadId": "",
+    "actionId": ""
+  },
+  "dropZones": {
+    "actionList": false,
+    "buttonPads": false,
+    "sideBarProfiles": false,
+    "sideBarStyles": false,
+    "styleHeader": false
+  }
+}

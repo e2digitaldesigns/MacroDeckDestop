@@ -1,22 +1,108 @@
 import React from "react";
 import * as Styled from "./breadCrumbMenu.style";
+import {
+  BreadCrumbMenuTypes,
+  IntButtonPads,
+  IntPages,
+  IntProfile
+} from "../../../../types";
+import {
+  useActions,
+  useAppData,
+  useButton,
+  usePage,
+  useProfile
+} from "../../../../hooks";
+import _map from "lodash/map";
+import { IntActions } from "./../../../../types/globalContextType";
 
 export interface IntBreadCrumbMenu {
-  type: string;
+  dropDownType: string;
+  handleSetActiveBreadCrumbMenu: (
+    activeMenu: BreadCrumbMenuTypes | null
+  ) => void;
 }
 
-const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({ type }) => {
-  return (
-    <Styled.BreadCrumbMenu>
-      <Styled.BreadCrumbMenuItem>Page 001</Styled.BreadCrumbMenuItem>
-      <Styled.BreadCrumbMenuItem active={true}>
-        Page 002
-      </Styled.BreadCrumbMenuItem>
-      <Styled.BreadCrumbMenuItem>Page 003</Styled.BreadCrumbMenuItem>
-      <Styled.BreadCrumbMenuItem>Page 004</Styled.BreadCrumbMenuItem>
-      <Styled.BreadCrumbMenuItem>Page 005</Styled.BreadCrumbMenuItem>
-    </Styled.BreadCrumbMenu>
-  );
+const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
+  dropDownType,
+  handleSetActiveBreadCrumbMenu
+}) => {
+  const { appState } = useAppData();
+  const { activateProfile, readProfiles } = useProfile();
+  const { activatePage, readPages } = usePage();
+  const { activateButtonPad, readButtonPads } = useButton();
+  const { activateAction, getActions } = useActions();
+
+  const handleOnClick = (func: (_id: string) => void, _id: string): void => {
+    handleSetActiveBreadCrumbMenu(null);
+    func(_id);
+  };
+
+  if (dropDownType === BreadCrumbMenuTypes.Profile) {
+    return (
+      <Styled.BreadCrumbMenu>
+        {_map(readProfiles(), (item: IntProfile) => (
+          <Styled.BreadCrumbMenuItem
+            active={item._id === appState.active.profileId}
+            key={item._id}
+            onClick={() => handleOnClick(activateProfile, item._id)}
+          >
+            {item.profileName}
+          </Styled.BreadCrumbMenuItem>
+        ))}
+      </Styled.BreadCrumbMenu>
+    );
+  }
+
+  if (dropDownType === BreadCrumbMenuTypes.Page) {
+    return (
+      <Styled.BreadCrumbMenu>
+        {_map(readPages(), (item: IntPages) => (
+          <Styled.BreadCrumbMenuItem
+            active={item._id === appState.active.pageId}
+            key={item._id}
+            onClick={() => handleOnClick(activatePage, item._id)}
+          >
+            page: {item.number}
+          </Styled.BreadCrumbMenuItem>
+        ))}
+      </Styled.BreadCrumbMenu>
+    );
+  }
+
+  if (dropDownType === BreadCrumbMenuTypes.ButtonPad) {
+    return (
+      <Styled.BreadCrumbMenu>
+        {_map(readButtonPads(), (item: IntButtonPads) => (
+          <Styled.BreadCrumbMenuItem
+            active={item._id === appState.active.buttonPadId}
+            key={item._id}
+            onClick={() => handleOnClick(activateButtonPad, item._id)}
+          >
+            button pad: {item.buttonPadNum}
+          </Styled.BreadCrumbMenuItem>
+        ))}
+      </Styled.BreadCrumbMenu>
+    );
+  }
+
+  if (dropDownType === BreadCrumbMenuTypes.Action) {
+    return (
+      <Styled.BreadCrumbMenu>
+        {_map(getActions(), (item: IntActions) => (
+          <Styled.BreadCrumbMenuItem
+            active={item._id === appState.active.actionId}
+            key={item._id}
+            onClick={() => handleOnClick(activateAction, item._id)}
+          >
+            {item.order} | {item.action}
+          </Styled.BreadCrumbMenuItem>
+        ))}
+      </Styled.BreadCrumbMenu>
+    );
+  }
+
+  return null;
 };
 
 export default BreadCrumbMenu;
