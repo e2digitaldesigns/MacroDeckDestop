@@ -32,7 +32,7 @@ export interface IntUsePageHook {
 const usePageHook = (): IntUsePageHook => {
   const globalData: IntGlobalData = useGlobalData();
   const appData: IntAppData = useAppData();
-  const { pageObj } = useObj();
+  const { actionObj, buttonPadObj, pageObj, profileObj } = useObj();
 
   const sortPages = (profileId: string | null = null) => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
@@ -49,9 +49,23 @@ const usePageHook = (): IntUsePageHook => {
 
   const activatePage: IntUsePageHook["activatePage"] = _id => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
+    const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
+
+    const buttonPadId =
+      _sortBy(
+        _filter(state?.buttonPads, (f: IntButtonPads) => f.pageId === _id),
+        "buttonPadNum"
+      )?.[0]?._id || "";
+
+    const actionId =
+      _filter(
+        state?.actions,
+        (f: IntActions) => f.buttonPadId === buttonPadId
+      )?.[0]?._id || "";
+
     appState.active.pageId = _id;
-    appState.active.buttonPadId = "";
-    appState.active.actionId = "";
+    appState.active.buttonPadId = buttonPadId;
+    appState.active.actionId = actionId;
     appData.setAppState(appState);
   };
 
@@ -90,15 +104,34 @@ const usePageHook = (): IntUsePageHook => {
   const createPage = () => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
-    const page: IntPages = pageObj();
 
+    const page: IntPages = pageObj();
     page.profileId = appState.active.profileId;
-    state.pages.push(page);
-    globalData.setState(state);
 
     appState.active.pageId = page._id;
     appState.active.buttonPadId = "";
     appState.active.actionId = "";
+    appData.setAppState(appState);
+
+    const buttonPad = buttonPadObj();
+    buttonPad.profileId = page.profileId;
+    buttonPad.pageId = page._id;
+    buttonPad.buttonPadNum = 1;
+
+    const action = actionObj();
+    action.profileId = page.profileId;
+    action.pageId = page._id;
+    action.buttonPadId = buttonPad._id;
+
+    state.pages.push(page);
+    state.buttonPads.push(buttonPad);
+    state.actions.push(action);
+    globalData.setState(state);
+
+    appState.active.profileId = page.profileId;
+    appState.active.pageId = page._id;
+    appState.active.buttonPadId = buttonPad._id;
+    appState.active.actionId = action._id;
     appData.setAppState(appState);
   };
 
