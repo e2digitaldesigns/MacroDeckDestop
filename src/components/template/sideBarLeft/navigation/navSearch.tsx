@@ -9,29 +9,22 @@ import _size from "lodash/size";
 import { IntProfile } from "../../../../types";
 
 interface IntNavigationSearch {
-  setFilterProfiles: React.Dispatch<React.SetStateAction<IntProfile[]>>;
+  count: number;
+  searchText: string;
+  setSearchText: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const NavigationSearch: React.FC<IntNavigationSearch> = ({
-  setFilterProfiles
+  count,
+  searchText,
+  setSearchText
 }) => {
   const globalData = useGlobalData();
   const profiles = globalData?.state?.profiles || [];
-  const [searchText, setSearchText] = React.useState<string>("");
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
-
-  const filteredProfiles = searchText
-    ? _filter(profiles, (profile: IntProfile) =>
-        _includes(_toLower(profile.profileName), _toLower(searchText))
-      )
-    : profiles;
-
-  React.useEffect(() => {
-    setFilterProfiles(filteredProfiles);
-  }, [filteredProfiles]);
 
   return (
     <Styled.SearchWrapper>
@@ -40,7 +33,7 @@ const NavigationSearch: React.FC<IntNavigationSearch> = ({
         <div>
           Viewing
           <Styled.SearchStatsCount>
-            {_size(filteredProfiles)}/ {_size(profiles)}{" "}
+            {count}/ {_size(profiles)}{" "}
           </Styled.SearchStatsCount>
         </div>
 
