@@ -4,19 +4,9 @@ import { render } from "@testing-library/react";
 import NavigationItem from "./navigationItem";
 
 import { ApplicationContext } from "../../../../context/context";
+import { IntProfile } from "../../../../types";
 
-const mockData = [
-  { name: "Local", pads: 6 },
-  { name: "Remote", pads: 12 },
-  { name: "Issues", pads: 9 },
-  { name: "Teams", pads: 15 },
-  { name: "Tags", pads: 18 },
-  { name: "Local", pads: 6 },
-  { name: "Remote", pads: 12 },
-  { name: "Issues", pads: 9 },
-  { name: "Teams", pads: 15 },
-  { name: "Tags", pads: 18 }
-];
+const mockData: IntProfile = { _id: "01", profileName: "Local", buttonPads: 6 };
 
 const testSetup = () => {
   return render(
