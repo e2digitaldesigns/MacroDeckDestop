@@ -14,11 +14,6 @@ export enum DragAndDropDataTypes {
   OriginPadNumber = "DragAndDropOriginPadNumber"
 }
 
-interface IntIconSelector {
-  isVisible: boolean;
-  icon: string;
-}
-
 interface IntDropZones {
   actionList: boolean;
   buttonPads: boolean;

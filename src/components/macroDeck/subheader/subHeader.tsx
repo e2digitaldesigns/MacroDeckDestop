@@ -50,7 +50,7 @@ const BreadWrapper: React.FC<IntBreadWrapper> = ({
   );
 };
 
-export const TemplateSubHeader: React.FC = () => {
+export const MacroDeckSubHeader: React.FC = () => {
   const [activeBreadCrumbMenu, setActiveBreadCrumbMenu] =
     React.useState<BreadCrumbMenuTypes | null>(BreadCrumbMenuTypes.Page);
   const { readPage, totalPages } = usePage();
