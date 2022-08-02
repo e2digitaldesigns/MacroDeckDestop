@@ -2,7 +2,6 @@ import _cloneDeep from "lodash/cloneDeep";
 import _filter from "lodash/filter";
 import _find from "lodash/find";
 import _findIndex from "lodash/findIndex";
-import _map from "lodash/map";
 import _sortBy from "lodash/sortBy";
 
 import { useAppData, useGlobalData } from "../";
@@ -32,7 +31,7 @@ export interface IntUsePageHook {
 const usePageHook = (): IntUsePageHook => {
   const globalData: IntGlobalData = useGlobalData();
   const appData: IntAppData = useAppData();
-  const { actionObj, buttonPadObj, pageObj, profileObj } = useObj();
+  const { actionObj, buttonPadObj, pageObj } = useObj();
 
   const sortPages = (profileId: string | null = null) => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);

@@ -1,6 +1,6 @@
 import React from "react";
 import { useElectron, useTemplate, useTheme } from "../../../hooks";
-import * as Styled from "./mainContent.style";
+import * as Styled from "../../../styles/app.style";
 import * as themes from "../../../context/themeContext/themes";
 import { IpcRendererTypes } from "../../../types";
 

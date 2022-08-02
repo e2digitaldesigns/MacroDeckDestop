@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styled from "./app.style";
+import * as Styled from "./styles/global.style";
 import { ApplicationContext } from "./context/context";
 
 import {
