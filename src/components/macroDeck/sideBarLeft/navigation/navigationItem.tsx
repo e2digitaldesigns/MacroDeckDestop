@@ -2,12 +2,7 @@ import React from "react";
 import { Folder2 } from "react-bootstrap-icons";
 //https://icons.getbootstrap.com/
 
-import {
-  useAppData,
-  useDragDrop,
-  useGlobalData,
-  useProfile
-} from "../../../../hooks";
+import { useAppData, useDragDrop, useProfile } from "../../../../hooks";
 import * as Styled from "./navigation.style";
 import { IntProfile } from "../../../../types";
 
@@ -16,27 +11,9 @@ interface IntNavigationItem {
 }
 
 const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
-  const globalData = useGlobalData();
   const { activateProfile } = useProfile();
   const { appState } = useAppData();
-  const { menuAllowDrop, menuDragEnd, menuDragStart, menuItemDrop } =
-    useDragDrop();
-  const profileItemRef = React.useRef<any>(null);
-
-  React.useEffect(() => {
-    profileItemRef?.current?.addEventListener("dragstart", (e: any) =>
-      menuDragStart(e, profile._id)
-    );
-    profileItemRef?.current?.addEventListener("dragend", menuDragEnd);
-
-    return () => {
-      profileItemRef?.current?.removeEventListener("dragstart", (e: any) =>
-        menuDragStart(e, profile._id)
-      );
-
-      profileItemRef?.current?.removeEventListener("dragend", menuDragEnd);
-    };
-  }, [profileItemRef, profile._id]);
+  const { allowDrop, itemDrop, dragDropRef } = useDragDrop(profile._id);
 
   const handleProfileActivate = (
     event: React.FormEvent<HTMLDivElement>
@@ -51,9 +28,9 @@ const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
       data-testid="side_bar_item__component"
       draggable={true}
       onClick={handleProfileActivate}
-      onDragOver={menuAllowDrop}
-      onDrop={e => menuItemDrop(e, profile._id)}
-      ref={profileItemRef}
+      onDragOver={allowDrop}
+      onDrop={e => itemDrop(e, profile._id)}
+      ref={dragDropRef}
     >
       <div>
         <Folder2 size={16} />

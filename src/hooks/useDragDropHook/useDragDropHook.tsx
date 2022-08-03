@@ -1,43 +1,75 @@
 import * as React from "react";
-
 import _cloneDeep from "lodash/cloneDeep";
 import _findIndex from "lodash/findIndex";
-
 import { IntProfile } from "../../types";
 import useGlobalData from "./../useGlobalDataHook/useGlobalDataHook";
 
-type TMenuAllowDrop = (e: React.DragEvent<HTMLDivElement>) => void;
-type TMenuDragEnd = (e: React.DragEvent<HTMLDivElement>) => void;
-type TMenuDragStart = (e: React.DragEvent<HTMLDivElement>, _id: string) => void;
-type TMenuItemDrop = (e: React.DragEvent<HTMLDivElement>, _id: string) => void;
-
-interface IntUseDragDropHook {
-  menuAllowDrop: TMenuAllowDrop;
-  menuDragEnd: TMenuDragEnd;
-  menuDragStart: TMenuDragStart;
-  menuItemDrop: TMenuItemDrop;
+enum DragDropStates {
+  DragStart = "dragstart",
+  DragEnd = "dragend"
 }
 
-const useDragDropHook = (): IntUseDragDropHook => {
-  const globalData = useGlobalData();
+enum DragDropDataKeys {
+  Action = "dndAction",
+  DragId = "dragId"
+}
 
-  const menuAllowDrop: TMenuAllowDrop = e => {
+type TAllowDrop = (e: React.DragEvent<HTMLDivElement>) => void;
+type TDragEnd = (e: React.DragEvent<HTMLDivElement>) => void;
+type TDragStart = (e: React.DragEvent<HTMLDivElement>, _id: string) => void;
+type TItemDrop = (e: React.DragEvent<HTMLDivElement>, _id: string) => void;
+
+interface IntUseDragDropHook {
+  dragDropRef: any;
+  allowDrop: TAllowDrop;
+  itemDrop: TItemDrop;
+}
+
+const useDragDropHook = (draggingId: string): IntUseDragDropHook => {
+  const globalData = useGlobalData();
+  const dragDropRef = React.useRef<any>(null);
+
+  React.useEffect(() => {
+    let buttonPadRefCleanUp = dragDropRef.current;
+
+    const menuDragEnd: TDragEnd = e => {};
+
+    const menuDragStart: TDragStart = (e, _id) => {
+      e.dataTransfer.setData(DragDropDataKeys.DragId, _id);
+    };
+
+    buttonPadRefCleanUp.addEventListener(
+      DragDropStates.DragStart,
+      (e: React.DragEvent<HTMLDivElement>) => menuDragStart(e, draggingId)
+    );
+    buttonPadRefCleanUp.addEventListener(
+      DragDropStates.DragEnd,
+      (e: React.DragEvent<HTMLDivElement>) => menuDragEnd(e)
+    );
+
+    return () => {
+      buttonPadRefCleanUp.removeEventListener(
+        DragDropStates.DragStart,
+        (e: React.DragEvent<HTMLDivElement>) => menuDragStart(e, draggingId)
+      );
+
+      buttonPadRefCleanUp.removeEventListener(
+        DragDropStates.DragEnd,
+        (e: React.DragEvent<HTMLDivElement>) => menuDragEnd(e)
+      );
+
+      buttonPadRefCleanUp = null;
+    };
+  }, [dragDropRef, draggingId]);
+
+  const allowDrop: TAllowDrop = e => {
     e.preventDefault();
   };
 
-  const menuDragEnd: TMenuDragEnd = e => {
-    console.log(27, "handleDragEnd HOOK");
-  };
-
-  const menuDragStart: TMenuDragStart = (e, _id) => {
-    e.dataTransfer.setData("dndAction", "sideBarProfileSort");
-    e.dataTransfer.setData("dragId", _id);
-  };
-
-  const menuItemDrop: TMenuItemDrop = (e, _id) => {
+  const itemDrop: TItemDrop = (e, _id) => {
     const newState = _cloneDeep(globalData.state);
 
-    const dragId = e.dataTransfer.getData("dragId");
+    const dragId = e.dataTransfer.getData(DragDropDataKeys.DragId);
 
     const dragIndex = _findIndex(
       newState.profiles,
@@ -60,14 +92,13 @@ const useDragDropHook = (): IntUseDragDropHook => {
       newState.profiles.splice(dragIndex, 1);
     }
 
-    if (dragIndex !== dropIndex) globalData.setState(newState);
+    dragIndex !== dropIndex && globalData.setState(newState);
   };
 
   return {
-    menuAllowDrop,
-    menuDragEnd,
-    menuDragStart,
-    menuItemDrop
+    dragDropRef,
+    allowDrop,
+    itemDrop
   };
 };
 
