@@ -1,5 +1,5 @@
 import React from "react";
-import { Folder2 } from "react-bootstrap-icons";
+import { Folder2, FolderFill } from "react-bootstrap-icons";
 //https://icons.getbootstrap.com/
 
 import { useAppData, useDragDrop, useProfile } from "../../../../hooks";
@@ -33,7 +33,11 @@ const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
       ref={dragDropRef}
     >
       <div>
-        <Folder2 size={16} />
+        {appState?.active?.profileId === profile._id ? (
+          <FolderFill size={16} />
+        ) : (
+          <Folder2 size={16} />
+        )}
       </div>
       <div>{profile.profileName}</div>
       <div>{profile.buttonPads}</div>

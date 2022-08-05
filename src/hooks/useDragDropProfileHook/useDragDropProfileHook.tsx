@@ -2,7 +2,7 @@ import * as React from "react";
 import _cloneDeep from "lodash/cloneDeep";
 import _findIndex from "lodash/findIndex";
 import { IntProfile } from "../../types";
-import useGlobalData from "./../useGlobalDataHook/useGlobalDataHook";
+import useGlobalData from "../useGlobalDataHook/useGlobalDataHook";
 
 enum DragDropStates {
   DragStart = "dragstart",

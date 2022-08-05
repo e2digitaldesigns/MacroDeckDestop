@@ -1,26 +1,21 @@
 import styled from "styled-components";
 
-export const NavigationWrapper = styled.div`
-  height: 300px;
-`;
+export const NavigationWrapper = styled.div``;
 
 interface IntNavigationItem {
   active: boolean;
 }
 
-export const NavigationItem = styled.div<IntNavigationItem>`
-  height: 30px;
-  background-color: ${props => (props.active ? "#111" : "#32363f")};
+const defaultItem = styled.div`
+  background-color: #32363f;
   border-top: 1px solid #42464e;
-
+  height: 30px;
   display: grid;
-  grid-template-columns: 40px auto 30px;
   grid-column-gap: 0.125rem;
-
   cursor: pointer;
+  font-size: 0.75rem;
 
   > div {
-    font-size: 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,9 +27,19 @@ export const NavigationItem = styled.div<IntNavigationItem>`
     :nth-child(2) {
       justify-content: left;
     }
+  }
+`;
 
+export const NavigationItem = styled(defaultItem)<IntNavigationItem>`
+  background-color: ${props => (props.active ? "#25334f" : "#32363f")};
+  grid-template-columns: 40px auto 30px;
+  > div {
     :nth-child(3) {
       color: #8498d2;
     }
   }
+`;
+
+export const NewProfileButton = styled(defaultItem)`
+  grid-template-columns: 40px auto;
 `;

@@ -38,7 +38,6 @@ const useDragDropButtonPadsHook = (
   const { dropZoneState, setDropZoneState } = useDropZone();
 
   React.useEffect(() => {
-    console.log(45);
     const menuDragEnd: TDragEnd = e => {
       const dropZoneStateClone = _cloneDeep(dropZoneState);
       dropZoneStateClone.dropZones.buttonPads = false;

@@ -1,7 +1,7 @@
 import React from "react";
-import _map from "lodash/map";
+import { PlusCircle } from "react-bootstrap-icons";
 import * as Styled from "./navigation.style";
-import { useGlobalData } from "../../../../hooks";
+import { useGlobalData, useProfile } from "../../../../hooks";
 import NavigationItem from "./navigationItem";
 import { IntProfile } from "../../../../types";
 import NavigationSearch from "./navSearch";
@@ -9,9 +9,11 @@ import _filter from "lodash/filter";
 import _includes from "lodash/includes";
 import _size from "lodash/size";
 import _toLower from "lodash/toLower";
+import _map from "lodash/map";
 
 const Navigation: React.FC = () => {
   const globalData = useGlobalData();
+  const { createProfile } = useProfile();
   const [searchText, setSearchText] = React.useState<string>("");
   const profiles = globalData?.state?.profiles || [];
 
@@ -28,6 +30,14 @@ const Navigation: React.FC = () => {
         searchText={searchText}
         setSearchText={setSearchText}
       />
+
+      <Styled.NewProfileButton onClick={createProfile}>
+        <div>
+          <PlusCircle size={16} />
+        </div>
+        <div>New Profile</div>
+      </Styled.NewProfileButton>
+
       <Styled.NavigationWrapper>
         {_map(
           filteredProfiles,
