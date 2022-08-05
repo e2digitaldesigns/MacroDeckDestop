@@ -2,7 +2,6 @@ import { IntGlobalContextInterface } from "../../types";
 
 export const defaultState: IntGlobalContextInterface = {
   userInformation: { _id: "", name: "" },
-  templateInformation: { sideBarState: "" },
   settings: {
     ipAddress: "",
     port: "",
@@ -18,12 +17,6 @@ export const defaultState: IntGlobalContextInterface = {
         channel: "icon33"
       }
     }
-  },
-  active: {
-    profileId: "",
-    pageId: "",
-    buttonPadId: "",
-    actionId: ""
   },
   profiles: [],
   pages: [],

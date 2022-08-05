@@ -87,9 +87,7 @@ export interface IntStyles {
 
 export interface IntGlobalContextInterface {
   userInformation: IntUserInformation;
-  templateInformation: IntTemplateInformation;
   settings: any;
-  active?: IntActive;
   profiles: IntProfile[];
   pages: IntPages[];
   buttonPads: IntButtonPads[];
