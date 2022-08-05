@@ -1,6 +1,5 @@
 {
   "userInformation": { "_id": "", "name": "" },
-  "templateInformation": { "sideBarState": "" },
   "settings": {
     "ipAddress": "",
     "port": "",
@@ -12,12 +11,6 @@
         "password": ""
       }
     }
-  },
-  "active": {
-    "profileId": "",
-    "buttonPadId": "",
-    "actionId": "",
-    "pageId": ""
   },
   "profiles": [],
   "pages": [],
