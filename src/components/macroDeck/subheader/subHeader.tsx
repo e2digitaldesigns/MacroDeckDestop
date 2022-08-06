@@ -53,7 +53,7 @@ const BreadWrapper: React.FC<IntBreadWrapper> = ({
 export const MacroDeckSubHeader: React.FC = () => {
   const [activeBreadCrumbMenu, setActiveBreadCrumbMenu] =
     React.useState<BreadCrumbMenuTypes | null>(BreadCrumbMenuTypes.Page);
-  const { readPage, totalPages } = usePage();
+  const { readPage, pageCount } = usePage();
   const { readProfile } = useProfile();
   const { appState } = useAppData();
   const { getActiveButton } = useButton();
@@ -61,13 +61,13 @@ export const MacroDeckSubHeader: React.FC = () => {
 
   const profile = readProfile();
   const page = readPage();
-  const pageCount = totalPages();
+  const pagesCount = pageCount();
   const activeButton = getActiveButton();
   const activeAction = getActiveAction();
 
   const profileTitle = profile?.profileName || "Select a Profile";
   const pageNumber = page?.number || "0";
-  const pageTitle = `${pageNumber} / ${pageCount}`;
+  const pageTitle = `${pageNumber} / ${pagesCount}`;
 
   const buttonPadCount = profile?.buttonPads || 0;
   const buttonPadNum = activeButton?.buttonPadNum || 0;

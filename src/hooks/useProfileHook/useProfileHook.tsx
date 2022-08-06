@@ -3,6 +3,7 @@ import _filter from "lodash/filter";
 import _find from "lodash/find";
 import _findIndex from "lodash/findIndex";
 import _sortBy from "lodash/sortBy";
+import _size from "lodash/size";
 
 import { useAppData, useGlobalData } from "..";
 import {
@@ -33,6 +34,7 @@ export interface IntUseProfileHook {
   readProfile: () => IntProfile;
   updateProfile: (_id: string, profileState: IntEditState) => void;
   deleteProfile: (_id: string) => void;
+  profileCount: () => number;
 }
 
 const useProfileHook = (): IntUseProfileHook => {
@@ -170,13 +172,18 @@ const useProfileHook = (): IntUseProfileHook => {
     appData.setAppState(appState);
   };
 
+  const profileCount: IntUseProfileHook["profileCount"] = () => {
+    return _size(readProfiles);
+  };
+
   return {
     activateProfile,
     createProfile,
     readProfiles,
     readProfile,
     updateProfile,
-    deleteProfile
+    deleteProfile,
+    profileCount
   };
 };
 

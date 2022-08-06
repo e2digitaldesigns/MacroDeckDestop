@@ -25,7 +25,7 @@ export interface IntUsePageHook {
   deletePage: () => void;
   readPage: (_id?: string) => any;
   readPages: () => IntPages[];
-  totalPages: TTotalPages;
+  pageCount: TTotalPages;
 }
 
 const usePageHook = (): IntUsePageHook => {
@@ -95,7 +95,7 @@ const usePageHook = (): IntUsePageHook => {
     return pages;
   };
 
-  const totalPages: TTotalPages = () => {
+  const pageCount: TTotalPages = () => {
     const pages = sortPages() || [];
     return pages.length;
   };
@@ -173,7 +173,7 @@ const usePageHook = (): IntUsePageHook => {
     deletePage,
     readPage,
     readPages,
-    totalPages
+    pageCount
   };
 };
 

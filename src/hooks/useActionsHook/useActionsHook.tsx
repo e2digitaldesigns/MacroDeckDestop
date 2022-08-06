@@ -2,6 +2,7 @@ import _findIndex from "lodash/findIndex";
 import _cloneDeep from "lodash/cloneDeep";
 import _filter from "lodash/filter";
 import _find from "lodash/find";
+import _size from "lodash/size";
 
 import { useAppData, useGlobalData } from "../";
 import { useObj } from "../../hooks";
@@ -22,6 +23,7 @@ export interface IntUseActionHooks {
   createAction: () => void;
   deleteAction: (_id: string) => void;
   updateAction: (action: any) => void;
+  actionCount: () => number;
 }
 
 const useActionHooks = (): IntUseActionHooks => {
@@ -116,6 +118,10 @@ const useActionHooks = (): IntUseActionHooks => {
     globalData?.setState(state);
   };
 
+  const actionCount: IntUseActionHooks["actionCount"] = () => {
+    return _size(getActions);
+  };
+
   return {
     activateAction,
     getActions,
@@ -123,7 +129,8 @@ const useActionHooks = (): IntUseActionHooks => {
     getActiveAction,
     createAction,
     deleteAction,
-    updateAction
+    updateAction,
+    actionCount
   };
 };
 
