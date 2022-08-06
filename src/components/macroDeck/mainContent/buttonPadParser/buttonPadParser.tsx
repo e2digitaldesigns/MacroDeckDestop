@@ -72,16 +72,10 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
 
   if (!buttonPadNumber) return <Styled.ButtonPadNone />;
 
-  if (!buttonPad)
-    return (
-      <Styled.ButtonPadEmpty onClick={handleButtonCreate}>
-        <PlusSquareFill />
-      </Styled.ButtonPadEmpty>
-    );
-
   return (
     <Styled.ButtonPad
       bgColor={buttonPad?.bgColor}
+      data-testid="bbbbb"
       draggable={buttonPad?._id ? true : false}
       isDropZone={dropZoneState.dropZones.buttonPads}
       isActive={buttonPad?._id === activeButtonPadId}
@@ -91,35 +85,45 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
       onDrop={e => itemDrop(e, buttonPadNumber)}
       ref={dragDropRef}
     >
-      <Styled.ButtonPadOptionDelete
-        data-testid="button_pad_parser__option-delete"
-        onClick={e => handleDeleteButton(e)}
-      >
-        <TrashFill />
-      </Styled.ButtonPadOptionDelete>
+      {buttonPad?._id && (
+        <>
+          <Styled.ButtonPadOptionDelete
+            data-testid="button_pad_parser__option-delete"
+            onClick={e => handleDeleteButton(e)}
+          >
+            <TrashFill />
+          </Styled.ButtonPadOptionDelete>
 
-      <Styled.ButtonPadOptionEdit
-        data-testid="button_pad_parser__option-edit"
-        onClick={e => handleButtonActivate(e)}
-      >
-        <Clipboard2PlusFill />
-      </Styled.ButtonPadOptionEdit>
+          <Styled.ButtonPadOptionEdit
+            data-testid="button_pad_parser__option-edit"
+            onClick={e => handleButtonActivate(e)}
+          >
+            <Clipboard2PlusFill />
+          </Styled.ButtonPadOptionEdit>
 
-      <Styled.ButtonPadOptionCopy
-        data-testid="button_pad_parser__option-copy"
-        onClick={() => handleButtonCopy(buttonPad)}
-      >
-        <Clipboard2PlusFill />
-      </Styled.ButtonPadOptionCopy>
+          <Styled.ButtonPadOptionCopy
+            data-testid="button_pad_parser__option-copy"
+            onClick={() => handleButtonCopy(buttonPad)}
+          >
+            <Clipboard2PlusFill />
+          </Styled.ButtonPadOptionCopy>
 
-      <Styled.ButtonPadOptionPaste
-        data-testid="button_pad_parser__option-paste"
-        onClick={handlePasteToButton}
-      >
-        <Clipboard2PlusFill />
-      </Styled.ButtonPadOptionPaste>
+          <Styled.ButtonPadOptionPaste
+            data-testid="button_pad_parser__option-paste"
+            onClick={handlePasteToButton}
+          >
+            <Clipboard2PlusFill />
+          </Styled.ButtonPadOptionPaste>
 
-      <Styled.ButtonPadIcon>{buttonPad?.icon}</Styled.ButtonPadIcon>
+          <Styled.ButtonPadIcon>{buttonPad?.icon}</Styled.ButtonPadIcon>
+        </>
+      )}
+
+      {!buttonPad && (
+        <Styled.ButtonPadIconPlus>
+          <PlusSquareFill />
+        </Styled.ButtonPadIconPlus>
+      )}
 
       <Styled.ButtonPadText
         color={buttonPad?.textColor}

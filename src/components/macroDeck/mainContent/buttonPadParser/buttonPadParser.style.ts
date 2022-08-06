@@ -9,7 +9,7 @@ const ButtonPadDiv = styled.div`
 `;
 
 interface IntButtonPad {
-  bgColor: string;
+  bgColor?: string;
   isActive: boolean;
   isDropZone?: boolean;
 }
@@ -25,19 +25,6 @@ export const ButtonPad = styled(ButtonPadDiv)<IntButtonPad>`
   border: 2px solid #2a2d34;
   border-bottom: 2px solid ${props => (props.isActive ? "#8498d2" : "#2a2d34")};
   transition: border 0.75s;
-`;
-
-export const ButtonPadEmpty = styled(ButtonPadDiv)`
-  color: #777;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: color 0.25s;
-  :hover {
-    color: white;
-  }
 `;
 
 export const ButtonPadNone = styled(ButtonPadDiv)``;
@@ -105,14 +92,26 @@ export const ButtonPadText = styled.div<ButtonPadTextType>`
   text-overflow: ellipsis;
 `;
 
-export const ButtonPadIcon = styled.div`
+interface IntButtonPadIcon {
+  iconColor?: string;
+}
+
+export const ButtonPadIcon = styled.div<IntButtonPadIcon>`
   position: absolute;
   top: 0;
+
+  
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 01.5em;
+  font-size: 1.52em;
+  color: ${props => props.iconColor || "#ffffff"};
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const ButtonPadIconPlus = styled(ButtonPadIcon)`
+  font-size: 2.5em;
+  color: #999;
 `;
