@@ -42,4 +42,5 @@ export const NavigationItem = styled(defaultItem)<IntNavigationItem>`
 
 export const NewProfileButton = styled(defaultItem)`
   grid-template-columns: 40px auto;
+  border-bottom: 1px solid #42464e;
 `;

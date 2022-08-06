@@ -3,6 +3,7 @@ import _filter from "lodash/filter";
 import _find from "lodash/find";
 import _findIndex from "lodash/findIndex";
 import _map from "lodash/map";
+import _size from "lodash/size";
 import _sortBy from "lodash/sortBy";
 
 import { useAppData, useGlobalData } from "../";
@@ -27,9 +28,10 @@ export interface IntUseButtonHook {
     pageId: string,
     buttonPadNumber: number
   ) => void;
+  buttonPadCount: () => number;
   createButtonPad: (padNumber: number, data?: { _id?: string }) => void;
   readButtonPad: (padNumber: number) => IntButtonPads | undefined;
-  readButtonPads: () => any;
+  readButtonPads: () => IntButtonPads[];
   updateButtonPad: (data: IntButtonPads) => void;
   deleteButtonPad: (_id: string) => void;
   overWriteButtonPad: (origin: number, destination: number) => void;
@@ -100,7 +102,7 @@ const useButtonHook = (): IntUseButtonHook => {
     globalData.setState(state);
   };
 
-  const readButtonPads: any = () => {
+  const readButtonPads: IntUseButtonHook["readButtonPads"] = () => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
     const activePageId = appState.active.pageId;
@@ -362,9 +364,14 @@ const useButtonHook = (): IntUseButtonHook => {
     appData.setAppState(appState);
   };
 
+  const buttonPadCount: IntUseButtonHook["buttonPadCount"] = () => {
+    return _size(readButtonPads);
+  };
+
   return {
     activateButtonPad,
     addStyleToButtonPad,
+    buttonPadCount,
     createButtonPad,
     deleteButtonPad,
     getActiveButton,

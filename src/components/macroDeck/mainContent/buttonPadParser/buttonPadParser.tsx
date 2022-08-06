@@ -75,10 +75,10 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
   return (
     <Styled.ButtonPad
       bgColor={buttonPad?.bgColor}
-      data-testid="bbbbb"
       draggable={buttonPad?._id ? true : false}
       isDropZone={dropZoneState.dropZones.buttonPads}
       isActive={buttonPad?._id === activeButtonPadId}
+      isEmpty={buttonPad?._id ? false : true}
       onClick={handleButtonActivate}
       onDragLeave={e => dragLeave(e)}
       onDragOver={e => handleDragOver(e)}
@@ -120,7 +120,7 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
       )}
 
       {!buttonPad && (
-        <Styled.ButtonPadIconPlus>
+        <Styled.ButtonPadIconPlus onClick={handleButtonCreate}>
           <PlusSquareFill />
         </Styled.ButtonPadIconPlus>
       )}

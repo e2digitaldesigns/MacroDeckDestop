@@ -28,17 +28,17 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
   handleSetActiveBreadCrumbMenu
 }) => {
   const { appState } = useAppData();
-  const { activateProfile, readProfiles } = useProfile();
-  const { activatePage, readPages } = usePage();
-  const { activateButtonPad, readButtonPads } = useButton();
-  const { activateAction, getActions } = useActions();
+  const { activateProfile, profileCount, readProfiles } = useProfile();
+  const { activatePage, pageCount, readPages } = usePage();
+  const { activateButtonPad, buttonPadCount, readButtonPads } = useButton();
+  const { activateAction, actionCount, getActions } = useActions();
 
   const handleOnClick = (func: (_id: string) => void, _id: string): void => {
     handleSetActiveBreadCrumbMenu(null);
     func(_id);
   };
 
-  if (dropDownType === BreadCrumbMenuTypes.Profile) {
+  if (dropDownType === BreadCrumbMenuTypes.Profile && profileCount() > 1) {
     return (
       <Styled.BreadCrumbMenu>
         {_map(readProfiles(), (item: IntProfile) => (
@@ -54,7 +54,7 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
     );
   }
 
-  if (dropDownType === BreadCrumbMenuTypes.Page) {
+  if (dropDownType === BreadCrumbMenuTypes.Page && pageCount() > 1) {
     return (
       <Styled.BreadCrumbMenu>
         {_map(readPages(), (item: IntPages) => (
@@ -70,7 +70,7 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
     );
   }
 
-  if (dropDownType === BreadCrumbMenuTypes.ButtonPad) {
+  if (dropDownType === BreadCrumbMenuTypes.ButtonPad && buttonPadCount() > 1) {
     return (
       <Styled.BreadCrumbMenu>
         {_map(readButtonPads(), (item: IntButtonPads) => (
@@ -86,7 +86,7 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
     );
   }
 
-  if (dropDownType === BreadCrumbMenuTypes.Action) {
+  if (dropDownType === BreadCrumbMenuTypes.Action && actionCount() > 1) {
     return (
       <Styled.BreadCrumbMenu>
         {_map(getActions(), (item: IntActions) => (

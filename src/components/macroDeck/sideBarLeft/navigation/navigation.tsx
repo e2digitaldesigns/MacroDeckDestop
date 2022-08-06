@@ -25,18 +25,18 @@ const Navigation: React.FC = () => {
 
   return (
     <>
-      <NavigationSearch
-        count={_size(filteredProfiles)}
-        searchText={searchText}
-        setSearchText={setSearchText}
-      />
-
       <Styled.NewProfileButton onClick={createProfile}>
         <div>
           <PlusCircle size={16} />
         </div>
         <div>New Profile</div>
       </Styled.NewProfileButton>
+
+      <NavigationSearch
+        count={_size(filteredProfiles)}
+        searchText={searchText}
+        setSearchText={setSearchText}
+      />
 
       <Styled.NavigationWrapper>
         {_map(
