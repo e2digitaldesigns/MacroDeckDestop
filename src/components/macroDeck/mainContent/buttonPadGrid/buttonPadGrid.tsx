@@ -26,7 +26,7 @@ const ButtonPadGrid: React.FC = () => {
   const profile = readProfile();
 
   const buttonPadParserNumbering = (padNumber: number): number => {
-    const padCount = profile.buttonPads;
+    const padCount = profile?.buttonPads;
 
     const buttonPadNumber: number =
       padCount && buttonMapper?.[padCount]?.[padNumber]

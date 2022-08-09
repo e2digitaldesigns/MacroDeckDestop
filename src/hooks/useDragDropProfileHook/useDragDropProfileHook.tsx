@@ -32,30 +32,30 @@ const useDragDropHook = (draggingId: string): IntUseDragDropHook => {
   React.useEffect(() => {
     let buttonPadRefCleanUp = dragDropRef.current;
 
-    const menuDragEnd: TDragEnd = e => {};
+    const dragEnd: TDragEnd = e => {};
 
-    const menuDragStart: TDragStart = (e, _id) => {
+    const dragStart: TDragStart = (e, _id) => {
       e.dataTransfer.setData(DragDropDataKeys.DragId, _id);
     };
 
     buttonPadRefCleanUp.addEventListener(
       DragDropStates.DragStart,
-      (e: React.DragEvent<HTMLDivElement>) => menuDragStart(e, draggingId)
+      (e: React.DragEvent<HTMLDivElement>) => dragStart(e, draggingId)
     );
     buttonPadRefCleanUp.addEventListener(
       DragDropStates.DragEnd,
-      (e: React.DragEvent<HTMLDivElement>) => menuDragEnd(e)
+      (e: React.DragEvent<HTMLDivElement>) => dragEnd(e)
     );
 
     return () => {
       buttonPadRefCleanUp.removeEventListener(
         DragDropStates.DragStart,
-        (e: React.DragEvent<HTMLDivElement>) => menuDragStart(e, draggingId)
+        (e: React.DragEvent<HTMLDivElement>) => dragStart(e, draggingId)
       );
 
       buttonPadRefCleanUp.removeEventListener(
         DragDropStates.DragEnd,
-        (e: React.DragEvent<HTMLDivElement>) => menuDragEnd(e)
+        (e: React.DragEvent<HTMLDivElement>) => dragEnd(e)
       );
 
       buttonPadRefCleanUp = null;

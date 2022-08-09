@@ -10,6 +10,5 @@ export const appDefaultState: IntAppContextInterface = {
     pageId: "",
     buttonPadId: "",
     actionId: ""
-  },
-  breadCrumbMenu: ""
+  }
 };

@@ -365,7 +365,7 @@ const useButtonHook = (): IntUseButtonHook => {
   };
 
   const buttonPadCount: IntUseButtonHook["buttonPadCount"] = () => {
-    return _size(readButtonPads);
+    return _size(readButtonPads());
   };
 
   return {

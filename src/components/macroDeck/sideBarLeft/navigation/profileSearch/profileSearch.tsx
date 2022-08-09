@@ -1,16 +1,16 @@
 import React from "react";
 import { ArrowLeftCircleFill } from "react-bootstrap-icons";
-import * as Styled from "./navSearch.style";
-import { useGlobalData } from "../../../../hooks";
+import * as Styled from "./profileSearch.style";
+import { useGlobalData } from "../../../../../hooks";
 import _size from "lodash/size";
 
-interface IntNavigationSearch {
+interface IntProfileSearch {
   count: number;
   searchText: string;
   setSearchText: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const NavigationSearch: React.FC<IntNavigationSearch> = ({
+const ProfileSearch: React.FC<IntProfileSearch> = ({
   count,
   searchText,
   setSearchText
@@ -23,26 +23,29 @@ const NavigationSearch: React.FC<IntNavigationSearch> = ({
   };
 
   return (
-    <Styled.SearchWrapper>
-      <Styled.SearchStats>
+    <Styled.ProfileSearchWrapper>
+      <Styled.ProfileSearchStats>
         <ArrowLeftCircleFill />
         <div>
           Viewing
-          <Styled.SearchStatsCount>
+          <Styled.ProfileSearchStatsCount>
             {count}/ {_size(profiles)}{" "}
-          </Styled.SearchStatsCount>
+          </Styled.ProfileSearchStatsCount>
         </div>
 
-        <Styled.SearchShowAll>
+        <Styled.ProfileSearchShowAll>
           <span onClick={() => setSearchText("")}>Show All</span>
-        </Styled.SearchShowAll>
-      </Styled.SearchStats>
+        </Styled.ProfileSearchShowAll>
+      </Styled.ProfileSearchStats>
 
       <div>
-        <Styled.SearchBox value={searchText} onChange={handleSearchChange} />
+        <Styled.ProfileSearchBox
+          value={searchText}
+          onChange={handleSearchChange}
+        />
       </div>
-    </Styled.SearchWrapper>
+    </Styled.ProfileSearchWrapper>
   );
 };
 
-export default NavigationSearch;
+export default ProfileSearch;

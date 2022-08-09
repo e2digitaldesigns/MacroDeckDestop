@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const SearchWrapper = styled.div`
+export const ProfileSearchWrapper = styled.div`
   height: 60px;
   width: 100%;
   background-color: #3d424d;
 `;
 
-export const SearchStats = styled.div`
+export const ProfileSearchStats = styled.div`
   width: 200px;
   height: 20px;
   font-size: 0.75rem;
@@ -20,18 +20,18 @@ export const SearchStats = styled.div`
   align-items: center;
 `;
 
-export const SearchStatsCount = styled.span`
+export const ProfileSearchStatsCount = styled.span`
   color: #8498d2;
 `;
 
-export const SearchShowAll = styled.div`
+export const ProfileSearchShowAll = styled.div`
   color: #8498d2;
   justify-content: right;
   text-align: right;
   cursor: pointer;
 `;
 
-export const SearchBox = styled.input.attrs({
+export const ProfileSearchBox = styled.input.attrs({
   type: "text"
 })`
   width: 200px;

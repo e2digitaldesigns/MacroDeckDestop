@@ -34,7 +34,6 @@ export interface IntDropZones {
 
 export interface IntAppContextInterface {
   active: IntAppDataActive;
-  breadCrumbMenu: BreadCrumbMenuTypes | "";
   iconSelector: IntAppDataIconSelector;
 }
 

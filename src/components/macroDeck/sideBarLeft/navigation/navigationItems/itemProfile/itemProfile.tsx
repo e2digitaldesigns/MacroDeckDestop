@@ -2,9 +2,9 @@ import React from "react";
 import { Folder2, FolderFill } from "react-bootstrap-icons";
 //https://icons.getbootstrap.com/
 
-import { useAppData, useDragDrop, useProfile } from "../../../../hooks";
-import * as Styled from "./navigation.style";
-import { IntProfile } from "../../../../types";
+import { useAppData, useDragDrop, useProfile } from "../../../../../../hooks";
+import * as Styled from "../navigationItems.style";
+import { IntProfile } from "../../../../../../types";
 
 interface IntNavigationItem {
   profile: IntProfile;
@@ -23,7 +23,7 @@ const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
   };
 
   return (
-    <Styled.NavigationItem
+    <Styled.ItemProfile
       active={appState?.active?.profileId === profile._id}
       data-testid="side_bar_item__component"
       draggable={true}
@@ -41,7 +41,7 @@ const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
       </div>
       <div>{profile.profileName}</div>
       <div>{profile.buttonPads}</div>
-    </Styled.NavigationItem>
+    </Styled.ItemProfile>
   );
 };
 

@@ -107,17 +107,12 @@ const usePageHook = (): IntUsePageHook => {
     const page: IntPages = pageObj();
     page.profileId = appState.active.profileId;
 
-    appState.active.pageId = page._id;
-    appState.active.buttonPadId = "";
-    appState.active.actionId = "";
-    appData.setAppState(appState);
-
-    const buttonPad = buttonPadObj();
+    const buttonPad: IntButtonPads = buttonPadObj();
     buttonPad.profileId = page.profileId;
     buttonPad.pageId = page._id;
     buttonPad.buttonPadNum = 1;
 
-    const action = actionObj();
+    const action: IntActions = actionObj();
     action.profileId = page.profileId;
     action.pageId = page._id;
     action.buttonPadId = buttonPad._id;

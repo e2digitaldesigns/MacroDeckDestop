@@ -10,5 +10,6 @@ export { default as useGlobalData } from "./useGlobalDataHook";
 export { default as useObj } from "./useObjHook";
 export { default as usePage } from "./usePageHook";
 export { default as useProfile } from "./useProfileHook";
+export { default as useStyles } from "./useStylesHook";
 export { default as useTemplate } from "./useTemplateDataHook";
 export { default as useTheme } from "./useThemeHook";

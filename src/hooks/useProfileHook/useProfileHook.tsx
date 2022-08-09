@@ -31,7 +31,7 @@ export interface IntUseProfileHook {
   activateProfile: TActivateProfile;
   createProfile: () => void;
   readProfiles: () => IntProfile[];
-  readProfile: () => IntProfile;
+  readProfile: () => IntProfile | undefined;
   updateProfile: (_id: string, profileState: IntEditState) => void;
   deleteProfile: (_id: string) => void;
   profileCount: () => number;
@@ -101,13 +101,13 @@ const useProfileHook = (): IntUseProfileHook => {
     appData.setAppState(appState);
   };
 
-  const readProfiles = (): IntProfile[] | any => {
+  const readProfiles = (): IntProfile[] => {
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
     const profiles = state.profiles;
     return profiles;
   };
 
-  const readProfile = (): IntProfile | any => {
+  const readProfile = (): IntProfile | undefined => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
 
@@ -173,7 +173,7 @@ const useProfileHook = (): IntUseProfileHook => {
   };
 
   const profileCount: IntUseProfileHook["profileCount"] = () => {
-    return _size(readProfiles);
+    return _size(readProfiles());
   };
 
   return {
