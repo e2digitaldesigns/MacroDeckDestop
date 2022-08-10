@@ -7,12 +7,7 @@ import {
 } from "../../../../../../types";
 import * as Styled from "../navigationItems.style";
 
-import {
-  Grid3x3GapFill,
-  Trash2Fill,
-  DropletFill,
-  VectorPen
-} from "react-bootstrap-icons";
+import MacroDeckIcon from "../../../../../../utils/icons/macroDeckIcons";
 
 interface IntItemStyle {
   data: IntStyles;
@@ -20,6 +15,7 @@ interface IntItemStyle {
 const ItemStyle: React.FC<IntItemStyle> = ({ data }) => {
   const { deleteStyle } = useStyles();
   const styleItemRef = React.useRef<HTMLDivElement>(null);
+  const iconSize = 14;
 
   React.useEffect(() => {
     const handleDragStart = (ev: any) => {
@@ -40,22 +36,26 @@ const ItemStyle: React.FC<IntItemStyle> = ({ data }) => {
   return (
     <Styled.ItemStyle draggable={true} ref={styleItemRef}>
       <Styled.Drag>
-        <Grid3x3GapFill />
+        <MacroDeckIcon icon={"Grid"} size={iconSize} />
       </Styled.Drag>
       <div>
-        <Grid3x3GapFill color={data.iconColor} />
+        <MacroDeckIcon
+          color={data.iconColor}
+          icon={data.icon}
+          size={iconSize}
+        />
       </div>
       <div>
-        <VectorPen color={data.textColor} />
+        <MacroDeckIcon color={data.textColor} icon="PenTool" size={iconSize} />
       </div>
       <div>
-        <DropletFill color={data.bgColor} />
+        <MacroDeckIcon color={data.bgColor} icon="Droplet" size={iconSize} />
       </div>
 
       <div />
 
       <Styled.Remove onClick={handleStyleDelete}>
-        <Trash2Fill />
+        <MacroDeckIcon icon="Trash2" size={iconSize} />
       </Styled.Remove>
     </Styled.ItemStyle>
   );

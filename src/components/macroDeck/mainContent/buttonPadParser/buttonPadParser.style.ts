@@ -29,7 +29,7 @@ export const ButtonPadNone = styled(ButtonPadDiv)`
 `;
 
 type ButtonPadTextType = {
-  color?: string | undefined;
+  color?: string;
 };
 
 const ButtonPadOptionIcon = styled.div`

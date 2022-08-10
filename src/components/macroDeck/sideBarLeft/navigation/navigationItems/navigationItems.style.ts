@@ -25,7 +25,7 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
 `;
 
 export const ItemStyle = styled(DefaultItem)`
-  grid-template-columns: 2.5em 1.5em 1.5em 1.5em auto 30px;
+  grid-template-columns: 2.5rem 1.5rem 1.5rem 1.5rem auto 30px;
   grid-gap: 1em;
   font-size: 0.9em;
 `;
