@@ -15,8 +15,8 @@ import {
   IntAppData,
   IntButtonPads
 } from "../../../../types";
+import MacroDeckIcon from "../../../../utils/icons/macroDeckIcons";
 // import { AddBox, Delete, Edit, FileCopy, Restore } from "@material-ui/icons";
-// import Iconic from "../../../../../utils/icons/icons";
 import * as Styled from "./buttonPadParser.style";
 
 interface IntButtonPadParser {
@@ -115,13 +115,26 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
             <Clipboard2PlusFill />
           </Styled.ButtonPadOptionPaste>
 
-          <Styled.ButtonPadIcon>{buttonPad?.icon}</Styled.ButtonPadIcon>
+          <Styled.ButtonPadIcon>
+            <MacroDeckIcon
+              color={buttonPad.iconColor}
+              data-testid="button_pad_parser__icon"
+              icon={buttonPad.icon}
+              size={32}
+            />
+          </Styled.ButtonPadIcon>
         </>
       )}
 
       {!buttonPad && (
         <Styled.ButtonPadIconPlus onClick={handleButtonCreate}>
-          <PlusSquareFill />
+          <Styled.ButtonPadIcon>
+            <MacroDeckIcon
+              data-testid="button_pad_parser__icon"
+              icon="PlusSquare"
+              size={32}
+            />
+          </Styled.ButtonPadIcon>
         </Styled.ButtonPadIconPlus>
       )}
 

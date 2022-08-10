@@ -13,6 +13,7 @@ import _size from "lodash/size";
 import _toLower from "lodash/toLower";
 import _map from "lodash/map";
 import ProfileButton from "./profileButton/profileButton";
+import StylesHeader from "./stylesHeader/stylesHeader";
 
 const Navigation: React.FC = () => {
   const { readProfiles } = useProfile();
@@ -46,6 +47,8 @@ const Navigation: React.FC = () => {
           )
         )}
       </div>
+
+      <StylesHeader />
 
       <div>
         {_map(

@@ -1,0 +1,2290 @@
+[
+  {
+    "_id": "lVuHovM-X",
+    "active": true,
+    "name": "Activity",
+    "reactNativeName": "activity",
+    "type": "feather",
+    "display": "Activity"
+  },
+  {
+    "_id": "UbbGmjnLdF",
+    "active": true,
+    "name": "Airplay",
+    "reactNativeName": "airplay",
+    "type": "feather",
+    "display": "Airplay"
+  },
+  {
+    "_id": "f7ldCBC0ib",
+    "active": true,
+    "name": "AlertCircle",
+    "reactNativeName": "alert-circle",
+    "type": "feather",
+    "display": "AlertCircle"
+  },
+  {
+    "_id": "YAz7h9g3jK",
+    "active": true,
+    "name": "AlertOctagon",
+    "reactNativeName": "alert-octagon",
+    "type": "feather",
+    "display": "AlertOctagon"
+  },
+  {
+    "_id": "EUqJlDIw45",
+    "active": true,
+    "name": "AlertTriangle",
+    "reactNativeName": "alert-triangle",
+    "type": "feather",
+    "display": "AlertTriangle"
+  },
+  {
+    "_id": "_oGzGZh9nH",
+    "active": true,
+    "name": "AlignCenter",
+    "reactNativeName": "align-center",
+    "type": "feather",
+    "display": "AlignCenter"
+  },
+  {
+    "_id": "RSrnCTMIkK",
+    "active": true,
+    "name": "AlignJustify",
+    "reactNativeName": "align-justify",
+    "type": "feather",
+    "display": "AlignJustify"
+  },
+  {
+    "_id": "dws2bVtpSo",
+    "active": true,
+    "name": "AlignLeft",
+    "reactNativeName": "align-left",
+    "type": "feather",
+    "display": "AlignLeft"
+  },
+  {
+    "_id": "EYXCKyDVpJ",
+    "active": true,
+    "name": "AlignRight",
+    "reactNativeName": "align-right",
+    "type": "feather",
+    "display": "AlignRight"
+  },
+  {
+    "_id": "jgx3C95-C8",
+    "active": true,
+    "name": "Anchor",
+    "reactNativeName": "anchor",
+    "type": "feather",
+    "display": "Anchor"
+  },
+  {
+    "_id": "qUz1a-sDNc",
+    "active": true,
+    "name": "Aperture",
+    "reactNativeName": "aperture",
+    "type": "feather",
+    "display": "Aperture"
+  },
+  {
+    "_id": "30mZ5O8yu2",
+    "active": true,
+    "name": "Archive",
+    "reactNativeName": "archive",
+    "type": "feather",
+    "display": "Archive"
+  },
+  {
+    "_id": "A6TGiGAV3w",
+    "active": true,
+    "name": "ArrowDownCircle",
+    "reactNativeName": "arrow-down-circle",
+    "type": "feather",
+    "display": "ArrowDownCircle"
+  },
+  {
+    "_id": "UaOo7D0QB5",
+    "active": true,
+    "name": "ArrowDownLeft",
+    "reactNativeName": "arrow-down-left",
+    "type": "feather",
+    "display": "ArrowDownLeft"
+  },
+  {
+    "_id": "oTVMYQ4yhB",
+    "active": true,
+    "name": "ArrowDownRight",
+    "reactNativeName": "arrow-down-right",
+    "type": "feather",
+    "display": "ArrowDownRight"
+  },
+  {
+    "_id": "zISNhmyb54",
+    "active": true,
+    "name": "ArrowDown",
+    "reactNativeName": "arrow-down",
+    "type": "feather",
+    "display": "ArrowDown"
+  },
+  {
+    "_id": "WbB1_o8DbDC",
+    "active": true,
+    "name": "ArrowLeftCircle",
+    "reactNativeName": "arrow-left-circle",
+    "type": "feather",
+    "display": "ArrowLeftCircle"
+  },
+  {
+    "_id": "TnyUDKRNFWC",
+    "active": true,
+    "name": "ArrowLeft",
+    "reactNativeName": "arrow-left",
+    "type": "feather",
+    "display": "ArrowLeft"
+  },
+  {
+    "_id": "Jt0xKsOZfeD",
+    "active": true,
+    "name": "ArrowRightCircle",
+    "reactNativeName": "arrow-right-circle",
+    "type": "feather",
+    "display": "ArrowRightCircle"
+  },
+  {
+    "_id": "4EIXkRqnDXc",
+    "active": true,
+    "name": "ArrowRight",
+    "reactNativeName": "arrow-right",
+    "type": "feather",
+    "display": "ArrowRight"
+  },
+  {
+    "_id": "gE-zFnovZ7g",
+    "active": true,
+    "name": "ArrowUpCircle",
+    "reactNativeName": "arrow-up-circle",
+    "type": "feather",
+    "display": "ArrowUpCircle"
+  },
+  {
+    "_id": "GLOu18jkmaH",
+    "active": true,
+    "name": "ArrowUpLeft",
+    "reactNativeName": "arrow-up-left",
+    "type": "feather",
+    "display": "ArrowUpLeft"
+  },
+  {
+    "_id": "_U79MzZ1qpy",
+    "active": true,
+    "name": "ArrowUpRight",
+    "reactNativeName": "arrow-up-right",
+    "type": "feather",
+    "display": "ArrowUpRight"
+  },
+  {
+    "_id": "9zLDUH2FMlS",
+    "active": true,
+    "name": "ArrowUp",
+    "reactNativeName": "arrow-up",
+    "type": "feather",
+    "display": "ArrowUp"
+  },
+  {
+    "_id": "FDlKfT54dBd",
+    "active": true,
+    "name": "AtSign",
+    "reactNativeName": "atsign",
+    "type": "feather",
+    "display": "AtSign"
+  },
+  {
+    "_id": "v_ZPeF0epTf",
+    "active": true,
+    "name": "Award",
+    "reactNativeName": "award",
+    "type": "feather",
+    "display": "Award"
+  },
+  {
+    "_id": "DmqLJJDwasQ",
+    "active": true,
+    "name": "BarChart2",
+    "reactNativeName": "bar-chart-2",
+    "type": "feather",
+    "display": "BarChart2"
+  },
+  {
+    "_id": "_RYLwE7MQmI",
+    "active": true,
+    "name": "BarChart",
+    "reactNativeName": "bar-chart",
+    "type": "feather",
+    "display": "BarChart"
+  },
+  {
+    "_id": "WurpAkFlPlU",
+    "active": true,
+    "name": "BatteryCharging",
+    "reactNativeName": "battery-charging",
+    "type": "feather",
+    "display": "BatteryCharging"
+  },
+  {
+    "_id": "TwMOG-RBV4b",
+    "active": true,
+    "name": "Battery",
+    "reactNativeName": "battery",
+    "type": "feather",
+    "display": "Battery"
+  },
+  {
+    "_id": "EdC0FUcyt5D",
+    "active": true,
+    "name": "BellOff",
+    "reactNativeName": "bell-off",
+    "type": "feather",
+    "display": "BellOff"
+  },
+  {
+    "_id": "WkvgwM3LGVF",
+    "active": true,
+    "name": "Bell",
+    "reactNativeName": "bell",
+    "type": "feather",
+    "display": "Bell"
+  },
+  {
+    "_id": "abetUV_9Zjc",
+    "active": true,
+    "name": "Bluetooth",
+    "reactNativeName": "bluetooth",
+    "type": "feather",
+    "display": "Bluetooth"
+  },
+  {
+    "_id": "JdinjLjoeW4",
+    "active": true,
+    "name": "Bold",
+    "reactNativeName": "bold",
+    "type": "feather",
+    "display": "Bold"
+  },
+  {
+    "_id": "xNYSM9slrKx",
+    "active": true,
+    "name": "BookOpen",
+    "reactNativeName": "book-open",
+    "type": "feather",
+    "display": "BookOpen"
+  },
+  {
+    "_id": "pZTi1q2vsWq",
+    "active": true,
+    "name": "Book",
+    "reactNativeName": "book",
+    "type": "feather",
+    "display": "Book"
+  },
+  {
+    "_id": "CTw7SULOo0T",
+    "active": true,
+    "name": "Bookmark",
+    "reactNativeName": "bookmark",
+    "type": "feather",
+    "display": "Bookmark"
+  },
+  {
+    "_id": "MHUa7VMQQhP",
+    "active": true,
+    "name": "Box",
+    "reactNativeName": "box",
+    "type": "feather",
+    "display": "Box"
+  },
+  {
+    "_id": "eiualCa7ino",
+    "active": true,
+    "name": "Briefcase",
+    "reactNativeName": "briefcase",
+    "type": "feather",
+    "display": "Briefcase"
+  },
+  {
+    "_id": "O2Ih6F_Osci",
+    "active": true,
+    "name": "Calendar",
+    "reactNativeName": "calendar",
+    "type": "feather",
+    "display": "Calendar"
+  },
+  {
+    "_id": "f7DwQGsilKq",
+    "active": true,
+    "name": "CameraOff",
+    "reactNativeName": "camera-off",
+    "type": "feather",
+    "display": "CameraOff"
+  },
+  {
+    "_id": "lcZk-G462aO",
+    "active": true,
+    "name": "Camera",
+    "reactNativeName": "camera",
+    "type": "feather",
+    "display": "Camera"
+  },
+  {
+    "_id": "4LqUdQz313d",
+    "active": true,
+    "name": "Cast",
+    "reactNativeName": "cast",
+    "type": "feather",
+    "display": "Cast"
+  },
+  {
+    "_id": "TUzB8Nz9cOI",
+    "active": true,
+    "name": "CheckCircle",
+    "reactNativeName": "check-circle",
+    "type": "feather",
+    "display": "CheckCircle"
+  },
+  {
+    "_id": "5zPBaTE6IL3",
+    "active": true,
+    "name": "CheckSquare",
+    "reactNativeName": "check-square",
+    "type": "feather",
+    "display": "CheckSquare"
+  },
+  {
+    "_id": "efpru0voyrr",
+    "active": true,
+    "name": "Check",
+    "reactNativeName": "check",
+    "type": "feather",
+    "display": "Check"
+  },
+  {
+    "_id": "KAyWr3cgLoj",
+    "active": true,
+    "name": "ChevronDown",
+    "reactNativeName": "chevron-down",
+    "type": "feather",
+    "display": "ChevronDown"
+  },
+  {
+    "_id": "XlMzfrKMaSu",
+    "active": true,
+    "name": "ChevronLeft",
+    "reactNativeName": "chevron-left",
+    "type": "feather",
+    "display": "ChevronLeft"
+  },
+  {
+    "_id": "fDWmbJ_VrrA",
+    "active": true,
+    "name": "ChevronRight",
+    "reactNativeName": "chevron-right",
+    "type": "feather",
+    "display": "ChevronRight"
+  },
+  {
+    "_id": "78MIUKifPk0",
+    "active": true,
+    "name": "ChevronUp",
+    "reactNativeName": "chevron-up",
+    "type": "feather",
+    "display": "ChevronUp"
+  },
+  {
+    "_id": "SK1WeLuOzxF",
+    "active": true,
+    "name": "ChevronsDown",
+    "reactNativeName": "chevrons-down",
+    "type": "feather",
+    "display": "ChevronsDown"
+  },
+  {
+    "_id": "vKr7SMGgldJ",
+    "active": true,
+    "name": "ChevronsLeft",
+    "reactNativeName": "chevrons-left",
+    "type": "feather",
+    "display": "ChevronsLeft"
+  },
+  {
+    "_id": "GkeCRv43Ht3",
+    "active": true,
+    "name": "ChevronsRight",
+    "reactNativeName": "chevrons-right",
+    "type": "feather",
+    "display": "ChevronsRight"
+  },
+  {
+    "_id": "CeAzJqeCV1u",
+    "active": true,
+    "name": "ChevronsUp",
+    "reactNativeName": "chevrons-up",
+    "type": "feather",
+    "display": "ChevronsUp"
+  },
+  {
+    "_id": "hhQcVgsLovk",
+    "active": true,
+    "name": "Chrome",
+    "reactNativeName": "chrome",
+    "type": "feather",
+    "display": "Chrome"
+  },
+  {
+    "_id": "cweXG4tnost",
+    "active": true,
+    "name": "Circle",
+    "reactNativeName": "circle",
+    "type": "feather",
+    "display": "Circle"
+  },
+  {
+    "_id": "0JDj0MAIAtp",
+    "active": true,
+    "name": "Clipboard",
+    "reactNativeName": "clipboard",
+    "type": "feather",
+    "display": "Clipboard"
+  },
+  {
+    "_id": "Daf35NgllEj",
+    "active": true,
+    "name": "Clock",
+    "reactNativeName": "clock",
+    "type": "feather",
+    "display": "Clock"
+  },
+  {
+    "_id": "YP6xyrCt-2h",
+    "active": true,
+    "name": "CloudDrizzle",
+    "reactNativeName": "clouddrizzle",
+    "type": "feather",
+    "display": "CloudDrizzle"
+  },
+  {
+    "_id": "K4eD6ylZsk0",
+    "active": true,
+    "name": "CloudLightning",
+    "reactNativeName": "cloud-lightning",
+    "type": "feather",
+    "display": "CloudLightning"
+  },
+  {
+    "_id": "ZPWmww3VJCF",
+    "active": true,
+    "name": "CloudOff",
+    "reactNativeName": "cloud-off",
+    "type": "feather",
+    "display": "CloudOff"
+  },
+  {
+    "_id": "oWnzr2OB3AC",
+    "active": true,
+    "name": "CloudRain",
+    "reactNativeName": "cloud-rain",
+    "type": "feather",
+    "display": "CloudRain"
+  },
+  {
+    "_id": "JLR-H5ZcAaZ",
+    "active": true,
+    "name": "CloudSnow",
+    "reactNativeName": "cloud-snow",
+    "type": "feather",
+    "display": "CloudSnow"
+  },
+  {
+    "_id": "Gxm0AsVX0vU",
+    "active": true,
+    "name": "Cloud",
+    "reactNativeName": "cloud",
+    "type": "feather",
+    "display": "Cloud"
+  },
+  {
+    "_id": "VwffDYDrD9h",
+    "active": true,
+    "name": "Code",
+    "reactNativeName": "code",
+    "type": "feather",
+    "display": "Code"
+  },
+  {
+    "_id": "EDKpodgGFp-",
+    "active": true,
+    "name": "Codepen",
+    "reactNativeName": "codepen",
+    "type": "feather",
+    "display": "Codepen"
+  },
+  {
+    "_id": "mkdyJpkrmYS",
+    "active": true,
+    "name": "Codesandbox",
+    "reactNativeName": "codesandbox",
+    "type": "feather",
+    "display": "Codesandbox"
+  },
+  {
+    "_id": "jH4gGdGrk31",
+    "active": true,
+    "name": "Coffee",
+    "reactNativeName": "coffee",
+    "type": "feather",
+    "display": "Coffee"
+  },
+  {
+    "_id": "RqLSh8urwsH",
+    "active": true,
+    "name": "Columns",
+    "reactNativeName": "columns",
+    "type": "feather",
+    "display": "Columns"
+  },
+  {
+    "_id": "p1cdzHmbPYh",
+    "active": true,
+    "name": "Command",
+    "reactNativeName": "command",
+    "type": "feather",
+    "display": "Command"
+  },
+  {
+    "_id": "TU3aeXkXVId",
+    "active": true,
+    "name": "Compass",
+    "reactNativeName": "compass",
+    "type": "feather",
+    "display": "Compass"
+  },
+  {
+    "_id": "3ukYNVRZDPx",
+    "active": true,
+    "name": "Copy",
+    "reactNativeName": "copy",
+    "type": "feather",
+    "display": "Copy"
+  },
+  {
+    "_id": "xHlEVOEl5G_",
+    "active": true,
+    "name": "CornerDownLeft",
+    "reactNativeName": "corner-down-left",
+    "type": "feather",
+    "display": "CornerDownLeft"
+  },
+  {
+    "_id": "KFQVufymicg",
+    "active": true,
+    "name": "CornerDownRight",
+    "reactNativeName": "corner-down-right",
+    "type": "feather",
+    "display": "CornerDownRight"
+  },
+  {
+    "_id": "4wTrJ0QM8SM",
+    "active": true,
+    "name": "CornerLeftDown",
+    "reactNativeName": "corner-left-down",
+    "type": "feather",
+    "display": "CornerLeftDown"
+  },
+  {
+    "_id": "vYnqTODoROg",
+    "active": true,
+    "name": "CornerLeftUp",
+    "reactNativeName": "corner-left-up",
+    "type": "feather",
+    "display": "CornerLeftUp"
+  },
+  {
+    "_id": "bfSUc2_1yQd",
+    "active": true,
+    "name": "CornerRightDown",
+    "reactNativeName": "corner-right-down",
+    "type": "feather",
+    "display": "CornerRightDown"
+  },
+  {
+    "_id": "aHa4XHN6n2y",
+    "active": true,
+    "name": "CornerRightUp",
+    "reactNativeName": "corner-right-up",
+    "type": "feather",
+    "display": "CornerRightUp"
+  },
+  {
+    "_id": "5xUeszZvh6n",
+    "active": true,
+    "name": "CornerUpLeft",
+    "reactNativeName": "corner-up-left",
+    "type": "feather",
+    "display": "CornerUpLeft"
+  },
+  {
+    "_id": "OHKFGLz_8OZ",
+    "active": true,
+    "name": "CornerUpRight",
+    "reactNativeName": "corner-up-right",
+    "type": "feather",
+    "display": "CornerUpRight"
+  },
+  {
+    "_id": "d5GvdfQ_m5j",
+    "active": true,
+    "name": "Cpu",
+    "reactNativeName": "cpu",
+    "type": "feather",
+    "display": "Cpu"
+  },
+  {
+    "_id": "wpSl7xOSRfR",
+    "active": true,
+    "name": "CreditCard",
+    "reactNativeName": "credit-card",
+    "type": "feather",
+    "display": "CreditCard"
+  },
+  {
+    "_id": "Dc4wlHvIdZ8",
+    "active": true,
+    "name": "Crop",
+    "reactNativeName": "crop",
+    "type": "feather",
+    "display": "Crop"
+  },
+  {
+    "_id": "zzvysstRDVj",
+    "active": true,
+    "name": "Crosshair",
+    "reactNativeName": "crosshair",
+    "type": "feather",
+    "display": "Crosshair"
+  },
+  {
+    "_id": "z7E7izexvuK",
+    "active": true,
+    "name": "Database",
+    "reactNativeName": "database",
+    "type": "feather",
+    "display": "Database"
+  },
+  {
+    "_id": "bixREmRR5fG",
+    "active": true,
+    "name": "Delete",
+    "reactNativeName": "delete",
+    "type": "feather",
+    "display": "Delete"
+  },
+  {
+    "_id": "PVNAnEEHyno",
+    "active": true,
+    "name": "Disc",
+    "reactNativeName": "disc",
+    "type": "feather",
+    "display": "Disc"
+  },
+  {
+    "_id": "lva_WH3iIZI",
+    "active": true,
+    "name": "DivideCircle",
+    "reactNativeName": "divide-circle",
+    "type": "feather",
+    "display": "DivideCircle"
+  },
+  {
+    "_id": "2OFOb96a6Gt",
+    "active": true,
+    "name": "DivideSquare",
+    "reactNativeName": "divide-square",
+    "type": "feather",
+    "display": "DivideSquare"
+  },
+  {
+    "_id": "0nkDNUAp_Fa",
+    "active": true,
+    "name": "Divide",
+    "reactNativeName": "divide",
+    "type": "feather",
+    "display": "Divide"
+  },
+  {
+    "_id": "MzLyAY4CIXo",
+    "active": true,
+    "name": "DollarSign",
+    "reactNativeName": "dollar-sign",
+    "type": "feather",
+    "display": "DollarSign"
+  },
+  {
+    "_id": "GONFn1j3T64",
+    "active": true,
+    "name": "DownloadCloud",
+    "reactNativeName": "download-cloud",
+    "type": "feather",
+    "display": "DownloadCloud"
+  },
+  {
+    "_id": "9mUaaLhNY7Y",
+    "active": true,
+    "name": "Download",
+    "reactNativeName": "download",
+    "type": "feather",
+    "display": "Download"
+  },
+  {
+    "_id": "m7FfcnPsxls",
+    "active": true,
+    "name": "Dribbble",
+    "reactNativeName": "dribbble",
+    "type": "feather",
+    "display": "Dribbble"
+  },
+  {
+    "_id": "abai6SfoBDh",
+    "active": true,
+    "name": "Droplet",
+    "reactNativeName": "droplet",
+    "type": "feather",
+    "display": "Droplet"
+  },
+  {
+    "_id": "i2HtfQ2K0Se",
+    "active": true,
+    "name": "Edit2",
+    "reactNativeName": "edit2",
+    "type": "feather",
+    "display": "Edit2"
+  },
+  {
+    "_id": "gglq_mbOgnH",
+    "active": true,
+    "name": "Edit3",
+    "reactNativeName": "edit3",
+    "type": "feather",
+    "display": "Edit3"
+  },
+  {
+    "_id": "7P7KyIjDds5",
+    "active": true,
+    "name": "Edit",
+    "reactNativeName": "edit",
+    "type": "feather",
+    "display": "Edit"
+  },
+  {
+    "_id": "ojSXmlcjVDH",
+    "active": true,
+    "name": "ExternalLink",
+    "reactNativeName": "external-link",
+    "type": "feather",
+    "display": "ExternalLink"
+  },
+  {
+    "_id": "vrBSDbwrlel",
+    "active": true,
+    "name": "EyeOff",
+    "reactNativeName": "eyeoff",
+    "type": "feather",
+    "display": "EyeOff"
+  },
+  {
+    "_id": "2elTfdQnz3o",
+    "active": true,
+    "name": "Eye",
+    "reactNativeName": "eye",
+    "type": "feather",
+    "display": "Eye"
+  },
+  {
+    "_id": "QiP_EiXetgR",
+    "active": true,
+    "name": "Facebook",
+    "reactNativeName": "facebook",
+    "type": "feather",
+    "display": "Facebook"
+  },
+  {
+    "_id": "jdqUpse45Jx",
+    "active": true,
+    "name": "FastForward",
+    "reactNativeName": "fastforward",
+    "type": "feather",
+    "display": "FastForward"
+  },
+  {
+    "_id": "pmvjqzoJm2u",
+    "active": true,
+    "name": "Feather",
+    "reactNativeName": "feather",
+    "type": "feather",
+    "display": "Feather"
+  },
+  {
+    "_id": "FqUmAzCn5qP",
+    "active": true,
+    "name": "Figma",
+    "reactNativeName": "figma",
+    "type": "feather",
+    "display": "Figma"
+  },
+  {
+    "_id": "TXXhgXZnEmw",
+    "active": true,
+    "name": "FileMinus",
+    "reactNativeName": "file-minus",
+    "type": "feather",
+    "display": "FileMinus"
+  },
+  {
+    "_id": "rEN4uAiRKr_",
+    "active": true,
+    "name": "FilePlus",
+    "reactNativeName": "file-plus",
+    "type": "feather",
+    "display": "FilePlus"
+  },
+  {
+    "_id": "ez7-WpgaDJ1",
+    "active": true,
+    "name": "FileText",
+    "reactNativeName": "file-text",
+    "type": "feather",
+    "display": "FileText"
+  },
+  {
+    "_id": "D4gyQTvb_as",
+    "active": true,
+    "name": "File",
+    "reactNativeName": "file",
+    "type": "feather",
+    "display": "File"
+  },
+  {
+    "_id": "pBEHrFmHxr7",
+    "active": true,
+    "name": "Film",
+    "reactNativeName": "film",
+    "type": "feather",
+    "display": "Film"
+  },
+  {
+    "_id": "UJcBd8TfdyM",
+    "active": true,
+    "name": "Filter",
+    "reactNativeName": "filter",
+    "type": "feather",
+    "display": "Filter"
+  },
+  {
+    "_id": "TSS226E9XJo",
+    "active": true,
+    "name": "Flag",
+    "reactNativeName": "flag",
+    "type": "feather",
+    "display": "Flag"
+  },
+  {
+    "_id": "0tVyuKAGsFa",
+    "active": true,
+    "name": "FolderMinus",
+    "reactNativeName": "folder-minus",
+    "type": "feather",
+    "display": "FolderMinus"
+  },
+  {
+    "_id": "OdURsM7-pBo",
+    "active": true,
+    "name": "FolderPlus",
+    "reactNativeName": "folder-plus",
+    "type": "feather",
+    "display": "FolderPlus"
+  },
+  {
+    "_id": "GRyWeQyJhU1",
+    "active": true,
+    "name": "Folder",
+    "reactNativeName": "folder",
+    "type": "feather",
+    "display": "Folder"
+  },
+  {
+    "_id": "CnvQcwUFWID",
+    "active": true,
+    "name": "Framer",
+    "reactNativeName": "framer",
+    "type": "feather",
+    "display": "Framer"
+  },
+  {
+    "_id": "4ZGEnvKkrOm",
+    "active": true,
+    "name": "Frown",
+    "reactNativeName": "frown",
+    "type": "feather",
+    "display": "Frown"
+  },
+  {
+    "_id": "Co8zDkiEugz",
+    "active": true,
+    "name": "Gift",
+    "reactNativeName": "gift",
+    "type": "feather",
+    "display": "Gift"
+  },
+  {
+    "_id": "HPozFjfKsC-",
+    "active": true,
+    "name": "GitBranch",
+    "reactNativeName": "git-branch",
+    "type": "feather",
+    "display": "GitBranch"
+  },
+  {
+    "_id": "nrvuYsrMAwZ",
+    "active": true,
+    "name": "GitCommit",
+    "reactNativeName": "git-commit",
+    "type": "feather",
+    "display": "GitCommit"
+  },
+  {
+    "_id": "C6wZehLykJV",
+    "active": true,
+    "name": "GitMerge",
+    "reactNativeName": "git-merge",
+    "type": "feather",
+    "display": "GitMerge"
+  },
+  {
+    "_id": "4O3dBu6FOq-",
+    "active": true,
+    "name": "GitPullRequest",
+    "reactNativeName": "git-pull-request",
+    "type": "feather",
+    "display": "GitPullRequest"
+  },
+  {
+    "_id": "x3O5R3aqaQQ",
+    "active": true,
+    "name": "GitHub",
+    "reactNativeName": "github",
+    "type": "feather",
+    "display": "GitHub"
+  },
+  {
+    "_id": "1qILsQOT3kw",
+    "active": true,
+    "name": "Gitlab",
+    "reactNativeName": "gitlab",
+    "type": "feather",
+    "display": "Gitlab"
+  },
+  {
+    "_id": "OZuAOL1gq6q",
+    "active": true,
+    "name": "Globe",
+    "reactNativeName": "globe",
+    "type": "feather",
+    "display": "Globe"
+  },
+  {
+    "_id": "XCVVuZR_H02",
+    "active": true,
+    "name": "Grid",
+    "reactNativeName": "grid",
+    "type": "feather",
+    "display": "Grid"
+  },
+  {
+    "_id": "40rT_wKS-JJ",
+    "active": true,
+    "name": "HardDrive",
+    "reactNativeName": "hard-drive",
+    "type": "feather",
+    "display": "HardDrive"
+  },
+  {
+    "_id": "AFRfdeTeE1Q",
+    "active": true,
+    "name": "Hash",
+    "reactNativeName": "hash",
+    "type": "feather",
+    "display": "Hash"
+  },
+  {
+    "_id": "RzXNEtybOHK",
+    "active": true,
+    "name": "Headphones",
+    "reactNativeName": "headphones",
+    "type": "feather",
+    "display": "Headphones"
+  },
+  {
+    "_id": "rOVEB-90Fkr",
+    "active": true,
+    "name": "Heart",
+    "reactNativeName": "heart",
+    "type": "feather",
+    "display": "Heart"
+  },
+  {
+    "_id": "JApfjva3hB-",
+    "active": true,
+    "name": "HelpCircle",
+    "reactNativeName": "help-circle",
+    "type": "feather",
+    "display": "HelpCircle"
+  },
+  {
+    "_id": "a2lKHeP1Rnp",
+    "active": true,
+    "name": "Hexagon",
+    "reactNativeName": "hexagon",
+    "type": "feather",
+    "display": "Hexagon"
+  },
+  {
+    "_id": "ScVUVYuqdGW",
+    "active": true,
+    "name": "Home",
+    "reactNativeName": "home",
+    "type": "feather",
+    "display": "Home"
+  },
+  {
+    "_id": "R3-YACXzStE",
+    "active": true,
+    "name": "Image",
+    "reactNativeName": "image",
+    "type": "feather",
+    "display": "Image"
+  },
+  {
+    "_id": "QYVdWkR91C2",
+    "active": true,
+    "name": "Inbox",
+    "reactNativeName": "inbox",
+    "type": "feather",
+    "display": "Inbox"
+  },
+  {
+    "_id": "Y1nOLOFp-TB",
+    "active": true,
+    "name": "Info",
+    "reactNativeName": "info",
+    "type": "feather",
+    "display": "Info"
+  },
+  {
+    "_id": "s__D6x2Q2hR",
+    "active": true,
+    "name": "Instagram",
+    "reactNativeName": "instagram",
+    "type": "feather",
+    "display": "Instagram"
+  },
+  {
+    "_id": "0jnGHZ8r7KH",
+    "active": true,
+    "name": "Italic",
+    "reactNativeName": "italic",
+    "type": "feather",
+    "display": "Italic"
+  },
+  {
+    "_id": "RSbo2mTGqI-",
+    "active": true,
+    "name": "Key",
+    "reactNativeName": "key",
+    "type": "feather",
+    "display": "Key"
+  },
+  {
+    "_id": "D1r1TxmzOXW",
+    "active": true,
+    "name": "Layers",
+    "reactNativeName": "layers",
+    "type": "feather",
+    "display": "Layers"
+  },
+  {
+    "_id": "IVb8NdjlUQP",
+    "active": true,
+    "name": "Layout",
+    "reactNativeName": "layout",
+    "type": "feather",
+    "display": "Layout"
+  },
+  {
+    "_id": "LKEA2fEUsGS",
+    "active": true,
+    "name": "LifeBuoy",
+    "reactNativeName": "lifebuoy",
+    "type": "feather",
+    "display": "LifeBuoy"
+  },
+  {
+    "_id": "Bk-qif3GURK",
+    "active": true,
+    "name": "Link2",
+    "reactNativeName": "link2",
+    "type": "feather",
+    "display": "Link2"
+  },
+  {
+    "_id": "3Zn8-eCkltQ",
+    "active": true,
+    "name": "Link",
+    "reactNativeName": "link",
+    "type": "feather",
+    "display": "Link"
+  },
+  {
+    "_id": "chbvaOmqMVp",
+    "active": true,
+    "name": "Linkedin",
+    "reactNativeName": "linkedin",
+    "type": "feather",
+    "display": "Linkedin"
+  },
+  {
+    "_id": "-eyqQhxoXAx",
+    "active": true,
+    "name": "List",
+    "reactNativeName": "list",
+    "type": "feather",
+    "display": "List"
+  },
+  {
+    "_id": "o4zCWuWvjk-",
+    "active": true,
+    "name": "Loader",
+    "reactNativeName": "loader",
+    "type": "feather",
+    "display": "Loader"
+  },
+  {
+    "_id": "A7i8YgokGjx",
+    "active": true,
+    "name": "Lock",
+    "reactNativeName": "lock",
+    "type": "feather",
+    "display": "Lock"
+  },
+  {
+    "_id": "piy3UarIf-5",
+    "active": true,
+    "name": "LogIn",
+    "reactNativeName": "login",
+    "type": "feather",
+    "display": "LogIn"
+  },
+  {
+    "_id": "owINqeGt899",
+    "active": true,
+    "name": "LogOut",
+    "reactNativeName": "logout",
+    "type": "feather",
+    "display": "LogOut"
+  },
+  {
+    "_id": "mHrDjG_991a",
+    "active": true,
+    "name": "Mail",
+    "reactNativeName": "mail",
+    "type": "feather",
+    "display": "Mail"
+  },
+  {
+    "_id": "bX7P-tOXN5D",
+    "active": true,
+    "name": "MapPin",
+    "reactNativeName": "mappin",
+    "type": "feather",
+    "display": "MapPin"
+  },
+  {
+    "_id": "QTBi-FrNnJP",
+    "active": true,
+    "name": "Map",
+    "reactNativeName": "map",
+    "type": "feather",
+    "display": "Map"
+  },
+  {
+    "_id": "5uin0Ngc5N2",
+    "active": true,
+    "name": "Maximize2",
+    "reactNativeName": "maximize-2",
+    "type": "feather",
+    "display": "Maximize2"
+  },
+  {
+    "_id": "1_eIpfPSkz2",
+    "active": true,
+    "name": "Maximize",
+    "reactNativeName": "maximize",
+    "type": "feather",
+    "display": "Maximize"
+  },
+  {
+    "_id": "2G6Z_uCUqcf",
+    "active": true,
+    "name": "Meh",
+    "reactNativeName": "meh",
+    "type": "feather",
+    "display": "Meh"
+  },
+  {
+    "_id": "YIVHamFqhp4",
+    "active": true,
+    "name": "Menu",
+    "reactNativeName": "menu",
+    "type": "feather",
+    "display": "Menu"
+  },
+  {
+    "_id": "awPIpMjL8Yh",
+    "active": true,
+    "name": "MessageCircle",
+    "reactNativeName": "message-circle",
+    "type": "feather",
+    "display": "MessageCircle"
+  },
+  {
+    "_id": "DpMLVcWJ8pp",
+    "active": true,
+    "name": "MessageSquare",
+    "reactNativeName": "message-square",
+    "type": "feather",
+    "display": "MessageSquare"
+  },
+  {
+    "_id": "ocNizVo8v6z",
+    "active": true,
+    "name": "MicOff",
+    "reactNativeName": "mic-off",
+    "type": "feather",
+    "display": "MicOff"
+  },
+  {
+    "_id": "vWXvP492cDN",
+    "active": true,
+    "name": "Mic",
+    "reactNativeName": "mic",
+    "type": "feather",
+    "display": "Mic"
+  },
+  {
+    "_id": "WxlDnFQ7Iit",
+    "active": true,
+    "name": "Minimize2",
+    "reactNativeName": "minimize-2",
+    "type": "feather",
+    "display": "Minimize2"
+  },
+  {
+    "_id": "TCaqfuBf9fO",
+    "active": true,
+    "name": "Minimize",
+    "reactNativeName": "minimize",
+    "type": "feather",
+    "display": "Minimize"
+  },
+  {
+    "_id": "lmPGkWv4WBC",
+    "active": true,
+    "name": "MinusCircle",
+    "reactNativeName": "minus-circle",
+    "type": "feather",
+    "display": "MinusCircle"
+  },
+  {
+    "_id": "qM1Zqg9uwB3",
+    "active": true,
+    "name": "MinusSquare",
+    "reactNativeName": "minus-square",
+    "type": "feather",
+    "display": "MinusSquare"
+  },
+  {
+    "_id": "TKEokbRHrD-",
+    "active": true,
+    "name": "Minus",
+    "reactNativeName": "minus",
+    "type": "feather",
+    "display": "Minus"
+  },
+  {
+    "_id": "aWtuYnMiKtq",
+    "active": true,
+    "name": "Monitor",
+    "reactNativeName": "monitor",
+    "type": "feather",
+    "display": "Monitor"
+  },
+  {
+    "_id": "81V35G1lt2W",
+    "active": true,
+    "name": "Moon",
+    "reactNativeName": "moon",
+    "type": "feather",
+    "display": "Moon"
+  },
+  {
+    "_id": "UzUeYGSWfTl",
+    "active": true,
+    "name": "MoreHorizontal",
+    "reactNativeName": "more-horizontal",
+    "type": "feather",
+    "display": "MoreHorizontal"
+  },
+  {
+    "_id": "oItQUZK0qBg",
+    "active": true,
+    "name": "MoreVertical",
+    "reactNativeName": "more-vertical",
+    "type": "feather",
+    "display": "MoreVertical"
+  },
+  {
+    "_id": "hLHYb0X7kQe",
+    "active": true,
+    "name": "MousePointer",
+    "reactNativeName": "mouse-pointer",
+    "type": "feather",
+    "display": "MousePointer"
+  },
+  {
+    "_id": "TFDAt-YB5h7",
+    "active": true,
+    "name": "Move",
+    "reactNativeName": "move",
+    "type": "feather",
+    "display": "Move"
+  },
+  {
+    "_id": "MP4G-VDITTm",
+    "active": true,
+    "name": "Music",
+    "reactNativeName": "music",
+    "type": "feather",
+    "display": "Music"
+  },
+  {
+    "_id": "XZeROpzerTw",
+    "active": true,
+    "name": "Navigation2",
+    "reactNativeName": "navigation-2",
+    "type": "feather",
+    "display": "Navigation2"
+  },
+  {
+    "_id": "UbSztGBJs4V",
+    "active": true,
+    "name": "Navigation",
+    "reactNativeName": "navigation",
+    "type": "feather",
+    "display": "Navigation"
+  },
+  {
+    "_id": "KYE7kXqUQBF",
+    "active": true,
+    "name": "Octagon",
+    "reactNativeName": "octagon",
+    "type": "feather",
+    "display": "Octagon"
+  },
+  {
+    "_id": "5NzX2Oyd1-M",
+    "active": true,
+    "name": "Package",
+    "reactNativeName": "package",
+    "type": "feather",
+    "display": "Package"
+  },
+  {
+    "_id": "ac6itCcDdrW",
+    "active": true,
+    "name": "Paperclip",
+    "reactNativeName": "paperclip",
+    "type": "feather",
+    "display": "Paperclip"
+  },
+  {
+    "_id": "22O60ekq2Lv",
+    "active": true,
+    "name": "PauseCircle",
+    "reactNativeName": "pause-circle",
+    "type": "feather",
+    "display": "PauseCircle"
+  },
+  {
+    "_id": "D19IN1mdT2I",
+    "active": true,
+    "name": "Pause",
+    "reactNativeName": "pause",
+    "type": "feather",
+    "display": "Pause"
+  },
+  {
+    "_id": "DTirbPpiU0d",
+    "active": true,
+    "name": "PenTool",
+    "reactNativeName": "pentool",
+    "type": "feather",
+    "display": "PenTool"
+  },
+  {
+    "_id": "oQFfTA_qQnB",
+    "active": true,
+    "name": "Percent",
+    "reactNativeName": "percent",
+    "type": "feather",
+    "display": "Percent"
+  },
+  {
+    "_id": "gV7XqbxM0FB",
+    "active": true,
+    "name": "PhoneCall",
+    "reactNativeName": "phone-call",
+    "type": "feather",
+    "display": "PhoneCall"
+  },
+  {
+    "_id": "RasYhfnUtlQ",
+    "active": true,
+    "name": "PhoneForwarded",
+    "reactNativeName": "phone-forwarded",
+    "type": "feather",
+    "display": "PhoneForwarded"
+  },
+  {
+    "_id": "TMtHxsxZPiG",
+    "active": true,
+    "name": "PhoneIncoming",
+    "reactNativeName": "phone-incoming",
+    "type": "feather",
+    "display": "PhoneIncoming"
+  },
+  {
+    "_id": "0kqPp1V1Hv9",
+    "active": true,
+    "name": "PhoneMissed",
+    "reactNativeName": "phone-missed",
+    "type": "feather",
+    "display": "PhoneMissed"
+  },
+  {
+    "_id": "QL7pPT-nb42",
+    "active": true,
+    "name": "PhoneOff",
+    "reactNativeName": "phone-off",
+    "type": "feather",
+    "display": "PhoneOff"
+  },
+  {
+    "_id": "mQpTEdCzTPG",
+    "active": true,
+    "name": "PhoneOutgoing",
+    "reactNativeName": "phone-outgoing",
+    "type": "feather",
+    "display": "PhoneOutgoing"
+  },
+  {
+    "_id": "WU9eiyyjYww",
+    "active": true,
+    "name": "Phone",
+    "reactNativeName": "phone",
+    "type": "feather",
+    "display": "Phone"
+  },
+  {
+    "_id": "Mpu3AH6BIZF",
+    "active": true,
+    "name": "PieChart",
+    "reactNativeName": "piechart",
+    "type": "feather",
+    "display": "PieChart"
+  },
+  {
+    "_id": "3BclEOEuQcE",
+    "active": true,
+    "name": "PlayCircle",
+    "reactNativeName": "play-circle",
+    "type": "feather",
+    "display": "PlayCircle"
+  },
+  {
+    "_id": "sbZb22_FbYu",
+    "active": true,
+    "name": "Play",
+    "reactNativeName": "play",
+    "type": "feather",
+    "display": "Play"
+  },
+  {
+    "_id": "dZf7YjqSXy8",
+    "active": true,
+    "name": "PlusCircle",
+    "reactNativeName": "plus-circle",
+    "type": "feather",
+    "display": "PlusCircle"
+  },
+  {
+    "_id": "pyzFbRRVu1Y",
+    "active": true,
+    "name": "PlusSquare",
+    "reactNativeName": "plus-square",
+    "type": "feather",
+    "display": "PlusSquare"
+  },
+  {
+    "_id": "i97e82pfdrE",
+    "active": true,
+    "name": "Plus",
+    "reactNativeName": "plus",
+    "type": "feather",
+    "display": "Plus"
+  },
+  {
+    "_id": "Oef8-2o5fzC",
+    "active": true,
+    "name": "Pocket",
+    "reactNativeName": "pocket",
+    "type": "feather",
+    "display": "Pocket"
+  },
+  {
+    "_id": "3Y031VnmLbe",
+    "active": true,
+    "name": "Power",
+    "reactNativeName": "power",
+    "type": "feather",
+    "display": "Power"
+  },
+  {
+    "_id": "dOpke4UhURs",
+    "active": true,
+    "name": "Printer",
+    "reactNativeName": "printer",
+    "type": "feather",
+    "display": "Printer"
+  },
+  {
+    "_id": "y94AbVOxouO",
+    "active": true,
+    "name": "Radio",
+    "reactNativeName": "radio",
+    "type": "feather",
+    "display": "Radio"
+  },
+  {
+    "_id": "C2V5lKZ-Lnh",
+    "active": true,
+    "name": "RefreshCcw",
+    "reactNativeName": "refresh-ccw",
+    "type": "feather",
+    "display": "RefreshCcw"
+  },
+  {
+    "_id": "3OZ9NVSvdkE",
+    "active": true,
+    "name": "RefreshCw",
+    "reactNativeName": "refresh-cw",
+    "type": "feather",
+    "display": "RefreshCw"
+  },
+  {
+    "_id": "GacWrm8M6cA",
+    "active": true,
+    "name": "Repeat",
+    "reactNativeName": "repeat",
+    "type": "feather",
+    "display": "Repeat"
+  },
+  {
+    "_id": "seo0GKmJV9z",
+    "active": true,
+    "name": "Rewind",
+    "reactNativeName": "rewind",
+    "type": "feather",
+    "display": "Rewind"
+  },
+  {
+    "_id": "v7_SHTr0CwE",
+    "active": true,
+    "name": "RotateCcw",
+    "reactNativeName": "rotate-ccw",
+    "type": "feather",
+    "display": "RotateCcw"
+  },
+  {
+    "_id": "TF4ZFK6qqfs",
+    "active": true,
+    "name": "RotateCw",
+    "reactNativeName": "rotate-cw",
+    "type": "feather",
+    "display": "RotateCw"
+  },
+  {
+    "_id": "BZYPHfxt3bH",
+    "active": true,
+    "name": "Rss",
+    "reactNativeName": "rss",
+    "type": "feather",
+    "display": "Rss"
+  },
+  {
+    "_id": "KT_rf20k-E_",
+    "active": true,
+    "name": "Save",
+    "reactNativeName": "save",
+    "type": "feather",
+    "display": "Save"
+  },
+  {
+    "_id": "DG3Ow-pr-dw",
+    "active": true,
+    "name": "Scissors",
+    "reactNativeName": "scissors",
+    "type": "feather",
+    "display": "Scissors"
+  },
+  {
+    "_id": "1GPbWcFURMT",
+    "active": true,
+    "name": "Search",
+    "reactNativeName": "search",
+    "type": "feather",
+    "display": "Search"
+  },
+  {
+    "_id": "srPMs67MfxB",
+    "active": true,
+    "name": "Send",
+    "reactNativeName": "send",
+    "type": "feather",
+    "display": "Send"
+  },
+  {
+    "_id": "q1jgVEkqAfI",
+    "active": true,
+    "name": "Server",
+    "reactNativeName": "server",
+    "type": "feather",
+    "display": "Server"
+  },
+  {
+    "_id": "xl3_YN03pUy",
+    "active": true,
+    "name": "Settings",
+    "reactNativeName": "settings",
+    "type": "feather",
+    "display": "Settings"
+  },
+  {
+    "_id": "LesdKe6sQLo",
+    "active": true,
+    "name": "Share2",
+    "reactNativeName": "share2",
+    "type": "feather",
+    "display": "Share2"
+  },
+  {
+    "_id": "9IdSRt19fjR",
+    "active": true,
+    "name": "Share",
+    "reactNativeName": "share",
+    "type": "feather",
+    "display": "Share"
+  },
+  {
+    "_id": "7cDqwbeE1_a",
+    "active": true,
+    "name": "ShieldOff",
+    "reactNativeName": "shield-off",
+    "type": "feather",
+    "display": "ShieldOff"
+  },
+  {
+    "_id": "Lknty72bCcQ",
+    "active": true,
+    "name": "Shield",
+    "reactNativeName": "shield",
+    "type": "feather",
+    "display": "Shield"
+  },
+  {
+    "_id": "FtXJ5SD3iO6",
+    "active": true,
+    "name": "ShoppingBag",
+    "reactNativeName": "shopping-bag",
+    "type": "feather",
+    "display": "ShoppingBag"
+  },
+  {
+    "_id": "iNBzENzIhK5",
+    "active": true,
+    "name": "ShoppingCart",
+    "reactNativeName": "shopping-cart",
+    "type": "feather",
+    "display": "ShoppingCart"
+  },
+  {
+    "_id": "uPbvCw6J6IP",
+    "active": true,
+    "name": "Shuffle",
+    "reactNativeName": "shuffle",
+    "type": "feather",
+    "display": "Shuffle"
+  },
+  {
+    "_id": "POOUF07wJAP",
+    "active": true,
+    "name": "Sidebar",
+    "reactNativeName": "sidebar",
+    "type": "feather",
+    "display": "Sidebar"
+  },
+  {
+    "_id": "LJkuJQ_D40b",
+    "active": true,
+    "name": "SkipBack",
+    "reactNativeName": "skip-back",
+    "type": "feather",
+    "display": "SkipBack"
+  },
+  {
+    "_id": "c-X7sCLuH5a",
+    "active": true,
+    "name": "SkipForward",
+    "reactNativeName": "skip-forward",
+    "type": "feather",
+    "display": "SkipForward"
+  },
+  {
+    "_id": "D22Thm09wUn",
+    "active": true,
+    "name": "Slack",
+    "reactNativeName": "slack",
+    "type": "feather",
+    "display": "Slack"
+  },
+  {
+    "_id": "HhFm9ZtkcpR",
+    "active": true,
+    "name": "Slash",
+    "reactNativeName": "slash",
+    "type": "feather",
+    "display": "Slash"
+  },
+  {
+    "_id": "cG8AobKOAAh",
+    "active": true,
+    "name": "Sliders",
+    "reactNativeName": "sliders",
+    "type": "feather",
+    "display": "Sliders"
+  },
+  {
+    "_id": "xE_0pH313f9",
+    "active": true,
+    "name": "Smartphone",
+    "reactNativeName": "smartphone",
+    "type": "feather",
+    "display": "Smartphone"
+  },
+  {
+    "_id": "stSrXUEPgeQ",
+    "active": true,
+    "name": "Smile",
+    "reactNativeName": "smile",
+    "type": "feather",
+    "display": "Smile"
+  },
+  {
+    "_id": "z5zsb_QA7HI",
+    "active": true,
+    "name": "Speaker",
+    "reactNativeName": "speaker",
+    "type": "feather",
+    "display": "Speaker"
+  },
+  {
+    "_id": "w7ak9tiM4C5",
+    "active": true,
+    "name": "Square",
+    "reactNativeName": "square",
+    "type": "feather",
+    "display": "Square"
+  },
+  {
+    "_id": "fTc72KciKP0",
+    "active": true,
+    "name": "Star",
+    "reactNativeName": "star",
+    "type": "feather",
+    "display": "Star"
+  },
+  {
+    "_id": "bYoawg4R4AI",
+    "active": true,
+    "name": "StopCircle",
+    "reactNativeName": "stop-circle",
+    "type": "feather",
+    "display": "StopCircle"
+  },
+  {
+    "_id": "nHfjGPW7lEr",
+    "active": true,
+    "name": "Sun",
+    "reactNativeName": "sun",
+    "type": "feather",
+    "display": "Sun"
+  },
+  {
+    "_id": "zoiek2JU-l-",
+    "active": true,
+    "name": "Sunrise",
+    "reactNativeName": "sunrise",
+    "type": "feather",
+    "display": "Sunrise"
+  },
+  {
+    "_id": "jBH67Frj8z3",
+    "active": true,
+    "name": "Sunset",
+    "reactNativeName": "sunset",
+    "type": "feather",
+    "display": "Sunset"
+  },
+  {
+    "_id": "UyHY531928t",
+    "active": true,
+    "name": "Tablet",
+    "reactNativeName": "tablet",
+    "type": "feather",
+    "display": "Tablet"
+  },
+  {
+    "_id": "yDhtdaSiON1",
+    "active": true,
+    "name": "Tag",
+    "reactNativeName": "tag",
+    "type": "feather",
+    "display": "Tag"
+  },
+  {
+    "_id": "qnfBaDTb6Ue",
+    "active": true,
+    "name": "Target",
+    "reactNativeName": "target",
+    "type": "feather",
+    "display": "Target"
+  },
+  {
+    "_id": "w5wdeluA3vz",
+    "active": true,
+    "name": "Terminal",
+    "reactNativeName": "terminal",
+    "type": "feather",
+    "display": "Terminal"
+  },
+  {
+    "_id": "2JkyB4Sx3-y",
+    "active": true,
+    "name": "Thermometer",
+    "reactNativeName": "thermometer",
+    "type": "feather",
+    "display": "Thermometer"
+  },
+  {
+    "_id": "A5BThtA6ghc",
+    "active": true,
+    "name": "ThumbsDown",
+    "reactNativeName": "thumbsdown",
+    "type": "feather",
+    "display": "ThumbsDown"
+  },
+  {
+    "_id": "Fd8PPCPKmJo",
+    "active": true,
+    "name": "ThumbsUp",
+    "reactNativeName": "thumbsup",
+    "type": "feather",
+    "display": "ThumbsUp"
+  },
+  {
+    "_id": "_mq8mUA4nq4",
+    "active": true,
+    "name": "ToggleLeft",
+    "reactNativeName": "toggle-left",
+    "type": "feather",
+    "display": "ToggleLeft"
+  },
+  {
+    "_id": "_61u7x8U708",
+    "active": true,
+    "name": "ToggleRight",
+    "reactNativeName": "toggle-right",
+    "type": "feather",
+    "display": "ToggleRight"
+  },
+  {
+    "_id": "0qMgXhKOVwu",
+    "active": true,
+    "name": "Tool",
+    "reactNativeName": "tool",
+    "type": "feather",
+    "display": "Tool"
+  },
+  {
+    "_id": "1cvt-dtkQR5",
+    "active": true,
+    "name": "Trash2",
+    "reactNativeName": "trash-2",
+    "type": "feather",
+    "display": "Trash2"
+  },
+  {
+    "_id": "X0sNlzMMj3p",
+    "active": true,
+    "name": "Trash",
+    "reactNativeName": "trash",
+    "type": "feather",
+    "display": "Trash"
+  },
+  {
+    "_id": "I2KM23vsz3R",
+    "active": true,
+    "name": "Trello",
+    "reactNativeName": "trello",
+    "type": "feather",
+    "display": "Trello"
+  },
+  {
+    "_id": "R-x7HRhKgqQ",
+    "active": true,
+    "name": "TrendingDown",
+    "reactNativeName": "trending-down",
+    "type": "feather",
+    "display": "TrendingDown"
+  },
+  {
+    "_id": "otlfK3phKM5",
+    "active": true,
+    "name": "TrendingUp",
+    "reactNativeName": "trending-up",
+    "type": "feather",
+    "display": "TrendingUp"
+  },
+  {
+    "_id": "Zdu6sQ-CrV9",
+    "active": true,
+    "name": "Triangle",
+    "reactNativeName": "triangle",
+    "type": "feather",
+    "display": "Triangle"
+  },
+  {
+    "_id": "AbIrGEH2MOH",
+    "active": true,
+    "name": "Truck",
+    "reactNativeName": "truck",
+    "type": "feather",
+    "display": "Truck"
+  },
+  {
+    "_id": "yn8jM1_edXj",
+    "active": true,
+    "name": "Tv",
+    "reactNativeName": "tv",
+    "type": "feather",
+    "display": "Tv"
+  },
+  {
+    "_id": "NCi42zfg89y",
+    "active": true,
+    "name": "Twitch",
+    "reactNativeName": "twitch",
+    "type": "feather",
+    "display": "Twitch"
+  },
+  {
+    "_id": "6dopfNK2OG-",
+    "active": true,
+    "name": "Twitter",
+    "reactNativeName": "twitter",
+    "type": "feather",
+    "display": "Twitter"
+  },
+  {
+    "_id": "xoirmkhelNe",
+    "active": true,
+    "name": "Type",
+    "reactNativeName": "type",
+    "type": "feather",
+    "display": "Type"
+  },
+  {
+    "_id": "YjwCdyIVcku",
+    "active": true,
+    "name": "Umbrella",
+    "reactNativeName": "umbrella",
+    "type": "feather",
+    "display": "Umbrella"
+  },
+  {
+    "_id": "cr2A_dY4F-6e",
+    "active": true,
+    "name": "Underline",
+    "reactNativeName": "underline",
+    "type": "feather",
+    "display": "Underline"
+  },
+  {
+    "_id": "-5barff2LHN8",
+    "active": true,
+    "name": "Unlock",
+    "reactNativeName": "unlock",
+    "type": "feather",
+    "display": "Unlock"
+  },
+  {
+    "_id": "XCP_My_HLgzg",
+    "active": true,
+    "name": "UploadCloud",
+    "reactNativeName": "upload-cloud",
+    "type": "feather",
+    "display": "UploadCloud"
+  },
+  {
+    "_id": "oPf-VTyDwyts",
+    "active": true,
+    "name": "Upload",
+    "reactNativeName": "upload",
+    "type": "feather",
+    "display": "Upload"
+  },
+  {
+    "_id": "4UPBNtH5Nyo6",
+    "active": true,
+    "name": "UserCheck",
+    "reactNativeName": "user-check",
+    "type": "feather",
+    "display": "UserCheck"
+  },
+  {
+    "_id": "EgUWOGPDtEtH",
+    "active": true,
+    "name": "UserMinus",
+    "reactNativeName": "user-minus",
+    "type": "feather",
+    "display": "UserMinus"
+  },
+  {
+    "_id": "5X965-FBMtoS",
+    "active": true,
+    "name": "UserPlus",
+    "reactNativeName": "user-plus",
+    "type": "feather",
+    "display": "UserPlus"
+  },
+  {
+    "_id": "xLkAalZ-rZII",
+    "active": true,
+    "name": "UserX",
+    "reactNativeName": "user-x",
+    "type": "feather",
+    "display": "UserX"
+  },
+  {
+    "_id": "bkSOBPhZVLtf",
+    "active": true,
+    "name": "User",
+    "reactNativeName": "user",
+    "type": "feather",
+    "display": "User"
+  },
+  {
+    "_id": "whwqnWpQ5u05",
+    "active": true,
+    "name": "Users",
+    "reactNativeName": "users",
+    "type": "feather",
+    "display": "Users"
+  },
+  {
+    "_id": "bZIJhIDe2VdM",
+    "active": true,
+    "name": "VideoOff",
+    "reactNativeName": "video-off",
+    "type": "feather",
+    "display": "VideoOff"
+  },
+  {
+    "_id": "CRHWxtTRUPkW",
+    "active": true,
+    "name": "Video",
+    "reactNativeName": "video",
+    "type": "feather",
+    "display": "Video"
+  },
+  {
+    "_id": "u40bQdnnIt1Z",
+    "active": true,
+    "name": "Voicemail",
+    "reactNativeName": "voicemail",
+    "type": "feather",
+    "display": "Voicemail"
+  },
+  {
+    "_id": "2lLymSQ_Z9rS",
+    "active": true,
+    "name": "Volume1",
+    "reactNativeName": "volume-1",
+    "type": "feather",
+    "display": "Volume1"
+  },
+  {
+    "_id": "B_3IyQIxTV20",
+    "active": true,
+    "name": "Volume2",
+    "reactNativeName": "volume-2",
+    "type": "feather",
+    "display": "Volume2"
+  },
+  {
+    "_id": "xNeH3_hS8ici",
+    "active": true,
+    "name": "VolumeX",
+    "reactNativeName": "volume-x",
+    "type": "feather",
+    "display": "VolumeX"
+  },
+  {
+    "_id": "5fqfG4eaK6Wh",
+    "active": true,
+    "name": "Volume",
+    "reactNativeName": "volume",
+    "type": "feather",
+    "display": "Volume"
+  },
+  {
+    "_id": "5etwQKUCx4MP",
+    "active": true,
+    "name": "Watch",
+    "reactNativeName": "watch",
+    "type": "feather",
+    "display": "Watch"
+  },
+  {
+    "_id": "xhMJvEcVpRFX",
+    "active": true,
+    "name": "WifiOff",
+    "reactNativeName": "wifi-off",
+    "type": "feather",
+    "display": "WifiOff"
+  },
+  {
+    "_id": "XBqAH5UPm8im",
+    "active": true,
+    "name": "Wifi",
+    "reactNativeName": "wifi",
+    "type": "feather",
+    "display": "Wifi"
+  },
+  {
+    "_id": "AGrX31CVXRXV",
+    "active": true,
+    "name": "Wind",
+    "reactNativeName": "wind",
+    "type": "feather",
+    "display": "Wind"
+  },
+  {
+    "_id": "9DibmllYbCWL",
+    "active": true,
+    "name": "XCircle",
+    "reactNativeName": "x-circle",
+    "type": "feather",
+    "display": "XCircle"
+  },
+  {
+    "_id": "XxhRUDM2f_0-",
+    "active": true,
+    "name": "XOctagon",
+    "reactNativeName": "x-octagon",
+    "type": "feather",
+    "display": "XOctagon"
+  },
+  {
+    "_id": "jAaJmMFBcG1n",
+    "active": true,
+    "name": "XSquare",
+    "reactNativeName": "x-square",
+    "type": "feather",
+    "display": "XSquare"
+  },
+  {
+    "_id": "X0KOvyJszMr6",
+    "active": true,
+    "name": "X",
+    "reactNativeName": "x",
+    "type": "feather",
+    "display": "X"
+  },
+  {
+    "_id": "Jv2c82iiB6_g",
+    "active": true,
+    "name": "Youtube",
+    "reactNativeName": "youtube",
+    "type": "feather",
+    "display": "Youtube"
+  },
+  {
+    "_id": "E78K4YaO0jii",
+    "active": true,
+    "name": "ZapOff",
+    "reactNativeName": "zap-off",
+    "type": "feather",
+    "display": "ZapOff"
+  },
+  {
+    "_id": "xvkw3YVX4qmv",
+    "active": true,
+    "name": "Zap",
+    "reactNativeName": "zap",
+    "type": "feather",
+    "display": "Zap"
+  },
+  {
+    "_id": "DnsHnOefP_eV",
+    "active": true,
+    "name": "ZoomIn",
+    "reactNativeName": "zoom-in",
+    "type": "feather",
+    "display": "ZoomIn"
+  },
+  {
+    "_id": "WgfH4qMGG8pa",
+    "active": true,
+    "name": "ZoomOut",
+    "reactNativeName": "zoom-out",
+    "type": "feather",
+    "display": "ZoomOut"
+  }
+]

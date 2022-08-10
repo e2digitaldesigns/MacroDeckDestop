@@ -16,10 +16,6 @@ interface IntButtonPad {
 }
 export const ButtonPad = styled(ButtonPadDiv)<IntButtonPad>`
   font-size: 0.75rem;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* text-align: center; */
   cursor: ${props => (props.isEmpty ? "auto" : "grab")};
   position: relative;
   background: ${props => props.bgColor || "#2a2d34"};
@@ -41,7 +37,6 @@ const ButtonPadOptionIcon = styled.div`
   top: 0.125em;
   height: 1.75em;
   width: 1.75em;
-  /* text-align: center; */
   cursor: pointer;
   color: rgba(255, 255, 255, 1);
 
@@ -50,6 +45,7 @@ const ButtonPadOptionIcon = styled.div`
   z-index: 500;
 
   display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
@@ -83,7 +79,7 @@ export const ButtonPadOptionDelete = styled(ButtonPadOptionIcon)`
 
 export const ButtonPadText = styled.div<ButtonPadTextType>`
   position: absolute;
-  bottom: 2px;
+  bottom: 0px;
   left: 0;
   color: ${props => props.color || "#ffffff"};
   width: 100%;
@@ -101,16 +97,16 @@ interface IntButtonPadIcon {
 
 export const ButtonPadIcon = styled.div<IntButtonPadIcon>`
   position: absolute;
-  top: 0;
-
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 1.52em;
+  font-size: 2em;
   color: ${props => props.iconColor || "#ffffff"};
   display: flex;
+  padding-top: 18px;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 `;
 
 export const ButtonPadIconPlus = styled(ButtonPadIcon)`
