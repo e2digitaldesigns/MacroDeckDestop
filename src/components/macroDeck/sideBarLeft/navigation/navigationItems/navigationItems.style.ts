@@ -26,12 +26,25 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
 
 export const ItemStyle = styled(DefaultItem)`
   grid-template-columns: 2.5rem 1.5rem 1.5rem 1.5rem auto 30px;
-  grid-gap: 1em;
+  grid-template-columns: 40px auto 30px;
   font-size: 0.9em;
 `;
 
 export const Drag = styled.div`
   border-right: 0.0625em solid #444;
+`;
+
+export const InnerGrid = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid !important;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  > div {
+    justify-content: center !important;
+    text-align: center;
+  }
 `;
 
 export const Remove = styled.div`

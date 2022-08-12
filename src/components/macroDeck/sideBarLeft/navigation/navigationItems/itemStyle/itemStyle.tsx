@@ -38,21 +38,26 @@ const ItemStyle: React.FC<IntItemStyle> = ({ data }) => {
       <Styled.Drag>
         <MacroDeckIcon icon={"Grid"} size={iconSize} />
       </Styled.Drag>
-      <div>
-        <MacroDeckIcon
-          color={data.iconColor}
-          icon={data.icon}
-          size={iconSize}
-        />
-      </div>
-      <div>
-        <MacroDeckIcon color={data.textColor} icon="PenTool" size={iconSize} />
-      </div>
-      <div>
-        <MacroDeckIcon color={data.bgColor} icon="Droplet" size={iconSize} />
-      </div>
 
-      <div />
+      <Styled.InnerGrid data-testid="cccc">
+        <div>
+          <MacroDeckIcon
+            color={data.iconColor}
+            icon={data.icon}
+            size={iconSize}
+          />
+        </div>
+        <div>
+          <MacroDeckIcon
+            color={data.textColor}
+            icon="PenTool"
+            size={iconSize}
+          />
+        </div>
+        <div>
+          <MacroDeckIcon color={data.bgColor} icon="Droplet" size={iconSize} />
+        </div>
+      </Styled.InnerGrid>
 
       <Styled.Remove onClick={handleStyleDelete}>
         <MacroDeckIcon icon="Trash2" size={iconSize} />
