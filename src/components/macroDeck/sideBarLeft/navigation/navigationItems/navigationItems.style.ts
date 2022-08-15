@@ -8,7 +8,11 @@ interface IntNavigationItem {
 export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
   background-color: ${props => (props.active ? "#25334f" : "#32363f")};
   grid-template-columns: 40px auto 30px;
+
   > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     :nth-child(1) {
       color: #7d7f85;
     }
@@ -28,6 +32,12 @@ export const ItemStyle = styled(DefaultItem)`
   grid-template-columns: 2.5rem 1.5rem 1.5rem 1.5rem auto 30px;
   grid-template-columns: 40px auto 30px;
   font-size: 0.9em;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Drag = styled.div`

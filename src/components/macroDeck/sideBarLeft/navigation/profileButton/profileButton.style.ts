@@ -6,6 +6,10 @@ export const NewProfileButton = styled(DefaultItem)`
   border-bottom: 1px solid #42464e;
 
   > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     :nth-child(1) {
       color: #7d7f85;
     }

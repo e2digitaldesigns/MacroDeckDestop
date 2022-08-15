@@ -44,8 +44,23 @@ const useStylesHook = (): IntUseStyleHook => {
       bgColor: buttonPad.bgColor
     };
 
-    state.styles.push({ ...style, _id: idGenerator() });
-    globalData.setState(state);
+    const isFound = readStyles().some(element => {
+      if (
+        element.textColor === buttonPad.textColor &&
+        element.icon === buttonPad.icon &&
+        element.iconColor === buttonPad.iconColor &&
+        element.image === buttonPad.image &&
+        element.bgColor === buttonPad.bgColor
+      ) {
+        return true;
+      }
+      return false;
+    });
+
+    if (!isFound) {
+      state.styles.push({ ...style, _id: idGenerator() });
+      globalData.setState(state);
+    }
   };
 
   const readStyles: IntUseStyleHook["readStyles"] = (): IntStyles[] => {

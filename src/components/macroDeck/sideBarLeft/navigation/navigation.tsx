@@ -6,9 +6,10 @@ import { IntProfile, IntStyles } from "../../../../types";
 
 import _filter from "lodash/filter";
 import _includes from "lodash/includes";
+import _map from "lodash/map";
+import _range from "lodash/range";
 import _size from "lodash/size";
 import _toLower from "lodash/toLower";
-import _map from "lodash/map";
 
 import ProfileButton from "./profileButton/profileButton";
 import ProfileSearch from "./profileSearch/profileSearch";
@@ -16,19 +17,58 @@ import ItemProfile from "./navigationItems/itemProfile/itemProfile";
 import StylesHeader from "./stylesHeader/stylesHeader";
 import ItemStyle from "./navigationItems/itemStyle/itemStyle";
 
+interface IntItemPlaceHolders {
+  itemCount: number;
+}
+
+const ItemPlaceHolders: React.FC<IntItemPlaceHolders> = ({ itemCount }) => {
+  return (
+    <>
+      {_map(
+        _range(itemCount),
+        (i): React.ReactElement => (
+          <Styled.PlaceHolder key={i} />
+        )
+      )}
+    </>
+  );
+};
+
+enum PlaceHolderType {
+  Profile = "profile",
+  Style = "style"
+}
+
+const placeHolderParser = (
+  count: number,
+  type: PlaceHolderType = PlaceHolderType.Profile
+) => {
+  const minProfileCount = 10;
+  const minStylesCount = 5;
+
+  const baseNum =
+    type === PlaceHolderType.Style ? minStylesCount : minProfileCount;
+
+  return count >= minProfileCount ? 0 : baseNum - count;
+};
+
 const Navigation: React.FC = () => {
   const { readProfiles } = useProfile();
-  const { readStyles } = useStyles();
+  const { readStyles, styleCount } = useStyles();
   const [searchText, setSearchText] = React.useState<string>("");
 
   const profiles = readProfiles();
   const styles = readStyles();
+  const sytleNum = styleCount();
 
   const filteredProfiles = searchText
     ? _filter(profiles, (profile: IntProfile) =>
         _includes(_toLower(profile.profileName), _toLower(searchText))
       )
     : profiles;
+
+  const profilePlaceHolder = placeHolderParser(_size(filteredProfiles));
+  const stylePlaceHolder = placeHolderParser(sytleNum, PlaceHolderType.Style);
 
   return (
     <>
@@ -48,6 +88,8 @@ const Navigation: React.FC = () => {
               <ItemProfile key={profile._id} profile={profile} />
             )
           )}
+
+          <ItemPlaceHolders itemCount={profilePlaceHolder} />
         </div>
       </Styled.ItemProfileWrapper>
 
@@ -61,6 +103,8 @@ const Navigation: React.FC = () => {
               <ItemStyle key={style._id} data={style} />
             )
           )}
+
+          <ItemPlaceHolders itemCount={stylePlaceHolder} />
         </div>
       </Styled.ItemStyleWrapper>
     </>

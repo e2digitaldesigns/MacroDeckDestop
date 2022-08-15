@@ -9,12 +9,11 @@ export const DefaultItem = styled.div`
   grid-column-gap: 0.125rem;
   cursor: pointer;
   font-size: 0.75rem;
+`;
 
-  > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+export const PlaceHolder = styled(DefaultItem)`
+  border-bottom: 1px solid #424242;
+  cursor: inherit;
 `;
 
 export const ItemWrapper = styled.div`
@@ -40,6 +39,8 @@ export const ItemWrapper = styled.div`
     border-right: 1px solid #555;
     padding-right: 0.25rem;
   }
+
+  border-bottom: 1px solid #555;
 `;
 
 export const ItemProfileWrapper = styled(ItemWrapper)`

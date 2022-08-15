@@ -14,6 +14,10 @@ enum DragDropDataKeys {
   DragId = "dragId"
 }
 
+enum DragDropDataValues {
+  Profile = "Profile"
+}
+
 type TAllowDrop = (e: React.DragEvent<HTMLDivElement>) => void;
 type TDragEnd = (e: React.DragEvent<HTMLDivElement>) => void;
 type TDragStart = (e: React.DragEvent<HTMLDivElement>, _id: string) => void;
@@ -36,6 +40,10 @@ const useDragDropHook = (draggingId: string): IntUseDragDropHook => {
 
     const dragStart: TDragStart = (e, _id) => {
       e.dataTransfer.setData(DragDropDataKeys.DragId, _id);
+      e.dataTransfer.setData(
+        DragDropDataKeys.Action,
+        DragDropDataValues.Profile
+      );
     };
 
     buttonPadRefCleanUp.addEventListener(
@@ -70,6 +78,8 @@ const useDragDropHook = (draggingId: string): IntUseDragDropHook => {
     const newState = _cloneDeep(globalData.state);
 
     const dragId = e.dataTransfer.getData(DragDropDataKeys.DragId);
+    const action = e.dataTransfer.getData(DragDropDataKeys.Action);
+    if (action !== DragDropDataValues.Profile) return;
 
     const dragIndex = _findIndex(
       newState.profiles,
