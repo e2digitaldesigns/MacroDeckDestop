@@ -11,6 +11,7 @@ enum DragDropStates {
 
 type TAllowDrop = (e: React.DragEvent<HTMLDivElement>) => void;
 type TDragEnd = (e: React.DragEvent<HTMLDivElement>) => void;
+type TDragOver = () => void;
 type TDragStart = (e: React.DragEvent<HTMLDivElement>) => void;
 type TItemDrop = (
   e: React.DragEvent<HTMLDivElement>,
@@ -22,7 +23,7 @@ interface IntUseDragDropHook {
   isDragOver: boolean;
   allowDrop: TAllowDrop;
   itemDrop: TItemDrop;
-  dragOver: TDragEnd;
+  dragOver: TDragOver;
   dragLeave: TDragEnd;
 }
 
@@ -113,21 +114,23 @@ const useDragDropButtonPadsHook = (
 
       case DragAndDropOptions.CopyButtonPad:
         if (!e.ctrlKey) return;
-        overWriteButtonPad(
-          parseInt(
-            e.dataTransfer.getData(DragAndDropDataTypes.OriginPadNumber)
-          ),
-          destinationPadNumber
+        const originPadNumberCopy = parseInt(
+          e.dataTransfer.getData(DragAndDropDataTypes.OriginPadNumber)
         );
+
+        if (originPadNumberCopy === destinationPadNumber) return;
+
+        overWriteButtonPad(originPadNumberCopy, destinationPadNumber);
         break;
 
       case DragAndDropOptions.SwapButtonPad:
-        swapButtonPad(
-          parseInt(
-            e.dataTransfer.getData(DragAndDropDataTypes.OriginPadNumber)
-          ),
-          destinationPadNumber
+        const originPadNumberSwap = parseInt(
+          e.dataTransfer.getData(DragAndDropDataTypes.OriginPadNumber)
         );
+
+        if (originPadNumberSwap === destinationPadNumber) return;
+
+        swapButtonPad(originPadNumberSwap, destinationPadNumber);
         break;
 
       default:
@@ -135,7 +138,7 @@ const useDragDropButtonPadsHook = (
     }
   };
 
-  const dragOver: TDragEnd = () => {
+  const dragOver: TDragOver = () => {
     setIsdragOver(true);
   };
 

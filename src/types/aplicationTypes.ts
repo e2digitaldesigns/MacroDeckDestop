@@ -7,6 +7,16 @@ export enum ButtonPadNums {
   bpn32 = 32
 }
 
+export enum ButtonPadGridSize {
+  BPGS32 = 32,
+  BPGS36 = 36
+}
+
+export const AdjustGridButtonPadNums: ButtonPadNums[] = [
+  ButtonPadNums.bpn06,
+  ButtonPadNums.bpn15
+];
+
 export enum SectionRoutes {
   Home = "home",
   MacroDeck = "macroDeck",

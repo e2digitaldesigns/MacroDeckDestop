@@ -48,7 +48,7 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>): void => {
     e.preventDefault();
-    dragOver(e);
+    dragOver();
   };
 
   const handleButtonCreate = (e: React.MouseEvent<HTMLDivElement>): void => {

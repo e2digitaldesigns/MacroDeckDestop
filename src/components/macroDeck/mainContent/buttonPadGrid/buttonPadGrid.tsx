@@ -7,7 +7,9 @@ import _range from "lodash/range";
 import { buttonMapper } from "./buttonMapper";
 
 import {
+  AdjustGridButtonPadNums,
   ButtonPadGridCopyStateType,
+  ButtonPadGridSize,
   ButtonPadNums,
   IntActions,
   IntButtonPads
@@ -21,9 +23,19 @@ const ButtonPadGrid: React.FC = () => {
     React.useState<ButtonPadGridCopyStateType>(undefined);
   const { state } = useGlobalData();
   const { appState } = useAppData();
-  const buttonPadArray: number[] = _range(1, ButtonPadNums.bpn32 + 1);
   const { readProfile } = useProfile();
   const profile = readProfile();
+
+  const isGrid6x15 =
+    (profile?.buttonPads &&
+      AdjustGridButtonPadNums.includes(profile.buttonPads as ButtonPadNums)) ||
+    false;
+
+  const numberOfPads = isGrid6x15
+    ? ButtonPadGridSize.BPGS36
+    : ButtonPadGridSize.BPGS32;
+
+  const buttonPadArray: number[] = _range(1, numberOfPads + 1);
 
   const buttonPadParserNumbering = (padNumber: number): number => {
     const padCount = profile?.buttonPads;
@@ -31,8 +43,6 @@ const ButtonPadGrid: React.FC = () => {
     const buttonPadNumber: number =
       padCount && buttonMapper?.[padCount]?.[padNumber]
         ? Number(buttonMapper[padCount][padNumber])
-        : padCount && padCount === ButtonPadNums.bpn32
-        ? padNumber
         : 0;
 
     return buttonPadNumber;
@@ -63,7 +73,10 @@ const ButtonPadGrid: React.FC = () => {
 
   return (
     <>
-      <Styled.ButtonWrapperGrid data-testid="button_pad_grid_wrapper">
+      <Styled.ButtonWrapperGrid
+        data-testid="button_pad_grid_wrapper"
+        isGrid6x15={isGrid6x15}
+      >
         {_map(
           buttonPadArray,
           (number: number): React.ReactElement => (

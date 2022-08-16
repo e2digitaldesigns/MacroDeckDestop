@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ButtonPadDiv = styled.div`
-  width: 100px;
+  width: 100%;
   height: 80px;
   font-size: 0.75rem;
   background: #2a2d34;
