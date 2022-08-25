@@ -5,6 +5,7 @@ import _findIndex from "lodash/findIndex";
 import _map from "lodash/map";
 import _size from "lodash/size";
 import _sortBy from "lodash/sortBy";
+import axios from "axios";
 
 import { useAppData, useGlobalData } from "../";
 import { useObj } from "../../hooks";
@@ -42,6 +43,7 @@ export interface IntUseButtonHook {
     buttonPad: IntButtonPads | undefined,
     copyState: ButtonPadGridCopyStateType
   ) => void;
+  playButtonPad: (buttonPadId?: string) => Promise<void>;
 }
 
 const useButtonHook = (): IntUseButtonHook => {
@@ -368,6 +370,21 @@ const useButtonHook = (): IntUseButtonHook => {
     return _size(readButtonPads());
   };
 
+  const playButtonPad: IntUseButtonHook["playButtonPad"] =
+    async buttonPadId => {
+      const _id = buttonPadId
+        ? buttonPadId
+        : appData.appState.active.buttonPadId;
+
+      const { ipAddress, port } = globalData.state.settings;
+
+      if (!ipAddress || !port || !_id) return;
+
+      axios.post(`http://${ipAddress}:${port}/api/v1/mobile/actions/`, {
+        _id
+      });
+    };
+
   return {
     activateButtonPad,
     addStyleToButtonPad,
@@ -381,7 +398,8 @@ const useButtonHook = (): IntUseButtonHook => {
     readButtonPad,
     readButtonPads,
     swapButtonPad,
-    updateButtonPad
+    updateButtonPad,
+    playButtonPad
   };
 };
 

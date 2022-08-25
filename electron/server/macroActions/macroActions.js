@@ -111,6 +111,8 @@ class ActionClass {
       source: source,
       render: visible
     });
+
+    //SetSceneItemEnabled
   }
 
   async obs() {

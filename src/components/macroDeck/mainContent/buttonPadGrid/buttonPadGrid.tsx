@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppData, useGlobalData, useProfile } from "../../../../hooks";
+import { useGlobalData, useProfile } from "../../../../hooks";
 import _cloneDeep from "lodash/clone";
 import _filter from "lodash/filter";
 import _map from "lodash/map";
@@ -22,7 +22,6 @@ const ButtonPadGrid: React.FC = () => {
   const [copyState, setCopyState] =
     React.useState<ButtonPadGridCopyStateType>(undefined);
   const { state } = useGlobalData();
-  const { appState } = useAppData();
   const { readProfile } = useProfile();
   const profile = readProfile();
 
@@ -67,9 +66,9 @@ const ButtonPadGrid: React.FC = () => {
     });
   };
 
-  if (!appState?.active?.profileId) {
-    return <div data-testid="button_pad_grid_wrapper__null" />;
-  }
+  // if (!appState?.active?.profileId) {
+  //   return <div data-testid="button_pad_grid_wrapper__null" />;
+  // }
 
   return (
     <>
