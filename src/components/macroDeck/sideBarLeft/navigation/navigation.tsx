@@ -49,7 +49,7 @@ const placeHolderParser = (
   const baseNum =
     type === PlaceHolderType.Style ? minStylesCount : minProfileCount;
 
-  return count >= minProfileCount ? 0 : baseNum - count;
+  return count >= baseNum ? 0 : baseNum - count;
 };
 
 const Navigation: React.FC = () => {
