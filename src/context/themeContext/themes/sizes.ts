@@ -5,7 +5,7 @@ export const sizes: DefaultThemeSizes = {
     height: "1.5rem"
   },
   header: {
-    height: "1.875rem"
+    height: "2.1875rem"
   },
   sidebarLeft: {
     width: "13.75rem"

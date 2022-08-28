@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Header = styled.header`
   position: fixed;
   display: flex;
-  width: 100%;
-  height: 35px;
+  width: ${props => props.theme.modules.header.sizes.width};
+  height: ${props => props.theme.modules.header.sizes.height};
   align-items: center;
-  background: #2a2d34;
+  background: ${props => props.theme.modules.header.colors.bg};
 `;
 
 interface IntLinkWrapper {
@@ -22,20 +22,34 @@ export const LinkWrapper = styled.div<IntLinkWrapper>`
   justify-content: center;
   align-items: center;
   padding: 0 0.75rem;
-  background-color: ${props => (props.isActive ? "#33373f" : "#2a2d34")};
+  background-color: ${props =>
+    props.isActive
+      ? props.theme.modules.header.colors.link.bg.active
+      : props.theme.modules.header.colors.link.bg.normal};
   > svg {
-    color: ${props => (props.isActive ? "#8498d2" : "#7f8185")};
+    color: ${props =>
+      props.isActive
+        ? props.theme.modules.header.colors.link.icon.active
+        : props.theme.modules.header.colors.link.icon.normal};
     width: 12px;
     height: 12px;
   }
   a {
-    color: ${props => (props.isActive ? "#fff" : "#7f8185")};
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${props =>
+      props.isActive
+        ? props.theme.modules.header.colors.link.font.active
+        : props.theme.modules.header.colors.link.font.normal};
   }
 
   &:hover {
     a {
-      color: #ffffff;
+      color: ${props => props.theme.modules.header.colors.link.hover.font};
     }
-    background-color: #33373f;
+    background-color: ${props =>
+      props.theme.modules.header.colors.link.hover.bg};
   }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styled from "../../../styles/app.style";
+import * as Styled from "./subHeader.style";
 import { ChevronRight } from "react-bootstrap-icons";
 import BreadCrumb from "./breadCrumb/breadCrumb";
 import {
@@ -32,20 +32,18 @@ const BreadWrapper: React.FC<IntBreadWrapper> = ({
 }) => {
   return (
     <>
-      <>
-        {showChev && (
-          <Styled.BreadCrumbHolder>
-            <ChevronRight />
-          </Styled.BreadCrumbHolder>
-        )}
-        <BreadCrumb
-          activeBreadCrumbMenu={activeBreadCrumbMenu}
-          dropDownType={dropDownType}
-          label={label}
-          title={title}
-          handleSetActiveBreadCrumbMenu={handleSetActiveBreadCrumbMenu}
-        />
-      </>
+      {showChev && (
+        <Styled.BreadCrumbHolder>
+          <ChevronRight />
+        </Styled.BreadCrumbHolder>
+      )}
+      <BreadCrumb
+        activeBreadCrumbMenu={activeBreadCrumbMenu}
+        dropDownType={dropDownType}
+        label={label}
+        title={title}
+        handleSetActiveBreadCrumbMenu={handleSetActiveBreadCrumbMenu}
+      />
     </>
   );
 };

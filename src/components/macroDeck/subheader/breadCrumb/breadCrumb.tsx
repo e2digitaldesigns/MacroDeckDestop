@@ -26,7 +26,7 @@ const BreadCrumb: React.FC<IntBreadCrumb> = ({
     );
   };
 
-  const widthMap = {
+  const widthMap: { [key: string]: number } = {
     profile: 70,
     page: 55,
     buttonPad: 55,

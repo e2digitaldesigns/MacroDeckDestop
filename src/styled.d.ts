@@ -11,13 +11,14 @@ declare module "styled-components" {
     sidebarLeft?: any;
   }
   export interface DefaultTheme {
+    modules: any;
     colors: {
       bodyBg: string;
       border: {
         accent: string;
         default: string;
       };
-      font: string;
+      font: any;
       panel: {
         accent: string;
         fg: string;

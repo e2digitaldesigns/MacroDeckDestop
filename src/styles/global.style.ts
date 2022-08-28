@@ -3,13 +3,13 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 html,
 body {
-  color: ${props => props.theme.colors.font};
+  color: ${props => props.theme.modules.body.colors.font.normal};
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   white-space: nowrap;
-  background-color: ${props => props.theme.colors.bodyBg};
+  background-color: ${props => props.theme.modules.body.colors.bg};
 }
 
 *,

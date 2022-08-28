@@ -8,12 +8,13 @@ export const Footer = styled.section<IntFooter>`
   position: fixed;
   left: 0px;
   bottom: 0px;
-  width: 100%;
-  height: 25px;
-  border-top: 0.0625rem solid ${props => props.theme.colors.border.default};
+  width: ${props => props.theme.modules.footer.sizes.width};
+  height: ${props => props.theme.modules.footer.sizes.height};
+  border-top: 0.0625rem solid
+    ${props => props.theme.modules.footer.colors.border};
 
   overflow: hidden;
-  background-color: #32363f;
+  background-color: ${props => props.theme.modules.footer.colors.bg};
   transition: width 1s;
-  z-index: 999;
+  z-index: ${props => props.theme.modules.footer.zIndex};
 `;
