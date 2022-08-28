@@ -5,9 +5,12 @@ import ButtonPadGrid from "./buttonPadGrid/buttonPadGrid";
 import SectionMenu from "./sectionMenu/sectionMenu";
 import SectionWrapper from "./sectionFormWrapper/sectionFormWrapper";
 import { SectionMenus } from "../../../types/sectionMenuTypes";
+import ButtonPadEditor from "./ButtonPadEditor/ButtonPadEditor";
 
 export const MacroDeckMainContent: React.FC = () => {
-  const [activeMenu, setActiveMenu] = React.useState<SectionMenus | null>(null);
+  const [activeMenu, setActiveMenu] = React.useState<SectionMenus | null>(
+    SectionMenus.ButtonPad
+  );
 
   const handleChangeMenu = (menu: SectionMenus) => {
     setActiveMenu(menu);
@@ -15,9 +18,13 @@ export const MacroDeckMainContent: React.FC = () => {
 
   return (
     <AppStyled.MainContent>
-      {/* <div data-testid="main-content-wrapper"></div> */}
-
       <ButtonPadGrid />
+
+      {/* {activeMenu === SectionMenus.ButtonPad ? (
+        <ButtonPadEditor />
+      ) : (
+        <ButtonPadGrid />
+      )} */}
 
       <SectionMenu activeMenu={activeMenu} changeMenu={handleChangeMenu} />
 

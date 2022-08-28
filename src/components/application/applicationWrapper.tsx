@@ -13,11 +13,39 @@ const ApplicationWrapper: React.FC = () => {
       <Router>
         <AppTemplate.Header />
         <Routes>
-          <Route path={SectionRoutes.Home} element={<h3>home</h3>} />
+          <Route
+            path={SectionRoutes.Home}
+            element={
+              <>
+                <h3>home</h3>
+                <h3>home</h3>
+                <h3>home</h3>
+                <h3>home</h3>
+              </>
+            }
+          />
           <Route index element={<MacroDeck />} />
           <Route path={SectionRoutes.MacroDeck} element={<MacroDeck />} />
-          <Route path={SectionRoutes.Settings} element={<h3>settings</h3>} />
-          <Route path="*" element={<h3>wild card</h3>} />
+          <Route
+            path={SectionRoutes.Settings}
+            element={
+              <>
+                <h3>settings</h3>
+                <h3>settings</h3>
+                <h3>settings</h3>
+              </>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <>
+                <h3>wild card</h3>
+                <h3>wild card</h3>
+                <h3>wild card</h3>
+              </>
+            }
+          />
         </Routes>
 
         <AppTemplate.Footer />

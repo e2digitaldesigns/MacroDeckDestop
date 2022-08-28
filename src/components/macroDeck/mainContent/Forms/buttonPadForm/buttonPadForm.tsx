@@ -8,6 +8,8 @@ import _truncate from "lodash/truncate";
 
 // import * as Styled from "./buttonForm.styles";
 // import IconSelector from "./iconSelector/iconSelector";
+
+import * as FormStyles from "../../../../../styles/form.styles";
 import ButtonFormButtons from "./buttonFormButtons";
 import { IntButtonPads } from "../../../../../types";
 
@@ -75,12 +77,15 @@ const ButtonPadForm: React.FC<IntButtonForm> = () => {
 
   const handleResetButtonDefault = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    setState({ ...globalData.state.buttonPads[buttonPadIndex] });
+    setState({ ...buttonPad, ...defaultButtonPadElements });
+    buttonPad &&
+      state &&
+      updateButtonPad({ ...buttonPad, ...defaultButtonPadElements });
   };
 
   const handleRevertButtonSaved = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    setState({ ...state, ...buttonPad });
+    setState({ ...buttonPad });
   };
 
   const handleSelectIcon = (icon: string) => {
@@ -91,59 +96,32 @@ const ButtonPadForm: React.FC<IntButtonForm> = () => {
     <>
       <div>
         <div>
-          <div>
-            <label htmlFor="text">Text:</label>
-
-            <input
-              data-testid="button_form__text-field-text"
-              disabled={isDisabled}
-              name="text"
-              onChange={e => handleFormChange(e)}
-              type="text"
-              value={state.text}
-            />
-
-            <input
-              disabled={isDisabled}
-              data-testid="button_form__text-field-text-color"
-              name="textColor"
-              onChange={e => handleFormChange(e)}
-              type="color"
-              value={state.textColor}
-            />
-          </div>
-
-          <div>
-            <label htmlFor="icon">Icon:</label>
-            {/* <IconSelector
-              handleSelectIcon={handleSelectIcon}
-              isVisible={isIconSelectVisible}
-            /> */}
-
-            {!isIconSelectVisible && (
-              <input
-                data-testid="button_form__text-field-icon"
-                onClick={handleOpenIconSelector}
-                readOnly
-                type="text"
-                value={state.icon}
-              />
-            )}
-
-            <input
-              data-testid="button_form__icon-color"
-              disabled={isDisabled}
-              name="iconColor"
-              onChange={e => handleFormChange(e)}
-              type="color"
-              value={state.iconColor}
-            />
-          </div>
-
-          {!isIconSelectVisible && (
+          <FormStyles.FieldSet>
             <div>
-              <label htmlFor="bgColor">BG Color:</label>
-              <input
+              <FormStyles.TextField
+                data-testid="button_form__text-field-text"
+                disabled={isDisabled}
+                name="text"
+                onChange={e => handleFormChange(e)}
+                placeholder="Button Text"
+                type="text"
+                value={state.text}
+              />
+
+              <FormStyles.ColorField
+                disabled={isDisabled}
+                data-testid="button_form__text-field-text-color"
+                name="textColor"
+                onChange={e => handleFormChange(e)}
+                type="color"
+                value={state.textColor}
+              />
+            </div>
+          </FormStyles.FieldSet>
+
+          <FormStyles.FieldSet>
+            <div>
+              <FormStyles.ColorField
                 data-testid="button_form__bg-color"
                 disabled={isDisabled}
                 name="bgColor"
@@ -151,8 +129,8 @@ const ButtonPadForm: React.FC<IntButtonForm> = () => {
                 type="color"
                 value={state?.bgColor || defaultButtonPad.bgColor}
               />
-            </div>
-          )}
+            </div>{" "}
+          </FormStyles.FieldSet>
         </div>
 
         <ButtonFormButtons
@@ -164,11 +142,9 @@ const ButtonPadForm: React.FC<IntButtonForm> = () => {
           isVisible={!isIconSelectVisible}
           state={state}
         />
-
-        <button onClick={handleFormSubmit}>submit</button>
       </div>
 
-      <button onClick={() => playButtonPad()}>Play</button>
+      {/* <button onClick={() => playButtonPad()}>Play</button> */}
     </>
   );
 };

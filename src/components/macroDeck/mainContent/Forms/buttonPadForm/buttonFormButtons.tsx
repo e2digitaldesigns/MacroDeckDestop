@@ -1,6 +1,7 @@
 import React from "react";
 import { useButton } from "../../../../../hooks";
-// import * as Styled from "./buttonForm.styles";
+import * as Styled from "./buttonFormButtons.styles";
+import * as FormStyles from "../../../../../styles/form.styles";
 import _isEqual from "lodash/isEqual";
 
 import { IntButtonPads } from "../../../../../types";
@@ -47,31 +48,31 @@ const ButtonFormButtons: React.FC<IntButtonFormButtons> = ({
   if (!isVisible) return <div data-testid="button_form_buttons__submit_null" />;
 
   return (
-    <div>
-      <button
+    <Styled.ButtonGrid>
+      <Styled.SubmitButton
         data-testid="button_form__submit"
         disabled={isSaveDisabled}
         onClick={handleFormSubmit}
       >
         Save
-      </button>
+      </Styled.SubmitButton>
 
-      <button
+      <Styled.SubmitButton
         data-testid="button_form__revert"
         disabled={revertToSavedDisabled}
         onClick={handleRevertButtonSaved}
       >
-        Revert to Saved
-      </button>
+        Revert
+      </Styled.SubmitButton>
 
-      <button
+      <Styled.SubmitButton
         data-testid="button_form__reset"
         disabled={resetToDefaultDisabled}
         onClick={handleResetButtonDefault}
       >
-        Reset to Default
-      </button>
-    </div>
+        Reset
+      </Styled.SubmitButton>
+    </Styled.ButtonGrid>
   );
 };
 
