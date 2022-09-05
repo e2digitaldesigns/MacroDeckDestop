@@ -1,13 +1,36 @@
 import { DefaultTheme } from "styled-components";
 import { sizes } from "./sizes";
 
+const remMaker = (data: string[]): string => {
+  const total = data.reduce(
+    (prevValue: number, currentValue: string) =>
+      prevValue + parseFloat(currentValue),
+    0
+  );
+
+  return total + "rem";
+};
+
+const headerHeight = "2.1875rem";
+const subHeaderHeight = "2.8125rem";
+const footerHeight = "1.5625rem";
+
+const bodyBg = "#1c1e23";
+const primaryBg = "#2a2d34";
+const secondaryBg = "#2a2d34";
+
+const primaryFont = "#ffffff";
+const secondaryFont = "#7f8178";
+
+const primaryAccent = "#8498d2";
+
 export const themeDark: DefaultTheme = {
   modules: {
     body: {
       colors: {
         bg: "#1c1e23",
         font: {
-          normal: "#fff"
+          normal: primaryFont
         }
       }
     },
@@ -15,15 +38,15 @@ export const themeDark: DefaultTheme = {
     header: {
       sizes: {
         width: "100%",
-        height: "2.1875rem"
+        height: headerHeight
       },
       colors: {
         bg: "#2a2d34",
         link: {
           bg: { normal: "#2a2d34", active: "#33373f" },
           icon: { normal: "#7f8185", active: "#8498d2" },
-          font: { normal: "#7f8185", active: "#ffffff" },
-          hover: { bg: "#33373f", font: "#ffffff" }
+          font: { normal: "#7f8185", active: primaryFont },
+          hover: { bg: "#33373f", font: primaryFont }
         }
       }
     },
@@ -31,7 +54,7 @@ export const themeDark: DefaultTheme = {
     subHeader: {
       sizes: {
         width: "100%",
-        height: "2.8125rem"
+        height: subHeaderHeight
       },
       position: { top: "2.1875rem" },
       colors: {
@@ -42,16 +65,96 @@ export const themeDark: DefaultTheme = {
 
     breadCrumb: {
       colors: {
-        bg: { hover: "#2a2d34" },
-        label: { normal: "#7f8178", hover: "#7f8178" },
-        caretHolder: { normal: "#7f8178", hover: "#7f8178" }
+        bg: { normal: "transparent", hover: secondaryBg },
+        label: { font: { normal: secondaryFont } },
+        caretHolder: { normal: secondaryFont }
       }
     },
 
+    breadCrumbMenuItem: {
+      colors: {
+        bg: {
+          normal: { normal: "#414650", active: "#496954" },
+          hover: { normal: "#424d62", active: "#496954" }
+        }
+      }
+    },
+
+    sidebarLeft: {
+      sizes: {
+        width: "13.75rem",
+        height:
+          " calc( 100vh - " +
+          remMaker([headerHeight, subHeaderHeight, footerHeight]) +
+          ")"
+      },
+      position: { top: "5rem" },
+      colors: {
+        bg: "#272a31",
+        borderTop: "#131418",
+        borderRight: "#131418"
+      },
+      zIndex: 999,
+      navigationItems: {
+        colors: {
+          bg: { normal: "#32363f", active: "#25334f" },
+          font: { normal: "#7d7f85", hover: "" },
+          count: { border: "#42464e", font: "#8498d2" },
+          drag: { border: "#444444" },
+          remove: { border: "#42464e", font: "#8498d2" }
+        }
+      },
+      newProfileButton: {
+        colors: {
+          border: "#42464e",
+          font: { normal: "#7d7f85", hover: primaryFont }
+        }
+      },
+      profileSearch: {
+        colors: {
+          wrapper: { bg: "#3d424d" },
+          stats: { font: secondaryFont },
+          count: { font: "#8498d2" },
+          showAll: { font: "#8498d2" },
+          searchBox: { bg: "#31353e", border: "#41454d", font: secondaryFont }
+        }
+      },
+      styleHeeader: {
+        colors: {
+          wrapper: {
+            bg: "#3d424d",
+            border: { normal: "#3d424d", active: "blue" }
+          },
+          icon: { border: "#4444" },
+          svg: { font: { normal: primaryFont, active: "#8498d2" } },
+          count: { font: "#8498d2" }
+        }
+      }
+    },
+    buttonPadParser: {
+      colors: {
+        wrapper: {
+          bg: primaryBg
+        },
+        buttonPad: {
+          bg: primaryBg,
+          border: primaryBg,
+          borderBottom: { active: primaryAccent, normal: primaryBg }
+        },
+
+        buttonPadOptionIcon: {
+          bg: { normal: "rgba(0, 0, 0, 0.5)", hover: "rgba(0, 0, 0, 0.55)" },
+          font: { normal: primaryFont, hover: "#ffffff" }
+        },
+        buttonPadText: { font: { normal: primaryFont } },
+        buttonPadIcon: { font: { normal: primaryFont } },
+        buttonPadIconPlus: { font: { normal: "#999999" } }
+      }
+    },
     footer: {
       sizes: {
         width: "100%",
-        height: "1.5625rem"
+        height: footerHeight
       },
       colors: {
         bg: "#32363f",

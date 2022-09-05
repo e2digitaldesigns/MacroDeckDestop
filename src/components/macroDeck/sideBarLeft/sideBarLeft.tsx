@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "./navigation/navigation";
-import * as Styled from "../../../styles/app.style";
+import * as Styled from "./sideBarLeft.style";
 
 export const MacroDeckSidebarLeft: React.FC = () => {
   return (
-    <Styled.Sidebarleft>
+    <Styled.SidebarLeft>
       <Navigation />
-    </Styled.Sidebarleft>
+    </Styled.SidebarLeft>
   );
 };

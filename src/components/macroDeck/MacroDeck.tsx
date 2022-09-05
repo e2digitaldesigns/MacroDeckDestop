@@ -7,8 +7,8 @@ const MacroDeck: React.FC = () => {
   return (
     <>
       <MacroDeckSubHeader />
-      {/* <MacroDeckSidebarLeft /> */}
-      {/* <MacroDeckMainContent /> */}
+      <MacroDeckSidebarLeft />
+      <MacroDeckMainContent />
     </>
   );
 };

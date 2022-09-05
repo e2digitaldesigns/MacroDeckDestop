@@ -127,7 +127,10 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
       )}
 
       {!buttonPad && (
-        <Styled.ButtonPadIconPlus onClick={handleButtonCreate}>
+        <Styled.ButtonPadIconPlus
+          data-testid="ButtonPadIconPlus"
+          onClick={handleButtonCreate}
+        >
           <Styled.ButtonPadIcon>
             <MacroDeckIcon
               data-testid="button_pad_parser__icon"

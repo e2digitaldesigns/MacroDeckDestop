@@ -20,8 +20,14 @@ export const BreadCrumbMenuItem = styled.div<IntBreadCrumbMenuItem>`
   width: 100%;
   padding: 0.5rem 1rem;
   transition: 0.25s;
-  background-color: ${props => (props.active ? "#496954" : "#414650")};
+  background-color: ${props =>
+    props.active
+      ? props.theme.modules.breadCrumbMenuItem.colors.bg.normal.active
+      : props.theme.modules.breadCrumbMenuItem.colors.bg.normal.normal};
   :hover {
-    background-color: ${props => (props.active ? "#496954" : "#424d62")};
+    background-color: ${props =>
+      props.active
+        ? props.theme.modules.breadCrumbMenuItem.colors.bg.hover.active
+        : props.theme.modules.breadCrumbMenuItem.colors.bg.hover.normal};
   }
 `;

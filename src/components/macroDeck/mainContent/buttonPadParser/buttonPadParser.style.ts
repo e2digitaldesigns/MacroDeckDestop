@@ -4,7 +4,7 @@ const ButtonPadDiv = styled.div`
   width: 100%;
   height: 80px;
   font-size: 0.75rem;
-  background: #2a2d34;
+  background: ${props => props.theme.modules.buttonPadParser.colors.wrapper.bg};
   cursor: pointer;
 `;
 
@@ -18,9 +18,17 @@ export const ButtonPad = styled(ButtonPadDiv)<IntButtonPad>`
   font-size: 0.75rem;
   cursor: ${props => (props.isEmpty ? "auto" : "grab")};
   position: relative;
-  background: ${props => props.bgColor || "#2a2d34"};
-  border: 2px solid #2a2d34;
-  border-bottom: 2px solid ${props => (props.isActive ? "#8498d2" : "#2a2d34")};
+  background: ${props =>
+    props.bgColor || props.theme.modules.buttonPadParser.colors.buttonPad.bg};
+  border: 2px solid
+    ${props => props.theme.modules.buttonPadParser.colors.buttonPad.border};
+  border-bottom: 2px solid
+    ${props =>
+      props.isActive
+        ? props.theme.modules.buttonPadParser.colors.buttonPad.borderBottom
+            .active
+        : props.theme.modules.buttonPadParser.colors.buttonPad.borderBottom
+            .normal};
   transition: border 0.75s;
 `;
 
@@ -38,10 +46,12 @@ const ButtonPadOptionIcon = styled.div`
   height: 1.75em;
   width: 1.75em;
   cursor: pointer;
-  color: rgba(255, 255, 255, 1);
+  color: ${props =>
+    props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.font.normal};
 
   transition: background-color 0.75s;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: ${props =>
+    props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.bg.normal};
   z-index: 500;
 
   display: flex;
@@ -50,8 +60,11 @@ const ButtonPadOptionIcon = styled.div`
   align-items: center;
 
   &:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.55);
+    color: ${props =>
+      props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.font
+        .hover};
+    background-color: ${props =>
+      props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.bg.hover};
   }
 `;
 
@@ -81,7 +94,9 @@ export const ButtonPadText = styled.div<ButtonPadTextType>`
   position: absolute;
   bottom: 0px;
   left: 0;
-  color: ${props => props.color || "#ffffff"};
+  color: ${props =>
+    props.color ||
+    props.theme.modules.buttonPadParser.colors.buttonPadText.font.normal};
   width: 100%;
   min-height: 1.25em;
   padding: 0.25em 0.5em;
@@ -101,8 +116,9 @@ export const ButtonPadIcon = styled.div<IntButtonPadIcon>`
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 2em;
-  color: ${props => props.iconColor || "#ffffff"};
+  color: ${props =>
+    props.iconColor ||
+    props.theme.modules.buttonPadParser.colors.buttonPadIcon.font.normal};
   display: flex;
   padding-top: 18px;
   justify-content: center;
@@ -110,7 +126,7 @@ export const ButtonPadIcon = styled.div<IntButtonPadIcon>`
 `;
 
 export const ButtonPadIconPlus = styled(ButtonPadIcon)`
-  font-size: 2.5em;
-  color: #999;
+  color: ${props =>
+    props.theme.modules.buttonPadParser.colors.buttonPadIconPlus.font.normal};
   cursor: pointer;
 `;

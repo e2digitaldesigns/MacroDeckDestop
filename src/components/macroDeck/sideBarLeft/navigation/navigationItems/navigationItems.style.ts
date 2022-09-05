@@ -6,7 +6,10 @@ interface IntNavigationItem {
 }
 
 export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
-  background-color: ${props => (props.active ? "#25334f" : "#32363f")};
+  background-color: ${props =>
+    props.active
+      ? props.theme.modules.sidebarLeft.navigationItems.colors.bg.active
+      : props.theme.modules.sidebarLeft.navigationItems.colors.bg.normal};
   grid-template-columns: 40px auto 30px;
 
   > div {
@@ -14,7 +17,8 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
     justify-content: center;
     align-items: center;
     :nth-child(1) {
-      color: #7d7f85;
+      color: ${props =>
+        props.theme.modules.sidebarLeft.navigationItems.colors.font.normal};
     }
 
     :nth-child(2) {
@@ -22,8 +26,11 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
     }
 
     :nth-child(3) {
-      border-left: 0.0625em solid #42464e;
-      color: #8498d2;
+      border-left: 0.0625em solid
+        ${props =>
+          props.theme.modules.sidebarLeft.navigationItems.colors.count.border};
+      color: ${props =>
+        props.theme.modules.sidebarLeft.navigationItems.colors.count.font};
     }
   }
 `;
@@ -41,14 +48,15 @@ export const ItemStyle = styled(DefaultItem)`
 `;
 
 export const Drag = styled.div`
-  border-right: 0.0625em solid #444;
+  border-right: 0.0625em solid
+    ${props =>
+      props.theme.modules.sidebarLeft.navigationItems.colors.drag.border};
 `;
 
 export const InnerGrid = styled.div`
   width: 100%;
   height: 100%;
   display: grid !important;
-
   grid-template-columns: repeat(3, 1fr);
 
   > div {
@@ -58,6 +66,9 @@ export const InnerGrid = styled.div`
 `;
 
 export const Remove = styled.div`
-  border-left: 0.0625em solid #42464e;
-  color: #8498d2;
+  border-left: 0.0625em solid
+    ${props =>
+      props.theme.modules.sidebarLeft.navigationItems.colors.remove.border};
+  color: ${props =>
+    props.theme.modules.sidebarLeft.navigationItems.colors.remove.font};
 `;

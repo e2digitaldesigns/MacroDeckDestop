@@ -3,7 +3,15 @@ import { DefaultItem } from "../navigation.style";
 
 export const NewProfileButton = styled(DefaultItem)`
   grid-template-columns: 40px auto;
-  border-bottom: 1px solid #42464e;
+  border-bottom: 1px solid
+    ${props => props.theme.modules.sidebarLeft.newProfileButton.colors.border};
+
+  color: ${props =>
+    props.theme.modules.sidebarLeft.newProfileButton.colors.font.normal};
+  &:hover {
+    color: ${props =>
+      props.theme.modules.sidebarLeft.newProfileButton.colors.font.hover};
+  }
 
   > div {
     display: flex;
@@ -11,7 +19,6 @@ export const NewProfileButton = styled(DefaultItem)`
     align-items: center;
 
     :nth-child(1) {
-      color: #7d7f85;
     }
 
     :nth-child(2) {

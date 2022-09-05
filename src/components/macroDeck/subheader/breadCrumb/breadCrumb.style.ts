@@ -10,12 +10,13 @@ export const BreadCrumb = styled.div`
   padding: 0.25rem 0.5rem 0 1.25rem;
   cursor: pointer;
   :hover {
-    background-color: #2a2d34;
+    background-color: ${props =>
+      props.theme.modules.breadCrumb.colors.bg.hover};
   }
 `;
 
 export const Label = styled.div`
-  color: #7f8178;
+  color: ${props => props.theme.modules.breadCrumb.colors.label.font.normal};
   font-size: 0.75rem;
 `;
 
@@ -39,5 +40,5 @@ export const CaretHolder = styled.div`
   font-size: 0.875rem;
   display: flex;
   padding: 0.125rem 0 0 0.25rem;
-  color: #7f8178;
+  color: ${props => props.theme.modules.breadCrumb.colors.caretHolder.normal};
 `;
