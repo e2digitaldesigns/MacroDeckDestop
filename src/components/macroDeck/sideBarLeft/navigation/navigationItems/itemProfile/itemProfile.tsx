@@ -1,5 +1,5 @@
 import React from "react";
-import { Folder2, FolderFill } from "react-bootstrap-icons";
+import { Folder2, FolderFill, PencilSquare } from "react-bootstrap-icons";
 //https://icons.getbootstrap.com/
 
 import { useAppData, useDragDrop, useProfile } from "../../../../../../hooks";
@@ -7,13 +7,18 @@ import * as Styled from "../navigationItems.style";
 import { IntProfile } from "../../../../../../types";
 
 interface IntNavigationItem {
+  handleOpenProfileEdit: (e: React.MouseEvent<HTMLDivElement>) => void;
   profile: IntProfile;
 }
 
-const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
+const NavigationItem: React.FC<IntNavigationItem> = ({
+  handleOpenProfileEdit,
+  profile
+}) => {
   const { activateProfile } = useProfile();
   const { appState } = useAppData();
   const { allowDrop, itemDrop, dragDropRef } = useDragDrop(profile._id);
+  const [isHover, setIsHover] = React.useState<boolean | null>(null);
 
   const handleProfileActivate = (
     event: React.FormEvent<HTMLDivElement>
@@ -34,7 +39,19 @@ const NavigationItem: React.FC<IntNavigationItem> = ({ profile }) => {
     >
       <div>
         {appState?.active?.profileId === profile._id ? (
-          <FolderFill size={16} />
+          <Styled.IconWrapper
+            onClick={handleOpenProfileEdit}
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+          >
+            <Styled.IconFolderWrapper isHover={isHover}>
+              <FolderFill size={16} />
+            </Styled.IconFolderWrapper>
+
+            <Styled.IconEditWrapper isHover={isHover}>
+              <PencilSquare size={16} />
+            </Styled.IconEditWrapper>
+          </Styled.IconWrapper>
         ) : (
           <Folder2 size={16} />
         )}

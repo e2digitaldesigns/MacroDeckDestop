@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const DefaultItem = styled.div`
   background-color: #32363f;
@@ -50,3 +50,52 @@ export const ItemProfileWrapper = styled(ItemWrapper)`
 export const ItemStyleWrapper = styled(ItemWrapper)`
   height: 150px;
 `;
+
+export const ProfileWrapper = styled.div`
+  width: ${props => props.theme.modules.sidebarLeft.sizes.width};
+  overflow: hidden;
+  position: relative;
+  height: 390px;
+  display: flex;
+`;
+
+interface IntWrapper {
+  isEditMode: boolean | null;
+}
+
+const ProfileToggleWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 300px;
+
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+`;
+
+export const ProfileListWrapper = styled(ProfileToggleWrapper)<IntWrapper>`
+  animation-name: ${props =>
+    props.isEditMode === false
+      ? slideInAnimation
+      : props.isEditMode
+      ? slideOutAnimation
+      : ""};
+`;
+
+export const ProfileEditWrapper = styled(ProfileToggleWrapper)<IntWrapper>`
+  left: -220px;
+  animation-name: ${props =>
+    props.isEditMode
+      ? slideInAnimation
+      : props.isEditMode === false
+      ? slideOutAnimation
+      : ""};
+`;
+
+const slideInAnimation = keyframes`
+ 0% { left: 220px }
+ 100% { left: 0px }`;
+
+const slideOutAnimation = keyframes`
+0% { left: 0 }
+100% { left: -220px }`;

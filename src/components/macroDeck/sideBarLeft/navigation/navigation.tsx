@@ -56,6 +56,7 @@ const Navigation: React.FC = () => {
   const { readProfiles } = useProfile();
   const { readStyles, styleCount } = useStyles();
   const [searchText, setSearchText] = React.useState<string>("");
+  const [isEditMode, setIsEditMode] = React.useState<boolean | null>(null);
 
   const profiles = readProfiles();
   const styles = readStyles();
@@ -70,28 +71,45 @@ const Navigation: React.FC = () => {
   const profilePlaceHolder = placeHolderParser(_size(filteredProfiles));
   const stylePlaceHolder = placeHolderParser(sytleNum, PlaceHolderType.Style);
 
+  const handleOpenProfileEdit = (e: React.MouseEvent<HTMLDivElement>): void => {
+    e.stopPropagation();
+    setIsEditMode(true);
+  };
+
   return (
     <>
-      <ProfileButton />
+      <Styled.ProfileWrapper>
+        <Styled.ProfileListWrapper isEditMode={isEditMode}>
+          <ProfileButton />
 
-      <ProfileSearch
-        count={_size(filteredProfiles)}
-        searchText={searchText}
-        setSearchText={setSearchText}
-      />
+          <ProfileSearch
+            count={_size(filteredProfiles)}
+            searchText={searchText}
+            setSearchText={setSearchText}
+          />
 
-      <Styled.ItemProfileWrapper>
-        <div>
-          {_map(
-            filteredProfiles,
-            (profile: IntProfile): React.ReactElement => (
-              <ItemProfile key={profile._id} profile={profile} />
-            )
-          )}
+          <Styled.ItemProfileWrapper>
+            <div>
+              {_map(
+                filteredProfiles,
+                (profile: IntProfile): React.ReactElement => (
+                  <ItemProfile
+                    key={profile._id}
+                    handleOpenProfileEdit={handleOpenProfileEdit}
+                    profile={profile}
+                  />
+                )
+              )}
 
-          <ItemPlaceHolders itemCount={profilePlaceHolder} />
-        </div>
-      </Styled.ItemProfileWrapper>
+              <ItemPlaceHolders itemCount={profilePlaceHolder} />
+            </div>
+          </Styled.ItemProfileWrapper>
+        </Styled.ProfileListWrapper>
+
+        <Styled.ProfileEditWrapper isEditMode={isEditMode}>
+          <span onClick={() => setIsEditMode(false)}>Close</span>
+        </Styled.ProfileEditWrapper>
+      </Styled.ProfileWrapper>
 
       <StylesHeader />
 

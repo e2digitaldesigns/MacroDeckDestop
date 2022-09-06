@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { DefaultItem } from "../navigation.style";
 
 interface IntNavigationItem {
@@ -16,6 +16,9 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 29px;
+
     :nth-child(1) {
       color: ${props =>
         props.theme.modules.sidebarLeft.navigationItems.colors.font.normal};
@@ -72,3 +75,65 @@ export const Remove = styled.div`
   color: ${props =>
     props.theme.modules.sidebarLeft.navigationItems.colors.remove.font};
 `;
+
+interface IntWrapper {
+  isHover: boolean | null;
+}
+
+export const IconWrapper = styled.div`
+  display: block;
+  width: 40px;
+  height: 29px;
+  overflow: hidden;
+  position: relative;
+`;
+
+export const IconToggleWrapper = styled.div`
+  /* transition: 0.5s; */
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 29px;
+
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+`;
+
+export const IconFolderWrapper = styled(IconToggleWrapper)<IntWrapper>`
+  animation-name: ${props =>
+    props.isHover === null
+      ? startInAnimation
+      : props.isHover
+      ? slideOutAnimation
+      : slideInAnimation};
+`;
+
+export const IconEditWrapper = styled(IconToggleWrapper)<IntWrapper>`
+  left: -40px;
+  animation-name: ${props =>
+    props.isHover === null
+      ? startOutAnimation
+      : props.isHover
+      ? slideInAnimation
+      : slideOutAnimation};
+`;
+
+const slideInAnimation = keyframes`
+ 0% { left: 40px }
+ 100% { left: 0px }`;
+
+const slideOutAnimation = keyframes`
+0% { left: 0 }
+100% { left: -40px }`;
+
+const startInAnimation = keyframes`
+0% { left: 0px }
+100% { left: 0px }`;
+
+const startOutAnimation = keyframes`
+0% { left: -40px }
+100% { left: -40px }`;

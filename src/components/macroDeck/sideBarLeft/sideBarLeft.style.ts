@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface IntSidebarLeft {
-  showMenuLeft?: boolean;
-}
-
-export const SidebarLeft = styled.section<IntSidebarLeft>`
+export const SidebarLeft = styled.section`
   position: fixed;
   top: ${props => props.theme.modules.sidebarLeft.position.top};
   height: ${props => props.theme.modules.sidebarLeft.sizes.height};
