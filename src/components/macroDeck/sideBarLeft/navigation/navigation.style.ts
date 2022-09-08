@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const DefaultItem = styled.div`
   background-color: #32363f;
-  border-bottom: 1px solid #42464e;
+  /* border-bottom: 1px solid #42464e; */
   height: 30px;
   width: 100%;
   display: grid;
@@ -12,7 +12,7 @@ export const DefaultItem = styled.div`
 `;
 
 export const PlaceHolder = styled(DefaultItem)`
-  border-bottom: 1px solid #424242;
+  /* border-bottom: 1px solid #424242; */
   cursor: inherit;
 `;
 

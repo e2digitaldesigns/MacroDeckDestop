@@ -16,6 +16,7 @@ import ProfileSearch from "./profileSearch/profileSearch";
 import ItemProfile from "./navigationItems/itemProfile/itemProfile";
 import StylesHeader from "./stylesHeader/stylesHeader";
 import ItemStyle from "./navigationItems/itemStyle/itemStyle";
+import ProfileEditor from "./profileEditor/profileEditor";
 
 interface IntItemPlaceHolders {
   itemCount: number;
@@ -107,7 +108,7 @@ const Navigation: React.FC = () => {
         </Styled.ProfileListWrapper>
 
         <Styled.ProfileEditWrapper isEditMode={isEditMode}>
-          <span onClick={() => setIsEditMode(false)}>Close</span>
+          <ProfileEditor setIsEditMode={setIsEditMode} />
         </Styled.ProfileEditWrapper>
       </Styled.ProfileWrapper>
 

@@ -6,7 +6,7 @@ export const FieldSet = styled.fieldset`
   > div {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-column-gap: 0.25rem;
+    grid-column-gap: 0.5rem;
   }
 `;
 
@@ -75,4 +75,18 @@ export const SubmitButton = styled.button`
     opacity: 0.5;
     border: none;
   }
+`;
+
+export const SelectField = styled.select`
+  color: #fff;
+  width: 100%;
+  height: 2rem;
+  padding: 0.5em 0.5em;
+  display: inline-block;
+  box-sizing: border-box;
+  /* border-radius: 0.25em; */
+  border: 0.125em solid #55565a;
+  background-color: #1e1f22 !important;
+  outline: none;
+  font-size: 0.875em;
 `;
