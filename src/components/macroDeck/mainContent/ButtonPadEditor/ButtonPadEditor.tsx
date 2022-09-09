@@ -27,6 +27,7 @@ const ButtonPadEditor: React.FC = () => {
   const defaultButtonPad: IntButtonPads = SETTINGS.DEFAULT_STATE.BUTTON_PADS;
   const buttonPad = getActiveButton() || defaultButtonPad;
   const { dropZoneState } = useDropZone();
+  const [newIcon, setNewIcon] = React.useState<string>("");
 
   const { dragDropRef, dragLeave, dragOver, isDragOver, itemDrop } =
     useDragDropButtonPads(buttonPad.buttonPadNum);
@@ -34,6 +35,11 @@ const ButtonPadEditor: React.FC = () => {
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>): void => {
     e.preventDefault();
     dragOver();
+  };
+
+  const handleSelectIcon = (icon: string) => {
+    console.log("pssssss", icon);
+    setNewIcon(icon);
   };
 
   return (
@@ -64,15 +70,13 @@ const ButtonPadEditor: React.FC = () => {
           </Styled.ButtonPadText>
         </Styled.ButtonPadWrapper>
         <div>
-          <ButtonPadForm />
+          <ButtonPadForm newIcon={newIcon} />
         </div>
       </div>
 
-      {/* //icon selector */}
       <div>
-        <IconSelector handleSelectIcon={() => console.log("p")} />
+        <IconSelector handleSelectIcon={handleSelectIcon} />
       </div>
-      <div>action editor</div>
     </Styled.ButtonPadEditor>
   );
 };

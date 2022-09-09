@@ -61,6 +61,7 @@ const IconSelector: React.FC<IntIconSelectorProps> = ({ handleSelectIcon }) => {
             autoFocus={true}
             data-testid="icon-selector__search-field"
             onChange={e => handleOnchange(e)}
+            placeholder="search..."
             value={filter}
           />
         </Styled.IconListSearchWrapper>

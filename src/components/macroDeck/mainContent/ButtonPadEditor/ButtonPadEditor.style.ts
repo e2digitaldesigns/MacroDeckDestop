@@ -7,7 +7,7 @@ export const ButtonPadEditor = styled.div`
   margin: 10px 0 0 10px;
   height: 335px;
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 200px 1fr;
   grid-gap: 5px;
 `;
 

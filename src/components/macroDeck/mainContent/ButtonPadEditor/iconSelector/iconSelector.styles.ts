@@ -53,7 +53,7 @@ export const IconListWrapperScroll = styled.div`
 
 export const IconGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   padding: 0.125em 0.25em 0.125em 0.125em;
   grid-gap: 0.25em;
 `;

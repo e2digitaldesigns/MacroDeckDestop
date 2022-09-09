@@ -18,7 +18,9 @@ export const MacroDeckMainContent: React.FC = () => {
 
   return (
     <AppStyled.MainContent>
-      <ButtonPadGrid />
+      {/* <ButtonPadGrid /> */}
+
+      <ButtonPadEditor />
 
       {/* {activeMenu === SectionMenus.ButtonPad ? (
         <ButtonPadEditor />

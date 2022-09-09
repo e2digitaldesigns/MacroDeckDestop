@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useAppData, useButton, useGlobalData } from "../../../../../hooks";
 import SETTINGS from "../../../../../settings/system.json";
 import _cloneDeep from "lodash/cloneDeep";
@@ -13,9 +13,11 @@ import * as FormStyles from "../../../../../styles/form.styles";
 import ButtonFormButtons from "./buttonFormButtons";
 import { IntButtonPads } from "../../../../../types";
 
-export interface IntButtonForm {}
+export interface IntButtonForm {
+  newIcon: string;
+}
 
-const ButtonPadForm: React.FC<IntButtonForm> = () => {
+const ButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
   const globalData = useGlobalData();
   const { appState, setAppState } = useAppData();
   const {
@@ -27,7 +29,7 @@ const ButtonPadForm: React.FC<IntButtonForm> = () => {
   const defaultButtonPad: IntButtonPads = SETTINGS.DEFAULT_STATE.BUTTON_PADS;
   const buttonPad = getActiveButton() || defaultButtonPad;
   const buttonPadIndex = getActiveButtonIndex();
-  const [state, setState] = useState(defaultButtonPad);
+  const [state, setState] = React.useState(defaultButtonPad);
 
   const isIconSelectVisible = appState.iconSelector.isVisible;
   const isDisabled = !appState?.active?.buttonPadId;
@@ -38,17 +40,22 @@ const ButtonPadForm: React.FC<IntButtonForm> = () => {
     bgColor: defaultButtonPad.bgColor
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (buttonPad && !_isEqual(buttonPad, state)) {
       setState(state => buttonPad);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globalData.state.buttonPads[buttonPadIndex]]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     buttonPad && setState(state => buttonPad);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [appState.active.buttonPadId]);
+
+  React.useEffect(() => {
+    console.log(56, newIcon);
+    setState({ ...state, icon: newIcon });
+  }, [newIcon]);
 
   const handleFormChange = (
     event: React.ChangeEvent<HTMLInputElement>
