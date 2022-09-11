@@ -3,12 +3,13 @@ import * as FormStyles from "../../../../../styles/form.styles";
 
 export const IconListWrapper = styled.div`
   position: relative;
-  height: 11em;
+  /* height: 11em; */
   background-color: rgba(23, 23, 23, 0.5);
+  padding: 5px 0;
 `;
 
 export const IconListSearchWrapper = styled.div`
-  width: calc(100% - 1em);
+  /* width: calc(100% - 1em); */
 `;
 
 export const IconListSearchField = styled(FormStyles.TextField)`
@@ -23,9 +24,9 @@ export const IconListSearchField = styled(FormStyles.TextField)`
 
 export const IconListWrapperScroll = styled.div`
   margin-top: 8px;
-  height: 280px;
+  height: 260px;
   /* height: calc(100% - 3em); */
-  width: calc(100% - 1em);
+  /* width: calc(100% - 1em); */
 
   overflow-y: scroll;
   overflow-x: hidden;

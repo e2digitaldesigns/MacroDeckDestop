@@ -38,10 +38,10 @@ const database = () => {
       saveAppData: () => {
         console.log("save");
         try {
-          // storage.set("md", data.data, error => {
-          //   if (error) throw error;
-          //   console.log("file written successfully");
-          // });
+          storage.set("md", data.data, error => {
+            if (error) throw error;
+            console.log("file updated / written successfully");
+          });
         } catch (err) {
           console.error(err);
         }

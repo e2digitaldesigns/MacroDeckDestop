@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ButtonPadEditor = styled.div`
   background-color: #1c1e23;
-  background-color: black;
+  /* background-color: black; */
   width: 835px;
   margin: 10px 0 0 10px;
   height: 335px;
@@ -58,4 +58,10 @@ export const ButtonPadIcon = styled.div<IntButtonPadIcon>`
   padding-top: 36px;
   justify-content: center;
   /* align-items: center; */
+`;
+
+export const LeftSectionWrapper = styled.section`
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-gap: 5px;
 `;

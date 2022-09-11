@@ -43,7 +43,6 @@ router.get("/start", async (req, res) => {
 });
 
 router.post("/actions", async (req, res) => {
-  console.log(46, req.body);
   const io = req.app.get("socketio");
   const mainWindow = req.app.get("mainWindow");
 

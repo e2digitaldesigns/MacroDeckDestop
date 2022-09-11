@@ -15,6 +15,8 @@ import {
 } from "react-bootstrap-icons";
 import MacroDeckIcon from "../../../../utils/icons/macroDeckIcons";
 import IconSelector from "./iconSelector/iconSelector";
+import ButtonPadMenu from "./ButtonPadMenu/ButtonPadMenu";
+import ActionManager from "./ActionManager/ActionManager";
 
 const ButtonPadEditor: React.FC = () => {
   const {
@@ -38,13 +40,12 @@ const ButtonPadEditor: React.FC = () => {
   };
 
   const handleSelectIcon = (icon: string) => {
-    console.log("pssssss", icon);
     setNewIcon(icon);
   };
 
   return (
     <Styled.ButtonPadEditor>
-      <div>
+      <section>
         <Styled.ButtonPadWrapper
           bgColor={buttonPad?.bgColor}
           isDropZone={dropZoneState.dropZones.buttonPads}
@@ -69,14 +70,17 @@ const ButtonPadEditor: React.FC = () => {
             {isDragOver ? "Drop Here" : buttonPad?.text}
           </Styled.ButtonPadText>
         </Styled.ButtonPadWrapper>
+
         <div>
           <ButtonPadForm newIcon={newIcon} />
         </div>
-      </div>
+      </section>
 
-      <div>
-        <IconSelector handleSelectIcon={handleSelectIcon} />
-      </div>
+      <Styled.LeftSectionWrapper>
+        <ButtonPadMenu />
+        {/* <IconSelector handleSelectIcon={handleSelectIcon} /> */}
+        <ActionManager />
+      </Styled.LeftSectionWrapper>
     </Styled.ButtonPadEditor>
   );
 };

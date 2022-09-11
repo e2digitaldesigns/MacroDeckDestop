@@ -1,8 +1,8 @@
 import React from "react";
 import {
   Clipboard2PlusFill,
-  PlusSquareFill,
-  TrashFill
+  PencilSquare,
+  XSquareFill
 } from "react-bootstrap-icons";
 import {
   useAppData,
@@ -16,7 +16,6 @@ import {
   IntButtonPads
 } from "../../../../types";
 import MacroDeckIcon from "../../../../utils/icons/macroDeckIcons";
-// import { AddBox, Delete, Edit, FileCopy, Restore } from "@material-ui/icons";
 import * as Styled from "./buttonPadParser.style";
 
 interface IntButtonPadParser {
@@ -32,6 +31,7 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
 }) => {
   const appData: IntAppData = useAppData();
   const { dropZoneState } = useDropZone();
+  const [isHover, setIsHover] = React.useState(false);
   const {
     activateButtonPad,
     createButtonPad,
@@ -83,37 +83,36 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
       onDragLeave={e => dragLeave(e)}
       onDragOver={e => handleDragOver(e)}
       onDrop={e => itemDrop(e, buttonPadNumber)}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
       ref={dragDropRef}
     >
       {buttonPad?._id && (
         <>
-          <Styled.ButtonPadOptionDelete
-            data-testid="button_pad_parser__option-delete"
-            onClick={e => handleDeleteButton(e)}
-          >
-            <TrashFill />
-          </Styled.ButtonPadOptionDelete>
+          {isHover && (
+            <>
+              <Styled.ButtonPadOptionDelete
+                data-testid="button_pad_parser__option-delete"
+                onClick={e => handleDeleteButton(e)}
+              >
+                <XSquareFill />
+              </Styled.ButtonPadOptionDelete>
 
-          <Styled.ButtonPadOptionEdit
-            data-testid="button_pad_parser__option-edit"
-            onClick={e => handleButtonActivate(e)}
-          >
-            <Clipboard2PlusFill />
-          </Styled.ButtonPadOptionEdit>
+              <Styled.ButtonPadOptionCopy
+                data-testid="button_pad_parser__option-edit"
+                onClick={() => handleButtonCopy(buttonPad)}
+              >
+                <PencilSquare />
+              </Styled.ButtonPadOptionCopy>
 
-          <Styled.ButtonPadOptionCopy
-            data-testid="button_pad_parser__option-copy"
-            onClick={() => handleButtonCopy(buttonPad)}
-          >
-            <Clipboard2PlusFill />
-          </Styled.ButtonPadOptionCopy>
-
-          <Styled.ButtonPadOptionPaste
-            data-testid="button_pad_parser__option-paste"
-            onClick={handlePasteToButton}
-          >
-            <Clipboard2PlusFill />
-          </Styled.ButtonPadOptionPaste>
+              <Styled.ButtonPadOptionPaste
+                data-testid="button_pad_parser__option-paste"
+                onClick={handlePasteToButton}
+              >
+                <Clipboard2PlusFill />
+              </Styled.ButtonPadOptionPaste>
+            </>
+          )}
 
           <Styled.ButtonPadIcon>
             <MacroDeckIcon
@@ -147,10 +146,6 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
       >
         {isDragOver ? "Drop Here" : buttonPad?.text}
       </Styled.ButtonPadText>
-
-      {/* <div onClick={() => handleButtonCopy(buttonPad)}>copy</div>
-      <div onClick={handlePasteToButton}>paste</div>
-      <div onClick={e => handleDeleteButton(e)}>delete</div> */}
     </Styled.ButtonPad>
   );
 };

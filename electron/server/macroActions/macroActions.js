@@ -5,7 +5,10 @@ const _sortBy = require("lodash/sortBy");
 const axios = require("axios");
 // const robot = require("robotjs");
 const storage = require("electron-json-storage");
-const OBSWebSocket = require("obs-websocket-js");
+// const OBSWebSocket = require("obs-websocket-js");
+
+const OBSWebSocket = require("obs-websocket-js").default;
+const obs = new OBSWebSocket();
 
 class ActionClass {
   constructor(action, database, deviceId, ioSocket, mainWindow) {
@@ -36,7 +39,7 @@ class ActionClass {
 
   async sound() {
     return new Promise(resolve => {
-      this.mainWindow.webContents.send("MD:playSound", this.action.path);
+      this.mainWindow.webContents.send("MacroDeck:playSound", this.action.path);
       resolve();
     });
   }
@@ -98,21 +101,7 @@ class ActionClass {
   }
 
   async obsConnection(obs) {
-    await obs
-      .connect({ address: "10.0.0.91:4444", password: "" })
-      .then(() => console.log("connected..."))
-      .catch(err => {
-        console.log(err);
-      });
-  }
-
-  async obsToggler(obs, source, visible) {
-    await obs.send("SetSceneItemRender", {
-      source: source,
-      render: visible
-    });
-
-    //SetSceneItemEnabled
+    await obs.connect("ws://10.0.0.91:4444", "igHIw4ftNAXRHmVA");
   }
 
   async obs() {
@@ -122,60 +111,82 @@ class ActionClass {
 
       switch (this.action.subAction) {
         case "obsLayerToggle":
-          const { visible } = await obs.send("GetSceneItemProperties", {
-            item: this.action.layer
+          const layer = JSON.parse(this.action.layer);
+          const sceneName = layer.scene;
+          const sceneItemId = layer.sceneItemId;
+
+          const { sceneItemEnabled } = await obs.call("GetSceneItemEnabled", {
+            sceneName,
+            sceneItemId
           });
-          await this.obsToggler(obs, this.action.layer, !visible);
+
+          await obs.call("SetSceneItemEnabled", {
+            sceneName,
+            sceneItemId,
+            sceneItemEnabled: !sceneItemEnabled
+          });
+
           break;
 
-        case "obsLayerHide":
-          await this.obsToggler(obs, this.action.layer, false);
+        case "obsLayerHide": // UPDATE DB WITH SCENENAME AND SCENEITEMID
+          await obs.call("SetSceneItemEnabled", {
+            sceneName: "Hosting Right",
+            sceneItemId: 11,
+            sceneItemEnabled: false
+          });
           break;
 
-        case "obsLayerShow":
-          await this.obsToggler(obs, this.action.layer, true);
+        case "obsLayerShow": // UPDATE DB WITH SCENENAME AND SCENEITEMID
+          await obs.call("SetSceneItemEnabled", {
+            sceneName: "Hosting Right",
+            sceneItemId: 11,
+            sceneItemEnabled: true
+          });
           break;
 
-        case "obsSceneChange":
-          await obs.send("SetCurrentScene", {
-            "scene-name": this.action.scene
+        case "obsSceneChange": //WORKS WORKS WORKS WORKS WORKS WORKS WORKS WORKS
+          await obs.call("SetCurrentProgramScene", {
+            sceneName: this.action.scene
           });
           break;
 
         case "obsRecordToggle":
-          await obs.send("StartStopRecording");
+          await obs.call("ToggleRecord");
           break;
 
         case "obsRecordStart":
-          await obs.send("StartRecording");
+          await obs.call("StartRecord");
           break;
 
         case "obsRecordStop":
-          await obs.send("StopRecording");
+          await obs.call("StopRecord");
           break;
 
         case "obsRecordPause":
-          await obs.send("PauseRecording");
+          await obs.call("PauseRecord");
           break;
 
         case "obsRecordResume":
-          await obs.send("ResumeRecording");
+          await obs.call("ResumeRecord");
           break;
 
         case "obsStreamToggle":
-          await obs.send("StartStopStreaming");
+          await obs.call("ToggleStream");
           break;
 
         case "obsStreamStart":
-          await obs.send("StartStreaming");
+          await obs.call("StartStream");
           break;
 
         case "obsStreamStop":
-          await obs.send("StopStreaming");
+          await obs.call("StopStream");
           break;
       }
+
+      await obs.disconnect();
     } catch (error) {
       console.log(112, error);
+      await obs.disconnect();
     }
   }
 }
@@ -196,7 +207,6 @@ const actionParser = (io, data, mainWindow) => {
     if (!actionArray) return;
 
     for (let action of actionArray) {
-      console.log(181, action);
       const actionClass = await new ActionClass(
         action,
         db,

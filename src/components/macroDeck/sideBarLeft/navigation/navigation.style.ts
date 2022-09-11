@@ -12,7 +12,7 @@ export const DefaultItem = styled.div`
 `;
 
 export const PlaceHolder = styled(DefaultItem)`
-  /* border-bottom: 1px solid #424242; */
+  border-top: 1px solid #424242;
   cursor: inherit;
 `;
 

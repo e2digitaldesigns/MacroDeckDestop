@@ -6,11 +6,11 @@ import {
   FormFieldFileTypes,
   IntActions,
   IntActionTypes
-} from "../../../../../types";
+} from "../../../../../../types";
 
-import { useActions, useAppData } from "../../../../../hooks";
+import { useActions, useAppData } from "../../../../../../hooks";
 
-import SETTINGS from "../../../../../settings/system.json";
+import SETTINGS from "../../../../../../settings/system.json";
 import MdActionParser from "./parsers/mdActionParser";
 import ObsActionParser from "./parsers/obsActionParser";
 import secondaryParser from "./secondaryParser";

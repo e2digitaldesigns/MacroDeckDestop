@@ -4,6 +4,7 @@ export enum IpcRendererTypes {
   header = "header",
   importSettings = "importSettings",
   importSettingsReturn = "importSettings:return",
+  mdPlaySound = "MacroDeck:playSound",
   Ping = "ping"
 }
 

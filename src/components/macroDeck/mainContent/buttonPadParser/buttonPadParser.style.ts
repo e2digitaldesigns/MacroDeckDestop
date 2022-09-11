@@ -20,8 +20,8 @@ export const ButtonPad = styled(ButtonPadDiv)<IntButtonPad>`
   position: relative;
   background: ${props =>
     props.bgColor || props.theme.modules.buttonPadParser.colors.buttonPad.bg};
-  border: 2px solid
-    ${props => props.theme.modules.buttonPadParser.colors.buttonPad.border};
+  /* border: 2px solid
+    ${props => props.theme.modules.buttonPadParser.colors.buttonPad.border}; */
   border-bottom: 2px solid
     ${props =>
       props.isActive
@@ -42,20 +42,22 @@ type ButtonPadTextType = {
 
 const ButtonPadOptionIcon = styled.div`
   position: absolute;
-  top: 0.125em;
-  height: 1.75em;
-  width: 1.75em;
+  top: 0.125rem;
+  height: 1.75rem;
+  width: 1.75rem;
   cursor: pointer;
-  color: ${props =>
-    props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.font.normal};
+  /* color: ${props =>
+    props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.font
+      .normal}; */
 
   transition: background-color 0.75s;
-  color: ${props =>
+  background-color: ${props =>
     props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.bg.normal};
   z-index: 500;
 
+  color: #fff;
+
   display: flex;
-  display: none;
   justify-content: center;
   align-items: center;
 
@@ -68,26 +70,25 @@ const ButtonPadOptionIcon = styled.div`
   }
 `;
 
-export const ButtonPadOptionEdit = styled(ButtonPadOptionIcon)`
+export const ButtonPadOptionCopy = styled(ButtonPadOptionIcon)`
   left: 0;
   border-radius: 0 50% 50% 0;
 `;
 
-export const ButtonPadOptionCopy = styled(ButtonPadOptionIcon)`
-  left: 27px;
-  border-radius: 50% 0 0 50%;
-  display: none;
-`;
-
 export const ButtonPadOptionPaste = styled(ButtonPadOptionIcon)`
-  right: 27px;
-  border-radius: 0 50% 50% 0;
-  display: none;
+  right: 0;
+  border-radius: 50% 0 0 50%;
 `;
 
 export const ButtonPadOptionDelete = styled(ButtonPadOptionIcon)`
+  top: 50px;
   right: 0;
-  border-radius: 50% 0 0 50%;
+  border-radius: 50% 50% 0 0;
+  background-color: #2a2d34;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
 `;
 
 export const ButtonPadText = styled.div<ButtonPadTextType>`

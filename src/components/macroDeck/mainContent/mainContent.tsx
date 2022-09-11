@@ -20,13 +20,13 @@ export const MacroDeckMainContent: React.FC = () => {
     <AppStyled.MainContent>
       {/* <ButtonPadGrid /> */}
 
-      <ButtonPadEditor />
+      {/* <ButtonPadEditor /> */}
 
-      {/* {activeMenu === SectionMenus.ButtonPad ? (
+      {activeMenu === SectionMenus.ButtonPad ? (
         <ButtonPadEditor />
       ) : (
         <ButtonPadGrid />
-      )} */}
+      )}
 
       <SectionMenu activeMenu={activeMenu} changeMenu={handleChangeMenu} />
 
