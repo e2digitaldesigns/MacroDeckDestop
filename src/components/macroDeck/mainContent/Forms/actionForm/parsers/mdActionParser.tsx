@@ -10,6 +10,8 @@ import {
 import { usePage, useProfile } from "../../../../../../hooks";
 // import { SelectField } from "../../../../../../../theme";
 
+import * as Styled from "./../actionForm.styles";
+
 export interface MdActionParserProps {
   state: IntActions;
   onChange: (
@@ -42,8 +44,9 @@ const MdActionParser: React.FC<MdActionParserProps> = ({ state, onChange }) => {
   if (subAction) {
     return (
       <>
-        <label htmlFor={subAction}>Md Action:</label>
-        <select
+        {/* <label htmlFor={subAction}>Md Action:</label> */}
+        <div />
+        <Styled.SelectField
           name={subAction}
           value={state?.[subAction as keyof IntActions]}
           onChange={e => onChange(e)}
@@ -65,7 +68,7 @@ const MdActionParser: React.FC<MdActionParserProps> = ({ state, onChange }) => {
                 {pageLabel(_toNumber(index))}
               </option>
             ))}
-        </select>
+        </Styled.SelectField>
       </>
     );
   }

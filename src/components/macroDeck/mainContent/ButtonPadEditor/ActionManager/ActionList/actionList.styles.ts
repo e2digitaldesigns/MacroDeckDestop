@@ -1,7 +1,29 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  box-sizing: border-box !important;
+  background-color: #32363f;
+  padding: 0.5rem;
+  height: 100%;
+  height: 220px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FieldSet = styled.div`
+  border: none;
+  padding: 0;
+  margin: 0 0 0.375rem 0;
+  width: 100%;
+  overflow: hidden;
+  align-self: flex-end;
+  margin: auto 0 0 0;
+`;
+
 export const ActionListWrapper = styled.div`
-  height: 240px;
+  height: 162px;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 0.25rem;
@@ -28,8 +50,8 @@ export const ActionListWrapper = styled.div`
   border-bottom: 1px solid #555;
 `;
 
-export const ActionListWrapperScroll = styled.div`
-  height: 240px;
+export const ActionListScroll = styled.div`
+  min-height: 100%;
 `;
 
 type ActionListItemType = {
@@ -109,6 +131,7 @@ export const ActionListNewButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: 0.5s;
+  border-radius: 0.25rem;
 
   &:hover {
     background-color: #2a2d34;

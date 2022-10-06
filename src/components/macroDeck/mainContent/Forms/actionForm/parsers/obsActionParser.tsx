@@ -7,6 +7,7 @@ import {
   objectProps
 } from "../../../../../../types";
 import { useObs } from "../../../../../../hooks";
+import * as Styled from "../../../../mainContent/Forms/actionForm/actionForm.styles";
 // import { SelectField } from "../../../../../../../theme";
 
 export interface ObsActionParserProps {
@@ -53,7 +54,7 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
 
   if (subAction) {
     return (
-      <select
+      <Styled.SelectField
         name={subAction}
         value={state?.[subAction as keyof IntActions]}
         onChange={e => handleSelect(e)}
@@ -67,7 +68,7 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
           <>
             {_map(obsState?.scenes, (scene: IntObsScene, i) => (
               <option key={scene.name} value={scene.name}>
-                {scene.name}
+                {scene.name} eee
               </option>
             ))}
           </>
@@ -75,12 +76,12 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
           <>
             {_map(obsState?.sources, (source: IntObsSource, index: number) => (
               <option key={index} value={String(JSON.stringify(source))}>
-                {source.scene + " > " + source.sourceName}
+                {source.scene + " > " + source.sourceName} xxx
               </option>
             ))}
           </>
         )}
-      </select>
+      </Styled.SelectField>
     );
   }
 

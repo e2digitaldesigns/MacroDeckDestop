@@ -14,7 +14,7 @@ import ButtonFormButtons from "./buttonFormButtons";
 import { IntButtonPads } from "../../../../../types";
 
 export interface IntButtonForm {
-  newIcon: string;
+  newIcon?: string;
 }
 
 const ButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
@@ -54,7 +54,7 @@ const ButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
 
   React.useEffect(() => {
     console.log(56, newIcon);
-    setState({ ...state, icon: newIcon });
+    newIcon && setState({ ...state, icon: newIcon });
   }, [newIcon]);
 
   const handleFormChange = (

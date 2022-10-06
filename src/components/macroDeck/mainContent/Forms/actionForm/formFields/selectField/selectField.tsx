@@ -3,6 +3,8 @@ import _map from "lodash/map";
 import _upperFirst from "lodash/upperFirst";
 // import { SelectField } from "../../../../../../../../theme";
 
+import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
+
 interface subActionMapProps {
   [key: string]: any[];
 }
@@ -52,36 +54,29 @@ const FormFieldSelect: React.FC<IntFormFieldSelectProps> = ({
 }) => {
   return (
     <>
-      <div>
-        <label data-testid="form_field_selectField__label" htmlFor={name}>
-          {_upperFirst(name)}:
-        </label>
+      <Styled.Label htmlFor="action"> {_upperFirst(name)}:</Styled.Label>
 
-        <select
-          data-testid="form_field_selectField__input"
-          name="subAction"
-          onChange={e => onChange(e)}
-          value={subAction}
-        >
-          {subAction && (
-            <option
-              data-testid="form_field_selectField__option-choose"
-              value=""
-            >
-              Choose
-            </option>
-          )}
-          {_map(subActionMap?.[name], m => (
-            <option
-              data-testid="form_field_selectField__option"
-              key={m}
-              value={m}
-            >
-              {m}
-            </option>
-          ))}
-        </select>
-      </div>
+      <Styled.SelectField
+        data-testid="form_field_selectField__input"
+        name="subAction"
+        onChange={e => onChange(e)}
+        value={subAction}
+      >
+        {subAction && (
+          <option data-testid="form_field_selectField__option-choose" value="">
+            Choose
+          </option>
+        )}
+        {_map(subActionMap?.[name], m => (
+          <option
+            data-testid="form_field_selectField__option"
+            key={m}
+            value={m}
+          >
+            {m}
+          </option>
+        ))}
+      </Styled.SelectField>
     </>
   );
 };

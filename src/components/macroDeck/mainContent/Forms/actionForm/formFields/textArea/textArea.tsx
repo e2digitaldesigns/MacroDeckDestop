@@ -1,6 +1,7 @@
 import React from "react";
 import _upperFirst from "lodash/upperFirst";
 import { IntActions } from "../../../../../../../types/globalContextType";
+import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
 
 export interface IntFormFieldTextAreaProps {
   name: string;
@@ -14,18 +15,14 @@ const FormFieldTextArea: React.FC<IntFormFieldTextAreaProps> = ({
   state
 }) => (
   <>
-    <div>
-      <label data-testid="form_field_textArea__label" htmlFor={name}>
-        {_upperFirst(name)}:
-      </label>
+    <Styled.Label htmlFor="action">{_upperFirst(name)}:</Styled.Label>
 
-      <textarea
-        data-testid="form_field_textArea__input"
-        name={name}
-        value={state?.[name as keyof IntActions]}
-        onChange={e => onChange(e)}
-      ></textarea>
-    </div>
+    <textarea
+      data-testid="form_field_textArea__input"
+      name={name}
+      value={state?.[name as keyof IntActions]}
+      onChange={e => onChange(e)}
+    ></textarea>
   </>
 );
 

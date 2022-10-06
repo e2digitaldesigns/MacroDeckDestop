@@ -3,6 +3,7 @@ import _upperFirst from "lodash/upperFirst";
 import SETTINGS from "../../../../../../../settings/system.json";
 import { FormFieldFileTypes } from "../../../../../../../types";
 
+import * as Styled from "./../../actionForm.styles";
 export interface IntFormFieldFileProps {
   id?: FormFieldFileTypes;
   name?: string;
@@ -23,18 +24,16 @@ const FormFieldFile: React.FC<IntFormFieldFileProps> = ({
 
   return (
     <>
-      <div>
-        <label data-testid="form_field_fileField__label" htmlFor={name}>
-          {_upperFirst(name)}:
-        </label>
-        <input
-          data-testid="form_field_fileField__input"
-          id={id}
-          type="file"
-          onChange={() => onChange(id)}
-          accept={acceptedFiles}
-        />
-      </div>
+      <label data-testid="form_field_fileField__label" htmlFor={name}>
+        {_upperFirst(name)}:
+      </label>
+      <input
+        data-testid="form_field_fileField__input"
+        id={id}
+        type="file"
+        onChange={() => onChange(id)}
+        accept={acceptedFiles}
+      />
     </>
   );
 };

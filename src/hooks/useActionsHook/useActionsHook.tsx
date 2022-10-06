@@ -119,7 +119,7 @@ const useActionHooks = (): IntUseActionHooks => {
   };
 
   const actionCount: IntUseActionHooks["actionCount"] = () => {
-    return _size(getActions);
+    return _size(getActions());
   };
 
   return {

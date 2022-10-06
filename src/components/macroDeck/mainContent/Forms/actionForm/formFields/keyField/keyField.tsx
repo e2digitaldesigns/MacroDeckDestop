@@ -2,6 +2,7 @@ import React from "react";
 import _upperFirst from "lodash/upperFirst";
 import { IntActions } from "../../../../../../../types/globalContextType";
 // import { TextField } from "../../../../../../../theme";
+import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
 
 interface IntKeyMap {
   [key: string]: string;
@@ -43,19 +44,18 @@ const FormFieldKey: React.FC<IntFormFieldKeyProps> = ({
 
   return (
     <>
-      <div>
-        <label data-testid="form_field_keyField__label" htmlFor={name}>
-          {_upperFirst(name)}:
-        </label>
-        <input
-          data-testid="form_field_keyField__input"
-          name={name}
-          onKeyPress={handleKeyParser}
-          onChange={handleOnChange}
-          type="text"
-          value={state?.[name as keyof IntActions]}
-        />
-      </div>
+      <Styled.Label data-testid="form_field_keyField__label" htmlFor="action">
+        {_upperFirst(name)}:
+      </Styled.Label>
+
+      <Styled.TextField
+        data-testid="form_field_keyField__input"
+        name={name}
+        onKeyPress={handleKeyParser}
+        onChange={handleOnChange}
+        type="text"
+        value={state?.[name as keyof IntActions]}
+      />
     </>
   );
 };

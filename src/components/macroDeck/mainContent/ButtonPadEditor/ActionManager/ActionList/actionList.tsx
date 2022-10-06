@@ -30,14 +30,14 @@ const ActionList: React.FC<{}> = () => {
     deleteAction(_id);
   };
 
-  const defaultCount = 8;
+  const defaultCount = 5;
   const plCount =
     actions.length >= defaultCount ? 0 : defaultCount - actions.length;
 
   return (
-    <>
+    <Styled.Wrapper>
       <Styled.ActionListWrapper>
-        <Styled.ActionListWrapperScroll>
+        <Styled.ActionListScroll>
           <ul>
             {actions &&
               _map(
@@ -69,17 +69,18 @@ const ActionList: React.FC<{}> = () => {
               <Styled.ActionListItem key={index} />
             ))}
           </ul>
-        </Styled.ActionListWrapperScroll>
+        </Styled.ActionListScroll>
       </Styled.ActionListWrapper>
-
-      <Styled.ActionListNewButton
-        data-testid="action-list__action-item-new"
-        disabled={!appState?.active?.buttonPadId}
-        onClick={handleCreateAction}
-      >
-        New Action
-      </Styled.ActionListNewButton>
-    </>
+      <Styled.FieldSet>
+        <Styled.ActionListNewButton
+          data-testid="action-list__action-item-new"
+          disabled={!appState?.active?.buttonPadId}
+          onClick={handleCreateAction}
+        >
+          New Action
+        </Styled.ActionListNewButton>
+      </Styled.FieldSet>
+    </Styled.Wrapper>
   );
 };
 

@@ -23,11 +23,9 @@ const AppContextProvider: React.FC<IntAppContextProvider> = ({ children }) => {
   );
 
   return appContextValue ? (
-    <>
-      <AppContext.Provider value={appContextValue}>
-        {children}
-      </AppContext.Provider>
-    </>
+    <AppContext.Provider value={appContextValue}>
+      {children}
+    </AppContext.Provider>
   ) : null;
 };
 

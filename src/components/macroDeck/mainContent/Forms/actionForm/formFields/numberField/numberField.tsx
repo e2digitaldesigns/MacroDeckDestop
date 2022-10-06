@@ -3,6 +3,7 @@ import _upperFirst from "lodash/upperFirst";
 import _map from "lodash/map";
 import _range from "lodash/range";
 import _toNumber from "lodash/toNumber";
+import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
 
 import { IntActions } from "../../../../../../../types/globalContextType";
 import SETTINGS from "../../../../../../../settings/system.json";
@@ -26,27 +27,29 @@ const FormFieldNumbers: React.FC<IntFormFieldNumbersProps> = ({
 
   return (
     <>
-      <div>
-        <label data-testid="form_field_numberField__label" htmlFor={name}>
-          {_upperFirst(name)}:
-        </label>
-        <select
-          data-testid="form_field_numberField__input"
-          name={name}
-          onChange={onChange}
-          value={value}
-        >
-          {_map(range, (m: number) => (
-            <option
-              data-testid="form_field_numberField__options"
-              key={m}
-              value={seconds ? m * 1000 : m}
-            >
-              {seconds ? m * 1000 : m}
-            </option>
-          ))}
-        </select>
-      </div>
+      <Styled.Label
+        data-testid="form_field_numberField__label"
+        htmlFor="action"
+      >
+        {_upperFirst(name)}:
+      </Styled.Label>
+
+      <Styled.SelectField
+        data-testid="form_field_numberField__input"
+        name={name}
+        onChange={onChange}
+        value={value}
+      >
+        {_map(range, (m: number) => (
+          <option
+            data-testid="form_field_numberField__options"
+            key={m}
+            value={seconds ? m * 1000 : m}
+          >
+            {seconds ? m * 1000 : m}
+          </option>
+        ))}
+      </Styled.SelectField>
     </>
   );
 };

@@ -14,8 +14,9 @@ import SETTINGS from "../../../../../settings/system.json";
 import MdActionParser from "./parsers/mdActionParser";
 import ObsActionParser from "./parsers/obsActionParser";
 import secondaryParser from "./secondaryParser";
-// import * as Styled from "./actionForm.styles";
+import * as Styled from "./actionForm.styles";
 // import { SelectField } from "../../../../../../theme";
+//  xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 import ActionParser from "./actionParser";
 
@@ -111,6 +112,7 @@ const ActionForm: React.FC<{}> = () => {
   const showMdSubs =
     state?.action === ApplicationActions.MD &&
     secondaryParser(ApplicationActions.MD, state);
+
   const showObsSubs =
     state?.action === ApplicationActions.OBS &&
     secondaryParser(ApplicationActions.OBS, state);
@@ -118,61 +120,120 @@ const ActionForm: React.FC<{}> = () => {
   const disabled = !actionId;
 
   return (
-    <>
-      <fieldset>
-        <div>
-          <label htmlFor="action">Action:</label>
-          <select
-            data-testid="action-form__action"
-            name="action"
-            value={state?.action}
-            onChange={e => handleFormChange(e)}
-            disabled={disabled}
-          >
-            {!state?.action && <option value="">Choose Action</option>}
-            {_map(
-              SETTINGS.ACTION_TYPES,
-              (m: IntActionTypes) =>
-                m.active && (
-                  <option key={m.name} value={m.name}>
-                    {m.display}
-                  </option>
-                )
-            )}
-          </select>
-        </div>
+    <Styled.Wrapper>
+      <Styled.FieldSet>
+        <Styled.Label htmlFor="action">Action:</Styled.Label>
 
-        {state?.action && (
+        <Styled.SelectField
+          data-testid="action-form__action"
+          name="action"
+          value={state?.action}
+          onChange={e => handleFormChange(e)}
+          disabled={disabled}
+        >
+          {!state?.action && <option value="">Choose Action</option>}
+          {_map(
+            SETTINGS.ACTION_TYPES,
+            (m: IntActionTypes) =>
+              m.active && (
+                <option key={m.name} value={m.name}>
+                  {m.display}
+                </option>
+              )
+          )}
+        </Styled.SelectField>
+      </Styled.FieldSet>
+
+      {state?.action && (
+        <Styled.FieldSet>
           <ActionParser
             handleFilePathChange={handleFilePathChange}
             handleFormChange={handleFormChange}
             handleKeyFieldChange={handleKeyFieldChange}
             state={state}
           />
-        )}
+        </Styled.FieldSet>
+      )}
 
-        {showMdSubs && (
-          <div data-testid="action-form__md-subs">
-            <MdActionParser state={state} onChange={handleFormChange} />
-          </div>
-        )}
+      {showMdSubs && (
+        <Styled.FieldSet data-testid="action-form__md-subs">
+          <MdActionParser state={state} onChange={handleFormChange} />
+        </Styled.FieldSet>
+      )}
 
-        {showObsSubs && (
-          <div data-testid="action-form__obs-subs">
-            <label htmlFor="text"></label>
-            <ObsActionParser state={state} onChange={handleFormChange} />
-          </div>
-        )}
-      </fieldset>
+      {showObsSubs && (
+        <Styled.FieldSet data-testid="action-form__obs-subs">
+          <label></label>
+          <ObsActionParser state={state} onChange={handleFormChange} />
+        </Styled.FieldSet>
+      )}
 
-      <button
-        data-testid="action-form__submit"
-        onClick={submit}
-        disabled={disabled}
-      >
-        Submit
-      </button>
-    </>
+      <Styled.FieldSetBottom>
+        <Styled.SubmitButton
+          data-testid="action-form__submit"
+          onClick={submit}
+          disabled={disabled}
+        >
+          Submit
+        </Styled.SubmitButton>
+      </Styled.FieldSetBottom>
+    </Styled.Wrapper>
+
+    // <Styled.ActionFormContainer>
+    //   <fieldset>
+    //     <div>
+    //       <label htmlFor="action">Action:</label>
+    //       <select
+    //         data-testid="action-form__action"
+    //         name="action"
+    //         value={state?.action}
+    //         onChange={e => handleFormChange(e)}
+    //         disabled={disabled}
+    //       >
+    //         {!state?.action && <option value="">Choose Action</option>}
+    //         {_map(
+    //           SETTINGS.ACTION_TYPES,
+    //           (m: IntActionTypes) =>
+    //             m.active && (
+    //               <option key={m.name} value={m.name}>
+    //                 {m.display}
+    //               </option>
+    //             )
+    //         )}
+    //       </select>
+    //     </div>
+
+    //     {state?.action && (
+    //       <ActionParser
+    //         handleFilePathChange={handleFilePathChange}
+    //         handleFormChange={handleFormChange}
+    //         handleKeyFieldChange={handleKeyFieldChange}
+    //         state={state}
+    //       />
+    //     )}
+
+    //     {showMdSubs && (
+    //       <div data-testid="action-form__md-subs">
+    //         <MdActionParser state={state} onChange={handleFormChange} />
+    //       </div>
+    //     )}
+
+    //     {showObsSubs && (
+    //       <div data-testid="action-form__obs-subs">
+    //         <label htmlFor="text"></label>
+    //         <ObsActionParser state={state} onChange={handleFormChange} />
+    //       </div>
+    //     )}
+    //   </fieldset>
+
+    //   <button
+    //     data-testid="action-form__submit"
+    //     onClick={submit}
+    //     disabled={disabled}
+    //   >
+    //     Submit
+    //   </button>
+    // </Styled.ActionFormContainer>
   );
 };
 
