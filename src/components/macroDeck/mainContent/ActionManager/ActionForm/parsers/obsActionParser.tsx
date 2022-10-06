@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import _map from "lodash/map";
-import { IntActions } from "../../../../../../../types/globalContextType";
+import { IntActions } from "../../../../../../types/globalContextType";
 import {
   IntObsScene,
   IntObsSource,
   objectProps
-} from "../../../../../../../types";
-import { useObs } from "../../../../../../../hooks";
-// import { SelectField } from "../../../../../../../theme";
+} from "../../../../../../types";
+import { useObs } from "../../../../../../hooks";
 
 export interface ObsActionParserProps {
   state: IntActions;

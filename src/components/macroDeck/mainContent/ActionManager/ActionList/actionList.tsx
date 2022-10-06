@@ -1,8 +1,8 @@
 import React from "react";
 import _map from "lodash/map";
 import _range from "lodash/range";
-import { useActions, useAppData } from "../../../../../../hooks";
-import { IntActions } from "../../../../../../types/globalContextType";
+import { useActions, useAppData } from "../../../../../hooks";
+import { IntActions } from "../../../../../types/globalContextType";
 import SubActionParser from "./subActionParser/subActionParser";
 import * as Styled from "./actionList.styles";
 import { Trash2 } from "react-bootstrap-icons";

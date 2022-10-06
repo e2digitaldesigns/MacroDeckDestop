@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FormFieldFileTypes, IntActions } from "../../../../../../types";
+import { FormFieldFileTypes, IntActions } from "../../../../../types";
 
 import {
   FormFieldFile,

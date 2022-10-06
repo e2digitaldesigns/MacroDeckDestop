@@ -1,7 +1,7 @@
 import React from "react";
 import _upperFirst from "lodash/upperFirst";
-import SETTINGS from "../../../../../../../../settings/system.json";
-import { FormFieldFileTypes } from "../../../../../../../../types";
+import SETTINGS from "../../../../../../../settings/system.json";
+import { FormFieldFileTypes } from "../../../../../../../types";
 
 export interface IntFormFieldFileProps {
   id?: FormFieldFileTypes;

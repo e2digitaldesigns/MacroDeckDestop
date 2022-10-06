@@ -1,7 +1,6 @@
 import React from "react";
 import _upperFirst from "lodash/upperFirst";
-import { IntActions } from "../../../../../../../../types/globalContextType";
-// import { TextField } from "../../../../../../../theme";
+import { IntActions } from "../../../../../../../types/globalContextType";
 
 interface IntKeyMap {
   [key: string]: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import _upperFirst from "lodash/upperFirst";
-import { IntActions } from "../../../../../../../../types/globalContextType";
+import { IntActions } from "../../../../../../../types/globalContextType";
 
 export interface IntFormFieldTextAreaProps {
   name: string;

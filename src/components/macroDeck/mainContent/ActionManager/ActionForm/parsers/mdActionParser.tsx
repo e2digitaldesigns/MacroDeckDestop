@@ -6,8 +6,8 @@ import {
   IntPages,
   IntProfile,
   objectProps
-} from "../../../../../../../types";
-import { usePage, useProfile } from "../../../../../../../hooks";
+} from "../../../../../../types";
+import { usePage, useProfile } from "../../../../../../hooks";
 // import { SelectField } from "../../../../../../../theme";
 
 export interface MdActionParserProps {

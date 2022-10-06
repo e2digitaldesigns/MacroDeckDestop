@@ -2,8 +2,8 @@ import React from "react";
 import _size from "lodash/size";
 import _split from "lodash/split";
 
-import { usePage, useProfile } from "../../../../../../../hooks";
-import { IntActions } from "../../../../../../../types";
+import { usePage, useProfile } from "../../../../../../hooks";
+import { IntActions } from "../../../../../../types";
 
 export interface IntSubActionParser {
   action: IntActions;

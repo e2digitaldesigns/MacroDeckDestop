@@ -1,6 +1,6 @@
 import _includes from "lodash/includes";
 import _startsWith from "lodash/startsWith";
-import { IntActions } from "../../../../../../types";
+import { IntActions } from "../../../../../types";
 
 const subArray = [
   "mdPage",

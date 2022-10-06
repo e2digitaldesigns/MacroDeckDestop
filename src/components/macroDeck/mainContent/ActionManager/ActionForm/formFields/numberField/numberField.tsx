@@ -4,9 +4,8 @@ import _map from "lodash/map";
 import _range from "lodash/range";
 import _toNumber from "lodash/toNumber";
 
-import { IntActions } from "../../../../../../../../types/globalContextType";
-import SETTINGS from "../../../../../../../../settings/system.json";
-// import { SelectField } from "../../../../../../../../theme";
+import { IntActions } from "../../../../../../../types/globalContextType";
+import SETTINGS from "../../../../../../../settings/system.json";
 
 export interface IntFormFieldNumbersProps {
   name: string;
