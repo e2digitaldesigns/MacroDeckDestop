@@ -1,8 +1,8 @@
 import React from "react";
-import ActionForm from "./ActionForm/actionForm";
-import ActionList from "./ActionList/actionList";
+import ActionForm from "./actionForm/actionForm";
+import ActionList from "./actionList/actionList";
 
-import * as Styled from "./ActionManager.styles";
+import * as Styled from "./actionManager.styles";
 
 const ActionManager: React.FC = () => {
   return (

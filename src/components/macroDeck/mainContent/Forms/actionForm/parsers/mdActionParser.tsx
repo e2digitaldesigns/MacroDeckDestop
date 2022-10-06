@@ -10,7 +10,7 @@ import {
 import { usePage, useProfile } from "../../../../../../hooks";
 // import { SelectField } from "../../../../../../../theme";
 
-import * as Styled from "./../actionForm.styles";
+import * as Styled from "../actionForm.styles";
 
 export interface MdActionParserProps {
   state: IntActions;

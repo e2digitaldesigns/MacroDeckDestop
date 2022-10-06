@@ -3,7 +3,7 @@ import _map from "lodash/map";
 import _upperFirst from "lodash/upperFirst";
 // import { SelectField } from "../../../../../../../../theme";
 
-import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
+import * as Styled from "../../actionForm.styles";
 
 interface subActionMapProps {
   [key: string]: any[];

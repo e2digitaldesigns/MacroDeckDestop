@@ -7,7 +7,7 @@ import {
   objectProps
 } from "../../../../../../types";
 import { useObs } from "../../../../../../hooks";
-import * as Styled from "../../../../mainContent/Forms/actionForm/actionForm.styles";
+import * as Styled from "../actionForm.styles";
 // import { SelectField } from "../../../../../../../theme";
 
 export interface ObsActionParserProps {

@@ -3,7 +3,7 @@ import _upperFirst from "lodash/upperFirst";
 import { IntActions } from "../../../../../../../types/globalContextType";
 // import { TextField } from "../../../../../../../../theme";
 
-import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
+import * as Styled from "../../actionForm.styles";
 
 export interface IntFormFieldTextProps {
   name: string;

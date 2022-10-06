@@ -1,7 +1,7 @@
 import React from "react";
 import _upperFirst from "lodash/upperFirst";
 import { IntActions } from "../../../../../../../types/globalContextType";
-import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
+import * as Styled from "../../actionForm.styles";
 
 export interface IntFormFieldTextAreaProps {
   name: string;

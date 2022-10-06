@@ -2,7 +2,7 @@ import React from "react";
 import _upperFirst from "lodash/upperFirst";
 import { IntActions } from "../../../../../../../types/globalContextType";
 // import { TextField } from "../../../../../../../theme";
-import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
+import * as Styled from "../../actionForm.styles";
 
 interface IntKeyMap {
   [key: string]: string;

@@ -3,7 +3,7 @@ import _upperFirst from "lodash/upperFirst";
 import _map from "lodash/map";
 import _range from "lodash/range";
 import _toNumber from "lodash/toNumber";
-import * as Styled from "../../../../../mainContent/Forms/actionForm/actionForm.styles";
+import * as Styled from "../../actionForm.styles";
 
 import { IntActions } from "../../../../../../../types/globalContextType";
 import SETTINGS from "../../../../../../../settings/system.json";
