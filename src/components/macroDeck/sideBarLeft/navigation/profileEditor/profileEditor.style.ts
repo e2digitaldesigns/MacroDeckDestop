@@ -2,12 +2,13 @@ import styled from "styled-components";
 import * as FormStyles from "../../../../../styles/form.styles";
 
 export const ProfileEditorWrapper = styled.div`
-  height: 390px;
-  width: 220px;
-  border-bottom: 1px solid #555;
-  background-color: #32363f;
-  /* padding: 0.5rem; */
-
+  height: 24.375rem;
+  width: 13.75rem;
+  border-bottom: 0.0625rem solid
+    ${props =>
+      props.theme.modules.sidebarLeft.profileEdit.wrapper.border.normal};
+  background-color: ${props =>
+    props.theme.modules.sidebarLeft.profileEdit.wrapper.bg.normal};
   position: relative;
 `;
 
@@ -32,7 +33,9 @@ export const ButtonHolder = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 0.5rem;
-  border-top: 1px solid #555;
+  border-top: 0.0625rem solid
+    ${props =>
+      props.theme.modules.sidebarLeft.profileEdit.buttonHolder.border.normal};
   padding: 0.5rem;
 
   position: absolute;
@@ -41,10 +44,13 @@ export const ButtonHolder = styled.div`
 `;
 
 export const SubmitButton = styled(FormStyles.SubmitButton)`
-  margin: 0.25em 0;
-  background-color: #8498d2;
+  margin: 0.25rem 0;
+  background-color: ${props =>
+    props.theme.modules.sidebarLeft.profileEdit.submitButton.bg.normal};
 `;
 
 export const CloseButton = styled(FormStyles.SubmitButton)`
-  margin: 0.25em 0;
+  margin: 0.25rem 0;
+  background-color: ${props =>
+    props.theme.modules.sidebarLeft.profileEdit.closeButton.bg.normal};
 `;

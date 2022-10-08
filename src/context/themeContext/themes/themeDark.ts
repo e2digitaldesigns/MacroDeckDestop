@@ -119,7 +119,27 @@ export const themeDark: DefaultTheme = {
           searchBox: { bg: "#31353e", border: "#41454d", font: secondaryFont }
         }
       },
-      styleHeeader: {
+      profileEdit: {
+        wrapper: {
+          bg: { normal: "#32363f" },
+          border: {
+            normal: "#555",
+            hover: "#55565a"
+          }
+        },
+        buttonHolder: {
+          border: {
+            normal: "#555"
+          }
+        },
+        submitButton: {
+          bg: { normal: "#8498d2" }
+        },
+        closeButton: {
+          bg: { normal: "#8498d2" }
+        }
+      },
+      styleHeader: {
         colors: {
           wrapper: {
             bg: "#3d424d",
@@ -129,6 +149,13 @@ export const themeDark: DefaultTheme = {
           svg: { font: { normal: primaryFont, active: "#8498d2" } },
           count: { font: "#8498d2" }
         }
+      }
+    },
+    scrollerDiv: {
+      track: { bg: { normal: "#32363f" } },
+      thumb: {
+        bg: { normal: "#3d424d" },
+        border: { normal: "#6e92b9" }
       }
     },
     buttonPadParser: {
@@ -164,8 +191,62 @@ export const themeDark: DefaultTheme = {
         }
       },
       zIndex: 999
+    },
+    formFields: {
+      default: {
+        bg: { normal: "#1e1f22" },
+        border: {
+          normal: "#55565a",
+          hover: "#55565a"
+        },
+        text: {
+          normal: "#fff",
+          focus: "#fff"
+        }
+      },
+      submit: {
+        bg: {
+          normal: bodyBg,
+          hover: bodyBg,
+          focus: bodyBg,
+          active: bodyBg,
+          disabled: bodyBg
+        },
+        border: {
+          normal: "transparent",
+          hover: "#8498d2",
+          focus: "none",
+          active: "none",
+          disabled: "none"
+        },
+        text: {
+          normal: "#fff",
+          hover: "#fff",
+          focus: "#fff",
+          active: "#fff",
+          disabled: "#bbb"
+        }
+      },
+      selectField: {
+        text: {
+          normal: "#fff"
+        },
+        border: {
+          normal: "#55565a"
+        },
+        bg: {
+          normal: "#1e1f22"
+        }
+      },
+      textField: {
+        text: {
+          normal: "#fff",
+          focus: "#fff"
+        }
+      }
     }
   },
+
   colors: {
     bodyBg: "#1c1e23",
     border: {

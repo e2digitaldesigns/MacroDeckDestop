@@ -10,55 +10,54 @@ export const FieldSet = styled.fieldset`
   }
 `;
 
-export const TextField = styled.input.attrs({
-  type: "text"
-})`
-  color: #fff;
+const DefaultField = styled.input`
   width: 100%;
   height: 2rem;
-  padding: 0.5em 0.5em;
-  display: inline-block;
+  color: ${props => props.theme.modules.formFields.default.text.normal};
   box-sizing: border-box;
-  /* border-radius: 0.25em; */
-  border: 0.125em solid #55565a;
-  background-color: #1e1f22 !important;
+  border: 0.125em solid
+    ${props => props.theme.modules.formFields.default.border.normal};
+  background-color: ${props =>
+    props.theme.modules.formFields.default.bg.normal} !important;
   outline: none;
-  font-size: 0.875em;
+  display: inline-block;
+`;
+
+export const TextField = styled(DefaultField).attrs({
+  type: "text"
+})`
+  color: ${props => props.theme.modules.formFields.textField.text.normal};
+  padding: 0.5rem;
+  font-size: 0.875rem;
   &:focus {
-    color: #fff;
+    color: ${props => props.theme.modules.formFields.textField.text.focus};
   }
 `;
 
-export const ColorField = styled.input.attrs({
+export const ColorField = styled(DefaultField).attrs({
   type: "color"
 })`
-  width: 100%;
-  height: 2rem;
-  padding: 0.125em 0.125em;
-  box-sizing: border-box;
-  /* border-radius: 0.25em; */
-  border: 0.125em solid #55565a;
-  background-color: #1e1f22 !important;
-  outline: none;
+  padding: 0.125rem;
 `;
 
 export const SubmitButton = styled.button`
-  background-color: ${props => props.theme.colors.bodyBg};
-  color: white;
-  padding: 0.5em 0.5em;
-  margin: 0.5em 0;
+  background-color: ${props => props.theme.modules.formFields.submit.bg.normal};
+  color: ${props => props.theme.modules.formFields.submit.text.normal};
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0;
   border: none;
-  /* border-radius: 0.125em; */
-  /* float: right; */
   width: 100%;
   cursor: pointer;
   border: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 0.0625rem solid
+    ${props => props.theme.modules.formFields.submit.border.normal};
   outline: none;
   transition: 0.5s;
   &:hover {
-    background-color: ${props => props.theme.colors.bodyBg};
-    border-bottom: 1px solid #8498d2;
+    background-color: ${props =>
+      props.theme.modules.formFields.submit.bg.hover};
+    border-bottom: 0.0625rem solid
+      ${props => props.theme.modules.formFields.submit.border.hover};
   }
   &:focus {
     border: none;
@@ -69,8 +68,9 @@ export const SubmitButton = styled.button`
     text-decoration: none;
   }
   &:disabled {
-    background-color: ${props => props.theme.colors.bodyBg};
-    color: #bbb;
+    background-color: ${props =>
+      props.theme.modules.formFields.submit.bg.disabled};
+    color: ${props => props.theme.modules.formFields.submit.text.disabled};
     cursor: default;
     opacity: 0.5;
     border: none;
@@ -78,15 +78,18 @@ export const SubmitButton = styled.button`
 `;
 
 export const SelectField = styled.select`
-  color: #fff;
+  color: ${props => props.theme.modules.formFields.selectField.text.normal};
+  padding: 0.125rem 0.25rem;
+
   width: 100%;
   height: 2rem;
-  padding: 0.5em 0.5em;
   display: inline-block;
   box-sizing: border-box;
-  /* border-radius: 0.25em; */
-  border: 0.125em solid #55565a;
-  background-color: #1e1f22 !important;
+  border: 0.125em solid
+    ${props => props.theme.modules.formFields.selectField.border.normal};
+
+  background-color: ${props =>
+    props.theme.modules.formFields.selectField.bg.normal} !important;
   outline: none;
-  font-size: 0.875em;
+  font-size: 0.875rem;
 `;

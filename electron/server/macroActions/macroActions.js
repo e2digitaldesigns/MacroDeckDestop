@@ -128,18 +128,22 @@ class ActionClass {
 
           break;
 
-        case "obsLayerHide": // UPDATE DB WITH SCENENAME AND SCENEITEMID
+        case "obsLayerHide":
+          const obsLayerHideProps = JSON.parse(this.action.layer);
+
           await obs.call("SetSceneItemEnabled", {
-            sceneName: "Hosting Right",
-            sceneItemId: 11,
+            sceneName: obsLayerHideProps.scene,
+            sceneItemId: obsLayerHideProps.sceneItemId,
             sceneItemEnabled: false
           });
           break;
 
-        case "obsLayerShow": // UPDATE DB WITH SCENENAME AND SCENEITEMID
+        case "obsLayerShow":
+          const obsLayerShowProps = JSON.parse(this.action.layer);
+
           await obs.call("SetSceneItemEnabled", {
-            sceneName: "Hosting Right",
-            sceneItemId: 11,
+            sceneName: obsLayerShowProps.scene,
+            sceneItemId: obsLayerShowProps.sceneItemId,
             sceneItemEnabled: true
           });
           break;

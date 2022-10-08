@@ -129,7 +129,7 @@ const BtmButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
           disabled={isDisabled}
           name="text"
           onChange={e => handleFormChange(e)}
-          placeholder="Button Text"
+          placeholder="Button Text..."
           type="text"
           value={state.text}
         />
@@ -148,6 +148,7 @@ const BtmButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
         <Styled.ButtonFormTextField
           data-testid="button_form__text-field-icon"
           onClick={handleOpenIconSelector}
+          placeholder="Choose Icon..."
           readOnly
           type="text"
           value={state.icon}

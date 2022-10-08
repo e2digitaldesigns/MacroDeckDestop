@@ -6,20 +6,20 @@ type TStylesHeader = {
 };
 
 export const StylesHeader = styled(DefaultItem)<TStylesHeader>`
-  margin-top: 15px;
-  grid-template-columns: 40px auto 30px;
+  margin-top: 0.9375rem;
+  grid-template-columns: 2.5rem auto 1.875rem;
   background-color: ${props =>
-    props.theme.modules.sidebarLeft.styleHeeader.colors.wrapper.bg};
+    props.theme.modules.sidebarLeft.styleHeader.colors.wrapper.bg};
 
-  grid-gap: 1em;
-  height: 60px;
+  grid-gap: 0.5rem;
+  height: 3.75rem;
 
-  border: 1px dashed
+  border: 0.0625rem dashed
     ${props =>
       props.active
-        ? props.theme.modules.sidebarLeft.styleHeeader.colors.wrapper.border
+        ? props.theme.modules.sidebarLeft.styleHeader.colors.wrapper.border
             .active
-        : props.theme.modules.sidebarLeft.styleHeeader.colors.wrapper.border
+        : props.theme.modules.sidebarLeft.styleHeader.colors.wrapper.border
             .normal};
 
   > div {
@@ -28,15 +28,15 @@ export const StylesHeader = styled(DefaultItem)<TStylesHeader>`
     align-items: center;
 
     :nth-child(1) {
-      border-right: 0.0625em solid
+      border-right: 0.0625rem solid
         ${props =>
-          props.theme.modules.sidebarLeft.styleHeeader.colors.icon.border};
+          props.theme.modules.sidebarLeft.styleHeader.colors.icon.border};
     }
 
     :nth-child(2) {
       display: grid;
       grid-template-columns: 1fr;
-      font-size: 12px;
+      font-size: 0.75rem;
     }
   }
 `;
@@ -49,16 +49,16 @@ export const StylesHeaderIconHolder = styled.div<TStylesHeaderIconHolder>`
   svg {
     color: ${props =>
       props.active
-        ? props.theme.modules.sidebarLeft.styleHeeader.colors.svg.active
-        : props.theme.modules.sidebarLeft.styleHeeader.colors.svg.normal};
+        ? props.theme.modules.sidebarLeft.styleHeader.colors.svg.active
+        : props.theme.modules.sidebarLeft.styleHeader.colors.svg.normal};
   }
 `;
 
 export const StylesHeaderMessage = styled.span`
-  font-size: 11px;
+  font-size: 0.6875rem;
 `;
 
 export const StylesHeaderCount = styled.span`
   color: ${props =>
-    props.theme.modules.sidebarLeft.styleHeeader.colors.count.font};
+    props.theme.modules.sidebarLeft.styleHeader.colors.count.font};
 `;

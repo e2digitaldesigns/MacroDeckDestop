@@ -16,6 +16,8 @@ const MacroDeckIcon: React.FC<IntMacroDeckIcon> = ({
   size = 24
 }): React.ReactElement => {
   const delimeter = "md-icon-alpha-";
+  const defaultIcon = RFIcon.Home;
+  const TheIcon = _find(RFIcon, (f: RFIcon.Icon) => f.displayName === icon);
 
   if (_startsWith(icon, delimeter)) {
     return (
@@ -25,17 +27,16 @@ const MacroDeckIcon: React.FC<IntMacroDeckIcon> = ({
     );
   }
 
-  const defaultIcon = RFIcon.Home;
-
-  const TheIcon =
-    _find(RFIcon, (f: RFIcon.Icon) => f.displayName === icon) || defaultIcon;
-
   return (
-    <TheIcon
-      data-testid={`icon-${TheIcon.displayName}`}
-      color={color}
-      size={size}
-    />
+    <>
+      {icon === "NONE" || !TheIcon ? null : (
+        <TheIcon
+          data-testid={`icon-${TheIcon.displayName}`}
+          color={color}
+          size={size}
+        />
+      )}
+    </>
   );
 };
 

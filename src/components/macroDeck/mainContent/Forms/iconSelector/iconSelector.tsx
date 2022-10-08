@@ -29,7 +29,8 @@ const IconSelector: React.FC<IntIconSelector> = ({ setNewIcon }) => {
     const state = _cloneDeep(appState);
     state.iconSelector.isVisible = false;
     setAppState({ ...state });
-    icon && setNewIcon(icon);
+    console.log({ icon });
+    icon !== null && setNewIcon(icon);
   };
 
   const filterIcons = (iconSet: any) => {
@@ -54,7 +55,7 @@ const IconSelector: React.FC<IntIconSelector> = ({ setNewIcon }) => {
             value={filter}
           />
 
-          <Styled.CloseButton onClick={() => handleCloseIconSelector("")}>
+          <Styled.CloseButton onClick={() => handleCloseIconSelector(null)}>
             Close
           </Styled.CloseButton>
         </Styled.IconListSearchWrapper>
@@ -63,7 +64,7 @@ const IconSelector: React.FC<IntIconSelector> = ({ setNewIcon }) => {
           <Styled.IconGrid>
             <Styled.IconItem
               data-testid="icon-selector__none"
-              onClick={() => handleCloseIconSelector("")}
+              onClick={() => handleCloseIconSelector("NONE")}
             >
               None
             </Styled.IconItem>

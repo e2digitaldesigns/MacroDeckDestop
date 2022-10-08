@@ -58,15 +58,15 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
         onChange={e => handleSelect(e)}
       >
         {!state?.[subAction as keyof IntActions] && (
-          <option value="">Choose {subAction}</option>
+          <option value="">Choose {subAction} sssss</option>
         )}
-        <option>{subAction}s</option>
+        <option>{subAction}s sssssssss</option>
 
         {subAction === "scene" ? (
           <>
             {_map(obsState?.scenes, (scene: IntObsScene, i) => (
               <option key={scene.name} value={scene.name}>
-                {scene.name}
+                {scene.name} 69
               </option>
             ))}
           </>
@@ -74,7 +74,7 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
           <>
             {_map(obsState?.sources, (source: IntObsSource, index: number) => (
               <option key={index} value={String(JSON.stringify(source))}>
-                {source.scene + " > " + source.sourceName}
+                {source.scene + " > " + source.sourceName} 77
               </option>
             ))}
           </>

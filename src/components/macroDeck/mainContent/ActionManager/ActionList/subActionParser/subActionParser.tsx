@@ -65,7 +65,8 @@ const SubActionParser: React.FC<IntSubActionParser> = ({ action }) => {
     case "obsLayerHide":
     case "obsLayerShow":
     case "obsLayerToggle":
-      actionText = `Layer: ${action.layer}`;
+      const sourceName = JSON.parse(action.layer)?.sourceName;
+      if (sourceName) actionText = `Layer: ${sourceName}`;
       break;
 
     case "obsRecordStart":

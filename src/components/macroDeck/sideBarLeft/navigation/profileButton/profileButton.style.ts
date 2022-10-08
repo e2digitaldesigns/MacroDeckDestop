@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { DefaultItem } from "../navigation.style";
 
 export const NewProfileButton = styled(DefaultItem)`
-  grid-template-columns: 40px auto;
-  border-bottom: 1px solid
+  grid-template-columns: 2.5rem auto;
+  border-bottom: 0.0625rem solid
     ${props => props.theme.modules.sidebarLeft.newProfileButton.colors.border};
 
   color: ${props =>

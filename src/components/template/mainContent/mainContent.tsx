@@ -6,7 +6,7 @@ import { IpcRendererTypes } from "../../../types";
 
 export const TemplateMainContent: React.FC = () => {
   const { templateState, setTemplateState } = useTemplate();
-  const { setThemeState } = useTheme();
+  const { themeState, setThemeState } = useTheme();
   const { ipcRender } = useElectron();
 
   const handleIpc = () => {
@@ -17,7 +17,7 @@ export const TemplateMainContent: React.FC = () => {
     <Styled.MainContent>
       <h2>Main</h2>
       <br />
-      <h3 onClick={() => setThemeState(themes.themeLight)}>Light</h3>
+      {/* <h3 onClick={() => setThemeState(themes.themeLight)}>Light</h3> */}
       <br />
       <h3 onClick={() => setThemeState(themes.themeDark)}>Dark</h3>
       <br />

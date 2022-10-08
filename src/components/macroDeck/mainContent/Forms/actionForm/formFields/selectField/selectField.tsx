@@ -22,12 +22,16 @@ const subActionMap: subActionMapProps = {
     "obsLayerHide",
     "obsLayerShow",
     "obsLayerToggle",
+
     "obsRecordStart",
     "obsRecordStop",
     "obsRecordToggle",
+
     "obsRecordPause",
     "obsRecordResume",
+
     "obsSceneChange",
+
     "obsStreamStart",
     "obsStreamStop",
     "obsStreamToggle"

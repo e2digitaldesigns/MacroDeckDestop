@@ -15,8 +15,6 @@ import MdActionParser from "./parsers/mdActionParser";
 import ObsActionParser from "./parsers/obsActionParser";
 import secondaryParser from "./secondaryParser";
 import * as Styled from "./actionForm.styles";
-// import { SelectField } from "../../../../../../theme";
-//  xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 import ActionParser from "./actionParser";
 
@@ -52,6 +50,15 @@ const ActionForm: React.FC<{}> = () => {
     // eslint-disable-next-line
   }, [actionId]);
 
+  const handleActionChange = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ): void => {
+    const action = e.target.value;
+    const newState = clearButtonAttributes(action);
+    const subAction = action === "obs" ? "obsLayerHide" : "";
+    state && setState({ ...newState, action, subAction });
+  };
+
   const handleFormChange = (
     e:
       | React.ChangeEvent<HTMLInputElement>
@@ -71,7 +78,7 @@ const ActionForm: React.FC<{}> = () => {
     setState({ ...newState, text });
   };
 
-  // const handleFilePathChange = (id: FormFieldFileTypes): void => {
+  // FormFieldFileTypes
   const handleFilePathChange = (id: any): void => {
     const newState = clearButtonAttributes();
     const fileInput: any = document.getElementById(id) as HTMLInputElement;
@@ -128,7 +135,7 @@ const ActionForm: React.FC<{}> = () => {
           data-testid="action-form__action"
           name="action"
           value={state?.action}
-          onChange={e => handleFormChange(e)}
+          onChange={e => handleActionChange(e)}
           disabled={disabled}
         >
           {!state?.action && <option value="">Choose Action</option>}
@@ -178,62 +185,6 @@ const ActionForm: React.FC<{}> = () => {
         </Styled.SubmitButton>
       </Styled.FieldSetBottom>
     </Styled.Wrapper>
-
-    // <Styled.ActionFormContainer>
-    //   <fieldset>
-    //     <div>
-    //       <label htmlFor="action">Action:</label>
-    //       <select
-    //         data-testid="action-form__action"
-    //         name="action"
-    //         value={state?.action}
-    //         onChange={e => handleFormChange(e)}
-    //         disabled={disabled}
-    //       >
-    //         {!state?.action && <option value="">Choose Action</option>}
-    //         {_map(
-    //           SETTINGS.ACTION_TYPES,
-    //           (m: IntActionTypes) =>
-    //             m.active && (
-    //               <option key={m.name} value={m.name}>
-    //                 {m.display}
-    //               </option>
-    //             )
-    //         )}
-    //       </select>
-    //     </div>
-
-    //     {state?.action && (
-    //       <ActionParser
-    //         handleFilePathChange={handleFilePathChange}
-    //         handleFormChange={handleFormChange}
-    //         handleKeyFieldChange={handleKeyFieldChange}
-    //         state={state}
-    //       />
-    //     )}
-
-    //     {showMdSubs && (
-    //       <div data-testid="action-form__md-subs">
-    //         <MdActionParser state={state} onChange={handleFormChange} />
-    //       </div>
-    //     )}
-
-    //     {showObsSubs && (
-    //       <div data-testid="action-form__obs-subs">
-    //         <label htmlFor="text"></label>
-    //         <ObsActionParser state={state} onChange={handleFormChange} />
-    //       </div>
-    //     )}
-    //   </fieldset>
-
-    //   <button
-    //     data-testid="action-form__submit"
-    //     onClick={submit}
-    //     disabled={disabled}
-    //   >
-    //     Submit
-    //   </button>
-    // </Styled.ActionFormContainer>
   );
 };
 

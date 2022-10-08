@@ -70,9 +70,9 @@
       "pageId": "-",
       "_id": " ",
       "buttonPadNum": -1,
-      "text": "ButtonPad",
+      "text": "Your Text",
       "textColor": "#eeeeee",
-      "icon": "Image",
+      "icon": "",
       "iconColor": "#ffffff",
       "image": "",
       "bgColor": "#333333"

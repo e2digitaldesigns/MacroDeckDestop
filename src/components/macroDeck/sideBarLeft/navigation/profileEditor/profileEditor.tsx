@@ -76,7 +76,7 @@ const ProfileEditor: React.FC<IntProfileEditor> = ({ setIsEditMode }) => {
           <FormStyles.TextField
             name="profileName"
             onChange={e => handleFormChange(e)}
-            placeholder="Button Text"
+            placeholder="Profile Name"
             type="text"
             value={profileState.profileName}
           />
