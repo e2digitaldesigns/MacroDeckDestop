@@ -49,6 +49,7 @@ const useObsHook = () => {
 
         for (const item of sceneItems) {
           fullArray.push({
+            parentScene: scene.sceneName as string,
             scene: scene.sceneName as string,
             sceneItemId: item.sceneItemId as number,
             sourceName: item.sourceName as string
@@ -64,7 +65,8 @@ const useObsHook = () => {
 
             groupItems.forEach((gItems: any) => {
               fullArray.push({
-                scene: scene.sceneName as string,
+                parentScene: scene.sceneName as string,
+                scene: item.sourceName as string,
                 sceneItemId: gItems.sceneItemId,
                 sourceName: gItems.sourceName as string
               });
@@ -88,3 +90,5 @@ const useObsHook = () => {
 };
 
 export default useObsHook;
+
+// case id 2969 61065

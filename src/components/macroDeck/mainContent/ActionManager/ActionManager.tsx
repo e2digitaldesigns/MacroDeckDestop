@@ -1,17 +1,18 @@
 import React from "react";
-import ActionForm from "./actionForm/actionForm";
-import ActionList from "./actionList/actionList";
+// import ActionForm from "./actionForm/actionForm";
+// import ActionList from "./actionList/actionList";
 
-import * as Styled from "./actionManager.styles";
+// import * as Styled from "./actionManager.styles";
 
 const ActionManager: React.FC = () => {
   return (
-    <Styled.ActionManagerWrapper>
-      <div>
-        <ActionList />
-      </div>
-      <div>{/* <ActionForm /> */}</div>
-    </Styled.ActionManagerWrapper>
+    <h1>Hello</h1>
+    // <Styled.ActionManagerWrapper>
+    //   <div>
+    //     <ActionList />
+    //   </div>
+    //   <div>{/* <ActionForm /> */}</div>
+    // </Styled.ActionManagerWrapper>
   );
 };
 

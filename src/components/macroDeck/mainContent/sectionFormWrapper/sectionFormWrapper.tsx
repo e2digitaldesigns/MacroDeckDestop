@@ -2,9 +2,9 @@ import React from "react";
 import * as Styled from "./sectionFormWrapper.style";
 import ActionForm from "../forms/actionForm/actionForm";
 import BtmButtonPadForm from "../forms/buttonPadFormBottom/btmButtonPadForm";
-import ActionList from "../actionManager/actionList/actionList";
 import IconSelector from "../forms/iconSelector/iconSelector";
 import { useAppData } from "../../../../hooks";
+import ActionList from "../ActionManager/ActionList/actionList";
 
 const SectionWrapper: React.FC = () => {
   const { appState } = useAppData();
@@ -22,6 +22,8 @@ const SectionWrapper: React.FC = () => {
         </>
       ) : (
         <>
+          {/* <ActionList /> */}
+
           <ActionList />
           <ActionForm />
         </>

@@ -112,8 +112,6 @@ const ActionForm: React.FC<{}> = () => {
       newState.subAction = "";
     }
     updateAction(newState);
-
-    console.log(116, newState);
   };
 
   const showMdSubs =
@@ -169,10 +167,7 @@ const ActionForm: React.FC<{}> = () => {
       )}
 
       {showObsSubs && (
-        <Styled.FieldSet data-testid="action-form__obs-subs">
-          <label></label>
-          <ObsActionParser state={state} onChange={handleFormChange} />
-        </Styled.FieldSet>
+        <ObsActionParser state={state} onChange={handleFormChange} />
       )}
 
       <Styled.FieldSetBottom>

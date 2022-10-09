@@ -48,6 +48,7 @@ export interface IntObsScene {
 }
 
 export interface IntObsSource {
+  parentScene?: string;
   scene: string;
   sceneItemId: number;
   sourceName: string;

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import _filter from "lodash/filter";
 import _map from "lodash/map";
 import { IntActions } from "../../../../../../types/globalContextType";
 import {
@@ -28,15 +29,17 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
   state,
   onChange
 }) => {
-  const [obsState, setObsState] = useState<IntObsStateProps>({
+  const [obsState, setObsState] = React.useState<IntObsStateProps>({
     scenes: [],
     sources: []
   });
+
+  const [filterScene, setFilterScene] = React.useState<string>("");
   const { getScenes, getSources } = useObs();
   const subActionSubStr = state?.subAction && state.subAction.substring(0, 8);
   const subAction = subActionSubStr && subActionMap?.[subActionSubStr];
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchObs = async () => {
       const scenes = await getScenes();
       const sources = await getSources();
@@ -47,41 +50,79 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
     // eslint-disable-next-line
   }, []);
 
+  React.useEffect(() => {
+    if (state?.[subAction as keyof IntActions]) {
+      const data = JSON.parse(state?.[subAction as keyof IntActions] as string);
+      data?.parentScene && setFilterScene(data.parentScene);
+    }
+    // eslint-disable-next-line
+  }, []);
+
   const handleSelect = (e: any) => {
     onChange(e);
   };
 
+  const filterByScene = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    setFilterScene(e.target.value);
+  };
+
+  const filtered = _filter(
+    obsState.sources,
+    (f: any) => f.parentScene === filterScene
+  );
+
+  const parseOptionText = (source: any) => {
+    return source.scene + " > " + source.sourceName;
+  };
+
   if (subAction) {
     return (
-      <Styled.SelectField
-        name={subAction}
-        value={state?.[subAction as keyof IntActions]}
-        onChange={e => handleSelect(e)}
-      >
-        {!state?.[subAction as keyof IntActions] && (
-          <option value="">Choose {subAction}</option>
-        )}
-
-        {subAction === "scene" && (
-          <>
+      <>
+        <Styled.FieldSet>
+          <Styled.Label>Scene:</Styled.Label>
+          <Styled.SelectField onChange={filterByScene} value={filterScene}>
+            {!filterScene && <option>Choose Scene</option>}
             {_map(obsState?.scenes, (scene: IntObsScene, i) => (
               <option key={scene.name} value={scene.name}>
                 {scene.name}
               </option>
             ))}
-          </>
-        )}
+          </Styled.SelectField>
+        </Styled.FieldSet>
 
-        {subAction === "layer" && (
-          <>
-            {_map(obsState?.sources, (source: IntObsSource, index: number) => (
-              <option key={index} value={String(JSON.stringify(source))}>
-                {source.scene + " > " + source.sourceName}
-              </option>
-            ))}
-          </>
-        )}
-      </Styled.SelectField>
+        <Styled.FieldSet>
+          <Styled.Label>Layer:</Styled.Label>
+          <Styled.SelectField
+            name={subAction}
+            value={state?.[subAction as keyof IntActions]}
+            onChange={e => handleSelect(e)}
+          >
+            {!state?.[subAction as keyof IntActions] && (
+              <option value="">Choose {subAction}</option>
+            )}
+
+            {subAction === "scene" && (
+              <>
+                {_map(obsState?.scenes, (scene: IntObsScene, i) => (
+                  <option key={scene.name} value={scene.name}>
+                    {scene.name}
+                  </option>
+                ))}
+              </>
+            )}
+
+            {subAction === "layer" && (
+              <>
+                {_map(filtered, (source: IntObsSource, index: number) => (
+                  <option key={index} value={String(JSON.stringify(source))}>
+                    {parseOptionText(source)}
+                  </option>
+                ))}
+              </>
+            )}
+          </Styled.SelectField>
+        </Styled.FieldSet>
+      </>
     );
   }
 
