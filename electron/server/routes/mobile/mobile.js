@@ -18,7 +18,6 @@ router.get("/start", async (req, res) => {
   try {
     const db = [];
     storage.get("md", (error, data) => {
-      console.log(data);
       if (error) throw error;
 
       for (let i = 0; i < data.profiles.length; i++) {

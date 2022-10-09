@@ -2,6 +2,7 @@ const cors = require("cors");
 const storage = require("electron-json-storage");
 const SETTINGS = require("../settings/system.json");
 const actionParser = require("./macroActions/macroActions");
+const listners = require("../listeners");
 
 const service = mainWindow => {
   const app = require("express")();
@@ -20,6 +21,7 @@ const service = mainWindow => {
   io.on("connection", socket => {
     socket.on("macroDeckerSocket", data => {
       actionParser(io, data);
+      console.log(23);
     });
 
     socket.on("disconnect", reason => {
@@ -29,6 +31,7 @@ const service = mainWindow => {
 
   require("./twitch")();
 
+  listners.listeners(io, mainWindow);
   /////////////////////////////////////
   /////////////////////////////////////
   /////////////////////////////////////

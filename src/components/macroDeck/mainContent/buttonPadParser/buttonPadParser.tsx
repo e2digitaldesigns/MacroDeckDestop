@@ -132,6 +132,7 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
         >
           <Styled.ButtonPadIcon>
             <MacroDeckIcon
+              color="#444"
               data-testid="button_pad_parser__icon"
               icon="PlusSquare"
               size={32}
@@ -140,12 +141,14 @@ const ButtonPadParser: React.FC<IntButtonPadParser> = ({
         </Styled.ButtonPadIconPlus>
       )}
 
-      <Styled.ButtonPadText
-        color={buttonPad?.textColor}
-        data-testid="button_pad_parser__text"
-      >
-        {isDragOver ? "Drop Here" : buttonPad?.text}
-      </Styled.ButtonPadText>
+      {buttonPad && (
+        <Styled.ButtonPadText
+          color={buttonPad?.textColor}
+          data-testid="button_pad_parser__text"
+        >
+          {isDragOver ? "Drop Here" : buttonPad?.text}
+        </Styled.ButtonPadText>
+      )}
     </Styled.ButtonPad>
   );
 };

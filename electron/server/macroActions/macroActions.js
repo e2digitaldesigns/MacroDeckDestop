@@ -5,7 +5,6 @@ const _sortBy = require("lodash/sortBy");
 const axios = require("axios");
 // const robot = require("robotjs");
 const storage = require("electron-json-storage");
-// const OBSWebSocket = require("obs-websocket-js");
 
 const OBSWebSocket = require("obs-websocket-js").default;
 const obs = new OBSWebSocket();
@@ -114,6 +113,8 @@ class ActionClass {
           const layer = JSON.parse(this.action.layer);
           const sceneName = layer.scene;
           const sceneItemId = layer.sceneItemId;
+
+          console.log({ sceneName, sceneItemId });
 
           const { sceneItemEnabled } = await obs.call("GetSceneItemEnabled", {
             sceneName,

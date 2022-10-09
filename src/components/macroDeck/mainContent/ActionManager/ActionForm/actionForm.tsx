@@ -96,6 +96,7 @@ const ActionForm: React.FC<{}> = () => {
   };
 
   const submit = () => {
+    console.log("555555555555555555555555555555");
     const newState = _cloneDeep(state);
     if (
       newState.action !== ApplicationActions.MD &&

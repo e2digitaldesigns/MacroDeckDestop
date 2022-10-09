@@ -2,8 +2,8 @@ const electron = require("electron");
 const path = require("path");
 const getApplicationUrl = require("./utils/getApplicationUrl");
 const menuTemplate = require("./menu");
-const listners = require("./listeners");
 const server = require("./server/server");
+const listners = require("./listeners/");
 const storage = require("electron-json-storage");
 
 const SETTINGS = require("./settings/system.json");
@@ -94,7 +94,7 @@ electronApp.on("ready", () => {
     mainWindow = null;
   });
 
-  listners.listeners(mainWindow);
+  // listners.listeners(mainWindow);
 
   const mainMenu = Menu.buildFromTemplate(menuTemplate);
   Menu.setApplicationMenu(mainMenu);

@@ -14,7 +14,7 @@ const setIpAddress = json => {
   return data;
 };
 
-const database = () => {
+const database = io => {
   ipcMain.on("database", (event, data) => {
     const actions = {
       loadAppData: () => {
@@ -40,7 +40,11 @@ const database = () => {
         try {
           storage.set("md", data.data, error => {
             if (error) throw error;
-            console.log("file updated / written successfully");
+            console.log("file updated = / = written successfully");
+            io.emit("macroDeckerSocket", {
+              action: "system",
+              subAction: "dbUpdate"
+            });
           });
         } catch (err) {
           console.error(err);
