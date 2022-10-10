@@ -15,7 +15,7 @@ interface IntProfileEditor {
 }
 
 const ProfileEditor: React.FC<IntProfileEditor> = ({ setIsEditMode }) => {
-  const { readProfile, updateProfile } = useProfile();
+  const { deleteProfile, readProfile, updateProfile } = useProfile();
   const { appState } = useAppData();
   const activeProfile = readProfile();
 
@@ -56,6 +56,13 @@ const ProfileEditor: React.FC<IntProfileEditor> = ({ setIsEditMode }) => {
   const handleUpdateProfile = (): void => {
     if (activeProfile) {
       updateProfile(activeProfile._id, profileState);
+      setIsEditMode(false);
+    }
+  };
+
+  const handleDeleteProfile = (): void => {
+    if (activeProfile) {
+      activeProfile?._id && deleteProfile(activeProfile._id);
       setIsEditMode(false);
     }
   };
@@ -108,6 +115,12 @@ const ProfileEditor: React.FC<IntProfileEditor> = ({ setIsEditMode }) => {
           Save
         </Styled.SubmitButton>
       </Styled.ButtonHolder>
+
+      <Styled.ButtonHolderBottom>
+        <Styled.DeleteButton onClick={handleDeleteProfile}>
+          Delete
+        </Styled.DeleteButton>
+      </Styled.ButtonHolderBottom>
     </Styled.ProfileEditorWrapper>
   );
 };
