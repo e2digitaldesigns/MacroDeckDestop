@@ -1,56 +1,22 @@
 import React from "react";
-import { SectionMenus } from "../../../../types/sectionMenuTypes";
+import _map from "lodash/map";
+import { usePage } from "../../../../hooks";
 import * as Styled from "./sectionMenu.styles";
+import { IntPages } from "../../../../types";
 
-interface IntSectionMenu {
-  activeMenu: SectionMenus | null;
-  changeMenu: (menu: SectionMenus) => void;
-}
+interface IntSectionMenu {}
 
-// const MenuButton = ({ activeMenu, changeMenu }) => {
-//   return (
-//     <Styled.SectionMenuItems
-//       active={activeMenu === SectionMenus.Profile}
-//       onClick={() => changeMenu(SectionMenus.Profile)}
-//     >
-//       {SectionMenus.Profile}
-//     </Styled.SectionMenuItems>
-//   );
-// };
+const SectionMenu: React.FC<IntSectionMenu> = () => {
+  const { activatePage, pageCount, readPages } = usePage();
 
-const SectionMenu: React.FC<IntSectionMenu> = ({ activeMenu, changeMenu }) => {
   return (
     <>
       <Styled.SectionMenuWrapper>
-        <Styled.SectionMenuItemHeader>edit:</Styled.SectionMenuItemHeader>
-
-        <Styled.SectionMenuItems
-          active={activeMenu === SectionMenus.Profile}
-          onClick={() => changeMenu(SectionMenus.Profile)}
-        >
-          {SectionMenus.Profile}
-        </Styled.SectionMenuItems>
-
-        <Styled.SectionMenuItems
-          active={activeMenu === SectionMenus.Page}
-          onClick={() => changeMenu(SectionMenus.Page)}
-        >
-          {SectionMenus.Page}
-        </Styled.SectionMenuItems>
-
-        <Styled.SectionMenuItems
-          active={activeMenu === SectionMenus.ButtonPad}
-          onClick={() => changeMenu(SectionMenus.ButtonPad)}
-        >
-          {SectionMenus.ButtonPad}
-        </Styled.SectionMenuItems>
-
-        <Styled.SectionMenuItems
-          active={activeMenu === SectionMenus.Action}
-          onClick={() => changeMenu(SectionMenus.Action)}
-        >
-          {SectionMenus.Action}
-        </Styled.SectionMenuItems>
+        <Styled.SectionMenuItems />
+        <Styled.SectionMenuItems />
+        <Styled.SectionMenuItems />
+        <Styled.SectionMenuItems />
+        <Styled.SectionMenuItems />
       </Styled.SectionMenuWrapper>
     </>
   );

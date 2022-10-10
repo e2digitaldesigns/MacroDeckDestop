@@ -1,4 +1,5 @@
 import React from "react";
+import { Trash2Fill, PlusCircle, XCircle } from "react-bootstrap-icons";
 import * as Styled from "./breadCrumbMenu.style";
 import {
   BreadCrumbMenuTypes,
@@ -16,6 +17,19 @@ import {
 import _map from "lodash/map";
 import { IntActions } from "./../../../../types/globalContextType";
 
+interface ICloseButton {
+  handleCloseBreadCrumbMenu: (activeMenu: BreadCrumbMenuTypes | null) => void;
+}
+const CloseButton: React.FC<ICloseButton> = ({ handleCloseBreadCrumbMenu }) => {
+  return (
+    <Styled.BreadCrumbMenuItemClose
+      onClick={() => handleCloseBreadCrumbMenu(null)}
+    >
+      <XCircle />
+      <div>Close</div>
+    </Styled.BreadCrumbMenuItemClose>
+  );
+};
 export interface IntBreadCrumbMenu {
   dropDownType: string;
   handleSetActiveBreadCrumbMenu: (
@@ -29,9 +43,22 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
 }) => {
   const { appState } = useAppData();
   const { activateProfile, profileCount, readProfiles } = useProfile();
-  const { activatePage, pageCount, readPages } = usePage();
+  const { activatePage, createPage, deletePage, pageCount, readPages } =
+    usePage();
   const { activateButtonPad, buttonPadCount, readButtonPads } = useButton();
   const { activateAction, actionCount, getActions } = useActions();
+
+  const handleCreateNewPage = (e: any) => {
+    e.stopPropagation();
+    createPage();
+    handleSetActiveBreadCrumbMenu(null);
+  };
+
+  const handleDeletePage = (e: any, _id: string) => {
+    e.stopPropagation();
+    deletePage(_id);
+    handleSetActiveBreadCrumbMenu(null);
+  };
 
   const handleOnClick = (func: (_id: string) => void, _id: string): void => {
     handleSetActiveBreadCrumbMenu(null);
@@ -50,22 +77,47 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
             {item.profileName}
           </Styled.BreadCrumbMenuItem>
         ))}
+
+        <CloseButton
+          handleCloseBreadCrumbMenu={handleSetActiveBreadCrumbMenu}
+        />
       </Styled.BreadCrumbMenu>
     );
   }
 
-  if (dropDownType === BreadCrumbMenuTypes.Page && pageCount() > 1) {
+  if (
+    dropDownType === BreadCrumbMenuTypes.Page &&
+    appState?.active?.profileId
+  ) {
     return (
       <Styled.BreadCrumbMenu>
+        <Styled.BreadCrumbMenuItemNewPage onClick={handleCreateNewPage}>
+          <div>
+            <PlusCircle />
+          </div>
+
+          <div>Create New Page</div>
+        </Styled.BreadCrumbMenuItemNewPage>
+
         {_map(readPages(), (item: IntPages) => (
-          <Styled.BreadCrumbMenuItem
+          <Styled.BreadCrumbMenuItemPage
             active={item._id === appState.active.pageId}
             key={item._id}
             onClick={() => handleOnClick(activatePage, item._id)}
           >
-            page: {item.number}
-          </Styled.BreadCrumbMenuItem>
+            <div>page: {item.number}</div>
+
+            <div>
+              {pageCount() > 1 && (
+                <Trash2Fill onClick={e => handleDeletePage(e, item._id)} />
+              )}
+            </div>
+          </Styled.BreadCrumbMenuItemPage>
         ))}
+
+        <CloseButton
+          handleCloseBreadCrumbMenu={handleSetActiveBreadCrumbMenu}
+        />
       </Styled.BreadCrumbMenu>
     );
   }
@@ -82,6 +134,10 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
             button pad: {item.buttonPadNum}
           </Styled.BreadCrumbMenuItem>
         ))}
+
+        <CloseButton
+          handleCloseBreadCrumbMenu={handleSetActiveBreadCrumbMenu}
+        />
       </Styled.BreadCrumbMenu>
     );
   }
@@ -98,6 +154,10 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
             {item.order} | {item.action}
           </Styled.BreadCrumbMenuItem>
         ))}
+
+        <CloseButton
+          handleCloseBreadCrumbMenu={handleSetActiveBreadCrumbMenu}
+        />
       </Styled.BreadCrumbMenu>
     );
   }

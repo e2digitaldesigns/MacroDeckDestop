@@ -18,11 +18,11 @@ import {
 } from "../../types";
 
 type TTotalPages = () => number;
-
+type TDeletePage = (_id?: string) => void;
 export interface IntUsePageHook {
   activatePage: (_id: string) => void;
   createPage: () => void;
-  deletePage: () => void;
+  deletePage: TDeletePage;
   readPage: (_id?: string) => any;
   readPages: () => IntPages[];
   pageCount: TTotalPages;
@@ -104,6 +104,8 @@ const usePageHook = (): IntUsePageHook => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
 
+    if (!appState?.active?.profileId) return;
+
     const page: IntPages = pageObj();
     page.profileId = appState.active.profileId;
 
@@ -129,10 +131,10 @@ const usePageHook = (): IntUsePageHook => {
     appData.setAppState(appState);
   };
 
-  const deletePage: IntUsePageHook["deletePage"] = () => {
+  const deletePage: TDeletePage = _id => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
-    const pageId = appState.active.pageId;
+    const pageId = _id ? _id : appState.active.pageId;
 
     const pageCheck = _filter(
       state.pages,
@@ -157,8 +159,10 @@ const usePageHook = (): IntUsePageHook => {
     globalData.setState(state);
 
     appState.active.pageId = pageCheck[0]._id;
-    appState.active.buttonPadId = "";
-    appState.active.actionId = "";
+    if (!_id) {
+      appState.active.buttonPadId = "";
+      appState.active.actionId = "";
+    }
     appData.setAppState(appState);
   };
 

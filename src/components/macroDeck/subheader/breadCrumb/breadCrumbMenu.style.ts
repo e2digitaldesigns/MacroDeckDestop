@@ -31,3 +31,25 @@ export const BreadCrumbMenuItem = styled.div<IntBreadCrumbMenuItem>`
         : props.theme.modules.breadCrumbMenuItem.colors.bg.hover.normal};
   }
 `;
+
+export const BreadCrumbMenuItemPage = styled(BreadCrumbMenuItem)`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  div:nth-child(2) {
+    text-align: right;
+  }
+`;
+
+export const BreadCrumbMenuItemNewPage = styled(BreadCrumbMenuItem)`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 0.5rem;
+  background-color: ${props =>
+    props.theme.modules.breadCrumbMenuItem.colors.bg.hover.normal};
+`;
+
+export const BreadCrumbMenuItemClose = styled(BreadCrumbMenuItem)`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 0.5rem;
+`;
