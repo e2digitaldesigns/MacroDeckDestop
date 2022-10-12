@@ -75,23 +75,27 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
     return source.scene + " > " + source.sourceName;
   };
 
+  const label = subAction === "layer" ? "Layer" : "Scene";
+
   if (subAction) {
     return (
       <>
-        <Styled.FieldSet>
-          <Styled.Label>Scene:</Styled.Label>
-          <Styled.SelectField onChange={filterByScene} value={filterScene}>
-            {!filterScene && <option>Choose Scene</option>}
-            {_map(obsState?.scenes, (scene: IntObsScene, i) => (
-              <option key={scene.name} value={scene.name}>
-                {scene.name}
-              </option>
-            ))}
-          </Styled.SelectField>
-        </Styled.FieldSet>
+        {subAction === "layer" && (
+          <Styled.FieldSet>
+            <Styled.Label>Scene:</Styled.Label>
+            <Styled.SelectField onChange={filterByScene} value={filterScene}>
+              {!filterScene && <option>Choose Scene</option>}
+              {_map(obsState?.scenes, (scene: IntObsScene, i) => (
+                <option key={scene.name} value={scene.name}>
+                  {scene.name}
+                </option>
+              ))}
+            </Styled.SelectField>
+          </Styled.FieldSet>
+        )}
 
         <Styled.FieldSet>
-          <Styled.Label>Layer:</Styled.Label>
+          <Styled.Label>{label}:</Styled.Label>
           <Styled.SelectField
             name={subAction}
             value={state?.[subAction as keyof IntActions]}
