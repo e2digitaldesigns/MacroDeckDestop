@@ -51,12 +51,11 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
   }, []);
 
   React.useEffect(() => {
-    if (state?.[subAction as keyof IntActions]) {
-      const data = JSON.parse(state?.[subAction as keyof IntActions] as string);
+    if (state?.[subAction as keyof IntActions] && subAction === "layer") {
+      const data = JSON.parse(state[subAction as keyof IntActions] as string);
       data?.parentScene && setFilterScene(data.parentScene);
     }
-    // eslint-disable-next-line
-  }, []);
+  }, [state]);
 
   const handleSelect = (e: any) => {
     onChange(e);

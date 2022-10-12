@@ -47,8 +47,6 @@ const database = io => {
 
             const sendData = createMobileProfile(data.data);
 
-            console.log(sendData);
-
             io.emit("macroDeckerSocket", {
               action: "system",
               subAction: "dbUpdate",

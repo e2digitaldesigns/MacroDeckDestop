@@ -12,7 +12,6 @@ const subArray = [
 ];
 
 const secondaryParser = (type: string, state: IntActions): boolean => {
-  console.log(type, state.subAction);
   return (
     _startsWith(state?.action, type) && _includes(subArray, state?.subAction)
   );

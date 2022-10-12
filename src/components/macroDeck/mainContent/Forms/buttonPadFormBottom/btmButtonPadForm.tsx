@@ -61,7 +61,6 @@ const BtmButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
   );
 
   React.useEffect(() => {
-    console.log(64, newIcon);
     setState({ ...state, icon: newIcon });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [newIcon]);
