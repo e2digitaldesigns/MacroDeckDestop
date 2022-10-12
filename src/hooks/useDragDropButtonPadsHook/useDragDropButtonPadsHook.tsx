@@ -76,6 +76,7 @@ const useDragDropButtonPadsHook = (
       DragDropStates.DragStart,
       (e: React.DragEvent<HTMLDivElement>) => menuDragStart(e)
     );
+
     buttonPadRefCleanUp?.addEventListener(
       DragDropStates.DragEnd,
       (e: React.DragEvent<HTMLDivElement>) => menuDragEnd(e)
@@ -86,6 +87,7 @@ const useDragDropButtonPadsHook = (
         DragDropStates.DragStart,
         (e: React.DragEvent<HTMLDivElement>) => menuDragStart(e)
       );
+
       buttonPadRefCleanUp?.removeEventListener(
         DragDropStates.DragEnd,
         (e: React.DragEvent<HTMLDivElement>) => menuDragEnd(e)

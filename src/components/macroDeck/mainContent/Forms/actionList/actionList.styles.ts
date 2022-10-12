@@ -47,7 +47,7 @@ export const ActionListWrapper = styled.div`
     padding-right: 0.25rem;
   }
 
-  border-bottom: 1px solid #555;
+  /* border-bottom: 1px solid #555; */
 `;
 
 export const ActionListScroll = styled.div`
@@ -56,6 +56,7 @@ export const ActionListScroll = styled.div`
 
 type ActionListItemType = {
   isActive?: boolean;
+  isPlaceHolder?: boolean;
 };
 
 export const ActionListItem = styled.li<ActionListItemType>`
@@ -65,9 +66,9 @@ export const ActionListItem = styled.li<ActionListItemType>`
   grid-template-columns: 1fr 2rem;
   padding: 0 0.5em;
   align-items: center;
-  background-color: #32363f;
+  background-color: ${props => (props.isActive ? "#25334f" : "#32363f")};
   border-bottom: 1px solid #424242;
-  cursor: pointer;
+  cursor: ${props => (props.isPlaceHolder ? "inherit" : "pointer")};
 
   &:last-child {
     border-bottom: 0;
@@ -131,7 +132,6 @@ export const ActionListNewButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: 0.5s;
-  border-radius: 0.25rem;
 
   &:hover {
     background-color: #2a2d34;

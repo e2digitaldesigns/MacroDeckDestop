@@ -3,6 +3,7 @@ export { default as useActions } from "./useActionsHook";
 export { default as useAppData } from "./useAppDataHook";
 export { default as useButton } from "./useButtonHook";
 export { default as useDragDrop } from "./useDragDropProfileHook";
+export { default as useDragDropActions } from "./useDragDropActionHook";
 export { default as useDragDropButtonPads } from "./useDragDropButtonPadsHook";
 export { default as useDropZone } from "./useDropZoneHook";
 export { default as useElectron } from "./useElectronHook";

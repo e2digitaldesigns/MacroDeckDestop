@@ -149,25 +149,27 @@ const ActionForm: React.FC<{}> = () => {
         </Styled.SelectField>
       </Styled.FieldSet>
 
-      {state?.action && (
-        <Styled.FieldSet>
-          <ActionParser
-            handleFilePathChange={handleFilePathChange}
-            handleFormChange={handleFormChange}
-            handleKeyFieldChange={handleKeyFieldChange}
-            state={state}
-          />
-        </Styled.FieldSet>
-      )}
+      {state?.action && actionId && (
+        <>
+          <Styled.FieldSet>
+            <ActionParser
+              handleFilePathChange={handleFilePathChange}
+              handleFormChange={handleFormChange}
+              handleKeyFieldChange={handleKeyFieldChange}
+              state={state}
+            />
+          </Styled.FieldSet>
 
-      {showMdSubs && (
-        <Styled.FieldSet data-testid="action-form__md-subs">
-          <MdActionParser state={state} onChange={handleFormChange} />
-        </Styled.FieldSet>
-      )}
+          {showMdSubs && (
+            <Styled.FieldSet data-testid="action-form__md-subs">
+              <MdActionParser state={state} onChange={handleFormChange} />
+            </Styled.FieldSet>
+          )}
 
-      {showObsSubs && (
-        <ObsActionParser state={state} onChange={handleFormChange} />
+          {showObsSubs && (
+            <ObsActionParser state={state} onChange={handleFormChange} />
+          )}
+        </>
       )}
 
       <Styled.FieldSetBottom>

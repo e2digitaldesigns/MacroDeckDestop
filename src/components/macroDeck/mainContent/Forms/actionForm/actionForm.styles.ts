@@ -63,7 +63,6 @@ export const SelectField = styled.select`
   padding: 0.5em 0.5em;
   display: inline-block;
   box-sizing: border-box;
-  border-radius: 0.25em;
   border: 0.125em solid #55565a;
   background-color: #1e1f22;
   outline: none;
@@ -91,7 +90,6 @@ export const SubmitButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: 0.5s;
-  border-radius: 0.25rem;
 
   &:hover {
     background-color: #2a2d34;
