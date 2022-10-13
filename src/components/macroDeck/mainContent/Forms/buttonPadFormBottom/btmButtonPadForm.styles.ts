@@ -99,7 +99,6 @@ const ButtonDefaults = styled.button`
   cursor: pointer;
   outline: none;
   transition: 0.5s;
-  border-radius: 0.25rem;
 
   &:hover {
     background-color: ${props => props.theme.colors.bodyBg};

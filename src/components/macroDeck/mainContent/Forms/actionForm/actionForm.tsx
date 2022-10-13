@@ -124,6 +124,8 @@ const ActionForm: React.FC<{}> = () => {
 
   const disabled = !actionId;
 
+  console.log({ disabled });
+
   return (
     <Styled.Wrapper>
       <Styled.FieldSet>

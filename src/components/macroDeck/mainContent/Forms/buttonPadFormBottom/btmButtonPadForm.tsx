@@ -204,8 +204,7 @@ const BtmButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
 
       <Styled.FieldSetBottom>
         <Styled.DeleteButton
-          data-testid="button_form__reset"
-          disabled={!isPlayable}
+          data-testid="button_form__delete"
           onClick={handleButtonPadDelete}
         >
           Delete

@@ -17,7 +17,7 @@ export const FieldSet = styled.div`
   grid-template-columns: 65px 190px;
   border: none;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 0.375rem 0;
   width: 100%;
   overflow: hidden;
 `;
@@ -74,25 +74,40 @@ export const SelectField = styled.select`
   }
 `;
 
-export const SubmitButton = styled.button`
-  margin: 0.5rem 0 0 0;
-  font-size: 0.75em;
+const ButtonDefaults = styled.button`
+  background-color: ${props => props.theme.colors.bodyBg};
+  color: white;
+  padding: 0.5rem 0.5rem;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid transparent;
   width: 100%;
-  height: 30px;
-  color: #ffffff;
-  display: grid;
-  align-content: center;
-  background-color: #2a2d34;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid #2a2d34;
-  padding: 0 10px;
-  justify-content: center;
   cursor: pointer;
+  outline: none;
   transition: 0.5s;
 
   &:hover {
-    background-color: #2a2d34;
+    background-color: ${props => props.theme.colors.bodyBg};
     border-bottom: 1px solid #8498d2;
   }
+
+  &:focus {
+    border: none;
+    text-decoration: none;
+  }
+
+  &:active {
+    border: none;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: ${props => props.theme.colors.bodyBg};
+    color: #bbb;
+    cursor: default;
+    opacity: 0.5;
+    border: none;
+  }
 `;
+
+export const SubmitButton = styled(ButtonDefaults)``;
