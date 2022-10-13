@@ -10,6 +10,7 @@ import {
 
 import ApplicationWrapper from "./components/application/applicationWrapper";
 import SoundPlayer from "./components/soundPlayer/soundPlayer";
+import UpdateListener from "./components/updateListener/updateListener";
 
 const App: React.FC<{}> = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC<{}> = () => {
         <Styled.GlobalStyle />
         <ApplicationContext.TemplateProvider>
           <GlobalContextProvider>
+            <UpdateListener />
             <AppContextProvider>
               <SoundPlayer />
               <DropZoneContextProvider>

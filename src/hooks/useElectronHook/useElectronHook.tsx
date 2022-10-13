@@ -7,13 +7,14 @@ type TIPCRender = (
 ) => void;
 
 type TLoadAppData = () => void;
-type SaveAppData = (data: any) => void;
+type TSaveAppData = (data: any) => void;
 
 export interface IntElectronHook {
   ipcRenderParser: () => any;
   ipcRender: TIPCRender;
   loadAppData: TLoadAppData;
-  saveAppData: SaveAppData;
+  saveAppData: TSaveAppData;
+  updateMobileDevice: TSaveAppData;
 }
 
 const ipcRenderParser = () => {
@@ -40,10 +41,18 @@ const useElectronHook = (): IntElectronHook => {
       });
   };
 
-  const saveAppData: SaveAppData = data => {
+  const saveAppData: TSaveAppData = data => {
     ipcRenderer &&
       ipcRenderer.send(IpcRendererTypes.database, {
         action: IpcRendererTypesAction.saveAppData,
+        data
+      });
+  };
+
+  const updateMobileDevice: TSaveAppData = data => {
+    ipcRenderer &&
+      ipcRenderer.send(IpcRendererTypes.database, {
+        action: IpcRendererTypesAction.updateMobileDevice,
         data
       });
   };
@@ -52,7 +61,8 @@ const useElectronHook = (): IntElectronHook => {
     ipcRenderParser,
     ipcRender,
     loadAppData,
-    saveAppData
+    saveAppData,
+    updateMobileDevice
   };
 };
 

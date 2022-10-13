@@ -58,45 +58,44 @@ const GlobalContextProvider: React.FC<IntGlobalContextProvider> = ({
 
   React.useEffect(() => {
     loadAppData();
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const checkers = React.useRef<IntGlobalContextCheckers>({
-    profiles: state.profiles,
-    pages: state.pages,
-    buttonPads: state.buttonPads,
-    actions: state.actions,
-    styles: state.styles
-  });
+  // const checkers = React.useRef<IntGlobalContextCheckers>({
+  //   profiles: state.profiles,
+  //   pages: state.pages,
+  //   buttonPads: state.buttonPads,
+  //   actions: state.actions,
+  //   styles: state.styles
+  // });
 
-  React.useEffect(() => {
-    let stillHere = true;
-    const keys = SETTINGS.SAVE_ON_CHANGE_PARAMS;
-    const stateCheck: Partial<IntGlobalContextInterface> = {};
-    const refCheck: Partial<IntGlobalContextInterface> = {};
+  // React.useEffect(() => {
+  //   let stillHere = true;
+  //   const keys = SETTINGS.SAVE_ON_CHANGE_PARAMS;
+  //   const stateCheck: Partial<IntGlobalContextInterface> = {};
+  //   const refCheck: Partial<IntGlobalContextInterface> = {};
 
-    for (let i = 0; i < keys.length; i++) {
-      let key = keys[i];
-      refCheck[key as keyof IntGlobalContextInterface] =
-        checkers.current[key as keyof IntGlobalContextCheckers];
-      stateCheck[key as keyof IntGlobalContextInterface] =
-        state[key as keyof IntGlobalContextInterface];
-    }
+  //   for (let i = 0; i < keys.length; i++) {
+  //     let key = keys[i];
+  //     refCheck[key as keyof IntGlobalContextInterface] =
+  //       checkers.current[key as keyof IntGlobalContextCheckers];
+  //     stateCheck[key as keyof IntGlobalContextInterface] =
+  //       state[key as keyof IntGlobalContextInterface];
+  //   }
 
-    if (!_isEqual(stateCheck, refCheck) && _size(refCheck)) {
-      for (let i = 0; i < _size(keys); i++) {
-        checkers.current[keys[i] as keyof IntGlobalContextCheckers] =
-          state[keys[i] as keyof IntGlobalContextInterface];
-      }
+  //   if (!_isEqual(stateCheck, refCheck) && _size(refCheck)) {
+  //     for (let i = 0; i < _size(keys); i++) {
+  //       checkers.current[keys[i] as keyof IntGlobalContextCheckers] =
+  //         state[keys[i] as keyof IntGlobalContextInterface];
+  //     }
 
-      state?.settings?.ipAddress && stillHere && saveAppData(state);
-    }
+  //     state?.settings?.ipAddress && stillHere && saveAppData(state);
+  //   }
 
-    return () => {
-      stillHere = false;
-    };
-  }, [state, saveAppData]);
+  //   return () => {
+  //     stillHere = false;
+  //   };
+  // }, [state, saveAppData]);
 
   return globalContextValue ? (
     <>

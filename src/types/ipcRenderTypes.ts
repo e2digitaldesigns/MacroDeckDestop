@@ -1,6 +1,7 @@
 export enum IpcRendererTypes {
   database = "database",
   databaseReturn = "database:return",
+  databaseMobileUpdate = "database:mobileUpdate",
   header = "header",
   importSettings = "importSettings",
   importSettingsReturn = "importSettings:return",
@@ -13,5 +14,6 @@ export enum IpcRendererTypesAction {
   fsToggle = "fsToggle",
   minimize = "minimize",
   loadAppData = "loadAppData",
-  saveAppData = "saveAppData"
+  saveAppData = "saveAppData",
+  updateMobileDevice = "updateMobileDevice"
 }

@@ -12,6 +12,7 @@
     "settings",
     "styles"
   ],
+  "UPDATE_ON_CHANGE_PARAMS": ["profiles", "pages", "buttonPads"],
   "ACTION_TYPES": [
     { "name": "api", "display": "API", "active": true },
     { "name": "delay", "display": "Delay", "active": true },
