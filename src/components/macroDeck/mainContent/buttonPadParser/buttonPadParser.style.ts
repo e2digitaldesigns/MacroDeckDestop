@@ -27,8 +27,9 @@ export const ButtonPad = styled(ButtonPadDiv)<IntButtonPad>`
       props.isActive
         ? props.theme.modules.buttonPadParser.colors.buttonPad.borderBottom
             .active
-        : props.theme.modules.buttonPadParser.colors.buttonPad.borderBottom
-            .normal};
+        : props?.bgColor
+        ? props.bgColor
+        : props.theme.modules.buttonPadParser.colors.buttonPad.bg};
   transition: border 0.75s;
 `;
 
@@ -81,7 +82,8 @@ export const ButtonPadOptionPaste = styled(ButtonPadOptionIcon)`
 `;
 
 export const ButtonPadOptionDelete = styled(ButtonPadOptionIcon)`
-  top: 50px;
+  top: auto;
+  bottom: 0px;
   right: 0;
   border-radius: 50% 50% 0 0;
   background-color: #2a2d34;
