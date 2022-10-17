@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ScrollerDiv } from "../../../../../styles/scrollDiv.style";
 
 export const Wrapper = styled.div`
   box-sizing: border-box !important;
@@ -22,32 +23,13 @@ export const FieldSet = styled.div`
   margin: auto 0 0 0;
 `;
 
-export const ActionListWrapper = styled.div`
+export const ActionListWrapper = styled(ScrollerDiv)`
   height: 162px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding-right: 0.25rem;
-
-  ::-webkit-scrollbar {
-    width: 0.625rem;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #32363f;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-top: 1px solid #6e92b9;
-    background: #3d424d;
-    min-height: 2rem;
-  }
 
   > div {
     border-right: 1px solid #555;
     padding-right: 0.25rem;
   }
-
-  /* border-bottom: 1px solid #555; */
 `;
 
 export const ActionListScroll = styled.div`

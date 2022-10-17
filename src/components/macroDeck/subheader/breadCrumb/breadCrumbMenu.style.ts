@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { ScrollerDiv } from "../../../../styles/scrollDiv.style";
 
-export const BreadCrumbMenu = styled.div`
+export const BreadCrumbMenu = styled(ScrollerDiv)`
   position: absolute;
   top: 45px;
   left: 0px;
-
+  max-height: 550px;
   min-width: 240px;
   background-color: #414650;
+  padding-right: 0;
   box-shadow: 1px 1px 4px #222;
+  overflow: auto;
 `;
 
 interface IntBreadCrumbMenuItem {
