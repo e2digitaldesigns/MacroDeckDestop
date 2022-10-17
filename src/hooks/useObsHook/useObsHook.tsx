@@ -3,6 +3,7 @@ import React from "react";
 import OBSWebSocket, { OBSRequestTypes } from "obs-websocket-js";
 import { IntObsScene, IntObsSource } from "../../types";
 import _map from "lodash/map";
+import _sortBy from "lodash/sortBy";
 import { useGlobalData } from "../";
 
 //https://github.com/obsproject/obs-websocket/releases/tag/5.0.0
@@ -29,7 +30,7 @@ const useObsHook = () => {
         allScenes.push({ name: scene.sceneName as string });
       });
 
-      return allScenes;
+      return _sortBy(allScenes, "name");
     } catch (error) {
       return [];
     }
@@ -76,7 +77,7 @@ const useObsHook = () => {
       }
 
       await obs.disconnect();
-      return fullArray;
+      return _sortBy(fullArray, ["parentScene", "sourceName"]);
     } catch (error) {
       console.error(error);
       return [];

@@ -71,7 +71,9 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
   );
 
   const parseOptionText = (source: any) => {
-    return source.scene + " > " + source.sourceName;
+    return source.scene !== filterScene
+      ? source.scene + " > " + source.sourceName
+      : source.sourceName;
   };
 
   const label = subAction === "layer" ? "Layer" : "Scene";
