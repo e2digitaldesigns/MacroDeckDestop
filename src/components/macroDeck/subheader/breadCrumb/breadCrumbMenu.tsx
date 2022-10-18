@@ -16,6 +16,7 @@ import {
 } from "../../../../hooks";
 import _map from "lodash/map";
 import { IntActions } from "./../../../../types/globalContextType";
+import SubActionParser from "../../mainContent/forms/actionList/subActionParser/subActionParser";
 
 interface ICloseButton {
   handleCloseBreadCrumbMenu: (activeMenu: BreadCrumbMenuTypes | null) => void;
@@ -145,13 +146,13 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
   if (dropDownType === BreadCrumbMenuTypes.Action && actionCount() > 1) {
     return (
       <Styled.BreadCrumbMenu>
-        {_map(getActions(), (item: IntActions) => (
+        {_map(getActions(), (action: IntActions) => (
           <Styled.BreadCrumbMenuItem
-            active={item._id === appState.active.actionId}
-            key={item._id}
-            onClick={() => handleOnClick(activateAction, item._id)}
+            active={action._id === appState.active.actionId}
+            key={action._id}
+            onClick={() => handleOnClick(activateAction, action._id)}
           >
-            {item.order} | {item.action}
+            <SubActionParser action={action} />
           </Styled.BreadCrumbMenuItem>
         ))}
 

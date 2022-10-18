@@ -2,11 +2,13 @@ import React from "react";
 import _size from "lodash/size";
 import _split from "lodash/split";
 
+import * as Styled from "./subActionParser.styles";
 import { usePage, useProfile } from "../../../../../../hooks";
 import { IntActions } from "../../../../../../types";
 
 export interface IntSubActionParser {
   action: IntActions;
+  showIcon?: boolean;
 }
 
 const SubActionParser: React.FC<IntSubActionParser> = ({ action }) => {
@@ -14,25 +16,44 @@ const SubActionParser: React.FC<IntSubActionParser> = ({ action }) => {
   const { readPage } = usePage();
 
   const parseAction = action?.subAction || action.action;
+  let theAction = "MD";
   let actionText: string | number | undefined = undefined;
+
+  const layerParser = (action: IntActions) => {
+    const act = action.subAction.split("obsLayer")[1];
+    const sourceName = JSON.parse(action.layer)?.sourceName;
+    return sourceName ? `${act} Layer: ${sourceName}` : "";
+  };
+
+  const getFilePath = (action: IntActions) => {
+    const pathArray1 = _split(action.path, "\\");
+    return pathArray1[_size(pathArray1) - 1] || "";
+  };
 
   switch (parseAction) {
     case "api":
+      theAction = "API";
       actionText = action?.url || "";
       break;
 
     case "delay":
-      actionText = `${action?.seconds || 0} seconds`;
+      theAction = "DLY";
+      actionText = `delay ${action?.seconds / 1000 || 0} seconds`;
       break;
 
     case "exe":
+      theAction = "EXE";
+      actionText = getFilePath(action);
+      break;
+
     case "sound":
-      const pathArray = _split(action.path, "\\");
-      actionText = pathArray[_size(pathArray) - 1] || "";
+      theAction = "SND";
+      actionText = getFilePath(action);
       break;
 
     case "keyTap":
-      actionText = action?.text || "";
+      theAction = "KEY";
+      actionText = action?.text ? `Key Press ${action.text}` : "";
       break;
 
     case "mdHome":
@@ -59,57 +80,72 @@ const SubActionParser: React.FC<IntSubActionParser> = ({ action }) => {
       break;
 
     case "mdSettings":
-      actionText = "Settings";
+      actionText = "Go to Settings";
       break;
 
     case "obsLayerHide":
     case "obsLayerShow":
     case "obsLayerToggle":
-      const sourceName = JSON.parse(action.layer)?.sourceName;
-      if (sourceName) actionText = `Layer: ${sourceName}`;
+      theAction = "OBS";
+      actionText = layerParser(action);
       break;
 
     case "obsRecordStart":
-      actionText = "OBS Record Start";
+      actionText = "Record Start";
       break;
 
     case "obsRecordStop":
-      actionText = "OBS Record Stop";
+      theAction = "OBS";
+      actionText = "Record Stop";
       break;
 
     case "obsRecordToggle":
-      actionText = "OBS Record Toggle";
+      theAction = "OBS";
+      actionText = "Record Toggle";
       break;
 
     case "obsRecordPause":
-      actionText = "OBS Record Pause";
+      theAction = "OBS";
+      actionText = "Record Pause";
       break;
 
     case "obsRecordResume":
-      actionText = "OBS Record Resume";
+      theAction = "OBS";
+      actionText = "Record Resume";
       break;
 
     case "obsSceneChange":
+      theAction = "OBS";
       actionText = `Scene: ${action.scene}`;
       break;
 
     case "obsStreamStart":
-      actionText = "OBS Stream Start";
+      theAction = "OBS";
+      actionText = "Stream Start";
       break;
 
     case "obsStreamStop":
-      actionText = "OBS Stream Stop";
+      theAction = "OBS";
+      actionText = "Stream Stop";
       break;
 
     case "obsStreamToggle":
-      actionText = "OBS Stream Toggle";
+      theAction = "OBS";
+      actionText = "Stream Toggle";
       break;
 
     default:
       actionText = "";
   }
 
-  return <div data-testid="sub-action-parser__text">{actionText}</div>;
+  // return <div data-testid="sub-action-parser__text">{actionText}</div>;
+
+  return (
+    <Styled.SubActionDiv data-testid="sub-action-parser__text">
+      <div>{theAction}</div>
+      <div>{actionText} </div>
+    </Styled.SubActionDiv>
+  );
 };
 
 export default SubActionParser;

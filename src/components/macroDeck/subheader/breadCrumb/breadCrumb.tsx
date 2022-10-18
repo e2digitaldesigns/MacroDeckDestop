@@ -30,7 +30,7 @@ const BreadCrumb: React.FC<IntBreadCrumb> = ({
     profile: 70,
     page: 55,
     buttonPad: 55,
-    action: 60
+    action: 120
   };
 
   return (

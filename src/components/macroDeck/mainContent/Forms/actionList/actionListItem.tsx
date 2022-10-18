@@ -1,6 +1,6 @@
 import React from "react";
 import * as Styled from "./actionList.styles";
-import { Trash2 } from "react-bootstrap-icons";
+import { Trash2Fill } from "react-bootstrap-icons";
 
 import {
   useActions,
@@ -43,17 +43,13 @@ const ActionListItem: React.FC<IActionListItem> = ({ action }) => {
       onDrop={e => itemDrop(e, action._id)}
       ref={dragDropRef}
     >
-      <Styled.ActionListItemInfo>
-        <div>{action.action}</div>
-        <div> | </div>
-        <SubActionParser action={action} />
-      </Styled.ActionListItemInfo>
+      <SubActionParser action={action} />
 
       <Styled.ActionListItemButton
         data-testid="action-list__action-item-delete"
         onClick={(e: any) => handleDeleteAction(e, action._id)}
       >
-        <Trash2 size={16} />
+        <Trash2Fill size={16} />
       </Styled.ActionListItemButton>
     </Styled.ActionListItem>
   );

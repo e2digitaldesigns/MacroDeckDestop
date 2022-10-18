@@ -9,7 +9,12 @@ import {
   usePage,
   useProfile
 } from "../../../hooks";
-import { BreadCrumbMenuTypes } from "../../../types";
+import {
+  BreadCrumbMenuTypes,
+  subActionMap,
+  allActionMap,
+  IntAllActionMap
+} from "../../../types";
 
 interface IntBreadWrapper {
   activeBreadCrumbMenu: BreadCrumbMenuTypes | null;
@@ -71,8 +76,8 @@ export const MacroDeckSubHeader: React.FC = () => {
   const buttonPadNum = activeButton?.buttonPadNum || 0;
   const buttonPadTitle = `${buttonPadNum} / ${buttonPadCount}`;
 
-  const actionTitle =
-    activeAction?.subAction || activeAction?.action || "no action selected";
+  let actionTitle = activeAction?.subAction || activeAction?.action || null;
+  actionTitle = actionTitle ? allActionMap[actionTitle] : "No Action";
 
   React.useEffect(() => {
     setActiveBreadCrumbMenu(activeBreadCrumbMenu => null);

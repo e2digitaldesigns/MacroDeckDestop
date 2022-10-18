@@ -3,7 +3,6 @@ import _cloneDeep from "lodash/cloneDeep";
 import _map from "lodash/map";
 import {
   ApplicationActions,
-  FormFieldFileTypes,
   IntActions,
   IntActionTypes
 } from "../../../../../types";
@@ -123,8 +122,6 @@ const ActionForm: React.FC<{}> = () => {
     secondaryParser(ApplicationActions.OBS, state);
 
   const disabled = !actionId;
-
-  console.log({ disabled });
 
   return (
     <Styled.Wrapper>

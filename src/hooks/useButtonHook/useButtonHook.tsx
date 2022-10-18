@@ -82,6 +82,7 @@ const useButtonHook = (): IntUseButtonHook => {
     buttonPad.pageId = appState.active.pageId;
 
     buttonPad.buttonPadNum = padNumber;
+    buttonPad.text = String(padNumber);
 
     buttonPad.profileId = appState.active.profileId;
     buttonPad.pageId = appState.active.pageId;

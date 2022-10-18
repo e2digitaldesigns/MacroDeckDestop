@@ -4,46 +4,7 @@ import _upperFirst from "lodash/upperFirst";
 // import { SelectField } from "../../../../../../../../theme";
 
 import * as Styled from "../../actionForm.styles";
-
-interface subActionMapProps {
-  [key: string]: any[];
-}
-
-const subActionMap: subActionMapProps = {
-  md: [
-    "mdHome",
-    "mdPage",
-    "mdProfile",
-    "mdProfileSelector",
-    "mdReset",
-    "mdSettings"
-  ],
-  obs: [
-    "obsLayerHide",
-    "obsLayerShow",
-    "obsLayerToggle",
-
-    "obsRecordStart",
-    "obsRecordStop",
-    "obsRecordToggle",
-
-    "obsRecordPause",
-    "obsRecordResume",
-
-    "obsSceneChange",
-
-    "obsStreamStart",
-    "obsStreamStop",
-    "obsStreamToggle"
-  ],
-  spotify: [
-    "spotifyNext",
-    "spotifyPause",
-    "spotifyPrevious",
-    "spotifyStart",
-    "spotifyStop"
-  ]
-};
+import { subActionMap } from "../../../../../../../types";
 
 export interface IntFormFieldSelectProps {
   name: string;
@@ -74,10 +35,10 @@ const FormFieldSelect: React.FC<IntFormFieldSelectProps> = ({
         {_map(subActionMap?.[name], m => (
           <option
             data-testid="form_field_selectField__option"
-            key={m}
-            value={m}
+            key={m.slug}
+            value={m.slug}
           >
-            {m}
+            {m.display}
           </option>
         ))}
       </Styled.SelectField>

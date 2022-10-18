@@ -22,7 +22,7 @@ const FormFieldNumbers: React.FC<IntFormFieldNumbersProps> = ({
   seconds,
   state
 }) => {
-  const range = _range(0, SETTINGS.MAX_DELAY_SECONDS, 0.5);
+  const range = _range(0.5, SETTINGS.MAX_DELAY_SECONDS, 0.5);
   const value = _toNumber(state[name as keyof IntActions]);
 
   return (
@@ -46,7 +46,7 @@ const FormFieldNumbers: React.FC<IntFormFieldNumbersProps> = ({
             key={m}
             value={seconds ? m * 1000 : m}
           >
-            {seconds ? m * 1000 : m}
+            {m.toFixed(1)} seconds
           </option>
         ))}
       </Styled.SelectField>

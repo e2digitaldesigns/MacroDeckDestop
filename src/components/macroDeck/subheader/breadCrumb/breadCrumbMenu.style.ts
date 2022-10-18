@@ -55,4 +55,5 @@ export const BreadCrumbMenuItemClose = styled(BreadCrumbMenuItem)`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-column-gap: 0.5rem;
+  border-top: solid 0.0625rem #8498d2;
 `;

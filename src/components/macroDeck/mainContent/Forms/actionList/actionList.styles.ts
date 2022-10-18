@@ -57,30 +57,6 @@ export const ActionListItem = styled.li<ActionListItemType>`
   }
 `;
 
-export const ActionListItemInfo = styled.div`
-  font-size: 0.75em;
-  width: 100%;
-  height: 0.875em;
-  display: grid;
-  grid-template-columns: 3rem 1rem auto;
-
-  div:nth-child(1) {
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-
-  div:nth-child(2) {
-    text-align: center;
-  }
-
-  div:nth-child(3) {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0 1em 0 0.5em;
-  }
-`;
-
 export const ActionListItemButton = styled.div`
   height: 100%;
   margin: 0;
