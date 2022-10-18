@@ -1,8 +1,11 @@
 {
-  "name": "the-app",
+  "name": "macrodeck",
   "version": "0.1.0",
+  "author": "C. Eugene Bey",
+  "description": "stuff",
   "private": true,
   "main": "./electron/main.js",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -13,6 +16,7 @@
     "@types/react-dom": "^18.0.6",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "cpx": "^1.5.0",
     "electron-json-storage": "^4.5.0",
     "ip": "^1.1.8",
     "lodash": "^4.17.21",
@@ -53,6 +57,7 @@
     "dist": "electron-builder",
     "eject": "react-scripts eject",
     "pack": "electron-builder --dir",
+    "postbuild": "cpx build/** electron/build",
     "postinstall": "electron-builder install-app-deps",
     "rebuild": "npm rebuild --runtime=electron --target=18.2.0 --disturl=https://atom.io/download/atom-shell --force-abi=101",
     "rebuilder": ".\\node_modules\\.bin\\electron-rebuild.cmd",
