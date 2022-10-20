@@ -14,6 +14,7 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "auto-launch": "^5.0.5",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "cpx": "^1.5.0",
@@ -41,6 +42,17 @@
     "asar": true,
     "extends": null,
     "appId": "com.macrodeck",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
     "mac": {
       "category": "your.app.category.type"
     },

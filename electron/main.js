@@ -1,30 +1,57 @@
 const electron = require("electron");
+const AutoLaunch = require("auto-launch");
 const path = require("path");
-const getApplicationUrl = require("./utils/getApplicationUrl");
 const menuTemplate = require("./menu");
 const server = require("./server/server");
-const listners = require("./listeners/");
 const storage = require("electron-json-storage");
 
 const SETTINGS = require("./settings/system.json");
 
-console.log(11, storage.getDataPath());
+console.log("storage path:", storage.getDataPath());
 // const isDev = process?.env?.APP_DEV ? true : false;
 const isDev = true;
 console.log(13, { isDev });
 
+// const autoLauncher = new AutoLaunch({
+//   name: "macrodeck",
+//   isHidden: true
+// });
+
+// autoLauncher
+//   .isEnabled()
+//   .then(function (isEnabled) {
+//     console.log({ isEnabled });
+//     if (isEnabled) return;
+//     autoLauncher.enable();
+//   })
+//   .catch(function (err) {
+//     throw err;
+//   });
+
 const { app: electronApp, BrowserWindow, ipcMain, Menu, Tray } = electron;
 
-let mainWindow;
+let mainWindow, splashWindow;
 let tray = null;
 const width = SETTINGS.APPLICATION.SIZE.WIDTH;
 const height = SETTINGS.APPLICATION.SIZE.HEIGHT;
 
 electronApp.on("ready", () => {
+  splashWindow = new BrowserWindow({
+    width: 500,
+    height: 300,
+    transparent: true,
+    frame: false,
+    alwaysOnTop: true
+  });
+
+  splashWindow.loadURL(`${__dirname}/${SETTINGS.SPLASH_PAGE}`);
+  splashWindow.center();
+
   tray = new Tray(__dirname + SETTINGS.LOGOS.SMALL);
   tray.setToolTip(SETTINGS.TRAY.TOOLTIP);
 
   mainWindow = new BrowserWindow({
+    autoHideMenuBar: true,
     width: width,
     minWidth: width,
     height: height,
@@ -55,7 +82,13 @@ electronApp.on("ready", () => {
     mainWindow.loadFile(`${__dirname}${SETTINGS.LOAD_URL.BUILD}`);
   }
 
-  mainWindow.once("ready-to-show", () => mainWindow.show());
+  mainWindow.once("ready-to-show", () => {
+    setTimeout(function () {
+      splashWindow.close();
+      splashWindow = null;
+      mainWindow.show();
+    }, 500);
+  });
 
   mainWindow.on("minimize", event => {
     event.preventDefault();
@@ -96,8 +129,8 @@ electronApp.on("ready", () => {
 
   // listners.listeners(mainWindow);
 
-  const mainMenu = Menu.buildFromTemplate(menuTemplate);
-  Menu.setApplicationMenu(mainMenu);
+  // const mainMenu = Menu.buildFromTemplate(menuTemplate);
+  // Menu.setApplicationMenu(mainMenu);
 
   server(mainWindow);
 });
