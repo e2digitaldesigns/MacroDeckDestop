@@ -23,7 +23,7 @@ export const SectionMenuItems = styled.div<IntSectionMenuItem>`
   border-bottom: 1px solid ${props => (props.active ? "#8498d2;" : "#2a2d34")};
   padding: 0 10px;
   justify-content: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: 0.5s;
 `;
 

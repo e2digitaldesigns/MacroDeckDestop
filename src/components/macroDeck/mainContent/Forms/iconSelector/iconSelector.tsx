@@ -1,6 +1,6 @@
 import React from "react";
 import * as Styled from "./iconSelector.styles";
-import * as RFIcon from "react-feather";
+// import * as RFIcon from "react-feather";
 import _cloneDeep from "lodash/cloneDeep";
 import _filter from "lodash/filter";
 import _map from "lodash/map";

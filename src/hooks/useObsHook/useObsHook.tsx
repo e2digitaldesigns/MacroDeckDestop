@@ -1,6 +1,5 @@
 /* istanbul ignore file */
-import React from "react";
-import OBSWebSocket, { OBSRequestTypes } from "obs-websocket-js";
+import OBSWebSocket from "obs-websocket-js";
 import { IntObsScene, IntObsSource } from "../../types";
 import _map from "lodash/map";
 import _sortBy from "lodash/sortBy";

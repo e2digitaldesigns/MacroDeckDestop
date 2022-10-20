@@ -9,12 +9,7 @@ import {
   usePage,
   useProfile
 } from "../../../hooks";
-import {
-  BreadCrumbMenuTypes,
-  subActionMap,
-  allActionMap,
-  IntAllActionMap
-} from "../../../types";
+import { BreadCrumbMenuTypes, allActionMap } from "../../../types";
 
 interface IntBreadWrapper {
   activeBreadCrumbMenu: BreadCrumbMenuTypes | null;

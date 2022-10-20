@@ -55,7 +55,7 @@ const ObsActionParser: React.FC<ObsActionParserProps> = ({
       const data = JSON.parse(state[subAction as keyof IntActions] as string);
       data?.parentScene && setFilterScene(data.parentScene);
     }
-  }, [state]);
+  }, [state, subAction]);
 
   const handleSelect = (e: any) => {
     onChange(e);

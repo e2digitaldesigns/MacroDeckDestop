@@ -10,9 +10,8 @@ import {
 } from "../../types";
 
 const UpdateListener: React.FC = () => {
-  const { ipcRenderParser, loadAppData, saveAppData, updateMobileDevice } =
-    useElectron();
-  const { state, setState } = useGlobalData();
+  const { saveAppData, updateMobileDevice } = useElectron();
+  const { state } = useGlobalData();
 
   const checkers = React.useRef<IntGlobalContextCheckers>({
     profiles: state.profiles,

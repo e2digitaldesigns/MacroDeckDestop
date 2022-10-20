@@ -3,7 +3,6 @@ import _upperFirst from "lodash/upperFirst";
 import SETTINGS from "../../../../../../../settings/system.json";
 import { FormFieldFileTypes } from "../../../../../../../types";
 
-import * as Styled from "../../actionForm.styles";
 export interface IntFormFieldFileProps {
   id?: FormFieldFileTypes;
   name?: string;

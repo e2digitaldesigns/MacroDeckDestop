@@ -1,6 +1,5 @@
 import React from "react";
 import _map from "lodash/map";
-import _range from "lodash/range";
 import { useActions, useAppData } from "../../../../../hooks";
 import { IntActions } from "../../../../../types/globalContextType";
 import * as Styled from "./actionList.styles";
@@ -15,10 +14,6 @@ const ActionList: React.FC<{}> = () => {
     createAction();
   };
 
-  const defaultCount = 5;
-  const plCount =
-    actions.length >= defaultCount ? 0 : defaultCount - actions.length;
-
   return (
     <Styled.Wrapper>
       <Styled.ActionListWrapper>
@@ -31,10 +26,6 @@ const ActionList: React.FC<{}> = () => {
                   <ActionListItem key={theAction._id} action={theAction} />
                 )
               )}
-
-            {/* {_map(_range(plCount), (index: number) => (
-              <Styled.ActionListItem key={index} isPlaceHolder={true} />
-            ))} */}
           </ul>
         </Styled.ActionListScroll>
       </Styled.ActionListWrapper>
