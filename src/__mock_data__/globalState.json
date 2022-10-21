@@ -6,12 +6,11 @@
     "port": "8585",
     "features": {
       "obs": {
-        "status": "0",
+        "status": true,
         "ipAddress": "10.0.0.91",
         "port": "4444",
         "password": ""
-      },
-      "twitch": { "status": "1", "channels": "icon33" }
+      }
     }
   },
   "profiles": [

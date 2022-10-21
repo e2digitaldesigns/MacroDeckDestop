@@ -7,21 +7,21 @@ export interface IntTemplateInformation {
   sideBarState: string;
 }
 
+export interface ISettingsFeaturesObs {
+  ipAddress: string;
+  port: number | string;
+  password: string;
+  status: boolean;
+}
+
+export interface ISettingsFeatures {
+  obs: ISettingsFeaturesObs;
+}
+
 export interface IntSettings {
   ipAddress: string;
   port: string;
-  features: {
-    obs: {
-      status: boolean;
-      ipAddress: string;
-      port: string;
-      password: string;
-    };
-    twitch: {
-      status: boolean;
-      channel: string;
-    };
-  };
+  features: ISettingsFeatures;
 }
 
 export interface IntIdIndex {

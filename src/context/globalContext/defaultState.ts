@@ -11,10 +11,6 @@ export const defaultState: IntGlobalContextInterface = {
         ipAddress: "",
         port: "",
         password: ""
-      },
-      twitch: {
-        status: false,
-        channel: "icon33"
       }
     }
   },
