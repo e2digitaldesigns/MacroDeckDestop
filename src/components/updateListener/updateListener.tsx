@@ -1,19 +1,16 @@
 import React from "react";
 import { useElectron, useGlobalData } from "../../hooks";
 
-import SETTINGS from "../../settings/system.json";
 import _isEqual from "lodash/isEqual";
 import _size from "lodash/size";
-import {
-  IntGlobalContextCheckers,
-  IntGlobalContextInterface
-} from "../../types";
+import { IntGlobalContextInterface } from "../../types";
 
 const UpdateListener: React.FC = () => {
   const { saveAppData, updateMobileDevice } = useElectron();
   const { state } = useGlobalData();
 
-  const checkers = React.useRef<IntGlobalContextCheckers>({
+  const checkers = React.useRef<Partial<IntGlobalContextInterface>>({
+    settings: state.settings,
     profiles: state.profiles,
     pages: state.pages,
     buttonPads: state.buttonPads,
@@ -23,33 +20,30 @@ const UpdateListener: React.FC = () => {
 
   React.useEffect(() => {
     let stillHere = true;
-    const keys = SETTINGS.SAVE_ON_CHANGE_PARAMS;
-    const stateCheck: Partial<IntGlobalContextInterface> = {};
-    const refCheck: Partial<IntGlobalContextInterface> = {};
 
-    for (let i = 0; i < keys.length; i++) {
-      let key = keys[i];
-      refCheck[key as keyof IntGlobalContextInterface] =
-        checkers.current[key as keyof IntGlobalContextCheckers];
-      stateCheck[key as keyof IntGlobalContextInterface] =
-        state[key as keyof IntGlobalContextInterface];
-    }
+    const refChecking = {
+      ...checkers.current
+    };
 
-    if (!_isEqual(stateCheck, refCheck) && _size(refCheck)) {
-      for (let i = 0; i < _size(keys); i++) {
-        checkers.current[keys[i] as keyof IntGlobalContextCheckers] =
-          state[keys[i] as keyof IntGlobalContextInterface];
-      }
+    const stateChecking = {
+      settings: state.settings,
+      profiles: state.profiles,
+      pages: state.pages,
+      buttonPads: state.buttonPads,
+      actions: state.actions,
+      styles: state.styles
+    };
+
+    if (!_isEqual(refChecking, stateChecking) && _size(refChecking)) {
+      checkers.current = {
+        ...stateChecking
+      };
 
       state?.settings?.ipAddress && stillHere && saveAppData(state);
     }
-
-    return () => {
-      stillHere = false;
-    };
   }, [state, saveAppData]);
 
-  const checkersMobile = React.useRef<Partial<IntGlobalContextCheckers>>({
+  const checkersMobile = React.useRef<Partial<IntGlobalContextInterface>>({
     profiles: state.profiles,
     pages: state.pages,
     buttonPads: state.buttonPads
@@ -57,23 +51,21 @@ const UpdateListener: React.FC = () => {
 
   React.useEffect(() => {
     let stillHereA = true;
-    const keys = SETTINGS.UPDATE_ON_CHANGE_PARAMS;
-    const stateCheck: Partial<IntGlobalContextInterface> = {};
-    const refCheck: Partial<IntGlobalContextInterface> = {};
 
-    for (let i = 0; i < keys.length; i++) {
-      let key = keys[i];
-      refCheck[key as keyof IntGlobalContextInterface] =
-        checkersMobile.current[key as keyof IntGlobalContextCheckers];
-      stateCheck[key as keyof IntGlobalContextInterface] =
-        state[key as keyof IntGlobalContextInterface];
-    }
+    const refCheckingMobile = {
+      ...checkersMobile.current
+    };
 
-    if (!_isEqual(stateCheck, refCheck) && _size(refCheck)) {
-      for (let i = 0; i < _size(keys); i++) {
-        checkersMobile.current[keys[i] as keyof IntGlobalContextCheckers] =
-          state[keys[i] as keyof IntGlobalContextInterface];
-      }
+    const stateCheckingMobile = {
+      profiles: state.profiles,
+      pages: state.pages,
+      buttonPads: state.buttonPads
+    };
+
+    if (!_isEqual(refCheckingMobile, stateCheckingMobile)) {
+      checkersMobile.current = {
+        ...stateCheckingMobile
+      };
 
       state?.settings?.ipAddress && stillHereA && updateMobileDevice(state);
     }

@@ -86,16 +86,8 @@ export interface IntStyles {
 }
 
 export interface IntGlobalContextInterface {
-  userInformation: IntUserInformation;
-  settings: any;
-  profiles: IntProfile[];
-  pages: IntPages[];
-  buttonPads: IntButtonPads[];
-  actions: IntActions[];
-  styles: IntStyles[];
-}
-
-export interface IntGlobalContextCheckers {
+  userInformation?: IntUserInformation;
+  settings: IntSettings;
   profiles: IntProfile[];
   pages: IntPages[];
   buttonPads: IntButtonPads[];
