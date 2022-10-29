@@ -1,7 +1,5 @@
 import React from "react";
 import { useElectron } from "../../hooks";
-import _isEqual from "lodash/isEqual";
-import _size from "lodash/size";
 import {
   IntGlobalData,
   IntGlobalContextInterface,

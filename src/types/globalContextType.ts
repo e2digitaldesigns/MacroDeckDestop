@@ -9,9 +9,9 @@ export interface IntTemplateInformation {
 
 export interface ISettingsFeaturesObs {
   ipAddress: string;
-  port: number | string;
+  port: string;
   password: string;
-  status: boolean;
+  status?: boolean;
 }
 
 export interface ISettingsFeatures {

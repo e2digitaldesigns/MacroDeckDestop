@@ -12,8 +12,7 @@ const createMobileProfile = require("../../utils/starterUtils");
 const setIpAddress = json => {
   const data = _cloneDeep(json);
   data.settings.ipAddress = ip.address();
-  // data.settings.port = data?.md?.settings?.port || SETTINGS.DEFAULT_PORT;
-  data.settings.port = SETTINGS.DEFAULT_PORT;
+  data.settings.port = data.settings.port || SETTINGS.DEFAULT_PORT;
   return data;
 };
 

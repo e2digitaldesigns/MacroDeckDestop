@@ -21,6 +21,8 @@ const UpdateListener: React.FC = () => {
   React.useEffect(() => {
     let stillHere = true;
 
+    console.log(24);
+
     const refChecking = {
       ...checkers.current
     };
@@ -38,8 +40,11 @@ const UpdateListener: React.FC = () => {
       checkers.current = {
         ...stateChecking
       };
+      console.log(43);
 
       state?.settings?.ipAddress && stillHere && saveAppData(state);
+      console.log(47, state?.settings?.ipAddress, stillHere);
+      state?.settings?.ipAddress && stillHere && console.log(46, "save me");
     }
   }, [state, saveAppData]);
 

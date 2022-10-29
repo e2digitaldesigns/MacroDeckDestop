@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { AppTemplate } from "../../components/template/template";
 import MacroDeck from "../macroDeck/MacroDeck";
+import SettingsWrapper from "../settings/settingsWrapper";
 import { SectionRoutes } from "./../../types";
 
 const ApplicationWrapper: React.FC = () => {
@@ -26,16 +27,7 @@ const ApplicationWrapper: React.FC = () => {
           />
           <Route index element={<MacroDeck />} />
           <Route path={SectionRoutes.MacroDeck} element={<MacroDeck />} />
-          <Route
-            path={SectionRoutes.Settings}
-            element={
-              <>
-                <h3>settings</h3>
-                <h3>settings</h3>
-                <h3>settings</h3>
-              </>
-            }
-          />
+          <Route path={SectionRoutes.Settings} element={<SettingsWrapper />} />
           <Route
             path="*"
             element={

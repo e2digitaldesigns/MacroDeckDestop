@@ -27,9 +27,10 @@ const ProfileSearch: React.FC<IntProfileSearch> = ({
       <Styled.ProfileSearchStats>
         <ArrowLeftCircleFill />
         <div>
-          Viewing{" "}
+          Viewing:{" "}
           <Styled.ProfileSearchStatsCount>
-            {count}/ {_size(profiles)}{" "}
+            {" "}
+            {count} / {_size(profiles)}{" "}
           </Styled.ProfileSearchStatsCount>
         </div>
 
