@@ -18,9 +18,12 @@ export interface ISettingsFeatures {
   obs: ISettingsFeaturesObs;
 }
 
-export interface IntSettings {
+export interface IMDSettings {
   ipAddress: string;
   port: string;
+}
+export interface IntSettings {
+  md: IMDSettings;
   features: ISettingsFeatures;
 }
 
@@ -101,3 +104,5 @@ export interface IntGlobalContextStateInterface {
 }
 
 export type IntGlobalData = IntGlobalContextStateInterface;
+
+export type TUpdateSettingsValue = ISettingsFeaturesObs;

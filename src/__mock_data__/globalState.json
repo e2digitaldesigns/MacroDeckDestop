@@ -2,8 +2,10 @@
   "userInformation": { "_id": "", "name": "" },
   "templateInformation": { "sideBarState": "" },
   "settings": {
-    "ipAddress": "10.0.0.91",
-    "port": "8585",
+    "md": {
+      "ipAddress": "10.0.0.91",
+      "port": "8585"
+    },
     "features": {
       "obs": {
         "status": true,

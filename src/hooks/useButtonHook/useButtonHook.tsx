@@ -377,7 +377,7 @@ const useButtonHook = (): IntUseButtonHook => {
         ? buttonPadId
         : appData.appState.active.buttonPadId;
 
-      const { ipAddress, port } = globalData.state.settings;
+      const { ipAddress, port } = globalData.state.settings.md;
 
       if (!ipAddress || !port || !_id) return;
 

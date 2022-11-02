@@ -4,18 +4,18 @@ import { useSettings } from "./../../../hooks";
 
 export const TemplateFooter: React.FC = () => {
   const { getSettings } = useSettings();
-  const { ipAddress, port } = getSettings();
+  const { md } = getSettings();
 
   return (
     <Styled.Footer>
       <Styled.FooterTab>
         port:
-        <span>{port || "n/a"}</span>
+        <span>{md?.port || "n/a"}</span>
       </Styled.FooterTab>
 
       <Styled.FooterTab>
         ip address:
-        <span>{ipAddress || "n/a"}</span>
+        <span>{md?.ipAddress || "n/a"}</span>
       </Styled.FooterTab>
     </Styled.Footer>
   );
