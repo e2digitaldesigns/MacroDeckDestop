@@ -42,9 +42,9 @@ const UpdateListener: React.FC = () => {
       };
       console.log(43);
 
-      state?.settings?.ipAddress && stillHere && saveAppData(state);
-      console.log(47, state?.settings?.ipAddress, stillHere);
-      state?.settings?.ipAddress && stillHere && console.log(46, "save me");
+      state?.settings?.md?.ipAddress && stillHere && saveAppData(state);
+      console.log(47, state?.settings?.md?.ipAddress, stillHere);
+      state?.settings?.md?.ipAddress && stillHere && console.log(46, "save me");
     }
   }, [state, saveAppData]);
 
@@ -72,7 +72,7 @@ const UpdateListener: React.FC = () => {
         ...stateCheckingMobile
       };
 
-      state?.settings?.ipAddress && stillHereA && updateMobileDevice(state);
+      state?.settings?.md?.ipAddress && stillHereA && updateMobileDevice(state);
     }
 
     return () => {

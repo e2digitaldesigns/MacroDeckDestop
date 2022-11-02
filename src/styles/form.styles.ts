@@ -60,20 +60,20 @@ export const SubmitButton = styled.button`
       ${props => props.theme.modules.formFields.submit.border.hover};
   }
   &:focus {
-    border: none;
+    border-bottom-color: transparent;
     text-decoration: none;
   }
   &:active {
-    border: none;
+    border-bottom-color: transparent;
     text-decoration: none;
   }
   &:disabled {
+    border-bottom-color: transparent;
     background-color: ${props =>
       props.theme.modules.formFields.submit.bg.disabled};
     color: ${props => props.theme.modules.formFields.submit.text.disabled};
     cursor: default;
     opacity: 0.5;
-    border: none;
   }
 `;
 

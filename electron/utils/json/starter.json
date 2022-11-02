@@ -1,8 +1,10 @@
 {
   "userInformation": { "_id": "", "name": "" },
   "settings": {
-    "ipAddress": "",
-    "port": "",
+    "md": {
+      "ipAddress": "",
+      "port": ""
+    },
     "features": {
       "obs": {
         "status": "0",

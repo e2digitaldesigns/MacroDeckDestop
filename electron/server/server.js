@@ -39,9 +39,7 @@ const service = mainWindow => {
   try {
     storage.get("md", (error, data) => {
       if (error) throw error;
-      // const PORT = data?.settings?.port || SETTINGS.DEFAULT_PORT;
-      const PORT = SETTINGS.DEFAULT_PORT;
-      server.listen(PORT);
+      server.listen(data.settings.md.port || SETTINGS.DEFAULT_PORT);
     });
   } catch (error) {
     console.log(45, error);
