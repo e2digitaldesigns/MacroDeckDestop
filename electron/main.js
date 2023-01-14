@@ -1,5 +1,5 @@
 const electron = require("electron");
-const AutoLaunch = require("auto-launch");
+// const AutoLaunch = require("auto-launch");
 const path = require("path");
 const menuTemplate = require("./menu");
 const server = require("./server/server");

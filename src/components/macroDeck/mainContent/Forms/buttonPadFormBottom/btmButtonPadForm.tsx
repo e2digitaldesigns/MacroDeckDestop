@@ -67,7 +67,8 @@ const BtmButtonPadForm: React.FC<IntButtonForm> = ({ newIcon }) => {
 
   React.useEffect(() => {
     if (buttonPad && !_isEqual(buttonPad, state)) {
-      setState(state => buttonPad);
+      console.log(74, "Update state");
+      // setState(state => buttonPad);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globalData.state.buttonPads[buttonPadIndex]]);
