@@ -47,7 +47,7 @@ export const ProfileSearchBox = styled.input.attrs({
   background: ${props =>
     props.theme.modules.sidebarLeft.profileSearch.colors.searchBox.bg};
   border-radius: 2px;
-  border: 1px solid
+  border: 0.0625rem solid
     ${props =>
       props.theme.modules.sidebarLeft.profileSearch.colors.searchBox
         .border} !important;

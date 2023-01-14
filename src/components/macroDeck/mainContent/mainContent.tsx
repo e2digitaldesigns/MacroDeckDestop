@@ -10,7 +10,7 @@ export const MacroDeckMainContent: React.FC = () => {
     <AppStyled.MainContent>
       <ButtonPadGrid />
 
-      <SectionMenu />
+      {/* <SectionMenu /> */}
 
       <SectionWrapper />
     </AppStyled.MainContent>

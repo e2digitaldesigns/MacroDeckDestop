@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 23px;
   white-space: nowrap;
   background-color: ${props => props.theme.modules.body.colors.bg};
 }

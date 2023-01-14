@@ -35,7 +35,7 @@ export const Section2 = styled(Section)`
 export const SectionHeader = styled.h4`
   padding: 0.5rem 0 0.5rem 0;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #555;
+  border-bottom: 0.0625rem solid #555;
 `;
 
 export const FieldSet = styled.div`

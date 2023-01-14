@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import { pxToRem } from "./../../../../utils";
 
 const ButtonPadDiv = styled.div`
   width: 100%;
-  height: 80px;
   font-size: 0.75rem;
   background: ${props => props.theme.modules.buttonPadParser.colors.wrapper.bg};
   cursor: pointer;
@@ -15,14 +15,11 @@ interface IntButtonPad {
   isEmpty: boolean;
 }
 export const ButtonPad = styled(ButtonPadDiv)<IntButtonPad>`
-  font-size: 0.75rem;
   cursor: ${props => (props.isEmpty ? "auto" : "grab")};
   position: relative;
   background: ${props =>
     props.bgColor || props.theme.modules.buttonPadParser.colors.buttonPad.bg};
-  /* border: 2px solid
-    ${props => props.theme.modules.buttonPadParser.colors.buttonPad.border}; */
-  border-bottom: 2px solid
+  border-bottom: ${pxToRem("2px")} solid
     ${props =>
       props.isActive
         ? props.theme.modules.buttonPadParser.colors.buttonPad.borderBottom
@@ -47,10 +44,6 @@ const ButtonPadOptionIcon = styled.div`
   height: 1.75rem;
   width: 1.75rem;
   cursor: pointer;
-  /* color: ${props =>
-    props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.font
-      .normal}; */
-
   transition: background-color 0.75s;
   background-color: ${props =>
     props.theme.modules.buttonPadParser.colors.buttonPadOptionIcon.bg.normal};
@@ -123,9 +116,8 @@ export const ButtonPadIcon = styled.div<IntButtonPadIcon>`
     props.iconColor ||
     props.theme.modules.buttonPadParser.colors.buttonPadIcon.font.normal};
   display: flex;
-  padding-top: 18px;
+  padding-top: ${pxToRem("18px")};
   justify-content: center;
-  /* align-items: center; */
 `;
 
 export const ButtonPadIconPlus = styled(ButtonPadIcon)`

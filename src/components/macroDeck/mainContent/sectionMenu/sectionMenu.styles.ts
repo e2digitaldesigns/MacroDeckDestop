@@ -20,7 +20,8 @@ export const SectionMenuItems = styled.div<IntSectionMenuItem>`
   display: grid;
   align-content: center;
   background-color: ${props => (props.active ? "#2a2d34" : "#2a2d34")};
-  border-bottom: 1px solid ${props => (props.active ? "#8498d2;" : "#2a2d34")};
+  border-bottom: 0.0625rem solid
+    ${props => (props.active ? "#8498d2;" : "#2a2d34")};
   padding: 0 10px;
   justify-content: center;
   /* cursor: pointer; */

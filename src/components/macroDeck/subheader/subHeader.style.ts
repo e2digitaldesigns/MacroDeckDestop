@@ -10,7 +10,7 @@ export const SubHeader = styled.header`
 
   display: inline-flex;
   align-content: center;
-  gap: 0px;
+  gap: 0;
   z-index: ${props => props.theme.modules.subHeader.zIndex};
 `;
 

@@ -9,7 +9,7 @@ export const BreadCrumbMenu = styled(ScrollerDiv)`
   min-width: 240px;
   background-color: #414650;
   padding-right: 0;
-  box-shadow: 1px 1px 4px #222;
+  box-shadow: 0.0625rem 0.0625rem 4px #222;
   overflow: auto;
 `;
 
