@@ -10,14 +10,14 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
     props.active
       ? props.theme.modules.sidebarLeft.navigationItems.colors.bg.active
       : props.theme.modules.sidebarLeft.navigationItems.colors.bg.normal};
-  grid-template-columns: 40px auto 30px;
+  grid-template-columns: 2.5rem auto 1.875rem;
 
   > div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 29px;
+    height: 1.8125rem;
 
     :nth-child(1) {
       color: ${props =>
@@ -39,9 +39,8 @@ export const ItemProfile = styled(DefaultItem)<IntNavigationItem>`
 `;
 
 export const ItemStyle = styled(DefaultItem)`
-  grid-template-columns: 2.5rem 1.5rem 1.5rem 1.5rem auto 30px;
-  grid-template-columns: 40px auto 30px;
-  font-size: 0.9em;
+  grid-template-columns: 2.5rem auto 1.875rem;
+  font-size: 0.9rem;
 
   > div {
     display: flex;
@@ -82,21 +81,20 @@ interface IntWrapper {
 
 export const IconWrapper = styled.div`
   display: block;
-  width: 40px;
-  height: 29px;
+  width: 2.5rem;
+  height: 1.8125rem;
   overflow: hidden;
   position: relative;
 `;
 
 export const IconToggleWrapper = styled.div`
-  /* transition: 0.5s; */
   position: absolute;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 29px;
+  width: 2.5rem;
+  height: 1.8125rem;
 
   animation-duration: 0.25s;
   animation-fill-mode: forwards;
@@ -113,7 +111,7 @@ export const IconFolderWrapper = styled(IconToggleWrapper)<IntWrapper>`
 `;
 
 export const IconEditWrapper = styled(IconToggleWrapper)<IntWrapper>`
-  left: -40px;
+  left: -2.5rem;
   animation-name: ${props =>
     props.isHover === null
       ? startOutAnimation
@@ -123,17 +121,17 @@ export const IconEditWrapper = styled(IconToggleWrapper)<IntWrapper>`
 `;
 
 const slideInAnimation = keyframes`
- 0% { left: 40px }
+ 0% { left: 2.5rem }
  100% { left: 0px }`;
 
 const slideOutAnimation = keyframes`
 0% { left: 0 }
-100% { left: -40px }`;
+100% { left: -2.5rem }`;
 
 const startInAnimation = keyframes`
 0% { left: 0px }
 100% { left: 0px }`;
 
 const startOutAnimation = keyframes`
-0% { left: -40px }
-100% { left: -40px }`;
+0% { left: -2.5rem }
+100% { left: -2.5rem }`;

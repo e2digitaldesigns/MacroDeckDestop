@@ -45,15 +45,15 @@ const NavigationItem: React.FC<IntNavigationItem> = ({
             onMouseLeave={() => setIsHover(false)}
           >
             <Styled.IconFolderWrapper isHover={isHover}>
-              <FolderFill size={16} />
+              <FolderFill />
             </Styled.IconFolderWrapper>
 
             <Styled.IconEditWrapper isHover={isHover}>
-              <PencilSquare size={16} />
+              <PencilSquare />
             </Styled.IconEditWrapper>
           </Styled.IconWrapper>
         ) : (
-          <Folder2 size={16} />
+          <Folder2 />
         )}
       </div>
       <div>{profile.profileName}</div>
