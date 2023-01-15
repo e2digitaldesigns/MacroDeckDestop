@@ -5,7 +5,7 @@ export const ButtonWrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-row-gap: 0.5rem;
-  height: 141px;
+  height: 14.0625rem;
   margin-top: 0.25em;
 `;
 

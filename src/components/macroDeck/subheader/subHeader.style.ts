@@ -10,12 +10,12 @@ export const SubHeader = styled.header`
 
   display: inline-flex;
   align-content: center;
-  gap: 0px;
+  gap: 0;
   z-index: ${props => props.theme.modules.subHeader.zIndex};
 `;
 
 export const BreadCrumbHolder = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: flex;
   padding: 0.125rem 0 0 0.125rem;
   color: #7f8178;

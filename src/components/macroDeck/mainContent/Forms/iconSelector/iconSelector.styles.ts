@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import * as FormStyles from "../../../../../styles/form.styles";
+import { pxToRem } from "../../../../../utils";
 
 export const IconListWrapper = styled.div`
   position: relative;
-  height: 220px;
+  height: ${pxToRem("258px")};
   background-color: #32363f;
   padding: 0.5rem;
   display: grid;
@@ -41,13 +42,13 @@ export const IconListWrapperScroll = styled.div`
   }
 
   ::-webkit-scrollbar-thumb {
-    border-top: 1px solid #6e92b9;
+    border-top: 0.0625rem solid #6e92b9;
     background: #3d424d;
     min-height: 2rem;
   }
 
   > div {
-    border-right: 1px solid #555;
+    border-right: 0.0625rem solid #555;
     padding-right: 0.25rem;
   }
 `;

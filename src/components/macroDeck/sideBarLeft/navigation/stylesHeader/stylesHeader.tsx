@@ -30,7 +30,7 @@ const StylesHeader: React.FC = () => {
       <Styled.StylesHeaderIconHolder
         active={dropZoneState.dropZones.styleHeader}
       >
-        <MacroDeckIcon icon="Grid" size={14} />
+        <MacroDeckIcon icon="Grid" />
       </Styled.StylesHeaderIconHolder>
       <div>
         <div>

@@ -11,6 +11,6 @@ export const SidebarLeft = styled.section`
     ${props => props.theme.modules.sidebarLeft.colors.borderRight};
   overflow: hidden;
   background-color: ${props => props.theme.modules.sidebarLeft.colors.bg};
-  transition: width 1s;
+  /* transition: width 1s; */
   z-index: 999;
 `;

@@ -30,8 +30,8 @@ interface IntTitle {
 }
 
 export const Title = styled.div<IntTitle>`
-  font-size: 0.875rem;
-  width: ${props => (props.width ? props.width + "px" : "auto")};
+  font-size: 0.75rem;
+  width: ${props => (props.width ? props.width + "rem" : "auto")};
   text-overflow: ellipsis;
   overflow: hidden;
 `;

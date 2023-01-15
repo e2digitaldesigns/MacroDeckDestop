@@ -11,7 +11,7 @@ const ProfileButton: React.FC = () => {
     <>
       <Styled.NewProfileButton onClick={createProfile}>
         <div>
-          <PlusCircle size={16} />
+          <PlusCircle />
         </div>
         <div>New Profile</div>
       </Styled.NewProfileButton>

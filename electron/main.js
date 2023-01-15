@@ -62,6 +62,7 @@ electronApp.on("ready", () => {
     movable: true,
     minimizable: true,
     maximizable: true,
+    setAspectRatio: width / height,
     // icon: __dirname + SETTINGS.LOGOS.SMALL,
     show: false,
     webPreferences: {
