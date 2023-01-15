@@ -101,7 +101,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.25",
     "@types/uuid": "^8.3.4",
-    "electron": "^6.1.12",
+    "electron": "^22.0.2",
     "electron-builder": "^5.5.0",
     "electron-rebuild": "^3.2.8"
   }

@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { ButtonDefaults, FormWrapper } from "../forms.style";
+
+import {
+  ButtonDefaults,
+  FormFieldDefaultsParser,
+  FormWrapper
+} from "../../../../../styles/form.styles";
 
 export const Wrapper = styled(FormWrapper)``;
 
@@ -41,19 +46,7 @@ export const FieldSetBottom = styled(FieldSet)<IntFieldSet>`
 `;
 
 const FormFieldDefaults = styled.input`
-  width: 100%;
-  height: 2rem;
-  background-color: #1e1f22 !important;
-  border: 0.125rem solid #55565a;
-  box-sizing: border-box;
-  color: #fff;
-  font-size: 0.875rem;
-  outline: none;
-  padding: 0.5rem 0.5rem;
-
-  &:focus {
-    color: #fff;
-  }
+  ${FormFieldDefaultsParser()}
 `;
 
 export const TextField = styled(FormFieldDefaults).attrs({

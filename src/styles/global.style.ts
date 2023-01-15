@@ -1,5 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 
+const calculateFontSize = (test: any) => {
+  const WIDTH = 1090,
+    HEIGHT = 785,
+    domWidth = document.body.clientWidth,
+    domHeight = document.body.clientHeight;
+
+  const ratio = 16 / WIDTH;
+
+  console.log(9, document.body.clientWidth, test);
+
+  return domWidth * (16 / 1090) + "px";
+};
+
 export const GlobalStyle = createGlobalStyle`
 html,
 body {
@@ -7,9 +20,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 23px;
+  font-size: calc(100vw * (16/1090));
   white-space: nowrap;
   background-color: ${props => props.theme.modules.body.colors.bg};
+  overflow: hidden;
 }
 
 *,

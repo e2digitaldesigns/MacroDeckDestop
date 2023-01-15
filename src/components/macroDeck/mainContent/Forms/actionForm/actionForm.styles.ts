@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { pxToRem } from "../../../../../utils";
-// import { SubmitButton, FieldSet } from "../../../../../../theme";
 
-import { ButtonDefaults, FormWrapper } from "../forms.style";
+import {
+  ButtonDefaults,
+  FormWrapper,
+  FormFieldDefaultsParser
+} from "../../../../../styles/form.styles";
 
 export const Wrapper = styled(FormWrapper)``;
 
@@ -52,7 +55,17 @@ export const TextField = styled(FormFieldDefaults).attrs({
 })``;
 
 export const SelectField = styled.select`
-  appearance: none;
+  /* width: 100%;
+  height: 2rem;
+  background-color: #1e1f22 !important;
+  border: 0.125rem solid #55565a;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.75rem;
+  outline: none;
+  padding: 0.25rem 0.5rem; */
+
+  /* appearance: none;
   color: #fff;
   width: 100%;
   padding: 0.5em 0.5em;
@@ -66,7 +79,9 @@ export const SelectField = styled.select`
     border-color: #55565a;
   }
   option {
-  }
+  } */
+
+  ${FormFieldDefaultsParser()}
 `;
 
 export const SubmitButton = styled(ButtonDefaults)``;

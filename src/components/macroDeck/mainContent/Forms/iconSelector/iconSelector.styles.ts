@@ -4,7 +4,6 @@ import { pxToRem } from "../../../../../utils";
 
 export const IconListWrapper = styled.div`
   position: relative;
-  height: 220px;
   height: ${pxToRem("258px")};
   background-color: #32363f;
   padding: 0.5rem;
