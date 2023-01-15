@@ -1,4 +1,5 @@
 const cors = require("cors");
+const ip = require("ip");
 const storage = require("electron-json-storage");
 const SETTINGS = require("../settings/system.json");
 const actionParser = require("./macroActions/macroActions");
@@ -10,6 +11,13 @@ const service = mainWindow => {
   const io = require("socket.io")(server);
 
   app.use(cors());
+
+  // app.use(
+  //   cors({
+  //     origin: "*"
+  //   })
+  // );
+
   app.set("socketio", io);
   app.set("mainWindow", mainWindow);
   require("./routes")(app);
@@ -39,7 +47,9 @@ const service = mainWindow => {
   try {
     storage.get("md", (error, data) => {
       if (error) throw error;
-      server.listen(data.settings.md.port || SETTINGS.DEFAULT_PORT);
+
+      const ipAddress = ip.address() || "127.0.0.1";
+      server.listen(data.settings.md.port || SETTINGS.DEFAULT_PORT, ipAddress);
     });
   } catch (error) {
     console.log(45, error);

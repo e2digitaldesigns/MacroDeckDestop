@@ -1,6 +1,5 @@
 import * as React from "react";
-import _cloneDeep from "lodash/cloneDeep";
-import { IntSettings, ISettingsFeaturesObs, IMDSettings } from "../../types";
+import { IntSettings, IMDSettings } from "../../types";
 import { useGlobalData, useSettings } from "../../hooks";
 import * as Styled from "./settingsForms.styles";
 import ObsSettingsForms from "./settingsForms/obsSettings/obsSettings";
@@ -14,17 +13,9 @@ const SettingsForms: React.FC = () => {
     port: ""
   });
 
-  const [settingsOBS, setSettingsOBS] = React.useState<ISettingsFeaturesObs>({
-    ipAddress: "",
-    port: "",
-    password: "",
-    status: true
-  });
-
   React.useEffect(() => {
     const settings: IntSettings = getSettings();
     setSettingsMD({ ipAddress: settings.md.ipAddress, port: settings.md.port });
-    setSettingsOBS({ ...settings.features.obs });
   }, [
     globalData.state.settings.md.ipAddress,
     globalData.state.settings.md.port
@@ -33,11 +24,6 @@ const SettingsForms: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setSettingsMD({ ...settingsMD, [name]: value });
-  };
-
-  const handleChangeObs = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const { name, value } = e.target;
-    setSettingsOBS({ ...settingsOBS, [name]: value });
   };
 
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
