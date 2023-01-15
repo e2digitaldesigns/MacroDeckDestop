@@ -31,8 +31,7 @@ export const LinkWrapper = styled.div<IntLinkWrapper>`
       props.isActive
         ? props.theme.modules.header.colors.link.icon.active
         : props.theme.modules.header.colors.link.icon.normal};
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
   }
   a {
     height: 100%;

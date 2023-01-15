@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Gear,
   GearFill,
@@ -11,7 +11,6 @@ import {
 } from "react-bootstrap-icons";
 import * as Styled from "./header.style";
 
-import { useLocation } from "react-router-dom";
 import { SectionRoutes } from "./../../../types";
 
 interface IntHeaderLink {

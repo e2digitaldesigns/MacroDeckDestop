@@ -42,6 +42,10 @@ export const ItemStyle = styled(DefaultItem)`
   grid-template-columns: 2.5rem auto 1.875rem;
   font-size: 0.9rem;
 
+  svg {
+    width: 0.875rem;
+  }
+
   > div {
     display: flex;
     justify-content: center;

@@ -15,7 +15,7 @@ export const SubHeader = styled.header`
 `;
 
 export const BreadCrumbHolder = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: flex;
   padding: 0.125rem 0 0 0.125rem;
   color: #7f8178;

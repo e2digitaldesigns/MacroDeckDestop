@@ -49,13 +49,13 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
   const { activateButtonPad, buttonPadCount, readButtonPads } = useButton();
   const { activateAction, actionCount, getActions } = useActions();
 
-  const handleCreateNewPage = (e: any) => {
+  const handleCreateNewPage = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation();
     createPage();
     handleSetActiveBreadCrumbMenu(null);
   };
 
-  const handleDeletePage = (e: any, _id: string) => {
+  const handleDeletePage = (e: React.MouseEvent<SVGElement>, _id: string) => {
     e.stopPropagation();
     deletePage(_id);
     handleSetActiveBreadCrumbMenu(null);
@@ -110,7 +110,11 @@ const BreadCrumbMenu: React.FC<IntBreadCrumbMenu> = ({
 
             <div>
               {pageCount() > 1 && (
-                <Trash2Fill onClick={e => handleDeletePage(e, item._id)} />
+                <Trash2Fill
+                  onClick={(e: React.MouseEvent<SVGElement>) =>
+                    handleDeletePage(e, item._id)
+                  }
+                />
               )}
             </div>
           </Styled.BreadCrumbMenuItemPage>

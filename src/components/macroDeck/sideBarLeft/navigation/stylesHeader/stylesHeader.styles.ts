@@ -47,6 +47,8 @@ type TStylesHeaderIconHolder = {
 
 export const StylesHeaderIconHolder = styled.div<TStylesHeaderIconHolder>`
   svg {
+    width: 0.875rem;
+
     color: ${props =>
       props.active
         ? props.theme.modules.sidebarLeft.styleHeader.colors.svg.active

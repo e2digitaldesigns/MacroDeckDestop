@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import { ScrollerDiv } from "../../../../styles/scrollDiv.style";
+import { pxToRem } from "./../../../../utils";
 
 export const BreadCrumbMenu = styled(ScrollerDiv)`
   position: absolute;
-  top: 45px;
+  top: 2.8125rem;
   left: 0px;
-  max-height: 550px;
-  min-width: 240px;
+  max-height: ${pxToRem("550px")};
+  min-width: ${pxToRem("240px")};
   background-color: #414650;
   padding-right: 0;
-  box-shadow: 0.0625rem 0.0625rem 4px #222;
+  box-shadow: 0.0625rem 0.0625rem 0.25rem #222;
   overflow: auto;
 `;
 
