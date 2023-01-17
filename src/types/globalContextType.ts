@@ -77,6 +77,7 @@ export interface IntActions {
   page: string;
   path: string;
   profile: string;
+  volume: number;
 }
 
 export interface IntStyles {

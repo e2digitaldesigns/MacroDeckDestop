@@ -12,14 +12,14 @@ import SETTINGS from "../../../../../../../settings/system.json";
 export interface IntFormFieldNumbersProps {
   name: string;
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  seconds: boolean;
+  seconds?: boolean;
   state: IntActions;
 }
 
 const FormFieldNumbers: React.FC<IntFormFieldNumbersProps> = ({
   name,
   onChange,
-  seconds,
+  seconds = false,
   state
 }) => {
   const range = _range(0.5, SETTINGS.MAX_DELAY_SECONDS, 0.5);

@@ -9,7 +9,7 @@ const SETTINGS = require("./settings/system.json");
 
 console.log("storage path:", storage.getDataPath());
 // const isDev = process?.env?.APP_DEV ? true : false;
-const isDev = false;
+const isDev = true;
 console.log(13, { isDev });
 
 // const autoLauncher = new AutoLaunch({

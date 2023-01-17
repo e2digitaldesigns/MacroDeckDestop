@@ -38,7 +38,10 @@ class ActionClass {
 
   async sound() {
     return new Promise(resolve => {
-      this.mainWindow.webContents.send("MacroDeck:playSound", this.action.path);
+      this.mainWindow.webContents.send("MacroDeck:playSound", {
+        path: this.action.path,
+        volume: this.action.volume
+      });
       resolve();
     });
   }

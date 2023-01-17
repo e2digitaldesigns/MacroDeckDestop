@@ -38,7 +38,8 @@ const useObjHooks = (): IntUseObjHooks => {
       layer: "",
       path: "",
       page: "",
-      profile: ""
+      profile: "",
+      volume: 100
     };
   };
 

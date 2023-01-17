@@ -3,10 +3,16 @@ import { IpcRendererTypes } from "../../types";
 import { MDAudio, MDHTMLAudioElement } from "./MDAudio";
 import { useElectron } from "../../hooks";
 
-export const playMethod = (e: object, data: string) => {
-  const audioObj: MDHTMLAudioElement = new MDAudio(data);
+interface IntSound {
+  path: string;
+  volume: number | undefined;
+}
+
+export const playMethod = (e: object, data: IntSound) => {
+  const audioObj: MDHTMLAudioElement = new MDAudio(data.path);
 
   audioObj.addEventListener("canplaythrough", () => {
+    audioObj.volume = data.volume ? data.volume / 100 : 1;
     audioObj.play();
   });
 };

@@ -7,7 +7,8 @@ import {
   FormFieldNumbers,
   FormFieldSelect,
   FormFieldTextArea,
-  FormFieldText
+  FormFieldText,
+  FormFieldRange
 } from "./formFields";
 
 interface IntActionparser {
@@ -59,11 +60,22 @@ const ActionParser: React.FC<IntActionparser> = ({
       />
     ),
     sound: (
-      <FormFieldFile
-        data-testid="action-parser__sound"
-        id={FormFieldFileTypes.MDFileFieldSound}
-        onChange={handleFilePathChange}
-      />
+      <>
+        <FormFieldFile
+          data-testid="action-parser__sound"
+          id={FormFieldFileTypes.MDFileFieldSound}
+          onChange={handleFilePathChange}
+        />
+
+        <FormFieldRange
+          data-testid="action-parser__delay"
+          displayName="Vol"
+          name="volume"
+          onChange={handleFormChange}
+          showValue={true}
+          state={state}
+        />
+      </>
     ),
     keyTap: (
       <FormFieldKey

@@ -54,6 +54,18 @@ export const TextField = styled(FormFieldDefaults).attrs({
   type: "text"
 })``;
 
+export const RangeField = styled(FormFieldDefaults).attrs({
+  type: "range"
+})`
+  width: 95%;
+`;
+
+export const FileField = styled(FormFieldDefaults).attrs({
+  type: "file"
+})`
+  padding: 0.25rem;
+`;
+
 export const SelectField = styled.select`
   /* width: 100%;
   height: 2rem;

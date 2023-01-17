@@ -27,6 +27,7 @@ interface IntResetObj {
   page: string;
   profile: string;
   subAction?: string;
+  volume: number;
 }
 
 const ActionForm: React.FC<{}> = () => {
@@ -65,6 +66,9 @@ const ActionForm: React.FC<{}> = () => {
       | React.ChangeEvent<HTMLTextAreaElement>
   ): void => {
     const { name: targetName, value: targetValue } = e.target;
+
+    console.log(7, { targetName, targetValue });
+
     const newState =
       targetName === "action"
         ? clearButtonAttributes(targetValue)
@@ -94,7 +98,8 @@ const ActionForm: React.FC<{}> = () => {
       layer: "",
       path: "",
       page: "",
-      profile: ""
+      profile: "",
+      volume: 100
     };
 
     if (action !== ApplicationActions.MD) resetObj.subAction = "";
