@@ -2,6 +2,7 @@ import _cloneDeep from "lodash/cloneDeep";
 import _filter from "lodash/filter";
 import _find from "lodash/find";
 import _findIndex from "lodash/findIndex";
+import _map from "lodash/map";
 import _sortBy from "lodash/sortBy";
 import _size from "lodash/size";
 
@@ -18,6 +19,7 @@ import {
 } from "../../types";
 
 import { useObj } from "../../hooks";
+import { subActionMap } from "./../../types/subActionTypes";
 
 export interface IntEditState {
   editing?: boolean;
@@ -71,6 +73,51 @@ const useProfileHook = (): IntUseProfileHook => {
   };
 
   const createProfile = () => {
+    const appState: IntAppContextInterface = _cloneDeep(appData.appState);
+    const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
+
+    const profile = profileObj();
+    const page = pageObj();
+    page.profileId = profile._id;
+
+    const actionType = "md";
+    const buttonArr = ["mdHome", "mdProfileSelector", "mdReset", "mdSettings"];
+
+    const btnArrayIds: string[] = [];
+    const actionArrayIds: string[] = [];
+
+    _map(buttonArr, (thisAction: string, index: number) => {
+      const buttonPad = buttonPadObj();
+      buttonPad.profileId = profile._id;
+      buttonPad.pageId = page._id;
+      buttonPad.text = thisAction.split(actionType)[1];
+      buttonPad.buttonPadNum = index + 1;
+      state.buttonPads.push(buttonPad);
+      btnArrayIds.push(buttonPad._id);
+
+      const action = actionObj();
+      action.action = actionType;
+      action.subAction = thisAction;
+      action.profileId = profile._id;
+      action.pageId = page._id;
+      action.buttonPadId = btnArrayIds[index];
+      state.actions.push(action);
+      actionArrayIds.push(action._id);
+    });
+
+    state.profiles.push(profile);
+    state.pages.push(page);
+
+    globalData.setState(state);
+
+    appState.active.profileId = profile._id;
+    appState.active.pageId = page._id;
+    appState.active.buttonPadId = btnArrayIds[0];
+    appState.active.actionId = actionArrayIds[0];
+    appData.setAppState(appState);
+  };
+
+  const createProfileXXX = () => {
     const appState: IntAppContextInterface = _cloneDeep(appData.appState);
     const state: IntGlobalContextInterface = _cloneDeep(globalData.state);
 
